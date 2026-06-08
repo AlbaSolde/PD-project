@@ -52,8 +52,6 @@ Project documentation and reports.
 
 The evaluation is primarily based on kernels from the GPU4S Bench benchmark suite:
 
-The benchmarks evaluated in this project include:
-
 * LRN (Local Response Normalization)
 * CIFAR-10 inference
 * Convolution 2D
