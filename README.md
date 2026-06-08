@@ -68,7 +68,7 @@ The evaluation is primarily based on kernels from the GPU4S Bench benchmark suit
 * Softmax
 * Wavelet Transform
 
-Some benchmarks required source-level modifications to become synthesizable with PandA-Bambu. These modifications are documented in the corresponding benchmark directories and project reports.
+Some benchmarks required source-level modifications to become synthesizable. These modifications are documented in the corresponding benchmark directories and project reports.
 
 ---
 
