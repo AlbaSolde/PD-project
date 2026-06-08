@@ -1,0 +1,24 @@
+[
+  {
+    "csim": false,
+    "functionLabel": "",
+    "functionName": "matrix_multiplication",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "matrix_multiplication"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench_fp16/cpu/run_hls.tcl",
+    "sourceLine": 7,
+    "success": true
+  }
+]

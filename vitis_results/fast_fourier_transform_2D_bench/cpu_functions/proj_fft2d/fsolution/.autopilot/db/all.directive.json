@@ -1,0 +1,24 @@
+[
+  {
+    "csim": false,
+    "functionLabel": "",
+    "functionName": "FFT2D_flat",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "FFT2D_flat"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/run_hls.tcl",
+    "sourceLine": 7,
+    "success": true
+  }
+]

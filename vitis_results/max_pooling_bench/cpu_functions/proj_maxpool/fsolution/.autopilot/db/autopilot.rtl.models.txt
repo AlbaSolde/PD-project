@@ -1,0 +1,5 @@
+max_pooling_dcmp_64ns_64ns_1_2_no_dsp_1
+max_pooling_flow_control_loop_pipe_sequential_init
+max_pooling_mul_32ns_32ns_64_2_1
+max_pooling_Pipeline_VITIS_LOOP_49_3_VITIS_LOOP_51_4
+max_pooling

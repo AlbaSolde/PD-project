@@ -1,0 +1,76 @@
+---
+MainSourceFile:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_55_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      55
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1290878
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_55_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_59_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      59
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1290952
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_59_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_77_3:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      77
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1291348
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_77_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_116_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      116
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1292042
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_116_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_129_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      129
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1292387
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_129_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_153_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      153
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1293217
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_153_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions'
+...

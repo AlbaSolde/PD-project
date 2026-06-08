@@ -1,0 +1,112 @@
+---
+MainSourceFile:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_4_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      4
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289568
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_4_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_6_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      6
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289610
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_6_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_8_3:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      8
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289654
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_8_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_27_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      27
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289867
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_27_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_100_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      100
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1290969
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_100_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_104_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      104
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1291031
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_104_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_123_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      123
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1291337
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_123_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_132_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      132
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1291555
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_132_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_158_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      158
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1292387
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_158_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions'
+...

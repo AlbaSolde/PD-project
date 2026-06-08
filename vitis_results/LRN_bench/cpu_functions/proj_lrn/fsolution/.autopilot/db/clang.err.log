@@ -1,0 +1,4 @@
+cpu_functions.cpp:29:15: warning: expression result unused [-Wunused-value]
+    B[i*size+j];
+    ~ ~~~~~~~~^
+1 warning generated.

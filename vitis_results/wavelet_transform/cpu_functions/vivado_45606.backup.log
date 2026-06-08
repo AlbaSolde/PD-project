@@ -1,0 +1,1412 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue May  5 16:52:00 2026
+# Process ID         : 45606
+# Current directory  : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions
+# Command line       : vivado -mode batch -source run_vivado.tcl
+# Log file           : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado.log
+# Journal file       : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado.jou
+# Running On         : luthier-ku
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1365U
+# CPU Frequency      : 1063.928 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 33282 MB
+# Swap memory        : 536 MB
+# Total Virtual      : 33819 MB
+# Available Virtual  : 27072 MB
+#-----------------------------------------------------------
+source run_vivado.tcl
+# create_project vivado_wavelet ./vivado_wavelet -part xc7z020clg484-1 -force
+# file mkdir vivado_reports
+# foreach ip_tcl [glob -nocomplain ./proj_wavelet/solution/syn/verilog/*_ip.tcl] {
+#     source $ip_tcl
+# }
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/albasg/software/vivado/2025.2/data/ip'.
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 5 \
+##                           CONFIG.c_mult_usage Full_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Add_Subtract \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Add \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 5 \
+##                           CONFIG.c_mult_usage Full_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Add_Subtract \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name ccsds_wavelet_transform_fmul_32ns_32ns_32_4_max_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Single \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 8 \
+##                           CONFIG.c_a_fraction_width 24 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 2 \
+##                           CONFIG.c_mult_usage Max_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 8 \
+##                           CONFIG.c_result_fraction_width 24 \
+##                           CONFIG.component_name ccsds_wavelet_transform_fmul_32ns_32ns_32_4_max_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Multiply \
+##                           CONFIG.result_precision_type Single \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips ccsds_wavelet_transform_fmul_32ns_32ns_32_4_max_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files ccsds_wavelet_transform_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files ccsds_wavelet_transform_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ccsds_wavelet_transform_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ccsds_wavelet_transform_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name ccsds_wavelet_transform_fadd_32ns_32ns_32_5_full_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Single \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Add \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 8 \
+##                           CONFIG.c_a_fraction_width 24 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 3 \
+##                           CONFIG.c_mult_usage Full_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 8 \
+##                           CONFIG.c_result_fraction_width 24 \
+##                           CONFIG.component_name ccsds_wavelet_transform_fadd_32ns_32ns_32_5_full_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Add_Subtract \
+##                           CONFIG.result_precision_type Single \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips ccsds_wavelet_transform_fadd_32ns_32ns_32_5_full_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files ccsds_wavelet_transform_fadd_32ns_32ns_32_5_full_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files ccsds_wavelet_transform_fadd_32ns_32ns_32_5_full_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ccsds_wavelet_transform_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ccsds_wavelet_transform_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Custom \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 32 \
+##                           CONFIG.c_a_fraction_width 0 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 4 \
+##                           CONFIG.c_mult_usage No_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Fixed_to_Float \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 5 \
+##                           CONFIG.c_mult_usage Max_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Multiply \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
+# read_verilog [glob ./proj_wavelet/solution/syn/verilog/*.v]
+# generate_target all [get_ips]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ccsds_wavelet_transform_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'ccsds_wavelet_transform_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'ccsds_wavelet_transform_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ccsds_wavelet_transform_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ccsds_wavelet_transform_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'ccsds_wavelet_transform_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'ccsds_wavelet_transform_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ccsds_wavelet_transform_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip'...
+# synth_design -top ccsds_wavelet_transform -part xc7z020clg484-1
+Command: synth_design -top ccsds_wavelet_transform -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 45646
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2127.688 ; gain = 466.836 ; free physical = 16787 ; free virtual = 24704
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_ccsds_wavelet_transform_Pipeline_VITIS_LOOP_9_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_ccsds_wavelet_transform_Pipeline_VITIS_LOOP_9_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip/synth/ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 5 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip/synth/ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip/synth/ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip/synth/ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 1 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 5 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 3 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip/synth/ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip/synth/ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 6 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip/synth/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip.vhd:70]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 1 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 4 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 0 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip/synth/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip.vhd:211]
+INFO: [Synth 8-256] done synthesizing module 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip/synth/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip.vhd:70]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_flow_control_loop_pipe_sequential_init' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_flow_control_loop_pipe_sequential_init' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_ccsds_wavelet_transform_Pipeline_VITIS_LOOP_9_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_ccsds_wavelet_transform_Pipeline_VITIS_LOOP_9_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_ccsds_wavelet_transform_Pipeline_VITIS_LOOP_33_2' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_ccsds_wavelet_transform_Pipeline_VITIS_LOOP_33_2.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_ccsds_wavelet_transform_Pipeline_VITIS_LOOP_33_2' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_ccsds_wavelet_transform_Pipeline_VITIS_LOOP_33_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_control_s_axi' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_control_s_axi.v:9]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_control_s_axi.v:224]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_control_s_axi' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_control_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:9]
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter CONSERVATIVE bound to: 1 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter NUM_WRITE_OUTSTANDING bound to: 0 - type: integer 
+	Parameter USER_MAXREQS bound to: 7 - type: integer 
+	Parameter CH0_USER_DW bound to: 32 - type: integer 
+	Parameter CH0_USER_AW bound to: 64 - type: integer 
+	Parameter CH0_NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter CH0_NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter CH0_USER_RFIFONUM_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_load' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:284]
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter BUS_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 64 - type: integer 
+	Parameter USER_LEN_WIDTH bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 7 - type: integer 
+	Parameter USER_RFIFONUM_WIDTH bound to: 9 - type: integer 
+	Parameter BUFFER_IMPL bound to: block - type: string 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_fifo' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2157]
+	Parameter DATA_WIDTH bound to: 96 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_srl' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2370]
+	Parameter DATA_WIDTH bound to: 96 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_srl' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2370]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_fifo' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2157]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_fifo__parameterized0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2157]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 34 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_mem' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2410]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 34 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_mem' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2410]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_fifo__parameterized0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2157]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_load' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:284]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_read' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:796]
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter BUS_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_LEN_WIDTH bound to: 32 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter ID0_NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter NUM_READ_PORTS bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_fifo__parameterized1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2157]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_srl__parameterized0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2370]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_srl__parameterized0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2370]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_fifo__parameterized1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2157]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_burst_converter' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:1050]
+	Parameter ID_WIDTH bound to: 1 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter LEN_WIDTH bound to: 32 - type: integer 
+	Parameter NUM_PORTS bound to: 1 - type: integer 
+	Parameter MAX_BURST_LEN bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_burst_sequential' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:1656]
+	Parameter ID_WIDTH bound to: 1 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter LEN_WIDTH bound to: 32 - type: integer 
+	Parameter NUM_PORTS bound to: 1 - type: integer 
+	Parameter MAX_BURST_LEN bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_reg_slice' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2053]
+	Parameter DATA_WIDTH bound to: 97 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_reg_slice' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2053]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_burst_sequential' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:1656]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_burst_converter' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:1050]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_reg_slice__parameterized0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2053]
+	Parameter DATA_WIDTH bound to: 34 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_reg_slice__parameterized0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:2053]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi_read' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:796]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem0_m_axi' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem0_m_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:9]
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter CONSERVATIVE bound to: 1 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter USER_MAXREQS bound to: 7 - type: integer 
+	Parameter CH0_USER_DW bound to: 32 - type: integer 
+	Parameter CH0_USER_AW bound to: 64 - type: integer 
+	Parameter CH0_NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter CH0_NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter CH0_USER_RFIFONUM_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_store' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:917]
+	Parameter CONSERVATIVE bound to: 1 - type: integer 
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter BUS_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 64 - type: integer 
+	Parameter USER_LEN_WIDTH bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 7 - type: integer 
+	Parameter BUFFER_IMPL bound to: block - type: string 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_srl' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3843]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_srl' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3843]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo__parameterized0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+	Parameter DATA_WIDTH bound to: 96 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_srl__parameterized0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3843]
+	Parameter DATA_WIDTH bound to: 96 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_srl__parameterized0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3843]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo__parameterized0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo__parameterized1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 36 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_srl__parameterized1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3843]
+	Parameter DATA_WIDTH bound to: 36 - type: integer 
+	Parameter ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_srl__parameterized1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3843]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo__parameterized1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo__parameterized2' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_srl__parameterized2' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3843]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_srl__parameterized2' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3843]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo__parameterized2' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo__parameterized3' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_srl__parameterized3' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3843]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DEPTH bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_srl__parameterized3' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3843]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo__parameterized3' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_store' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:917]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_load' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:413]
+	Parameter C_TARGET_ADDR bound to: 0 - type: integer 
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter BUS_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_DW bound to: 32 - type: integer 
+	Parameter USER_AW bound to: 64 - type: integer 
+	Parameter USER_LEN_WIDTH bound to: 32 - type: integer 
+	Parameter USER_MAXREQS bound to: 7 - type: integer 
+	Parameter USER_RFIFONUM_WIDTH bound to: 9 - type: integer 
+	Parameter BUFFER_IMPL bound to: block - type: string 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo__parameterized4' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 34 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_mem' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3883]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 34 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_mem' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3883]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo__parameterized4' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_load' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:413]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_write' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:1961]
+	Parameter CONSERVATIVE bound to: 1 - type: integer 
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter BUS_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_LEN_WIDTH bound to: 32 - type: integer 
+	Parameter MAX_WRITE_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter ID0_NUM_WRITE_OUTSTANDING bound to: 16 - type: integer 
+	Parameter NUM_WRITE_PORTS bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_burst_converter' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:2256]
+	Parameter ID_WIDTH bound to: 1 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter LEN_WIDTH bound to: 32 - type: integer 
+	Parameter NUM_PORTS bound to: 1 - type: integer 
+	Parameter MAX_BURST_LEN bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_burst_sequential' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:2862]
+	Parameter ID_WIDTH bound to: 1 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter LEN_WIDTH bound to: 32 - type: integer 
+	Parameter NUM_PORTS bound to: 1 - type: integer 
+	Parameter MAX_BURST_LEN bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3526]
+	Parameter DATA_WIDTH bound to: 97 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3526]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_burst_sequential' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:2862]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_burst_converter' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:2256]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_throttle' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3257]
+	Parameter CONSERVATIVE bound to: 1 - type: integer 
+	Parameter ID_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter NUM_OUTSTANDING bound to: 16 - type: integer 
+	Parameter ID0_NUM_OUTSTANDING bound to: 16 - type: integer 
+	Parameter NUM_PORTS bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo__parameterized5' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_srl__parameterized4' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3843]
+	Parameter DATA_WIDTH bound to: 64 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter DEPTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_srl__parameterized4' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3843]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_fifo__parameterized5' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3630]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3526]
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3526]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3526]
+	Parameter DATA_WIDTH bound to: 73 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3526]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_throttle' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3257]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized2' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3526]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized2' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3526]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_write' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:1961]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_read' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:1709]
+	Parameter C_M_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_USER_VALUE bound to: 0 - type: integer 
+	Parameter C_PROT_VALUE bound to: 0 - type: integer 
+	Parameter C_CACHE_VALUE bound to: 3 - type: integer 
+	Parameter BUS_ADDR_WIDTH bound to: 64 - type: integer 
+	Parameter BUS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter USER_LEN_WIDTH bound to: 32 - type: integer 
+	Parameter MAX_READ_BURST_LENGTH bound to: 16 - type: integer 
+	Parameter NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter ID0_NUM_READ_OUTSTANDING bound to: 16 - type: integer 
+	Parameter NUM_READ_PORTS bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized3' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3526]
+	Parameter DATA_WIDTH bound to: 34 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized3' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3526]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi_read' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:1709]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_gmem1_m_axi' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip/synth/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip.vhd:74]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 1 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 5 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 1 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip/synth/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip.vhd:223]
+INFO: [Synth 8-256] done synthesizing module 'ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/vivado_wavelet/vivado_wavelet.gen/sources_1/ip/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip/synth/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip.vhd:74]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'ccsds_wavelet_transform' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform.v:9]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_control_s_axi.v:299]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized23 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized23 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized23 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized23 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized23 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized93 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized93 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized93 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized93 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized93 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[11] in module flt_dec_op__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[10] in module flt_dec_op__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[9] in module flt_dec_op__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[8] in module flt_dec_op__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DIVIDE_BY_ZERO_IN in module flt_dec_op__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized73 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized73 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized73 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized73 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized73 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized89 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized89 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized89 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[30] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[29] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[28] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[27] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[26] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[25] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[24] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[23] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[22] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[21] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[20] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[19] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[18] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[17] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[16] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[15] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[14] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[13] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[12] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[11] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[10] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[9] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[8] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[7] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[6] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[5] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[4] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[3] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[2] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[1] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[0] in module fix_to_flt_conv_exp is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized122 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized122 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized122 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized122 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized122 is either unconnected or has no load
+INFO: [Synth 8-7129] Port B[26] in module carry_chain__parameterized14 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized120 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized120 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized120 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized120 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized120 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized67 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized67 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized67 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized67 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized67 is either unconnected or has no load
+INFO: [Synth 8-7129] Port NORMALIZE[1] in module flt_round_bit__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port FIXED_POINT in module flt_round_bit__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port FIX_MANT_SIGN in module flt_round_bit__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SIGN in module flt_round_bit__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized57 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized57 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized57 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized57 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized57 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized65 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized65 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized65 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized65 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized65 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized63 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized63 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized63 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2349.625 ; gain = 688.773 ; free physical = 16581 ; free virtual = 24481
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2349.625 ; gain = 688.773 ; free physical = 16613 ; free virtual = 24513
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2349.625 ; gain = 688.773 ; free physical = 16613 ; free virtual = 24513
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'ccsds_wavelet_transform_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'ccsds_wavelet_transform_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ccsds_wavelet_transform_gmem0_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ccsds_wavelet_transform_gmem0_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized2'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized3'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'ccsds_wavelet_transform_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'ccsds_wavelet_transform_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ccsds_wavelet_transform_gmem0_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ccsds_wavelet_transform_gmem0_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized2'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    ZERO |                               00 |                               10
+                     ONE |                               10 |                               11
+                     TWO |                               01 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ccsds_wavelet_transform_gmem1_m_axi_reg_slice__parameterized3'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:38 . Memory (MB): peak = 2376.625 ; gain = 715.773 ; free physical = 16569 ; free virtual = 24474
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'flt_add_logic:/NORM/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized11) to 'flt_add_logic:/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'flt_add_logic:/NORM/ROUND/EXP_INC_DELAY' (delay__parameterized11) to 'flt_add_logic:/NORM/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'grp_ccsds_wavelet_transform_Pipeline_VITIS_LOOP_9_1_fu_129/dadd_64ns_64ns_64_7_full_dsp_1_U2/ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized11) to 'grp_ccsds_wavelet_transform_Pipeline_VITIS_LOOP_9_1_fu_129/dadd_64ns_64ns_64_7_full_dsp_1_U2/ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'grp_ccsds_wavelet_transform_Pipeline_VITIS_LOOP_9_1_fu_129/dadd_64ns_64ns_64_7_full_dsp_1_U2/ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized11) to 'grp_ccsds_wavelet_transform_Pipeline_VITIS_LOOP_9_1_fu_129/dadd_64ns_64ns_64_7_full_dsp_1_U2/ccsds_wavelet_transform_dadd_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1:/ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized11) to 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1:/ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1:/ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized11) to 'ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1:/ccsds_wavelet_transform_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized11) to 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized11) to 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized53) to 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized53) to 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized11) to 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized11) to 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized11) to 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized11) to 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized11) to 'ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1:/ccsds_wavelet_transform_sitodp_32ns_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'dadddsub_64ns_64ns_64_7_full_dsp_1_U32/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized11) to 'dadddsub_64ns_64ns_64_7_full_dsp_1_U32/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'dadddsub_64ns_64ns_64_7_full_dsp_1_U32/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized11) to 'dadddsub_64ns_64ns_64_7_full_dsp_1_U32/ccsds_wavelet_transform_dadddsub_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3936] Found unconnected internal register 'wreq_throttle/rs_req/data_p1_reg' and it is trimmed from '73' to '72' bits. [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3559]
+INFO: [Synth 8-3936] Found unconnected internal register 'wreq_throttle/rs_req/data_p2_reg' and it is trimmed from '73' to '72' bits. [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/verilog/ccsds_wavelet_transform_gmem1_m_axi.v:3580]
+INFO: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module ccsds_wavelet_transform_control_s_axi.
+INFO: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused and will be removed from module ccsds_wavelet_transform_control_s_axi.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:39 ; elapsed = 00:01:38 . Memory (MB): peak = 2685.211 ; gain = 1024.359 ; free physical = 16211 ; free virtual = 24167
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:41 ; elapsed = 00:01:40 . Memory (MB): peak = 2685.211 ; gain = 1024.359 ; free physical = 16232 ; free virtual = 24168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance gmem0_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance gmem1_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:45 ; elapsed = 00:01:45 . Memory (MB): peak = 2685.211 ; gain = 1024.359 ; free physical = 16231 ; free virtual = 24173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:51 ; elapsed = 00:01:50 . Memory (MB): peak = 2707.023 ; gain = 1046.172 ; free physical = 16233 ; free virtual = 24173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:51 ; elapsed = 00:01:50 . Memory (MB): peak = 2707.023 ; gain = 1046.172 ; free physical = 16230 ; free virtual = 24172
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:52 ; elapsed = 00:01:51 . Memory (MB): peak = 2707.023 ; gain = 1046.172 ; free physical = 16214 ; free virtual = 24153
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:52 ; elapsed = 00:01:51 . Memory (MB): peak = 2707.023 ; gain = 1046.172 ; free physical = 16204 ; free virtual = 24143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:52 ; elapsed = 00:01:52 . Memory (MB): peak = 2717.930 ; gain = 1057.078 ; free physical = 16185 ; free virtual = 24126
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:52 ; elapsed = 00:01:52 . Memory (MB): peak = 2717.930 ; gain = 1057.078 ; free physical = 16185 ; free virtual = 24125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                          | DSP Mapping       | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp48e1_wrapper__parameterized0_264  | Dynamic           | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper_265                  | A':B'             | 29     | 18     | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_186  | C+A:B             | 0      | 2      | 47     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2_139  | A*B               | 17     | 0      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3_140  | (PCIN>>17+A*B)'   | 17     | 0      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized4_141  | PCIN+(A*B)'       | 17     | 0      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized5_142  | PCIN>>17+A'*B'    | 17     | 0      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized6_143  | (PCIN+A'*B')'     | 19     | 0      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized7_144  | PCIN+(A'*B')'     | 19     | 17     | -      | -      | 17     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized8_145  | PCIN>>17+A'*B''   | 0      | 17     | -      | -      | 16     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized9_146  | (PCIN+A''*B'')'   | 19     | 0      | -      | -      | 17     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized10_147 | PCIN>>17+(A*B'')' | 0      | 16     | -      | -      | 38     | 0    | 2    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized11_148 | PCIN>>17+A'*B''   | 0      | 2      | -      | -      | 21     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_124  | Dynamic           | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized0      | Dynamic           | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper                      | A':B'             | 29     | 18     | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_63   | C+A:B             | 0      | 2      | 47     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2      | A*B               | 17     | 0      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3      | (PCIN>>17+A*B)'   | 17     | 0      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized4      | PCIN+(A*B)'       | 17     | 0      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized5      | PCIN>>17+A'*B'    | 17     | 0      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized6      | (PCIN+A'*B')'     | 19     | 0      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized7      | PCIN+(A'*B')'     | 19     | 17     | -      | -      | 17     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized8      | PCIN>>17+A'*B''   | 0      | 17     | -      | -      | 16     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized9      | (PCIN+A''*B'')'   | 19     | 0      | -      | -      | 17     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized10     | PCIN>>17+(A*B'')' | 0      | 0      | -      | -      | 38     | 0    | 2    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized11     | PCIN>>17+A'*B''   | 0      | 2      | -      | -      | 21     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1      | Dynamic           | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 0    | 
++-------------------------------------+-------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   521|
+|3     |DSP48E1  |    28|
+|4     |LUT1     |   443|
+|5     |LUT2     |  1067|
+|6     |LUT3     |  1400|
+|7     |LUT4     |  1304|
+|8     |LUT5     |   909|
+|9     |LUT6     |  2509|
+|10    |MUXCY    |   578|
+|11    |MUXF7    |    35|
+|12    |MUXF8    |     2|
+|13    |RAMB18E1 |     2|
+|14    |SRL16E   |   386|
+|15    |SRLC32E  |    36|
+|16    |XORCY    |   348|
+|17    |FDE      |    70|
+|18    |FDRE     |  9189|
+|19    |FDSE     |    36|
+|20    |IBUF     |   126|
+|21    |OBUF     |   514|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:53 ; elapsed = 00:01:52 . Memory (MB): peak = 2717.930 ; gain = 1057.078 ; free physical = 16184 ; free virtual = 24125
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:53 ; elapsed = 00:01:52 . Memory (MB): peak = 2717.930 ; gain = 1057.078 ; free physical = 16184 ; free virtual = 24125
+Synthesis Optimization Complete : Time (s): cpu = 00:01:53 ; elapsed = 00:01:52 . Memory (MB): peak = 2717.938 ; gain = 1057.078 ; free physical = 16184 ; free virtual = 24125
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.3 ; elapsed = 00:00:00.3 . Memory (MB): peak = 2732.805 ; gain = 0.000 ; free physical = 16266 ; free virtual = 24220
+INFO: [Netlist 29-17] Analyzing 1584 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2892.230 ; gain = 0.000 ; free physical = 16180 ; free virtual = 24134
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 232 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 162 instances
+  FDE => FDRE: 70 instances
+
+Synth Design complete | Checksum: fbd1179a
+INFO: [Common 17-83] Releasing license: Synthesis
+275 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:05 ; elapsed = 00:02:01 . Memory (MB): peak = 2892.266 ; gain = 1247.422 ; free physical = 16180 ; free virtual = 24134
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2289.798; main = 2279.808; forked = 339.583
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3708.914; main = 2892.234; forked = 1001.887
+# create_clock -period 10.0 -name default [get_ports ap_clk]
+# report_utilization -file vivado_reports/utilization_synth.rpt
+# report_timing_summary -file vivado_reports/timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+report_timing_summary: Time (s): cpu = 00:00:35 ; elapsed = 00:00:17 . Memory (MB): peak = 2956.262 ; gain = 63.996 ; free physical = 16268 ; free virtual = 24178
+# exit
+INFO: [Common 17-206] Exiting Vivado at Tue May  5 16:54:45 2026...

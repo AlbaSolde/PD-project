@@ -1,0 +1,176 @@
+
+
+================================================================
+== Vitis HLS Report for 'convolution'
+================================================================
+* Date:           Mon May  4 21:47:30 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        proj_cifar10_multiple
+* Solution:       fsolution (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.256 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +----------------------------------------------------------------+------------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+        |                                                                |                                                      |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+        |                            Instance                            |                        Module                        |   min   |   max   |    min   |    max   | min | max |        Type       |
+        +----------------------------------------------------------------+------------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+        |grp_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_2_fu_77  |convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_2  |        ?|        ?|         ?|         ?|    0|    0|  loop pipeline stp|
+        +----------------------------------------------------------------+------------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    186|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    3|   10143|   7976|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     97|    -|
+|Register         |        -|    -|     261|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    3|   10404|   8259|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    1|       9|     15|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------------------------------------+------------------------------------------------------+---------+----+------+------+-----+
+    |                            Instance                            |                        Module                        | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +----------------------------------------------------------------+------------------------------------------------------+---------+----+------+------+-----+
+    |grp_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_2_fu_77  |convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_2  |        0|   0|  9978|  7926|    0|
+    |mul_32s_32s_32_2_1_U23                                          |mul_32s_32s_32_2_1                                    |        0|   3|   165|    50|    0|
+    +----------------------------------------------------------------+------------------------------------------------------+---------+----+------+------+-----+
+    |Total                                                           |                                                      |        0|   3| 10143|  7976|    0|
+    +----------------------------------------------------------------+------------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------+----------+----+---+----+------------+------------+
+    |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------+----------+----+---+----+------------+------------+
+    |add_ln31_fu_169_p2    |         +|   0|  0|  39|          32|           2|
+    |sub_ln14_2_fu_132_p2  |         -|   0|  0|  38|           1|          31|
+    |sub_ln14_fu_116_p2    |         -|   0|  0|  39|           1|          32|
+    |icmp_ln21_fu_164_p2   |      icmp|   0|  0|  39|          32|           1|
+    |kernel_rad_fu_148_p3  |    select|   0|  0|  31|           1|          31|
+    +----------------------+----------+----+---+----+------------+------------+
+    |Total                 |          |   0|  0| 186|          67|          97|
+    +----------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------+----+-----------+-----+-----------+
+    |      Name     | LUT| Input Size| Bits| Total Bits|
+    +---------------+----+-----------+-----+-----------+
+    |ap_NS_fsm      |  42|          8|    1|          8|
+    |grp_fu_102_ce  |   9|          2|    1|          2|
+    |grp_fu_102_p0  |  14|          3|   32|         96|
+    |grp_fu_102_p1  |  14|          3|   32|         96|
+    |grp_fu_270_ce  |   9|          2|    1|          2|
+    |grp_fu_274_ce  |   9|          2|    1|          2|
+    +---------------+----+-----------+-----+-----------+
+    |Total          |  97|         20|   68|        206|
+    +---------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                     Name                                    | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------------------------------+----+----+-----+-----------+
+    |add_ln31_reg_255                                                             |  32|   0|   32|          0|
+    |ap_CS_fsm                                                                    |   7|   0|    7|          0|
+    |bitcast_ln35_reg_260                                                         |  32|   0|   32|          0|
+    |grp_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_2_fu_77_ap_start_reg  |   1|   0|    1|          0|
+    |icmp_ln21_reg_241                                                            |   1|   0|    1|          0|
+    |kernel_rad_reg_214                                                           |  31|   0|   31|          0|
+    |mul_ln12_reg_245                                                             |  64|   0|   64|          0|
+    |mul_ln21_reg_225                                                             |  32|   0|   32|          0|
+    |squared_kernel_size_reg_219                                                  |  32|   0|   32|          0|
+    |trunc_ln33_reg_265                                                           |  29|   0|   29|          0|
+    +-----------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                        | 261|   0|  261|          0|
+    +-----------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------------+-----+-----+------------+--------------+--------------+
+|ap_clk                |   in|    1|  ap_ctrl_hs|   convolution|  return value|
+|ap_rst                |   in|    1|  ap_ctrl_hs|   convolution|  return value|
+|ap_start              |   in|    1|  ap_ctrl_hs|   convolution|  return value|
+|ap_done               |  out|    1|  ap_ctrl_hs|   convolution|  return value|
+|ap_idle               |  out|    1|  ap_ctrl_hs|   convolution|  return value|
+|ap_ready              |  out|    1|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_620_p_din0     |  out|   32|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_620_p_din1     |  out|   32|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_620_p_dout0    |   in|   32|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_620_p_ce       |  out|    1|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_1343_p_din0    |  out|   32|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_1343_p_din1    |  out|   32|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_1343_p_opcode  |  out|    2|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_1343_p_dout0   |   in|   32|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_1343_p_ce      |  out|    1|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_585_p_din0     |  out|   32|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_585_p_din1     |  out|   32|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_585_p_dout0    |   in|   32|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_585_p_ce       |  out|    1|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_596_p_din0     |  out|   32|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_596_p_din1     |  out|   32|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_596_p_dout0    |   in|   64|  ap_ctrl_hs|   convolution|  return value|
+|grp_fu_596_p_ce       |  out|    1|  ap_ctrl_hs|   convolution|  return value|
+|A_read                |   in|   32|     ap_none|        A_read|        scalar|
+|A                     |   in|   34|     ap_none|             A|        scalar|
+|B                     |  out|   32|      ap_vld|             B|       pointer|
+|B_ap_vld              |  out|    1|      ap_vld|             B|       pointer|
+|kernel_read           |   in|   32|     ap_none|   kernel_read|        scalar|
+|n                     |   in|   32|     ap_none|             n|        scalar|
+|kernel_size           |   in|   32|     ap_none|   kernel_size|        scalar|
++----------------------+-----+-----+------------+--------------+--------------+
+

@@ -1,0 +1,5 @@
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/memory_bandwidth_bench/cpu_functions/proj_membw/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:176:5: remark: Added loop label VITIS_LOOP_4_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < size; i++) {
+    ^
+    VITIS_LOOP_4_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/memory_bandwidth_bench/cpu_functions/proj_membw/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:176:5: note: FIX-IT applied suggested code changes

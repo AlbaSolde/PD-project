@@ -1,0 +1,21 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <name>
+        <value string="fsolution"/>
+    </name>
+    <project>
+        <value string="proj_lrn"/>
+    </project>
+    <flowTarget value="vivado"/>
+    <targetInfo>
+        <TargetInfo value="xc7z020:-clg484:-1"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
+    </libraryList>
+    <clockList>
+        <clock name="default" period="9.66" default="false"/>
+    </clockList>
+    <config>
+        <config_export format="verilog"/>
+    </config>
+</AutoPilot:solution>

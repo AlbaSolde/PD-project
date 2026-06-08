@@ -1,0 +1,59 @@
+{
+    "1": {
+        "name": "softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4",
+        "file": "cpu_functions.cpp",
+        "fileloc": "56",
+        "instructions": "27",
+        "total_instructions": "27",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "5",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "6"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "softmax_Pipeline_VITIS_LOOP_46_1_VITIS_LOOP_48_2",
+        "file": "cpu_functions.cpp",
+        "fileloc": "44",
+        "instructions": "21",
+        "total_instructions": "21",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "softmax",
+        "file": "cpu_functions.cpp",
+        "fileloc": "42",
+        "instructions": "31",
+        "total_instructions": "79",
+        "calls": "2 1",
+        "basicblocks": "3",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "3",
+        "loads": {
+            "L": "2"
+        }
+    }
+}

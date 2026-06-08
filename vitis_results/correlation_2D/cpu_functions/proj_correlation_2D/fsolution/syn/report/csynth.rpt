@@ -1,0 +1,136 @@
+
+
+================================================================
+== Synthesis Summary Report of 'correlation_2D'
+================================================================
++ General Information: 
+    * Date:           Mon May  4 23:40:55 2026
+    * Version:        2025.2 (Build 6295257 on Nov 14 2025)
+    * Project:        proj_correlation_2D
+    * Solution:       fsolution (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
+* Performance & Resource Estimates: 
++------------------------------------------------------------+------+-------------------+----------+---------+------+----------+---------+-----+------+------+----------+-----------+------------+-----+
+|                           Modules                          | Issue|                   | Iteration|         | Trip |          |    Latency    |      |      |          |           |            |     |
+|                           & Loops                          | Type |   Violation Type  |  Latency | Interval| Count| Pipelined| (cycles)| (ns)| Slack| BRAM |    DSP   |     FF    |     LUT    | URAM|
++------------------------------------------------------------+------+-------------------+----------+---------+------+----------+---------+-----+------+------+----------+-----------+------------+-----+
+|+ correlation_2D                                            |     -|                  -|         -|        -|     -|        no|        -|    -|  0.00|     -|  26 (11%)|  4031 (3%)|  5412 (10%)|    -|
+| + correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2   |     -|                  -|         -|        -|     -|       yes|        -|    -|  0.00|     -|    3 (1%)|  896 (~0%)|   1385 (2%)|    -|
+|  o VITIS_LOOP_9_1_VITIS_LOOP_10_2                          |    II|  Memory Dependency|         9|        8|     -|       yes|        -|    -|  7.30|     -|         -|          -|           -|    -|
+| + correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_21  |     -|                  -|         -|        -|     -|       yes|        -|    -|  0.00|     -|    3 (1%)|  896 (~0%)|   1385 (2%)|    -|
+|  o VITIS_LOOP_9_1_VITIS_LOOP_10_2                          |    II|  Memory Dependency|         9|        8|     -|       yes|        -|    -|  7.30|     -|         -|          -|           -|    -|
+| + correlation_2D_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2  |     -|                  -|         -|        -|     -|       yes|        -|    -|  0.04|     -|         -|  264 (~0%)|   291 (~0%)|    -|
+|  o VITIS_LOOP_31_1_VITIS_LOOP_32_2                         |    II|  Memory Dependency|         9|        6|     -|       yes|        -|    -|  7.30|     -|         -|          -|           -|    -|
++------------------------------------------------------------+------+-------------------+----------+---------+------+----------+---------+-----+------+------+----------+-----------+------------+-----+
+    II Violation Information: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+    Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++------+---------+-----------+----------+
+| Port | Mode    | Direction | Bitwidth |
++------+---------+-----------+----------+
+| A    | ap_none | in        | 32       |
+| B    | ap_none | in        | 32       |
+| R    | ap_vld  | out       | 32       |
+| size | ap_none | in        | 32       |
++------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------+
+| Argument | Direction | Datatype      |
++----------+-----------+---------------+
+| A        | in        | float const * |
+| B        | in        | float const * |
+| R        | out       | float*        |
+| size     | in        | int const     |
++----------+-----------+---------------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+
+| Argument | HW Interface | HW Type |
++----------+--------------+---------+
+| A        | A            | port    |
+| B        | B            | port    |
+| R        | R            | port    |
+| R        | R_ap_vld     | port    |
+| size     | size         | port    |
++----------+--------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------------------------------------------+-----+--------+----------------+---------+----------+---------+
+| Name                                                       | DSP | Pragma | Variable       | Op      | Impl     | Latency |
++------------------------------------------------------------+-----+--------+----------------+---------+----------+---------+
+| + correlation_2D                                           | 26  |        |                |         |          |         |
+|   fpext_32ns_64_2_no_dsp_1_U28                             |     |        | conv_i         | fpext   | auto     | 1       |
+|   empty_5_fu_187_p2                                        |     |        | empty_5        | setgt   | auto     | 0       |
+|   smax_fu_192_p3                                           |     |        | smax           | select  | auto_sel | 0       |
+|   mul_31ns_32ns_63_2_1_U31                                 | 4   |        | mul_ln20       | mul     | auto     | 1       |
+|   mul_32s_32s_32_2_1_U32                                   | 3   |        | mul_ln15       | mul     | auto     | 1       |
+|   sitofp_32ns_32_6_no_dsp_1_U25                            |     |        | conv11_i       | sitofp  | auto     | 5       |
+|   fpext_32ns_64_2_no_dsp_1_U29                             |     |        | conv_i1        | fpext   | auto     | 1       |
+|   fptrunc_64ns_32_2_no_dsp_1_U26                           |     |        | conv9_i        | fptrunc | auto     | 1       |
+|   fdiv_32ns_32ns_32_16_no_dsp_1_U23                        |     |        | mean_a_matrix  | fdiv    | fabric   | 15      |
+|   fptrunc_64ns_32_2_no_dsp_1_U27                           |     |        | conv9_i1       | fptrunc | auto     | 1       |
+|   fdiv_32ns_32ns_32_16_no_dsp_1_U24                        |     |        | mean_b_matrix  | fdiv    | fabric   | 15      |
+|   faddfsub_32ns_32ns_32_5_full_dsp_1_U18                   | 2   |        | result_mean_a  | fsub    | fulldsp  | 4       |
+|   fsub_32ns_32ns_32_5_full_dsp_1_U19                       | 2   |        | result_mean_b  | fsub    | fulldsp  | 4       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U20                        | 3   |        | mul            | fmul    | maxdsp   | 3       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U21                        | 3   |        | mul1           | fmul    | maxdsp   | 3       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U22                        | 3   |        | mul2           | fmul    | maxdsp   | 3       |
+|   fmul_32ns_32ns_32_4_max_dsp_1_U20                        | 3   |        | mul3           | fmul    | maxdsp   | 3       |
+|   fsqrt_32ns_32ns_32_16_no_dsp_1_U30                       |     |        | conv           | fsqrt   | fabric   | 15      |
+|   fdiv_32ns_32ns_32_16_no_dsp_1_U23                        |     |        | div            | fdiv    | fabric   | 15      |
+|  + correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2  | 3   |        |                |         |          |         |
+|    icmp_ln9_fu_76_p2                                       |     |        | icmp_ln9       | seteq   | auto     | 0       |
+|    add_ln9_fu_81_p2                                        |     |        | add_ln9        | add     | fabric   | 0       |
+|    dadd_64ns_64ns_64_7_full_dsp_1_U1                       | 3   |        | suma_valores   | dadd    | fulldsp  | 6       |
+|  + correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_21 | 3   |        |                |         |          |         |
+|    icmp_ln9_fu_76_p2                                       |     |        | icmp_ln9       | seteq   | auto     | 0       |
+|    add_ln9_fu_81_p2                                        |     |        | add_ln9        | add     | fabric   | 0       |
+|    dadd_64ns_64ns_64_7_full_dsp_1_U6                       | 3   |        | suma_valores_1 | dadd    | fulldsp  | 6       |
+|  + correlation_2D_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2 | 0   |        |                |         |          |         |
+|    icmp_ln31_fu_132_p2                                     |     |        | icmp_ln31      | seteq   | auto     | 0       |
+|    add_ln31_fu_137_p2                                      |     |        | add_ln31       | add     | fabric   | 0       |
++------------------------------------------------------------+-----+--------+----------------+---------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Inferred Pragmas
++----------+---------+-----------------------------------------------------------------------------------------+-------------------------------+
+| Type     | Options | Location                                                                                | Inferred From                 |
++----------+---------+-----------------------------------------------------------------------------------------+-------------------------------+
+| PIPELINE |         | loop VITIS_LOOP_10_2 (cpu_functions.cpp:10:20) in correlation_2d (cpu_functions.cpp:10) | syn.compile.pipeline_loops=64 |
+| PIPELINE |         | loop VITIS_LOOP_32_2 (cpu_functions.cpp:32:20) in correlation_2d (cpu_functions.cpp:32) | syn.compile.pipeline_loops=64 |
++----------+---------+-----------------------------------------------------------------------------------------+-------------------------------+
+
+

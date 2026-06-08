@@ -1,0 +1,20 @@
+{
+  "0": {
+    "basicblocks": 17,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 5,
+    "file": "cpu_functions.cpp",
+    "fileloc": 18,
+    "instructions": 77,
+    "loads": {
+      "T": 2
+    },
+    "memory_accesses": 1,
+    "name": "matrix_convolution",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 77
+  }
+}

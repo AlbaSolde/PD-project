@@ -1,0 +1,4 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="cpu_functions.cpp:45:20" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="cpu_functions.cpp:45:20" LoopName="VITIS_LOOP_45_2" ParentFunc="max_pooling(double const*, double*, unsigned int, unsigned int, unsigned int)"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="CouldNotAnalyzeBoundsPatternMissed" src_info="cpu_functions.cpp:43:19" msg_id="214-252" msg_severity="INFO" msg_body="Could not analyze the loop bounds" resolution="214-252" LoopLoc="cpu_functions.cpp:43:19" LoopName="VITIS_LOOP_43_1" ParentFunc="max_pooling(double const*, double*, unsigned int, unsigned int, unsigned int)"/>
+</VitisHLS:BurstInfo>

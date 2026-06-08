@@ -1,0 +1,191 @@
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project proj_lrn 
+WARNING: [HLS 200-2182] The 'proj_lrn' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Creating and opening solution '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn'.
+INFO: [HLS 200-1510] Running: set_top lrn 
+INFO: [HLS 200-1510] Running: add_files /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/cpu_functions.cpp -cflags -DFLOAT 
+INFO: [HLS 200-10] Adding design file '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/cpu_functions.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution fsolution 
+INFO: [HLS 200-10] Creating and opening solution '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1510] Running: create_clock -period 9.66 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 9.66ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.44 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.62 seconds; current allocated memory: 251.754 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'cpu_functions.cpp' ... 
+WARNING: [HLS 207-6585] expression result unused (cpu_functions.cpp:29:15)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.08 seconds. CPU system time: 0.63 seconds. Elapsed time: 4.03 seconds; current allocated memory: 253.508 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 53,700 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 4,784 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,921 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,848 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,390 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,385 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,385 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,385 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,385 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,386 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,296 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,296 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,295 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,295 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,297 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,294 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isinf<double>(double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h:16:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isnan<double>(double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h:16:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::data() const (.103.113.143.153)' into 'fp_struct<double>::to_double() const (.100.110.140.150)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:494:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_double() const (.100.110.140.150)' into 'fp_struct<double>::to_ieee() const' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:509:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>(ap_ufixed<71, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<73, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>(ap_ufixed<73, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<83, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>(ap_ufixed<83, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<92, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>(ap_ufixed<92, -(17), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<87, -(((17) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>(ap_ufixed<87, -(22), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<82, -(((22) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>(ap_ufixed<82, -(27), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<77, -(((27) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>(ap_ufixed<77, -(32), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<72, -(((32) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isinf<double>(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isnan<double>(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0)
+INFO: [HLS 214-178] Inlining function 'pow_reduce::pow_traits<double>::exp_Z1P_m_1(ap_ufixed<51, -8, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0)
+INFO: [HLS 214-178] Inlining function 'pow' into 'lrn(float const*, float*, unsigned int)' (cpu_functions.cpp:36:0)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:51:18)
+WARNING: [HLS 214-450] Ignore address on register port 'B' (cpu_functions.cpp:51:16)
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_49_2> at cpu_functions.cpp:49:20 due to pipeline_loops threshold
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.32 seconds. CPU system time: 0.77 seconds. Elapsed time: 9.4 seconds; current allocated memory: 264.625 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 264.625 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 268.531 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:383) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::log_range_reduction<71>' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:519) automatically.
+WARNING: [SYNCHK 200-23] /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:373: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 272.340 MB.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:383) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::log_range_reduction<71>' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:519) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:293:9) to (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:661:3) in function 'pow_reduce::pow_generic<double>'... converting 27 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:291)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 296.051 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 304.930 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'lrn' ...
+WARNING: [SYN 201-103] Legalizing function name 'pow_generic<double>' to 'pow_generic_double_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln563) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'pow_generic<double>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 89, function 'pow_generic<double>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.41 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.46 seconds; current allocated memory: 304.930 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 304.930 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lrn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 304.930 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 304.930 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_ROM_cud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_dEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_eOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17_6_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17g8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22_6_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22hbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27_6_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27ibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32_6_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32jbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arkbM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_arralbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arramb6' due to the length limit 80
+INFO: [RTGEN 206-104] Estimated max fanout for 'pow_generic_double_s' is 20860 from HDL expression: ((1'b1 == ap_ce_reg) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Generating core module 'bitselect_1ns_52ns_6ns_1_1_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15ns_19s_31_4_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12s_80ns_90_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_13s_71s_71_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40ns_40ns_79_2_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_43ns_36ns_78_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_49ns_44ns_92_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_50ns_50ns_99_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_54s_6ns_54_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_71ns_4ns_75_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_73ns_6ns_79_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_77ns_6ns_82_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_78s_54s_131_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_82ns_6ns_87_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_83ns_6ns_89_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_87ns_6ns_92_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_92ns_6ns_97_5_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_19_8_64_1_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_1_1_0': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pow_generic_double_s'.
+INFO: [RTMG 210-279] Implementing memory 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_ROM_cud' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_dEe' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_eOg' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17g8j' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22hbi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27ibs' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32jbC' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arkbM' using auto ROMs.
+INFO: [HLS 200-2168] Implementing memory 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_arralbW' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [RTMG 210-279] Implementing memory 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arramb6' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 309.523 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lrn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'lrn/A' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lrn/B' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'lrn/size' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'lrn' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-104] Estimated max fanout for 'lrn' is 21180 from HDL expression: ((1'b1 == ap_CS_fsm_state255) | (1'b1 == ap_CS_fsm_state106) | (1'b1 == ap_CS_fsm_state98) | (1'b1 == ap_CS_fsm_state1) | (1'b1 == ap_CS_fsm_state257) | (1'b1 == ap_CS_fsm_state256) | (1'b1 == ap_CS_fsm_state254) | (1'b1 == ap_CS_fsm_state253) | (1'b1 == ap_CS_fsm_state252) | (1'b1 == ap_CS_fsm_state251) | (1'b1 == ap_CS_fsm_state250) | (1'b1 == ap_CS_fsm_state249) | (1'b1 == ap_CS_fsm_state248) | (1'b1 == ap_CS_fsm_state247) | (1'b1 == ap_CS_fsm_state246) | (1'b1 == ap_CS_fsm_state245) | (1'b1 == ap_CS_fsm_state244) | (1'b1 == ap_CS_fsm_state243) | (1'b1 == ap_CS_fsm_state242) | (1'b1 == ap_CS_fsm_state241) | (1'b1 == ap_CS_fsm_state240) | (1'b1 == ap_CS_fsm_state239) | (1'b1 == ap_CS_fsm_state238) | (1'b1 == ap_CS_fsm_state237) | (1'b1 == ap_CS_fsm_state236) | (1'b1 == ap_CS_fsm_state235) | (1'b1 == ap_CS_fsm_state234) | (1'b1 == ap_CS_fsm_state233) | (1'b1 == ap_CS_fsm_state232) | (1'b1 == ap_CS_fsm_state231) | (1'b1 == ap_CS_fsm_state230) | (1'b1 == ap_CS_fsm_state229) | (1'b1 == ap_CS_fsm_state228) | (1'b1 
+    == ap_CS_fsm_state227) | (1'b1 == ap_CS_fsm_state226) | (1'b1 == ap_CS_fsm_state225) | (1'b1 == ap_CS_fsm_state224) | (1'b1 == ap_CS_fsm_state223) | (1'b1 == ap_CS_fsm_state222) | (1'b1 == ap_CS_fsm_state221) | (1'b1 == ap_CS_fsm_state220) | (1'b1 == ap_CS_fsm_state219) | (1'b1 == ap_CS_fsm_state218) | (1'b1 == ap_CS_fsm_state217) | (1'b1 == ap_CS_fsm_state216) | (1'b1 == ap_CS_fsm_state215) | (1'b1 == ap_CS_fsm_state214) | (1'b1 == ap_CS_fsm_state213) | (1'b1 == ap_CS_fsm_state212) | (1'b1 == ap_CS_fsm_state211) | (1'b1 == ap_CS_fsm_state210) | (1'b1 == ap_CS_fsm_state209) | (1'b1 == ap_CS_fsm_state208) | (1'b1 == ap_CS_fsm_state207) | (1'b1 == ap_CS_fsm_state206) | (1'b1 == ap_CS_fsm_state205) | (1'b1 == ap_CS_fsm_state204) | (1'b1 == ap_CS_fsm_state203) | (1'b1 == ap_CS_fsm_state202) | (1'b1 == ap_CS_fsm_state201) | (1'b1 == ap_CS_fsm_state200) | (1'b1 == ap_CS_fsm_state199) | (1'b1 == ap_CS_fsm_state198) | (1'b1 == ap_CS_fsm_state197) | (1'b1 == ap_CS_fsm_state105) | (1'b1 == ap_CS_fsm_state104) | (1'b1 == 
+    ap_CS_fsm_state103) | (1'b1 == ap_CS_fsm_state102) | (1'b1 == ap_CS_fsm_state101) | (1'b1 == ap_CS_fsm_state100) | (1'b1 == ap_CS_fsm_state99) | (1'b1 == ap_CS_fsm_state97) | (1'b1 == ap_CS_fsm_state96) | (1'b1 == ap_CS_fsm_state95) | (1'b1 == ap_CS_fsm_state94) | (1'b1 == ap_CS_fsm_state93) | (1'b1 == ap_CS_fsm_state92))
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_8_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_59_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lrn'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.4 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 320.152 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.36 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.42 seconds; current allocated memory: 323.539 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.38 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.45 seconds; current allocated memory: 327.160 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for lrn.
+INFO: [VLOG 209-307] Generating Verilog RTL for lrn.
+INFO: [HLS 200-789] **** Estimated Fmax: 143.31 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:17; Allocated memory: 75.406 MB.
+INFO: [HLS 200-1510] Running: export_design -format verilog 
+ERROR: [IMPL 213-30] 'verilog' is an invalid value for option '-format'. Valid values are 'ip', 'xo' and 'syn_dcp'.
+INFO: [HLS 200-2161] Finished Command export_design Elapsed time: 00:00:00; Allocated memory: 0.000 MB.
+command 'ap_source' returned error code
+    while executing
+"source /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/run_hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 13.09 seconds. Total CPU system time: 2.02 seconds. Total elapsed time: 18.72 seconds; peak allocated memory: 327.160 MB.
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

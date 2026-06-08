@@ -1,0 +1,272 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue May  5 09:35:40 2026
+# Process ID         : 5865
+# Current directory  : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions
+# Command line       : vivado -mode batch -source run_vivado.tcl
+# Log file           : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado.log
+# Journal file       : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado.jou
+# Running On         : luthier-ku
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1365U
+# CPU Frequency      : 663.193 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 33282 MB
+# Swap memory        : 536 MB
+# Total Virtual      : 33819 MB
+# Available Virtual  : 30577 MB
+#-----------------------------------------------------------
+source run_vivado.tcl
+# create_project vivado_fft2d ./vivado_fft2d -part xc7z020clg484-1 -force
+# file mkdir vivado_reports
+# foreach ip_tcl [glob ./proj_fft2d/fsolution/syn/verilog/*_ip.tcl] {
+#     source $ip_tcl
+# }
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/albasg/software/vivado/2025.2/data/ip'.
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 0 \
+##                           CONFIG.c_mult_usage No_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 8 \
+##                           CONFIG.c_result_fraction_width 24 \
+##                           CONFIG.component_name FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken false \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Float_to_Float \
+##                           CONFIG.result_precision_type Single \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Single \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 8 \
+##                           CONFIG.c_a_fraction_width 24 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 2 \
+##                           CONFIG.c_mult_usage Max_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 8 \
+##                           CONFIG.c_result_fraction_width 24 \
+##                           CONFIG.component_name FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Multiply \
+##                           CONFIG.result_precision_type Single \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 57 \
+##                           CONFIG.c_mult_usage No_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Divide \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Custom \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 32 \
+##                           CONFIG.c_a_fraction_width 0 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 4 \
+##                           CONFIG.c_mult_usage No_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Fixed_to_Float \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Single \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 8 \
+##                           CONFIG.c_a_fraction_width 24 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 3 \
+##                           CONFIG.c_mult_usage Full_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 8 \
+##                           CONFIG.c_result_fraction_width 24 \
+##                           CONFIG.component_name FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Add_Subtract \
+##                           CONFIG.result_precision_type Single \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip'...
+# read_verilog [glob ./proj_fft2d/fsolution/syn/verilog/*.v]
+# synth_design -top FFT2D -part xc7z020clg484-1
+Command: synth_design -top FFT2D -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5903
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2120.129 ; gain = 476.707 ; free physical = 22039 ; free virtual = 27803
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-439] module 'FFT2D' not found
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2257.066 ; gain = 613.645 ; free physical = 21913 ; free virtual = 27679
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+5 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2257.074 ; gain = 624.625 ; free physical = 21910 ; free virtual = 27677
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1849.587; main = 1506.594; forked = 342.993
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3258.941; main = 2257.070; forked = 1001.871
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Tue May  5 09:36:12 2026...

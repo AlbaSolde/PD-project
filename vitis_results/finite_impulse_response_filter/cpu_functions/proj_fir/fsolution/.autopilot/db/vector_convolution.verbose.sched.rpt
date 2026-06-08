@@ -1,0 +1,165 @@
+
+
+================================================================
+== Vitis HLS Report for 'vector_convolution'
+================================================================
+* Date:           Tue May  5 11:47:44 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        proj_fir
+* Solution:       fsolution (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.256 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.37>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%kernel_size_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %kernel_size" [cpu_functions.cpp:40]   --->   Operation 6 'read' 'kernel_size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%size_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %size" [cpu_functions.cpp:40]   --->   Operation 7 'read' 'size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln43 = add i32 %kernel_size_read, i32 %size_read" [cpu_functions.cpp:43]   --->   Operation 8 'add' 'add_ln43' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 9 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln43_1 = add i32 %add_ln43, i32 4294967295" [cpu_functions.cpp:43]   --->   Operation 9 'add' 'add_ln43_1' <Predicate = true> <Delay = 4.37> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 2 <SV = 1> <Delay = 6.91>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%zext_ln40 = zext i32 %add_ln43_1" [cpu_functions.cpp:40]   --->   Operation 10 'zext' 'zext_ln40' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln40_1 = zext i32 %kernel_size_read" [cpu_functions.cpp:40]   --->   Operation 11 'zext' 'zext_ln40_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [2/2] (6.91ns)   --->   "%mul_ln40 = mul i64 %zext_ln40, i64 %zext_ln40_1" [cpu_functions.cpp:40]   --->   Operation 12 'mul' 'mul_ln40' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 6.91>
+ST_3 : Operation 13 [1/2] (6.91ns)   --->   "%mul_ln40 = mul i64 %zext_ln40, i64 %zext_ln40_1" [cpu_functions.cpp:40]   --->   Operation 13 'mul' 'mul_ln40' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 7.25>
+ST_4 : Operation 14 [1/1] (0.00ns)   --->   "%kernel_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %kernel" [cpu_functions.cpp:49]   --->   Operation 14 'read' 'kernel_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 15 [1/1] (0.00ns)   --->   "%bitcast_ln49 = bitcast i32 %kernel_read" [cpu_functions.cpp:49]   --->   Operation 15 'bitcast' 'bitcast_ln49' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 16 [1/1] (0.00ns)   --->   "%A_read = read i32 @_ssdm_op_Read.ap_auto.i32P0A, i32 %A" [cpu_functions.cpp:49]   --->   Operation 16 'read' 'A_read' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 17 [1/1] (0.00ns)   --->   "%bitcast_ln49_1 = bitcast i32 %A_read" [cpu_functions.cpp:49]   --->   Operation 17 'bitcast' 'bitcast_ln49_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 18 [2/2] (7.25ns)   --->   "%call_ln40 = call void @vector_convolution_Pipeline_VITIS_LOOP_43_1_VITIS_LOOP_45_2, i64 %mul_ln40, i32 %kernel_size_read, i32 %size_read, i32 %bitcast_ln49, i32 %bitcast_ln49_1, i32 %B" [cpu_functions.cpp:40]   --->   Operation 18 'call' 'call_ln40' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 7.25>
+ST_5 : Operation 19 [1/1] (0.00ns)   --->   "%spectopmodule_ln40 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [cpu_functions.cpp:40]   --->   Operation 19 'spectopmodule' 'spectopmodule_ln40' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 20 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %A"   --->   Operation 20 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 21 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %A, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 21 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 22 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %kernel"   --->   Operation 22 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 23 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %kernel, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 23 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 24 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %B"   --->   Operation 24 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 25 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %B, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 25 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 26 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %size"   --->   Operation 26 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 27 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %size, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 27 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 28 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %kernel_size"   --->   Operation 28 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 29 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %kernel_size, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 29 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 30 [1/2] (7.25ns)   --->   "%call_ln40 = call void @vector_convolution_Pipeline_VITIS_LOOP_43_1_VITIS_LOOP_45_2, i64 %mul_ln40, i32 %kernel_size_read, i32 %size_read, i32 %bitcast_ln49, i32 %bitcast_ln49_1, i32 %B" [cpu_functions.cpp:40]   --->   Operation 30 'call' 'call_ln40' <Predicate = true> <Delay = 7.25> <CoreType = "Generic">   --->   Generic Core
+ST_5 : Operation 31 [1/1] (0.00ns)   --->   "%ret_ln53 = ret" [cpu_functions.cpp:53]   --->   Operation 31 'ret' 'ret_ln53' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 4.371ns
+The critical path consists of the following:
+	wire read operation ('kernel_size', cpu_functions.cpp:40) on port 'kernel_size' (cpu_functions.cpp:40) [17]  (0.000 ns)
+	'add' operation 32 bit ('add_ln43', cpu_functions.cpp:43) [23]  (0.000 ns)
+	'add' operation 32 bit ('add_ln43_1', cpu_functions.cpp:43) [24]  (4.371 ns)
+
+ <State 2>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 64 bit ('mul_ln40', cpu_functions.cpp:40) [27]  (6.912 ns)
+
+ <State 3>: 6.912ns
+The critical path consists of the following:
+	'mul' operation 64 bit ('mul_ln40', cpu_functions.cpp:40) [27]  (6.912 ns)
+
+ <State 4>: 7.256ns
+The critical path consists of the following:
+	wire read operation ('kernel_read', cpu_functions.cpp:49) on port 'kernel' (cpu_functions.cpp:49) [19]  (0.000 ns)
+	'call' operation ('call_ln40', cpu_functions.cpp:40) to 'vector_convolution_Pipeline_VITIS_LOOP_43_1_VITIS_LOOP_45_2' [28]  (7.256 ns)
+
+ <State 5>: 7.256ns
+The critical path consists of the following:
+	'call' operation ('call_ln40', cpu_functions.cpp:40) to 'vector_convolution_Pipeline_VITIS_LOOP_43_1_VITIS_LOOP_45_2' [28]  (7.256 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

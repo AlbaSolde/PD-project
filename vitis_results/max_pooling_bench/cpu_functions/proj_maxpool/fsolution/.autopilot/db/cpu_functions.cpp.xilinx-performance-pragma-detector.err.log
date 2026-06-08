@@ -1,0 +1,3 @@
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/cpu_functions.cpp:34:15: warning: expression result unused [-Wunused-value]
+                                B[i*size+j];
+                                ~ ~~~~~~~~^

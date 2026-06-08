@@ -1,0 +1,160 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_matrix_multiplication_ir
+Args:            
+  - Callee:          'matrix_multiplication(double const*, double const*, double*, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 3, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_matrix_multiplication_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 10, Column: 14 }
+Function:        _Z21matrix_multiplicationPKdS0_Pdjjj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          C
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 10, Column: 27 }
+Function:        _Z21matrix_multiplicationPKdS0_Pdjjj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 10, Column: 38 }
+Function:        _Z21matrix_multiplicationPKdS0_Pdjjj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 10, Column: 14 }
+Function:        _Z21matrix_multiplicationPKdS0_Pdjjj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          C
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 10, Column: 14 }
+Function:        _Z21matrix_multiplicationPKdS0_Pdjjj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          C
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 10, Column: 27 }
+Function:        _Z21matrix_multiplicationPKdS0_Pdjjj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 10, Column: 38 }
+Function:        _Z21matrix_multiplicationPKdS0_Pdjjj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 10, Column: 14 }
+Function:        _Z21matrix_multiplicationPKdS0_Pdjjj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          C
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_8_3
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:8:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 8, Column: 20 }
+Function:        _Z21matrix_multiplicationPKdS0_Pdjjj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrix_multiplication
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_8_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:8:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 8, Column: 20 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: cpu_functions.cpp, Line: 6, Column: 19 }
+Function:        _Z21matrix_multiplicationPKdS0_Pdjjj
+Args:            
+  - String:          'Disabling loop flattening for loop '''
+  - LoopName:        VITIS_LOOP_6_2
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 6, Column: 19 }
+Function:        _Z21matrix_multiplicationPKdS0_Pdjjj
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   'off '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  matrix_multiplication
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_6_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:6:19'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 6, Column: 19 }
+  - String:          ' '
+...

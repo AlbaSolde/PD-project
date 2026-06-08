@@ -1,0 +1,136 @@
+---
+MainSourceFile:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_4_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      4
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289202
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_4_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_6_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      6
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289244
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_6_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_8_3:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      8
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289288
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_8_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_19_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      19
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289682
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_19_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_21_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      21
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289727
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_21_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_52_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      52
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1290193
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_52_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_119_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      119
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1291180
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_119_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_123_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      123
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1291242
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_123_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_139_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      139
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1291519
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_139_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_149_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      149
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1291746
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_149_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_173_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      173
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1292576
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_173_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions'
+...

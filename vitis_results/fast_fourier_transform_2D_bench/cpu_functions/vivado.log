@@ -1,0 +1,1369 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue May  5 09:37:31 2026
+# Process ID         : 6128
+# Current directory  : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions
+# Command line       : vivado -mode batch -source run_vivado.tcl
+# Log file           : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado.log
+# Journal file       : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado.jou
+# Running On         : luthier-ku
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1365U
+# CPU Frequency      : 400.094 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 33282 MB
+# Swap memory        : 536 MB
+# Total Virtual      : 33819 MB
+# Available Virtual  : 30549 MB
+#-----------------------------------------------------------
+source run_vivado.tcl
+# create_project vivado_fft2d ./vivado_fft2d -part xc7z020clg484-1 -force
+# file mkdir vivado_reports
+# foreach ip_tcl [glob ./proj_fft2d/fsolution/syn/verilog/*_ip.tcl] {
+#     source $ip_tcl
+# }
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/albasg/software/vivado/2025.2/data/ip'.
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 0 \
+##                           CONFIG.c_mult_usage No_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 8 \
+##                           CONFIG.c_result_fraction_width 24 \
+##                           CONFIG.component_name FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken false \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Float_to_Float \
+##                           CONFIG.result_precision_type Single \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Single \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 8 \
+##                           CONFIG.c_a_fraction_width 24 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 2 \
+##                           CONFIG.c_mult_usage Max_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 8 \
+##                           CONFIG.c_result_fraction_width 24 \
+##                           CONFIG.component_name FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Multiply \
+##                           CONFIG.result_precision_type Single \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 57 \
+##                           CONFIG.c_mult_usage No_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Divide \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Custom \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 32 \
+##                           CONFIG.c_a_fraction_width 0 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 4 \
+##                           CONFIG.c_mult_usage No_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Fixed_to_Float \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Single \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 8 \
+##                           CONFIG.c_a_fraction_width 24 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 3 \
+##                           CONFIG.c_mult_usage Full_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 8 \
+##                           CONFIG.c_result_fraction_width 24 \
+##                           CONFIG.component_name FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Add_Subtract \
+##                           CONFIG.result_precision_type Single \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip'...
+# read_verilog [glob ./proj_fft2d/fsolution/syn/verilog/*.v]
+# synth_design -top FFT2D_flat -part xc7z020clg484-1
+Command: synth_design -top FFT2D_flat -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6166
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2119.574 ; gain = 474.988 ; free physical = 22171 ; free virtual = 27946
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_col_x_RAM_AUTO_1R1W' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_col_x_RAM_AUTO_1R1W.v:7]
+	Parameter DataWidth bound to: 32 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_col_x_RAM_AUTO_1R1W' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_col_x_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_FFT2D_flat_Outline_VITIS_LOOP_19_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Outline_VITIS_LOOP_19_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_21_2' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_21_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_flow_control_loop_pipe_sequential_init' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_flow_control_loop_pipe_sequential_init' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_21_2' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_21_2.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_FFT2D_flat_Outline_VITIS_LOOP_19_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Outline_VITIS_LOOP_19_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_FFT2D_flat_Outline_VITIS_LOOP_30_3' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Outline_VITIS_LOOP_30_3.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_37_5' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_37_5.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_37_5' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_37_5.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_FFT2D_flat_Outline_VITIS_LOOP_30_3' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Outline_VITIS_LOOP_30_3.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_69_4' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_69_4.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_69_4' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_69_4.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_21_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_21_21.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_21_21' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_21_21.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_72_5' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_72_5.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_72_5' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_72_5.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_sin_or_cos_float_s' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R.v:7]
+	Parameter DataWidth bound to: 100 - type: integer 
+	Parameter AddressWidth bound to: 4 - type: integer 
+	Parameter AddressRange bound to: 13 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './FFT2D_flat_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s_ref_4oPi_table_100_ROM_1P_LUTRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R.v:7]
+	Parameter DataWidth bound to: 30 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K0_ROM_1P_LUTRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R.v:7]
+	Parameter DataWidth bound to: 23 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K1_ROM_1P_LUTRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R.v:7]
+	Parameter DataWidth bound to: 15 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s_second_order_float_sin_cos_K2_ROM_1P_LUTRAM_1R.v:7]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_sin_or_cos_float_Pipeline_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_Pipeline_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_ctlz_32_32_1_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_ctlz_32_32_1_1.v:8]
+	Parameter din_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_ctlz_32_32_1_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_ctlz_32_32_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_sin_or_cos_float_Pipeline_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_Pipeline_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_sin_or_cos_float_Pipeline_2' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_Pipeline_2.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_sin_or_cos_float_Pipeline_2' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_Pipeline_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_mul_23s_22ns_45_1_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_23s_22ns_45_1_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 23 - type: integer 
+	Parameter din1_WIDTH bound to: 22 - type: integer 
+	Parameter dout_WIDTH bound to: 45 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_mul_23s_22ns_45_1_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_23s_22ns_45_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_mul_30s_29ns_58_2_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_30s_29ns_58_2_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 30 - type: integer 
+	Parameter din1_WIDTH bound to: 29 - type: integer 
+	Parameter dout_WIDTH bound to: 58 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_mul_30s_29ns_58_2_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_30s_29ns_58_2_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_mul_80s_24ns_80_5_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_80s_24ns_80_5_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 80 - type: integer 
+	Parameter din1_WIDTH bound to: 24 - type: integer 
+	Parameter dout_WIDTH bound to: 80 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_mul_80s_24ns_80_5_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_80s_24ns_80_5_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_sparsemux_17_3_1_1_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sparsemux_17_3_1_1_1.v:8]
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter def_WIDTH bound to: 1 - type: integer 
+	Parameter sel_WIDTH bound to: 3 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+	Parameter CASE0 bound to: 3'b000 
+	Parameter CASE1 bound to: 3'b001 
+	Parameter CASE2 bound to: 3'b010 
+	Parameter CASE3 bound to: 3'b011 
+	Parameter CASE4 bound to: 3'b100 
+	Parameter CASE5 bound to: 3'b101 
+	Parameter CASE6 bound to: 3'b110 
+	Parameter CASE7 bound to: 3'b111 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sparsemux_17_3_1_1_1.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_sparsemux_17_3_1_1_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sparsemux_17_3_1_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_ctlz_30_30_1_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_ctlz_30_30_1_1.v:8]
+	Parameter din_WIDTH bound to: 30 - type: integer 
+	Parameter dout_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_ctlz_30_30_1_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_ctlz_30_30_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_sparsemux_33_4_1_1_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sparsemux_33_4_1_1_1.v:8]
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter din3_WIDTH bound to: 1 - type: integer 
+	Parameter din4_WIDTH bound to: 1 - type: integer 
+	Parameter din5_WIDTH bound to: 1 - type: integer 
+	Parameter din6_WIDTH bound to: 1 - type: integer 
+	Parameter din7_WIDTH bound to: 1 - type: integer 
+	Parameter din8_WIDTH bound to: 1 - type: integer 
+	Parameter din9_WIDTH bound to: 1 - type: integer 
+	Parameter din10_WIDTH bound to: 1 - type: integer 
+	Parameter din11_WIDTH bound to: 1 - type: integer 
+	Parameter din12_WIDTH bound to: 1 - type: integer 
+	Parameter din13_WIDTH bound to: 1 - type: integer 
+	Parameter din14_WIDTH bound to: 1 - type: integer 
+	Parameter din15_WIDTH bound to: 1 - type: integer 
+	Parameter def_WIDTH bound to: 1 - type: integer 
+	Parameter sel_WIDTH bound to: 4 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+	Parameter CASE0 bound to: 4'b0000 
+	Parameter CASE1 bound to: 4'b0001 
+	Parameter CASE2 bound to: 4'b0010 
+	Parameter CASE3 bound to: 4'b0011 
+	Parameter CASE4 bound to: 4'b0100 
+	Parameter CASE5 bound to: 4'b0101 
+	Parameter CASE6 bound to: 4'b0110 
+	Parameter CASE7 bound to: 4'b0111 
+	Parameter CASE8 bound to: 4'b1000 
+	Parameter CASE9 bound to: 4'b1001 
+	Parameter CASE10 bound to: 4'b1010 
+	Parameter CASE11 bound to: 4'b1011 
+	Parameter CASE12 bound to: 4'b1100 
+	Parameter CASE13 bound to: 4'b1101 
+	Parameter CASE14 bound to: 4'b1110 
+	Parameter CASE15 bound to: 4'b1111 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sparsemux_33_4_1_1_1.v:126]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_sparsemux_33_4_1_1_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sparsemux_33_4_1_1_1.v:8]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_mul_15ns_15ns_30_1_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_15ns_15ns_30_1_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 15 - type: integer 
+	Parameter dout_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_mul_15ns_15ns_30_1_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_15ns_15ns_30_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_mul_15ns_15s_30_1_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_15ns_15s_30_1_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 15 - type: integer 
+	Parameter din1_WIDTH bound to: 15 - type: integer 
+	Parameter dout_WIDTH bound to: 30 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_mul_15ns_15s_30_1_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_15ns_15s_30_1_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_sin_or_cos_float_s' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sin_or_cos_float_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_37_52' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_37_52.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_37_52' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_37_52.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip/synth/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip.vhd:68]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 1 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 0 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 0 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip/synth/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip/synth/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 59 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip/synth/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 1 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 57 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip/synth/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip/synth/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_sitodp_32s_64_6_no_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sitodp_32s_64_6_no_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 6 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip/synth/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip.vhd:70]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 1 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 4 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 0 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip/synth/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip.vhd:211]
+INFO: [Synth 8-256] done synthesizing module 'FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip/synth/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip.vhd:70]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_sitodp_32s_64_6_no_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_sitodp_32s_64_6_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_mul_32s_32s_32_2_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_32s_32s_32_2_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_mul_32s_32s_32_2_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_32s_32s_32_2_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/synth/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.vhd:74]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 1 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 1 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/synth/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.vhd:223]
+INFO: [Synth 8-256] done synthesizing module 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip/synth/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip.vhd:74]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip/synth/FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 1 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 2 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 3 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip/synth/FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/vivado_fft2d/vivado_fft2d.gen/sources_1/ip/FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip/synth/FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'FFT2D_flat' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat.v:9]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-3917] design FFT2D_flat has port ap_return[0] driven by constant 1
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized27 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized27 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized27 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized27 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized27 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[11] in module flt_dec_op_lat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[10] in module flt_dec_op_lat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[9] in module flt_dec_op_lat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[8] in module flt_dec_op_lat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DIVIDE_BY_ZERO_IN in module flt_dec_op_lat__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized80 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized80 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized80 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized80 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized80 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized137 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized137 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized137 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized137 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized137 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized135 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized135 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized135 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized135 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized135 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized118 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized118 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized118 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized118 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized118 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized116 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized116 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized116 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized116 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized116 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized112 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized112 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized112 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized112 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized112 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module dsp48e1_wrapper__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SIGN in module flt_round_dsp_opt_full is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized133 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized133 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized133 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized133 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized133 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized122 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized122 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized122 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized56 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized56 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized56 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized46 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized46 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized46 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized44 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized44 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized44 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized38 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized38 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized38 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_eq_im__parameterized2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port A[31] in module special_detect__parameterized2 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized95 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized95 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized95 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized95 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized95 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized131 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized131 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized131 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized131 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized131 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized114 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2335.512 ; gain = 690.926 ; free physical = 22023 ; free virtual = 27803
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2335.512 ; gain = 690.926 ; free physical = 22031 ; free virtual = 27811
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2335.512 ; gain = 690.926 ; free physical = 22031 ; free virtual = 27811
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-3936] Found unconnected internal register 'i_3_reg_133_reg' and it is trimmed from '7' to '6' bits. [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_FFT2D_flat_Pipeline_VITIS_LOOP_69_4.v:152]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:01 ; elapsed = 00:01:00 . Memory (MB): peak = 3490.637 ; gain = 1846.051 ; free physical = 20850 ; free virtual = 26666
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'fptrunc_64ns_32_2_no_dsp_1_U87/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized3) to 'fptrunc_64ns_32_2_no_dsp_1_U87/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'fptrunc_64ns_32_2_no_dsp_1_U87/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXP_INC_DELAY' (delay__parameterized3) to 'fptrunc_64ns_32_2_no_dsp_1_U87/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'fptrunc_64ns_32_2_no_dsp_1_U87/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized3) to 'fptrunc_64ns_32_2_no_dsp_1_U87/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'fptrunc_64ns_32_2_no_dsp_1_U87/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized3) to 'fptrunc_64ns_32_2_no_dsp_1_U87/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'fptrunc_64ns_32_2_no_dsp_1_U87/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized3) to 'fptrunc_64ns_32_2_no_dsp_1_U87/FFT2D_flat_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'ddiv_64ns_64ns_64_59_no_dsp_1_U88/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized3) to 'ddiv_64ns_64ns_64_59_no_dsp_1_U88/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'ddiv_64ns_64ns_64_59_no_dsp_1_U88/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized3) to 'ddiv_64ns_64ns_64_59_no_dsp_1_U88/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'ddiv_64ns_64ns_64_59_no_dsp_1_U88/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW' (delay__parameterized3) to 'ddiv_64ns_64ns_64_59_no_dsp_1_U88/FFT2D_flat_ddiv_64ns_64ns_64_59_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized3) to 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized3) to 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized42) to 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized42) to 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized3) to 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized3) to 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized3) to 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized3) to 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized3) to 'sitodp_32s_64_6_no_dsp_1_U89/FFT2D_flat_sitodp_32s_64_6_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1:/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized3) to 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1:/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1:/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized3) to 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1:/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1:/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized3) to 'FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1:/FFT2D_flat_faddfsub_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1:/FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized3) to 'FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1:/FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1:/FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized3) to 'FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1:/FFT2D_flat_fmul_32ns_32ns_32_4_max_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6014] Unused sequential element mul_80s_24ns_80_5_1_U18/buff0_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_80s_24ns_80_5_1.v:67]
+INFO: [Synth 8-6014] Unused sequential element mul_80s_24ns_80_5_1_U18/buff0_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_80s_24ns_80_5_1.v:67]
+INFO: [Synth 8-6014] Unused sequential element mul_80s_24ns_80_5_1_U18/buff0_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_80s_24ns_80_5_1.v:67]
+INFO: [Synth 8-6014] Unused sequential element mul_80s_24ns_80_5_1_U18/buff0_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/syn/verilog/FFT2D_flat_mul_80s_24ns_80_5_1.v:67]
+INFO: [Synth 8-3917] design FFT2D_flat has port ap_return[0] driven by constant 1
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[47]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[46]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[45]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[44]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[43]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[42]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[41]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[40]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[39]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[38]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[37]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[36]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[35]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[34]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[33]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[32]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[31]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[30]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[29]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[28]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[27]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[26]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[25]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[24]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[23]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[22]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[21]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[20]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[19]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[18]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[17]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[16]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[15]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[14]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[13]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[12]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[11]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[10]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[9]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[8]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[7]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[6]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[5]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[4]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[3]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[2]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[1]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[0]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[47]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[46]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[45]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[44]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[43]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[42]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[41]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[40]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[39]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[38]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[37]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[36]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[35]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[34]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[33]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[32]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[31]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[30]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[29]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[28]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[27]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[26]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[25]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[24]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[23]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[22]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[21]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[20]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[19]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[18]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[17]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[16]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[15]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[14]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[13]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[12]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[11]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[10]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[9]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[8]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[7]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[6]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[5]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[4]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[3]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[2]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[1]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff2_reg[0]) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[47]__0) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[46]__0) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[45]__0) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Synth 8-3332] Sequential element (mul_80s_24ns_80_5_1_U18/buff1_reg[44]__0) is unused and will be removed from module FFT2D_flat_sin_or_cos_float_s__1.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:43 ; elapsed = 00:02:43 . Memory (MB): peak = 3733.637 ; gain = 2089.051 ; free physical = 20422 ; free virtual = 26404
+---------------------------------------------------------------------------------
+ Sort Area is FFT2D_flat__GC0 mul_80s_24ns_80_5_1_U18/buff0_reg_0 : 0 0 : 3515 16441 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_80s_24ns_80_5_1_U18/buff0_reg_0 : 0 1 : 3526 16441 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_80s_24ns_80_5_1_U18/buff0_reg_0 : 0 2 : 3574 16441 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_80s_24ns_80_5_1_U18/buff0_reg_0 : 0 3 : 3551 16441 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_80s_24ns_80_5_1_U18/buff0_reg_0 : 0 4 : 2275 16441 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_80s_24ns_80_5_1_U18/buff0_reg_13 : 0 0 : 3515 16441 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_80s_24ns_80_5_1_U18/buff0_reg_13 : 0 1 : 3526 16441 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_80s_24ns_80_5_1_U18/buff0_reg_13 : 0 2 : 3574 16441 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_80s_24ns_80_5_1_U18/buff0_reg_13 : 0 3 : 3551 16441 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_80s_24ns_80_5_1_U18/buff0_reg_13 : 0 4 : 2275 16441 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_32s_32s_32_2_1_U90/tmp_product_19 : 0 0 : 3101 5802 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_32s_32s_32_2_1_U90/tmp_product_19 : 0 1 : 2701 5802 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_32s_32s_32_2_1_U90/tmp_product_1c : 0 0 : 2634 5167 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_32s_32s_32_2_1_U90/tmp_product_1c : 0 1 : 2533 5167 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_30s_29ns_58_2_1_U17/tmp_product_17 : 0 0 : 2719 4607 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_30s_29ns_58_2_1_U17/tmp_product_17 : 0 1 : 1888 4607 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_30s_29ns_58_2_1_U17/tmp_product_d : 0 0 : 2719 4607 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_30s_29ns_58_2_1_U17/tmp_product_d : 0 1 : 1888 4607 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_23s_22ns_45_1_1_U16/tmp_product_16 : 0 0 : 3275 4188 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_23s_22ns_45_1_1_U16/tmp_product_16 : 0 1 : 913 4188 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_23s_22ns_45_1_1_U16/tmp_product_a : 0 0 : 3275 4188 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_23s_22ns_45_1_1_U16/tmp_product_a : 0 1 : 913 4188 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_30s_29ns_58_2_1_U17/tmp_product_10 : 0 0 : 1832 3309 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_30s_29ns_58_2_1_U17/tmp_product_10 : 0 1 : 1477 3309 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_30s_29ns_58_2_1_U17/tmp_product_18 : 0 0 : 1832 3309 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_30s_29ns_58_2_1_U17/tmp_product_18 : 0 1 : 1477 3309 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_15ns_15ns_30_1_1_U23/tmp_product_14 : 0 0 : 1969 1969 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_15ns_15ns_30_1_1_U23/tmp_product_6 : 0 0 : 1969 1969 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_15ns_15s_30_1_1_U24/tmp_product_15 : 0 0 : 1834 1834 : Used 1 time 0
+ Sort Area is FFT2D_flat__GC0 mul_15ns_15s_30_1_1_U24/tmp_product_8 : 0 0 : 1834 1834 : Used 1 time 0
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:44 ; elapsed = 00:02:43 . Memory (MB): peak = 3733.637 ; gain = 2089.051 ; free physical = 20481 ; free virtual = 26406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance col_x_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance col_x_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance col_y_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance col_y_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:50 ; elapsed = 00:02:50 . Memory (MB): peak = 3733.637 ; gain = 2089.051 ; free physical = 20500 ; free virtual = 26394
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:56 ; elapsed = 00:02:55 . Memory (MB): peak = 3733.637 ; gain = 2089.051 ; free physical = 20507 ; free virtual = 26328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:56 ; elapsed = 00:02:56 . Memory (MB): peak = 3733.637 ; gain = 2089.051 ; free physical = 20507 ; free virtual = 26328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:57 ; elapsed = 00:02:57 . Memory (MB): peak = 3733.637 ; gain = 2089.051 ; free physical = 20518 ; free virtual = 26339
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:57 ; elapsed = 00:02:57 . Memory (MB): peak = 3733.637 ; gain = 2089.051 ; free physical = 20518 ; free virtual = 26338
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:58 ; elapsed = 00:02:58 . Memory (MB): peak = 3733.637 ; gain = 2089.051 ; free physical = 20518 ; free virtual = 26338
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:58 ; elapsed = 00:02:58 . Memory (MB): peak = 3733.637 ; gain = 2089.051 ; free physical = 20525 ; free virtual = 26345
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                         | DSP Mapping            | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp48e1_wrapper_222                 | Dynamic                | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized0_176 | C+A'*B'                | 24     | 16     | 35     | -      | 35     | 1    | 1    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper                     | Dynamic                | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized0     | C+A'*B'                | 24     | 16     | 35     | -      | 35     | 1    | 1    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_111 | (A*B)'                 | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized2_112 | PCIN>>17+(A*B)'        | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized3_109 | PCIN+A:B+C             | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_82  | (A*B)'                 | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized2_83  | PCIN>>17+(A*B)'        | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized3_80  | PCIN+A:B+C             | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_53  | (A*B)'                 | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized2_54  | PCIN>>17+(A*B)'        | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized3_51  | PCIN+A:B+C             | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1     | (A*B)'                 | 24     | 17     | -      | -      | 41     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized2     | PCIN>>17+(A*B)'        | 0      | 7      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized3     | PCIN+A:B+C             | 22     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FFT2D_flat_sin_or_cos_float_s       | A'*B'                  | 15     | 15     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|FFT2D_flat_sin_or_cos_float_s       | (A'*B')'               | 15     | 18     | -      | -      | 31     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|FFT2D_flat_sin_or_cos_float_s       | A'*B''                 | 22     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|FFT2D_flat_sin_or_cos_float_s       | (PCIN>>17+A'*B')'      | 22     | 18     | -      | -      | 28     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|FFT2D_flat_sin_or_cos_float_s       | A*B'                   | 17     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|FFT2D_flat_sin_or_cos_float_s       | (PCIN>>17+A'*B)'       | 30     | 12     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FFT2D_flat_sin_or_cos_float_s       | A'*B                   | 17     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FFT2D_flat_sin_or_cos_float_s       | (PCIN>>17+A*B)'        | 0      | 12     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FFT2D_flat_sin_or_cos_float_s       | (A'*B'')'              | 24     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|FFT2D_flat_sin_or_cos_float_s       | PCIN>>17+(A'*B'')'     | 24     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|FFT2D_flat_sin_or_cos_float_s       | (PCIN>>17+(A'*B'')')'  | 24     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|FFT2D_flat_sin_or_cos_float_s       | PCIN>>17+(A''*B'')'    | 24     | 17     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|FFT2D_flat_sin_or_cos_float_s       | (PCIN>>17+(A''*B'')')' | 24     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|FFT2D_flat_sin_or_cos_float_s       | A'*B'                  | 15     | 15     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|FFT2D_flat_sin_or_cos_float_s       | (A'*B')'               | 15     | 18     | -      | -      | 31     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|FFT2D_flat_sin_or_cos_float_s       | A'*B''                 | 22     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|FFT2D_flat_sin_or_cos_float_s       | (PCIN>>17+A'*B')'      | 22     | 18     | -      | -      | 28     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|FFT2D_flat_sin_or_cos_float_s       | A*B'                   | 17     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|FFT2D_flat_sin_or_cos_float_s       | (PCIN>>17+A'*B)'       | 30     | 12     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|FFT2D_flat_sin_or_cos_float_s       | A'*B                   | 17     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|FFT2D_flat_sin_or_cos_float_s       | (PCIN>>17+A*B)'        | 0      | 12     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FFT2D_flat_sin_or_cos_float_s       | (A'*B'')'              | 24     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|FFT2D_flat_sin_or_cos_float_s       | PCIN>>17+(A'*B'')'     | 24     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|FFT2D_flat_sin_or_cos_float_s       | (PCIN>>17+(A'*B'')')'  | 24     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|FFT2D_flat_sin_or_cos_float_s       | PCIN>>17+(A''*B'')'    | 24     | 17     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|FFT2D_flat_sin_or_cos_float_s       | (PCIN>>17+(A''*B'')')' | 24     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|FFT2D_flat                          | (A*B)'                 | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|FFT2D_flat                          | A*B                    | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|FFT2D_flat                          | (PCIN>>17+A*B)'        | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   312|
+|3     |DSP48E1  |    45|
+|4     |LUT1     |   312|
+|5     |LUT2     |  1042|
+|6     |LUT3     |  3840|
+|7     |LUT4     |  1037|
+|8     |LUT5     |   822|
+|9     |LUT6     |  2301|
+|10    |MUXCY    |  3309|
+|11    |MUXF7    |   324|
+|12    |MUXF8    |    94|
+|13    |RAMB36E1 |     2|
+|14    |SRL16E   |    16|
+|15    |SRLC32E  |    90|
+|16    |XORCY    |  3217|
+|17    |FDE      |    23|
+|18    |FDRE     | 11739|
+|19    |FDSE     |    91|
+|20    |IBUF     |   195|
+|21    |OBUF     |    69|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:58 ; elapsed = 00:02:58 . Memory (MB): peak = 3733.637 ; gain = 2089.051 ; free physical = 20525 ; free virtual = 26346
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:58 ; elapsed = 00:02:58 . Memory (MB): peak = 3733.637 ; gain = 2089.051 ; free physical = 20525 ; free virtual = 26346
+Synthesis Optimization Complete : Time (s): cpu = 00:02:58 ; elapsed = 00:02:58 . Memory (MB): peak = 3733.645 ; gain = 2089.051 ; free physical = 20525 ; free virtual = 26346
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.6 ; elapsed = 00:00:00.61 . Memory (MB): peak = 3733.645 ; gain = 0.000 ; free physical = 20716 ; free virtual = 26534
+INFO: [Netlist 29-17] Analyzing 7326 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3773.656 ; gain = 0.000 ; free physical = 20711 ; free virtual = 26547
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 898 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 875 instances
+  FDE => FDRE: 23 instances
+
+Synth Design complete | Checksum: 63250899
+INFO: [Common 17-83] Releasing license: Synthesis
+354 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:03:14 ; elapsed = 00:03:10 . Memory (MB): peak = 3773.691 ; gain = 2140.078 ; free physical = 20711 ; free virtual = 26547
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 3333.375; main = 3179.276; forked = 338.943
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4735.527; main = 3773.660; forked = 1001.887
+# create_clock -period 10.0 -name default [get_ports ap_clk]
+# report_utilization -file vivado_reports/utilization_synth.rpt
+# report_timing_summary -file vivado_reports/timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+report_timing_summary: Time (s): cpu = 00:00:40 ; elapsed = 00:00:19 . Memory (MB): peak = 3837.688 ; gain = 63.996 ; free physical = 20590 ; free virtual = 26521
+# exit
+INFO: [Common 17-206] Exiting Vivado at Tue May  5 09:41:21 2026...

@@ -1,0 +1,334 @@
+
+
+================================================================
+== Vitis HLS Report for 'matrix_convolution'
+================================================================
+* Date:           Mon May  4 23:34:02 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        matrix_convolution_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.297 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 21
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.80>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%kernel_size_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %kernel_size"   --->   Operation 22 'read' 'kernel_size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%sum_1_loc = alloca i64 1"   --->   Operation 23 'alloca' 'sum_1_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %kernel_size_read, i32 31" [cpu_functions.cpp:20]   --->   Operation 24 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (2.55ns)   --->   "%sub_ln20 = sub i32 0, i32 %kernel_size_read" [cpu_functions.cpp:20]   --->   Operation 25 'sub' 'sub_ln20' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%lshr_ln20_1 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %sub_ln20, i32 1, i32 31" [cpu_functions.cpp:20]   --->   Operation 26 'partselect' 'lshr_ln20_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (2.52ns)   --->   "%sub_ln20_1 = sub i31 0, i31 %lshr_ln20_1" [cpu_functions.cpp:20]   --->   Operation 27 'sub' 'sub_ln20_1' <Predicate = true> <Delay = 2.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%lshr_ln20_2 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %kernel_size_read, i32 1, i32 31" [cpu_functions.cpp:20]   --->   Operation 28 'partselect' 'lshr_ln20_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.73ns)   --->   "%kernel_rad = select i1 %tmp, i31 %sub_ln20_1, i31 %lshr_ln20_2" [cpu_functions.cpp:20]   --->   Operation 29 'select' 'kernel_rad' <Predicate = true> <Delay = 0.73> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 2.52>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%sext_ln20 = sext i31 %kernel_rad" [cpu_functions.cpp:20]   --->   Operation 30 'sext' 'sext_ln20' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (2.52ns)   --->   "%sub_ln27 = sub i32 0, i32 %sext_ln20" [cpu_functions.cpp:27]   --->   Operation 31 'sub' 'sub_ln27' <Predicate = true> <Delay = 2.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (2.52ns)   --->   "%add_ln21 = add i32 %sext_ln20, i32 1" [cpu_functions.cpp:21]   --->   Operation 32 'add' 'add_ln21' <Predicate = true> <Delay = 2.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 5.10>
+ST_3 : Operation 33 [1/1] (2.55ns)   --->   "%empty_7 = icmp_slt  i32 %add_ln21, i32 %sub_ln27" [cpu_functions.cpp:21]   --->   Operation 33 'icmp' 'empty_7' <Predicate = true> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.00ns) (grouped into LUT with out node add_ln21_1)   --->   "%smax = select i1 %empty_7, i32 %sub_ln27, i32 %add_ln21" [cpu_functions.cpp:21]   --->   Operation 34 'select' 'smax' <Predicate = true> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 35 [1/1] (2.55ns) (out node of the LUT)   --->   "%add_ln21_1 = add i32 %sext_ln20, i32 %smax" [cpu_functions.cpp:21]   --->   Operation 35 'add' 'add_ln21_1' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/1] (2.55ns)   --->   "%add_ln21_3 = add i32 %add_ln21, i32 %sext_ln20" [cpu_functions.cpp:21]   --->   Operation 36 'add' 'add_ln21_3' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 6.97>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln18 = zext i32 %add_ln21_1" [cpu_functions.cpp:18]   --->   Operation 37 'zext' 'zext_ln18' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%sext_ln18 = sext i32 %add_ln21_3" [cpu_functions.cpp:18]   --->   Operation 38 'sext' 'sext_ln18' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%zext_ln18_1 = zext i64 %sext_ln18" [cpu_functions.cpp:18]   --->   Operation 39 'zext' 'zext_ln18_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 40 [5/5] (6.97ns)   --->   "%mul_ln18 = mul i96 %zext_ln18, i96 %zext_ln18_1" [cpu_functions.cpp:18]   --->   Operation 40 'mul' 'mul_ln18' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 6.97>
+ST_5 : Operation 41 [4/5] (6.97ns)   --->   "%mul_ln18 = mul i96 %zext_ln18, i96 %zext_ln18_1" [cpu_functions.cpp:18]   --->   Operation 41 'mul' 'mul_ln18' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 6.97>
+ST_6 : Operation 42 [3/5] (6.97ns)   --->   "%mul_ln18 = mul i96 %zext_ln18, i96 %zext_ln18_1" [cpu_functions.cpp:18]   --->   Operation 42 'mul' 'mul_ln18' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 6.97>
+ST_7 : Operation 43 [2/5] (6.97ns)   --->   "%mul_ln18 = mul i96 %zext_ln18, i96 %zext_ln18_1" [cpu_functions.cpp:18]   --->   Operation 43 'mul' 'mul_ln18' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 6.97>
+ST_8 : Operation 44 [1/5] (6.97ns)   --->   "%mul_ln18 = mul i96 %zext_ln18, i96 %zext_ln18_1" [cpu_functions.cpp:18]   --->   Operation 44 'mul' 'mul_ln18' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 6.97>
+ST_9 : Operation 45 [1/1] (0.00ns)   --->   "%size_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %size"   --->   Operation 45 'read' 'size_read' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 46 [1/1] (0.00ns)   --->   "%empty = trunc i32 %size_read"   --->   Operation 46 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln18_2 = zext i32 %size_read" [cpu_functions.cpp:18]   --->   Operation 47 'zext' 'zext_ln18_2' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 48 [1/1] (0.00ns)   --->   "%zext_ln18_3 = zext i96 %mul_ln18" [cpu_functions.cpp:18]   --->   Operation 48 'zext' 'zext_ln18_3' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 49 [5/5] (6.97ns)   --->   "%mul_ln18_1 = mul i128 %zext_ln18_2, i128 %zext_ln18_3" [cpu_functions.cpp:18]   --->   Operation 49 'mul' 'mul_ln18_1' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 6.97>
+ST_10 : Operation 50 [4/5] (6.97ns)   --->   "%mul_ln18_1 = mul i128 %zext_ln18_2, i128 %zext_ln18_3" [cpu_functions.cpp:18]   --->   Operation 50 'mul' 'mul_ln18_1' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 6.97>
+ST_11 : Operation 51 [3/5] (6.97ns)   --->   "%mul_ln18_1 = mul i128 %zext_ln18_2, i128 %zext_ln18_3" [cpu_functions.cpp:18]   --->   Operation 51 'mul' 'mul_ln18_1' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 6.97>
+ST_12 : Operation 52 [2/5] (6.97ns)   --->   "%mul_ln18_1 = mul i128 %zext_ln18_2, i128 %zext_ln18_3" [cpu_functions.cpp:18]   --->   Operation 52 'mul' 'mul_ln18_1' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 6.97>
+ST_13 : Operation 53 [1/5] (6.97ns)   --->   "%mul_ln18_1 = mul i128 %zext_ln18_2, i128 %zext_ln18_3" [cpu_functions.cpp:18]   --->   Operation 53 'mul' 'mul_ln18_1' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 54 [1/1] (2.55ns)   --->   "%empty_8 = icmp_sgt  i32 %size_read, i32 0"   --->   Operation 54 'icmp' 'empty_8' <Predicate = true> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 55 [1/1] (0.73ns)   --->   "%smax18 = select i1 %empty_8, i31 %empty, i31 0"   --->   Operation 55 'select' 'smax18' <Predicate = true> <Delay = 0.73> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 6.97>
+ST_14 : Operation 56 [1/1] (0.00ns)   --->   "%zext_ln18_4 = zext i31 %smax18" [cpu_functions.cpp:18]   --->   Operation 56 'zext' 'zext_ln18_4' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 57 [1/1] (0.00ns)   --->   "%zext_ln18_5 = zext i128 %mul_ln18_1" [cpu_functions.cpp:18]   --->   Operation 57 'zext' 'zext_ln18_5' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 58 [5/5] (6.97ns)   --->   "%mul_ln18_2 = mul i159 %zext_ln18_4, i159 %zext_ln18_5" [cpu_functions.cpp:18]   --->   Operation 58 'mul' 'mul_ln18_2' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 6.97>
+ST_15 : Operation 59 [4/5] (6.97ns)   --->   "%mul_ln18_2 = mul i159 %zext_ln18_4, i159 %zext_ln18_5" [cpu_functions.cpp:18]   --->   Operation 59 'mul' 'mul_ln18_2' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 6.97>
+ST_16 : Operation 60 [3/5] (6.97ns)   --->   "%mul_ln18_2 = mul i159 %zext_ln18_4, i159 %zext_ln18_5" [cpu_functions.cpp:18]   --->   Operation 60 'mul' 'mul_ln18_2' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 6.97>
+ST_17 : Operation 61 [2/5] (6.97ns)   --->   "%mul_ln18_2 = mul i159 %zext_ln18_4, i159 %zext_ln18_5" [cpu_functions.cpp:18]   --->   Operation 61 'mul' 'mul_ln18_2' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 6.97>
+ST_18 : Operation 62 [1/5] (6.97ns)   --->   "%mul_ln18_2 = mul i159 %zext_ln18_4, i159 %zext_ln18_5" [cpu_functions.cpp:18]   --->   Operation 62 'mul' 'mul_ln18_2' <Predicate = true> <Delay = 6.97> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 4> <II = 1> <Delay = 6.97> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 4.14>
+ST_19 : Operation 63 [1/1] (2.55ns)   --->   "%add_ln38 = add i32 %size_read, i32 4294967295" [cpu_functions.cpp:38]   --->   Operation 63 'add' 'add_ln38' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 64 [1/1] (0.00ns)   --->   "%kernel_read = read i64 @_ssdm_op_Read.ap_auto.i64P0A, i64 %kernel" [cpu_functions.cpp:48]   --->   Operation 64 'read' 'kernel_read' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 65 [1/1] (0.00ns)   --->   "%bitcast_ln48 = bitcast i64 %kernel_read" [cpu_functions.cpp:48]   --->   Operation 65 'bitcast' 'bitcast_ln48' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 66 [1/1] (0.00ns)   --->   "%A_read = read i64 @_ssdm_op_Read.ap_auto.i64P0A, i64 %A" [cpu_functions.cpp:45]   --->   Operation 66 'read' 'A_read' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 67 [1/1] (0.00ns)   --->   "%value = bitcast i64 %A_read" [cpu_functions.cpp:45]   --->   Operation 67 'bitcast' 'value' <Predicate = true> <Delay = 0.00>
+ST_19 : Operation 68 [2/2] (1.58ns)   --->   "%call_ln27 = call void @matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI, i32 %sub_ln27, i32 %sub_ln27, i159 %mul_ln18_2, i128 %mul_ln18_1, i32 %add_ln21, i32 %add_ln21, i96 %mul_ln18, i32 %add_ln38, i32 %add_ln38, i64 %value, i64 %bitcast_ln48, i64 %sum_1_loc" [cpu_functions.cpp:27]   --->   Operation 68 'call' 'call_ln27' <Predicate = true> <Delay = 1.58> <CoreType = "Generic">   --->   Generic Core
+
+State 20 <SV = 19> <Delay = 0.00>
+ST_20 : Operation 69 [1/2] (0.00ns)   --->   "%call_ln27 = call void @matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI, i32 %sub_ln27, i32 %sub_ln27, i159 %mul_ln18_2, i128 %mul_ln18_1, i32 %add_ln21, i32 %add_ln21, i96 %mul_ln18, i32 %add_ln38, i32 %add_ln38, i64 %value, i64 %bitcast_ln48, i64 %sum_1_loc" [cpu_functions.cpp:27]   --->   Operation 69 'call' 'call_ln27' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 21 <SV = 20> <Delay = 0.00>
+ST_21 : Operation 70 [1/1] (0.00ns)   --->   "%spectopmodule_ln18 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [cpu_functions.cpp:18]   --->   Operation 70 'spectopmodule' 'spectopmodule_ln18' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 71 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %A"   --->   Operation 71 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 72 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %A, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 72 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 73 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %kernel"   --->   Operation 73 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 74 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %kernel, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 74 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 75 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i64 %B"   --->   Operation 75 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 76 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %B, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 76 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 77 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %size"   --->   Operation 77 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 78 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %size, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 78 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 79 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %kernel_size"   --->   Operation 79 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 80 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %kernel_size, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 80 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 81 [1/1] (0.00ns)   --->   "%sum_1_loc_load = load i64 %sum_1_loc"   --->   Operation 81 'load' 'sum_1_loc_load' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 82 [1/1] (0.00ns)   --->   "%bitcast_ln52 = bitcast i64 %sum_1_loc_load" [cpu_functions.cpp:52]   --->   Operation 82 'bitcast' 'bitcast_ln52' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 83 [1/1] (0.00ns)   --->   "%br_ln21 = br i1 %empty_8, void %for.end50, void %for.end50.loopexit.split" [cpu_functions.cpp:21]   --->   Operation 83 'br' 'br_ln21' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 84 [1/1] (0.00ns)   --->   "%write_ln52 = write void @_ssdm_op_Write.ap_auto.i64P0A, i64 %B, i64 %bitcast_ln52" [cpu_functions.cpp:52]   --->   Operation 84 'write' 'write_ln52' <Predicate = (empty_8)> <Delay = 0.00>
+ST_21 : Operation 85 [1/1] (0.00ns)   --->   "%br_ln56 = br void %for.end50" [cpu_functions.cpp:56]   --->   Operation 85 'br' 'br_ln56' <Predicate = (empty_8)> <Delay = 0.00>
+ST_21 : Operation 86 [1/1] (0.00ns)   --->   "%ret_ln56 = ret" [cpu_functions.cpp:56]   --->   Operation 86 'ret' 'ret_ln56' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.808ns
+The critical path consists of the following:
+	wire read operation ('kernel_size') on port 'kernel_size' [6]  (0.000 ns)
+	'sub' operation 32 bit ('sub_ln20', cpu_functions.cpp:20) [22]  (2.552 ns)
+	'sub' operation 31 bit ('sub_ln20_1', cpu_functions.cpp:20) [24]  (2.522 ns)
+	'select' operation 31 bit ('kernel_rad', cpu_functions.cpp:20) [26]  (0.733 ns)
+
+ <State 2>: 2.522ns
+The critical path consists of the following:
+	'sub' operation 32 bit ('sub_ln27', cpu_functions.cpp:27) [28]  (2.522 ns)
+
+ <State 3>: 5.104ns
+The critical path consists of the following:
+	'icmp' operation 1 bit ('empty_7', cpu_functions.cpp:21) [35]  (2.552 ns)
+	'select' operation 32 bit ('smax', cpu_functions.cpp:21) [36]  (0.000 ns)
+	'add' operation 32 bit ('add_ln21_1', cpu_functions.cpp:21) [37]  (2.552 ns)
+
+ <State 4>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 96 bit ('mul_ln18', cpu_functions.cpp:18) [42]  (6.978 ns)
+
+ <State 5>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 96 bit ('mul_ln18', cpu_functions.cpp:18) [42]  (6.978 ns)
+
+ <State 6>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 96 bit ('mul_ln18', cpu_functions.cpp:18) [42]  (6.978 ns)
+
+ <State 7>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 96 bit ('mul_ln18', cpu_functions.cpp:18) [42]  (6.978 ns)
+
+ <State 8>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 96 bit ('mul_ln18', cpu_functions.cpp:18) [42]  (6.978 ns)
+
+ <State 9>: 6.978ns
+The critical path consists of the following:
+	wire read operation ('size') on port 'size' [7]  (0.000 ns)
+	'mul' operation 128 bit ('mul_ln18_1', cpu_functions.cpp:18) [45]  (6.978 ns)
+
+ <State 10>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 128 bit ('mul_ln18_1', cpu_functions.cpp:18) [45]  (6.978 ns)
+
+ <State 11>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 128 bit ('mul_ln18_1', cpu_functions.cpp:18) [45]  (6.978 ns)
+
+ <State 12>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 128 bit ('mul_ln18_1', cpu_functions.cpp:18) [45]  (6.978 ns)
+
+ <State 13>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 128 bit ('mul_ln18_1', cpu_functions.cpp:18) [45]  (6.978 ns)
+
+ <State 14>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 159 bit ('mul_ln18_2', cpu_functions.cpp:18) [50]  (6.978 ns)
+
+ <State 15>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 159 bit ('mul_ln18_2', cpu_functions.cpp:18) [50]  (6.978 ns)
+
+ <State 16>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 159 bit ('mul_ln18_2', cpu_functions.cpp:18) [50]  (6.978 ns)
+
+ <State 17>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 159 bit ('mul_ln18_2', cpu_functions.cpp:18) [50]  (6.978 ns)
+
+ <State 18>: 6.978ns
+The critical path consists of the following:
+	'mul' operation 159 bit ('mul_ln18_2', cpu_functions.cpp:18) [50]  (6.978 ns)
+
+ <State 19>: 4.140ns
+The critical path consists of the following:
+	'add' operation 32 bit ('add_ln38', cpu_functions.cpp:38) [29]  (2.552 ns)
+	'call' operation ('call_ln27', cpu_functions.cpp:27) to 'matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI' [51]  (1.588 ns)
+
+ <State 20>: 0.000ns
+The critical path consists of the following:
+
+ <State 21>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

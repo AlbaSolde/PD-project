@@ -1,0 +1,723 @@
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project proj_cifar10 
+WARNING: [HLS 200-2182] The 'proj_cifar10' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Creating and opening solution '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10'.
+INFO: [HLS 200-1510] Running: set_top cifar10 
+INFO: [HLS 200-1510] Running: add_files cpu_functions.cpp -cflags -DFLOAT 
+INFO: [HLS 200-10] Adding design file 'cpu_functions.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution fsolution 
+INFO: [HLS 200-10] Creating and opening solution '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64=false 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -bundle gmem cifar10 input_data 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -bundle gmem cifar10 output_data 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -bundle gmem cifar10 kernel_1_data 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -bundle gmem cifar10 kernel_2_data 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -bundle gmem cifar10 weights_1 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -bundle gmem cifar10 weights_2 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 input_data 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 output_data 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 kernel_1_data 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 kernel_2_data 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 weights_1 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 weights_2 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 input_data_size 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 output_data_size 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 kernel_1_size 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 kernel_2_size 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 stride_1_size 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 stride_2_size 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 neurons_dense_1_size 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 neurons_dense_2_size 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite -bundle control cifar10 return 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.45 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.57 seconds; current allocated memory: 251.770 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'cpu_functions.cpp' ... 
+WARNING: [HLS 207-6591] unused parameter 'm' (cpu_functions.cpp:12:93)
+WARNING: [HLS 207-6591] unused parameter 'w' (cpu_functions.cpp:12:106)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.2 seconds. CPU system time: 0.53 seconds. Elapsed time: 3.74 seconds; current allocated memory: 254.672 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+WARNING: [HLS 200-1995] There were 107,961 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 10,163 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 4,268 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 4,124 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,176 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,146 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,146 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,146 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,146 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,175 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,992 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,983 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,974 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,974 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 2,973 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 3,016 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 214-366] Duplicating function 'convolution(float const*, float*, float const*, int, int, int, int)' as different function signatures were detected between this call site and other call site(s). This may impact the resources used in the design. (cpu_functions.cpp:171:5)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isinf<double>(double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h:16:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_isnan<double>(double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h:16:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::data() const (.103.113.143.153)' into 'fp_struct<double>::to_double() const (.100.110.140.150)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:494:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_double() const (.100.110.140.150)' into 'fp_struct<double>::to_ieee() const' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:509:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>(ap_ufixed<71, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<73, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>(ap_ufixed<73, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<83, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>(ap_ufixed<83, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<92, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>(ap_ufixed<92, -(17), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<87, -(((17) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>(ap_ufixed<87, -(22), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<82, -(((22) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>(ap_ufixed<82, -(27), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<77, -(((27) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>(ap_ufixed<77, -(32), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<72, -(((32) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)' into 'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:186:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isinf<double>(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0)
+INFO: [HLS 214-178] Inlining function 'int generic_isnan<double>(double)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0)
+INFO: [HLS 214-178] Inlining function 'pow_reduce::pow_traits<double>::exp_Z1P_m_1(ap_ufixed<51, -8, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'double pow_reduce::pow_generic<double>(double, double)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:292:0)
+INFO: [HLS 214-178] Inlining function 'pow' into 'lrn(float const*, float*, int)' (cpu_functions.cpp:107:0)
+INFO: [HLS 214-178] Inlining function 'convolution(float const*, float*, float const*, int, int, int, int)' into 'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)' (cpu_functions.cpp:156:0)
+INFO: [HLS 214-178] Inlining function 'relu(float const*, float*, int)' into 'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)' (cpu_functions.cpp:156:0)
+INFO: [HLS 214-178] Inlining function 'max_pooling(float const*, float*, int, unsigned int, unsigned int)' into 'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)' (cpu_functions.cpp:156:0)
+INFO: [HLS 214-178] Inlining function 'lrn(float const*, float*, int)' into 'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)' (cpu_functions.cpp:156:0)
+INFO: [HLS 214-178] Inlining function 'convolution(float const*, float*, float const*, int, int, int, int) (.169)' into 'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)' (cpu_functions.cpp:156:0)
+INFO: [HLS 214-178] Inlining function 'matrix_multiplication(float const*, float const*, float*, int, int, int)' into 'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)' (cpu_functions.cpp:156:0)
+INFO: [HLS 214-178] Inlining function 'relu_linear(float const*, float*, int)' into 'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)' (cpu_functions.cpp:156:0)
+INFO: [HLS 214-178] Inlining function 'softmax(float const*, float*, int)' into 'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)' (cpu_functions.cpp:156:0)
+WARNING: [HLS 214-450] Ignore address on register port 'conv_1_output' (cpu_functions.cpp:37:12)
+WARNING: [HLS 214-450] Ignore address on register port 'conv_1_output' (cpu_functions.cpp:55:8)
+WARNING: [HLS 214-450] Ignore address on register port 'conv_1_output'
+WARNING: [HLS 214-450] Ignore address on register port 'conv_1_output' (cpu_functions.cpp:92:16)
+WARNING: [HLS 214-450] Ignore address on register port 'conv_1_output' (cpu_functions.cpp:97:108)
+WARNING: [HLS 214-450] Ignore address on register port 'pooling_1_output' (cpu_functions.cpp:100:49)
+WARNING: [HLS 214-450] Ignore address on register port 'pooling_1_output' (cpu_functions.cpp:112:18)
+WARNING: [HLS 214-450] Ignore address on register port 'pooling_1_output' (cpu_functions.cpp:112:16)
+WARNING: [HLS 214-450] Ignore address on register port 'pooling_1_output' (cpu_functions.cpp:33:13)
+WARNING: [HLS 214-450] Ignore address on register port 'conv_2_output' (cpu_functions.cpp:37:12)
+WARNING: [HLS 214-450] Ignore address on register port 'conv_2_output' (cpu_functions.cpp:55:8)
+WARNING: [HLS 214-450] Ignore address on register port 'conv_2_output'
+WARNING: [HLS 214-450] Ignore address on register port 'conv_2_output' (cpu_functions.cpp:112:18)
+WARNING: [HLS 214-450] Ignore address on register port 'conv_2_output' (cpu_functions.cpp:112:16)
+WARNING: [HLS 214-450] Ignore address on register port 'conv_2_output' (cpu_functions.cpp:92:16)
+WARNING: [HLS 214-450] Ignore address on register port 'conv_2_output' (cpu_functions.cpp:97:108)
+WARNING: [HLS 214-450] Ignore address on register port 'pooling_2_output' (cpu_functions.cpp:100:49)
+WARNING: [HLS 214-450] Ignore address on register port 'pooling_2_output' (cpu_functions.cpp:127:30)
+WARNING: [HLS 214-450] Ignore address on register port 'dense_layer_1_output' (cpu_functions.cpp:129:13)
+WARNING: [HLS 214-450] Ignore address on register port 'dense_layer_1_output' (cpu_functions.cpp:73:7)
+WARNING: [HLS 214-450] Ignore address on register port 'dense_layer_1_output'
+WARNING: [HLS 214-450] Ignore address on register port 'dense_layer_1_output' (cpu_functions.cpp:127:30)
+WARNING: [HLS 214-450] Ignore address on register port 'dense_layer_2_output' (cpu_functions.cpp:129:13)
+WARNING: [HLS 214-450] Ignore address on register port 'dense_layer_2_output' (cpu_functions.cpp:73:7)
+WARNING: [HLS 214-450] Ignore address on register port 'dense_layer_2_output'
+WARNING: [HLS 214-450] Ignore address on register port 'dense_layer_2_output' (cpu_functions.cpp:142:17)
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_26_2> at cpu_functions.cpp:26:20 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_53_2> at cpu_functions.cpp:53:20 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_95_4> at cpu_functions.cpp:95:22 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_110_2> at cpu_functions.cpp:110:21 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_125_3> at cpu_functions.cpp:125:22 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_71_1> at cpu_functions.cpp:71:19 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_140_1> at cpu_functions.cpp:140:20 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_147_2> at cpu_functions.cpp:147:20 due to pipeline_loops threshold
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_26_2'(cpu_functions.cpp:26:20) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (cpu_functions.cpp:26:20)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'VITIS_LOOP_125_3'(cpu_functions.cpp:125:22) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (cpu_functions.cpp:125:22)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'VITIS_LOOP_140_1'(cpu_functions.cpp:140:20) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (cpu_functions.cpp:140:20)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 6.76 seconds. CPU system time: 0.73 seconds. Elapsed time: 10.35 seconds; current allocated memory: 267.691 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 267.691 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 272.664 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:383) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::log_range_reduction<71>' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:519) automatically.
+WARNING: [SYNCHK 200-23] /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:373: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 276.984 MB.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:383) automatically.
+INFO: [XFORM 203-602] Inlining function 'pow_reduce::pow_traits<double>::log_range_reduction<71>' into 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:519) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:293:9) to (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:661:3) in function 'pow_reduce::pow_generic<double>'... converting 27 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'pow_reduce::pow_generic<double>' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h:291)...10 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.54 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.55 seconds; current allocated memory: 304.484 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_21_1'(cpu_functions.cpp:21:19) and 'VITIS_LOOP_26_2'(cpu_functions.cpp:26:20) in function 'cifar10' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_51_1'(cpu_functions.cpp:51:19) and 'VITIS_LOOP_53_2'(cpu_functions.cpp:53:20) in function 'cifar10' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_93_3'(cpu_functions.cpp:93:21) and 'VITIS_LOOP_95_4'(cpu_functions.cpp:95:22) in function 'cifar10' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_108_1'(cpu_functions.cpp:108:20) and 'VITIS_LOOP_110_2'(cpu_functions.cpp:110:21) in function 'cifar10' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_21_1'(cpu_functions.cpp:21:19) and 'VITIS_LOOP_26_2'(cpu_functions.cpp:26:20) in function 'cifar10' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_51_1'(cpu_functions.cpp:51:19) and 'VITIS_LOOP_53_2'(cpu_functions.cpp:53:20) in function 'cifar10' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_108_1'(cpu_functions.cpp:108:20) and 'VITIS_LOOP_110_2'(cpu_functions.cpp:110:21) in function 'cifar10' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_93_3'(cpu_functions.cpp:93:21) and 'VITIS_LOOP_95_4'(cpu_functions.cpp:95:22) in function 'cifar10' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_120_1'(cpu_functions.cpp:120:20) and 'VITIS_LOOP_125_3'(cpu_functions.cpp:125:22) in function 'cifar10' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_120_1'(cpu_functions.cpp:120:20) and 'VITIS_LOOP_125_3'(cpu_functions.cpp:125:22) in function 'cifar10' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_21_1' (cpu_functions.cpp:21:19) in function 'cifar10'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_51_1' (cpu_functions.cpp:51:19) in function 'cifar10'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_93_3' (cpu_functions.cpp:93:21) in function 'cifar10'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_108_1' (cpu_functions.cpp:108:20) in function 'cifar10'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_21_1' (cpu_functions.cpp:21:19) in function 'cifar10'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_51_1' (cpu_functions.cpp:51:19) in function 'cifar10'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_108_1' (cpu_functions.cpp:108:20) in function 'cifar10'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_93_3' (cpu_functions.cpp:93:21) in function 'cifar10'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_120_1' (cpu_functions.cpp:120:20) in function 'cifar10'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_120_1' (cpu_functions.cpp:120:20) in function 'cifar10'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.53 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.61 seconds; current allocated memory: 442.742 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'cifar10' ...
+WARNING: [SYN 201-103] Legalizing function name 'pow_generic<double>' to 'pow_generic_double_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1_VITIS_LOOP_26_2'.
+WARNING: [HLS 200-448] Lower bound of II is 2 due to multiple bus read operation ('gmem_addr_read', cpu_functions.cpp:33->cpu_functions.cpp:158) on port 'gmem' (cpu_functions.cpp:33->cpu_functions.cpp:158), bus read operation ('gmem_addr_1_read', cpu_functions.cpp:35->cpu_functions.cpp:158) on port 'gmem' (cpu_functions.cpp:35->cpu_functions.cpp:158) accessing 'gmem' m_axi read
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_2' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_26_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln16', cpu_functions.cpp:16->cpu_functions.cpp:158) of variable 'sum', cpu_functions.cpp:35->cpu_functions.cpp:158 32 bit on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:158 and 'load' operation 32 bit ('sum_load_2', cpu_functions.cpp:21->cpu_functions.cpp:158) on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:158.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_2' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_26_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('sum_write_ln16', cpu_functions.cpp:16->cpu_functions.cpp:158) of variable 'sum', cpu_functions.cpp:35->cpu_functions.cpp:158 32 bit on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:158 and 'load' operation 32 bit ('sum_load_2', cpu_functions.cpp:21->cpu_functions.cpp:158) on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:158.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_2' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_26_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('sum_write_ln16', cpu_functions.cpp:16->cpu_functions.cpp:158) of variable 'sum', cpu_functions.cpp:35->cpu_functions.cpp:158 32 bit on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:158 and 'load' operation 32 bit ('sum_load_2', cpu_functions.cpp:21->cpu_functions.cpp:158) on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:158.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_2' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_26_2'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation ('sum_write_ln16', cpu_functions.cpp:16->cpu_functions.cpp:158) of variable 'sum', cpu_functions.cpp:35->cpu_functions.cpp:158 32 bit on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:158 and 'load' operation 32 bit ('sum_load_2', cpu_functions.cpp:21->cpu_functions.cpp:158) on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:158.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 65, loop 'VITIS_LOOP_21_1_VITIS_LOOP_26_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.17 seconds; current allocated memory: 443.430 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 443.430 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_53_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_51_1_VITIS_LOOP_53_2'.
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_53_2' (loop 'VITIS_LOOP_51_1_VITIS_LOOP_53_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'select' operation 32 bit ('empty_82', cpu_functions.cpp:55->cpu_functions.cpp:161) and 'fcmp' operation 1 bit ('tmp_14', cpu_functions.cpp:55->cpu_functions.cpp:161).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 4, loop 'VITIS_LOOP_51_1_VITIS_LOOP_53_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 443.430 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 443.430 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_93_3_VITIS_LOOP_95_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_93_3_VITIS_LOOP_95_4'.
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_93_3_VITIS_LOOP_95_4' (loop 'VITIS_LOOP_93_3_VITIS_LOOP_95_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'and' operation 1 bit ('and_ln97_1', cpu_functions.cpp:97->cpu_functions.cpp:165) and 'fcmp' operation 1 bit ('tmp_18', cpu_functions.cpp:97->cpu_functions.cpp:165).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 4, loop 'VITIS_LOOP_93_3_VITIS_LOOP_95_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 443.430 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 443.430 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln563) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'pow_generic<double>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 87, function 'pow_generic<double>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 446.875 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 446.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'.
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_2' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i', cpu_functions.cpp:112->cpu_functions.cpp:168) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:168).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_2' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i', cpu_functions.cpp:112->cpu_functions.cpp:168) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:168).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_2' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i', cpu_functions.cpp:112->cpu_functions.cpp:168) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:168).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_2' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i', cpu_functions.cpp:112->cpu_functions.cpp:168) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:168).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_2' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 130, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i', cpu_functions.cpp:112->cpu_functions.cpp:168) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:168).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_2' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 193, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i', cpu_functions.cpp:112->cpu_functions.cpp:168) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:168).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_2' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 225, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i', cpu_functions.cpp:112->cpu_functions.cpp:168) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:168).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_2' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 241, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i', cpu_functions.cpp:112->cpu_functions.cpp:168) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:168).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_2' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 249, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i', cpu_functions.cpp:112->cpu_functions.cpp:168) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:168).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 250, Depth = 251, loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 447.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 448.203 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_1_VITIS_LOOP_26_2'.
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_21' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_26_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln16', cpu_functions.cpp:16->cpu_functions.cpp:171) of variable 'sum', cpu_functions.cpp:35->cpu_functions.cpp:171 32 bit on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:171 and 'load' operation 32 bit ('sum_load_1', cpu_functions.cpp:21->cpu_functions.cpp:171) on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:171.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_21' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_26_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln16', cpu_functions.cpp:16->cpu_functions.cpp:171) of variable 'sum', cpu_functions.cpp:35->cpu_functions.cpp:171 32 bit on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:171 and 'load' operation 32 bit ('sum_load_1', cpu_functions.cpp:21->cpu_functions.cpp:171) on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:171.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_21' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_26_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('sum_write_ln16', cpu_functions.cpp:16->cpu_functions.cpp:171) of variable 'sum', cpu_functions.cpp:35->cpu_functions.cpp:171 32 bit on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:171 and 'load' operation 32 bit ('sum_load_1', cpu_functions.cpp:21->cpu_functions.cpp:171) on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:171.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_21' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_26_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('sum_write_ln16', cpu_functions.cpp:16->cpu_functions.cpp:171) of variable 'sum', cpu_functions.cpp:35->cpu_functions.cpp:171 32 bit on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:171 and 'load' operation 32 bit ('sum_load_1', cpu_functions.cpp:21->cpu_functions.cpp:171) on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:171.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_21' (loop 'VITIS_LOOP_21_1_VITIS_LOOP_26_2'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation ('sum_write_ln16', cpu_functions.cpp:16->cpu_functions.cpp:171) of variable 'sum', cpu_functions.cpp:35->cpu_functions.cpp:171 32 bit on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:171 and 'load' operation 32 bit ('sum_load_1', cpu_functions.cpp:21->cpu_functions.cpp:171) on local variable 'sum', cpu_functions.cpp:16->cpu_functions.cpp:171.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [SCHED 204-61] Discarding stage scheduling solution.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 52, loop 'VITIS_LOOP_21_1_VITIS_LOOP_26_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 450.004 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 450.004 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_53_22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_51_1_VITIS_LOOP_53_2'.
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_53_22' (loop 'VITIS_LOOP_51_1_VITIS_LOOP_53_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'select' operation 32 bit ('select_ln55', cpu_functions.cpp:55->cpu_functions.cpp:174) and 'fcmp' operation 1 bit ('tmp_20', cpu_functions.cpp:55->cpu_functions.cpp:174).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 4, loop 'VITIS_LOOP_51_1_VITIS_LOOP_53_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 450.605 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 450.605 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'.
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_23' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i1', cpu_functions.cpp:112->cpu_functions.cpp:177) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:177).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_23' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i1', cpu_functions.cpp:112->cpu_functions.cpp:177) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:177).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_23' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i1', cpu_functions.cpp:112->cpu_functions.cpp:177) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:177).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_23' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i1', cpu_functions.cpp:112->cpu_functions.cpp:177) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:177).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_23' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 130, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i1', cpu_functions.cpp:112->cpu_functions.cpp:177) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:177).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_23' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 193, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i1', cpu_functions.cpp:112->cpu_functions.cpp:177) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:177).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_23' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 225, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i1', cpu_functions.cpp:112->cpu_functions.cpp:177) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:177).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_23' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 241, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i1', cpu_functions.cpp:112->cpu_functions.cpp:177) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:177).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_23' (loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'): Unable to enforce a carried dependence constraint (II = 249, distance = 1, offset = 1) between 'fptrunc' operation 32 bit ('conv12_i1', cpu_functions.cpp:112->cpu_functions.cpp:177) and 'fpext' operation 64 bit ('x', cpu_functions.cpp:112->cpu_functions.cpp:177).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 250, Depth = 251, loop 'VITIS_LOOP_108_1_VITIS_LOOP_110_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 450.938 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 451.754 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_93_3_VITIS_LOOP_95_44' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_93_3_VITIS_LOOP_95_4'.
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_93_3_VITIS_LOOP_95_44' (loop 'VITIS_LOOP_93_3_VITIS_LOOP_95_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'and' operation 1 bit ('and_ln97_1', cpu_functions.cpp:97->cpu_functions.cpp:181) and 'fcmp' operation 1 bit ('tmp_25', cpu_functions.cpp:97->cpu_functions.cpp:181).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 4, loop 'VITIS_LOOP_93_3_VITIS_LOOP_95_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 453.180 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 453.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'.
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_3' (loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('acumulated_write_ln124', cpu_functions.cpp:124->cpu_functions.cpp:184) of variable 'acumulated', cpu_functions.cpp:127->cpu_functions.cpp:184 32 bit on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:184 and 'load' operation 32 bit ('acumulated_load_2', cpu_functions.cpp:120->cpu_functions.cpp:184) on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:184.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_3' (loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('acumulated_write_ln124', cpu_functions.cpp:124->cpu_functions.cpp:184) of variable 'acumulated', cpu_functions.cpp:127->cpu_functions.cpp:184 32 bit on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:184 and 'load' operation 32 bit ('acumulated_load_2', cpu_functions.cpp:120->cpu_functions.cpp:184) on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:184.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_3' (loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('acumulated_write_ln124', cpu_functions.cpp:124->cpu_functions.cpp:184) of variable 'acumulated', cpu_functions.cpp:127->cpu_functions.cpp:184 32 bit on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:184 and 'load' operation 32 bit ('acumulated_load_2', cpu_functions.cpp:120->cpu_functions.cpp:184) on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:184.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_3' (loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('acumulated_write_ln124', cpu_functions.cpp:124->cpu_functions.cpp:184) of variable 'acumulated', cpu_functions.cpp:127->cpu_functions.cpp:184 32 bit on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:184 and 'load' operation 32 bit ('acumulated_load_2', cpu_functions.cpp:120->cpu_functions.cpp:184) on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:184.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_3' (loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation ('acumulated_write_ln124', cpu_functions.cpp:124->cpu_functions.cpp:184) of variable 'acumulated', cpu_functions.cpp:127->cpu_functions.cpp:184 32 bit on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:184 and 'load' operation 32 bit ('acumulated_load_2', cpu_functions.cpp:120->cpu_functions.cpp:184) on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:184.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 24, loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 453.793 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 453.793 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_71_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_71_1'.
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_71_1' (loop 'VITIS_LOOP_71_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'select' operation 32 bit ('select_ln73', cpu_functions.cpp:73->cpu_functions.cpp:187) and 'fcmp' operation 1 bit ('tmp_23', cpu_functions.cpp:73->cpu_functions.cpp:187).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 4, loop 'VITIS_LOOP_71_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 454.082 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 454.082 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_35' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'.
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_35' (loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('acumulated_write_ln124', cpu_functions.cpp:124->cpu_functions.cpp:190) of variable 'acumulated', cpu_functions.cpp:127->cpu_functions.cpp:190 32 bit on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:190 and 'load' operation 32 bit ('acumulated_load_1', cpu_functions.cpp:120->cpu_functions.cpp:190) on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:190.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_35' (loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('acumulated_write_ln124', cpu_functions.cpp:124->cpu_functions.cpp:190) of variable 'acumulated', cpu_functions.cpp:127->cpu_functions.cpp:190 32 bit on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:190 and 'load' operation 32 bit ('acumulated_load_1', cpu_functions.cpp:120->cpu_functions.cpp:190) on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:190.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_35' (loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('acumulated_write_ln124', cpu_functions.cpp:124->cpu_functions.cpp:190) of variable 'acumulated', cpu_functions.cpp:127->cpu_functions.cpp:190 32 bit on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:190 and 'load' operation 32 bit ('acumulated_load_1', cpu_functions.cpp:120->cpu_functions.cpp:190) on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:190.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_35' (loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('acumulated_write_ln124', cpu_functions.cpp:124->cpu_functions.cpp:190) of variable 'acumulated', cpu_functions.cpp:127->cpu_functions.cpp:190 32 bit on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:190 and 'load' operation 32 bit ('acumulated_load_1', cpu_functions.cpp:120->cpu_functions.cpp:190) on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:190.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_35' (loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 0) between 'store' operation ('acumulated_write_ln124', cpu_functions.cpp:124->cpu_functions.cpp:190) of variable 'acumulated', cpu_functions.cpp:127->cpu_functions.cpp:190 32 bit on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:190 and 'load' operation 32 bit ('acumulated_load_1', cpu_functions.cpp:120->cpu_functions.cpp:190) on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:190.
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 24, loop 'VITIS_LOOP_120_1_VITIS_LOOP_125_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 454.715 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 454.715 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_71_16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_71_1'.
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_71_16' (loop 'VITIS_LOOP_71_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'select' operation 32 bit ('select_ln73', cpu_functions.cpp:73->cpu_functions.cpp:193) and 'fcmp' operation 1 bit ('tmp_27', cpu_functions.cpp:73->cpu_functions.cpp:193).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 4, loop 'VITIS_LOOP_71_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 455.039 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 455.039 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_140_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_140_1'.
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_140_1' (loop 'VITIS_LOOP_140_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('sum_values_write_ln137', cpu_functions.cpp:137->cpu_functions.cpp:196) of variable 'sum_values', cpu_functions.cpp:143->cpu_functions.cpp:196 32 bit on local variable 'sum_values', cpu_functions.cpp:137->cpu_functions.cpp:196 and 'fadd' operation 32 bit ('sum_values', cpu_functions.cpp:143->cpu_functions.cpp:196).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_140_1' (loop 'VITIS_LOOP_140_1'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('sum_values_write_ln137', cpu_functions.cpp:137->cpu_functions.cpp:196) of variable 'sum_values', cpu_functions.cpp:143->cpu_functions.cpp:196 32 bit on local variable 'sum_values', cpu_functions.cpp:137->cpu_functions.cpp:196 and 'fadd' operation 32 bit ('sum_values', cpu_functions.cpp:143->cpu_functions.cpp:196).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_140_1' (loop 'VITIS_LOOP_140_1'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('sum_values_write_ln137', cpu_functions.cpp:137->cpu_functions.cpp:196) of variable 'sum_values', cpu_functions.cpp:143->cpu_functions.cpp:196 32 bit on local variable 'sum_values', cpu_functions.cpp:137->cpu_functions.cpp:196 and 'fadd' operation 32 bit ('sum_values', cpu_functions.cpp:143->cpu_functions.cpp:196).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_140_1' (loop 'VITIS_LOOP_140_1'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('sum_values_write_ln137', cpu_functions.cpp:137->cpu_functions.cpp:196) of variable 'sum_values', cpu_functions.cpp:143->cpu_functions.cpp:196 32 bit on local variable 'sum_values', cpu_functions.cpp:137->cpu_functions.cpp:196 and 'fadd' operation 32 bit ('sum_values', cpu_functions.cpp:143->cpu_functions.cpp:196).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cifar10_Pipeline_VITIS_LOOP_140_1' (loop 'VITIS_LOOP_140_1'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1) between 'store' operation ('sum_values_write_ln137', cpu_functions.cpp:137->cpu_functions.cpp:196) of variable 'sum_values', cpu_functions.cpp:143->cpu_functions.cpp:196 32 bit on local variable 'sum_values', cpu_functions.cpp:137->cpu_functions.cpp:196 and 'fadd' operation 32 bit ('sum_values', cpu_functions.cpp:143->cpu_functions.cpp:196).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 7, loop 'VITIS_LOOP_140_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 455.324 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 455.324 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10_Pipeline_VITIS_LOOP_147_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_147_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 32, loop 'VITIS_LOOP_147_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 455.664 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 455.664 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cifar10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 458.273 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 458.273 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_2' pipeline 'VITIS_LOOP_21_1_VITIS_LOOP_26_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_32ns_32s_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_32ns_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_32s_32_36_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 459.070 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_53_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_53_2' pipeline 'VITIS_LOOP_51_1_VITIS_LOOP_53_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_53_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 461.645 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_93_3_VITIS_LOOP_95_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_93_3_VITIS_LOOP_95_4' pipeline 'VITIS_LOOP_93_3_VITIS_LOOP_95_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_93_3_VITIS_LOOP_95_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 462.035 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'pow_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_ROM_cud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_dEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_eOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17_6_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17g8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22_6_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22hbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27_6_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27ibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32_6_64_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32jbC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arkbM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_arralbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array_ROM_AUTO_1R' to 'pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arramb6' due to the length limit 80
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'pow_generic_double_s' pipeline 'pow_generic<double>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'pow_generic_double_s' is 18953 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_ce))
+INFO: [RTGEN 206-100] Generating core module 'bitselect_1ns_52ns_6ns_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_15ns_19s_31_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_12s_80ns_90_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_13s_71s_71_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_40ns_40ns_79_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_43ns_36ns_78_3_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_49ns_44ns_92_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_50ns_50ns_99_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_54s_6ns_54_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_71ns_4ns_75_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_73ns_6ns_79_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_77ns_6ns_82_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_78s_54s_131_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_82ns_6ns_87_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_83ns_6ns_89_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_87ns_6ns_92_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_92ns_6ns_97_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_19_8_64_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_1_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'pow_generic_double_s'.
+INFO: [RTMG 210-279] Implementing memory 'cifar10_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cifar10_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_ROM_cud' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cifar10_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_dEe' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cifar10_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_eOg' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cifar10_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cifar10_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17g8j' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cifar10_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22hbi' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cifar10_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27ibs' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cifar10_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32jbC' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cifar10_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arkbM' using auto ROMs.
+INFO: [HLS 200-2168] Implementing memory 'cifar10_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_arralbW' using auto ROMs with 2 copies to ensure enough ports to satisfy II or latency constraints.
+INFO: [RTMG 210-279] Implementing memory 'cifar10_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arramb6' using auto ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.29 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.31 seconds; current allocated memory: 469.719 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_2' pipeline 'VITIS_LOOP_108_1_VITIS_LOOP_110_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_59_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.35 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.37 seconds; current allocated memory: 480.172 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_21' pipeline 'VITIS_LOOP_21_1_VITIS_LOOP_26_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_32ns_32ns_32_36_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_32ns_32ns_32_36_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_26_21'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 481.766 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_53_22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_53_22' pipeline 'VITIS_LOOP_51_1_VITIS_LOOP_53_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_51_1_VITIS_LOOP_53_22'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 484.594 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_23' pipeline 'VITIS_LOOP_108_1_VITIS_LOOP_110_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_59_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_108_1_VITIS_LOOP_110_23'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 486.941 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_93_3_VITIS_LOOP_95_44' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_93_3_VITIS_LOOP_95_44' pipeline 'VITIS_LOOP_93_3_VITIS_LOOP_95_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_93_3_VITIS_LOOP_95_44'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 489.605 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_3' pipeline 'VITIS_LOOP_120_1_VITIS_LOOP_125_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_30s_30s_30_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 490.703 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_71_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_71_1' pipeline 'VITIS_LOOP_71_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_71_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 492.793 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_35' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_35' pipeline 'VITIS_LOOP_120_1_VITIS_LOOP_125_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_30s_30s_30_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_120_1_VITIS_LOOP_125_35'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 493.797 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_71_16' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_71_16' pipeline 'VITIS_LOOP_71_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_71_16'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 495.844 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_140_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_140_1' pipeline 'VITIS_LOOP_140_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'cifar10_Pipeline_VITIS_LOOP_140_1/m_axi_gmem_0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cifar10_Pipeline_VITIS_LOOP_140_1/m_axi_gmem_0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cifar10_Pipeline_VITIS_LOOP_140_1/m_axi_gmem_0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cifar10_Pipeline_VITIS_LOOP_140_1/m_axi_gmem_0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cifar10_Pipeline_VITIS_LOOP_140_1/m_axi_gmem_0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cifar10_Pipeline_VITIS_LOOP_140_1/m_axi_gmem_0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cifar10_Pipeline_VITIS_LOOP_140_1/m_axi_gmem_0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cifar10_Pipeline_VITIS_LOOP_140_1/m_axi_gmem_0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cifar10_Pipeline_VITIS_LOOP_140_1/m_axi_gmem_0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cifar10_Pipeline_VITIS_LOOP_140_1/m_axi_gmem_0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cifar10_Pipeline_VITIS_LOOP_140_1/m_axi_gmem_0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cifar10_Pipeline_VITIS_LOOP_140_1/m_axi_gmem_0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cifar10_Pipeline_VITIS_LOOP_140_1/m_axi_gmem_0_BREADY' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_140_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 496.918 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10_Pipeline_VITIS_LOOP_147_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cifar10_Pipeline_VITIS_LOOP_147_2' pipeline 'VITIS_LOOP_147_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10_Pipeline_VITIS_LOOP_147_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 498.090 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cifar10' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/output_data' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/conv_1_output' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/pooling_1_output' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/conv_2_output' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/pooling_2_output' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/dense_layer_1_output' to 'ap_ovld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/dense_layer_2_output' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/input_data' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/kernel_1_data' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/kernel_2_data' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/weights_1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/weights_2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/input_data_size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/output_data_size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/kernel_1_size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/kernel_2_size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/stride_1_size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/stride_2_size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/neurons_dense_1_size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cifar10/neurons_dense_2_size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'cifar10' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'output_data', 'input_data', 'kernel_1_data', 'kernel_2_data', 'weights_1', 'weights_2', 'input_data_size', 'output_data_size', 'kernel_1_size', 'kernel_2_size', 'stride_1_size', 'stride_2_size', 'neurons_dense_1_size', 'neurons_dense_2_size' to AXI-Lite port control.
+INFO: [RTGEN 206-104] Estimated max fanout for 'cifar10' is 19952, found 2 HDL expressions with this fanout: ((1'b1 == ap_CS_fsm_state53) | (1'b1 == ap_CS_fsm_state54)), ((1'b1 == ap_CS_fsm_state63) | (1'b1 == ap_CS_fsm_state62))
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'ddiv_64ns_64ns_64_59_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fexp_32ns_32ns_32_10_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_30s_30s_30_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_32ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'udiv_32s_32ns_32_36_seq_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cifar10'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 504.555 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.49 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.56 seconds; current allocated memory: 510.207 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-2225] Wrote inferred directives to file /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/proj_cifar10/fsolution/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.3 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.36 seconds; current allocated memory: 522.445 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for cifar10.
+INFO: [VLOG 209-307] Generating Verilog RTL for cifar10.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 136.99 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:21; Allocated memory: 270.676 MB.
+INFO: [HLS 200-112] Total CPU user time: 18.54 seconds. Total CPU system time: 2.15 seconds. Total elapsed time: 23.31 seconds; peak allocated memory: 522.445 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 24s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

@@ -1,0 +1,44 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/run_hls.tcl:10:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ccsds_wavelet_transform" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=size" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/run_hls.tcl:11:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ccsds_wavelet_transform" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/run_hls.tcl:13:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ccsds_wavelet_transform" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=ccsds_wavelet_transform" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/run_hls.tcl:8:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ccsds_wavelet_transform" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi bundle=gmem0 port=A" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/run_hls.tcl:9:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="ccsds_wavelet_transform" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi bundle=gmem1 port=B" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cpu_functions.cpp:55:19" msg_body="pipeline   1 ccsds_wavelet_transform config_compile -pipeline_loops 64VITIS_LOOP_55_1 cpu_functions.cpp:55:19">
+        <args LoopLoc="cpu_functions.cpp:55:19" LoopLoc-DebugLoc="File cpu_functions.cpp Line 55 Column 19" LoopName="VITIS_LOOP_55_1" PragmaFunction="ccsds_wavelet_transform" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cpu_functions.cpp:59:20" msg_body="Loop 'VITIS_LOOP_59_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_59_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="cpu_functions.cpp:77:20" msg_body="Loop 'VITIS_LOOP_77_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_77_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cpu_functions.cpp:3:0" msg_body="Unrolling loop 'VITIS_LOOP_59_2' (cpu_functions.cpp:59:20) in function 'ccsds_wavelet_transform' completely with a factor of 9">
+        <args Factor="9" LoopLoc="cpu_functions.cpp:59:20" LoopName="VITIS_LOOP_59_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="cpu_functions.cpp:3:0" msg_body="Unrolling loop 'VITIS_LOOP_77_3' (cpu_functions.cpp:77:20) in function 'ccsds_wavelet_transform' completely with a factor of 7">
+        <args Factor="7" LoopLoc="cpu_functions.cpp:77:20" LoopName="VITIS_LOOP_77_3"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./cpu_functions.h:26:0" msg_body="Partitioning array 'lowpass_filter_cpu' dimension 1 due to constant index.">
+        <args Dim="1" Value="lowpass_filter_cpu"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-449" msg_severity="INFO" msg_loc="./cpu_functions.h:27:0" msg_body="Partitioning array 'highpass_filter_cpu' dimension 1 due to constant index.">
+        <args Dim="1" Value="highpass_filter_cpu"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./cpu_functions.h:27:0" msg_body="Applying array_partition to '_ZL19highpass_filter_cpu': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL19highpass_filter_cpu"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="./cpu_functions.h:26:0" msg_body="Applying array_partition to '_ZL18lowpass_filter_cpu': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="_ZL18lowpass_filter_cpu"/>
+    </msg>
+</xilinx:hls_fe_msgs>

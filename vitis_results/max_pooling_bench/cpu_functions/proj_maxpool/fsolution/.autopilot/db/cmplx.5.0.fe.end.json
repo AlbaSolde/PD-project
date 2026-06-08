@@ -1,0 +1,45 @@
+{
+    "0": {
+        "name": "max_pooling",
+        "file": "cpu_functions.cpp",
+        "fileloc": "40",
+        "instructions": "42",
+        "total_instructions": "78",
+        "calls": "1",
+        "basicblocks": "7",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "2"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1",
+            "N": "1"
+        }
+    },
+    "1": {
+        "name": "max_pooling_Pipeline_VITIS_LOOP_49_3_VITIS_LOOP_51_4",
+        "file": "cpu_functions.cpp",
+        "fileloc": "42",
+        "instructions": "36",
+        "total_instructions": "36",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

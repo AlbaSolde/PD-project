@@ -1,0 +1,596 @@
+
+
+================================================================
+== Vitis HLS Report for 'convolution'
+================================================================
+* Date:           Mon May  4 21:06:52 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        proj_cifar10
+* Solution:       fsolution (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_21_1  |        ?|        ?|         ?|          -|          -|     ?|        no|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 47
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 43 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 4 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.91>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%block = alloca i32 1" [cpu_functions.cpp:21]   --->   Operation 48 'alloca' 'block' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%n_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %n"   --->   Operation 49 'read' 'n_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%empty = trunc i32 %n_read"   --->   Operation 50 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%sum_loc = alloca i32 1"   --->   Operation 51 'alloca' 'sum_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [2/2] (6.91ns)   --->   "%mul_ln21 = mul i32 %n_read, i32 %n_read" [cpu_functions.cpp:21]   --->   Operation 52 'mul' 'mul_ln21' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 53 [1/1] (1.58ns)   --->   "%store_ln21 = store i32 0, i32 %block" [cpu_functions.cpp:21]   --->   Operation 53 'store' 'store_ln21' <Predicate = true> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 6.91>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%kernel_size_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %kernel_size"   --->   Operation 54 'read' 'kernel_size_read' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i32.i32, i32 %kernel_size_read, i32 31" [cpu_functions.cpp:14]   --->   Operation 55 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (2.55ns)   --->   "%sub_ln14 = sub i32 0, i32 %kernel_size_read" [cpu_functions.cpp:14]   --->   Operation 56 'sub' 'sub_ln14' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%lshr_ln14_1 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %sub_ln14, i32 1, i32 31" [cpu_functions.cpp:14]   --->   Operation 57 'partselect' 'lshr_ln14_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (2.52ns)   --->   "%sub_ln14_1 = sub i31 0, i31 %lshr_ln14_1" [cpu_functions.cpp:14]   --->   Operation 58 'sub' 'sub_ln14_1' <Predicate = true> <Delay = 2.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 59 [1/1] (0.00ns)   --->   "%lshr_ln14_2 = partselect i31 @_ssdm_op_PartSelect.i31.i32.i32.i32, i32 %kernel_size_read, i32 1, i32 31" [cpu_functions.cpp:14]   --->   Operation 59 'partselect' 'lshr_ln14_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 60 [1/1] (0.73ns)   --->   "%kernel_rad = select i1 %tmp, i31 %sub_ln14_1, i31 %lshr_ln14_2" [cpu_functions.cpp:14]   --->   Operation 60 'select' 'kernel_rad' <Predicate = true> <Delay = 0.73> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 61 [2/2] (6.91ns)   --->   "%squared_kernel_size = mul i32 %kernel_size_read, i32 %kernel_size_read" [cpu_functions.cpp:19]   --->   Operation 61 'mul' 'squared_kernel_size' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 62 [1/2] (6.91ns)   --->   "%mul_ln21 = mul i32 %n_read, i32 %n_read" [cpu_functions.cpp:21]   --->   Operation 62 'mul' 'mul_ln21' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%kernel_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %kernel"   --->   Operation 63 'read' 'kernel_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%B_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %B"   --->   Operation 64 'read' 'B_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%A_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %A"   --->   Operation 65 'read' 'A_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 66 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_0, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty, void @empty_20, void @empty_14, i32 16, i32 16, i32 16, i32 16, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0, i32 4"   --->   Operation 66 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 67 [1/2] (6.91ns)   --->   "%squared_kernel_size = mul i32 %kernel_size_read, i32 %kernel_size_read" [cpu_functions.cpp:19]   --->   Operation 67 'mul' 'squared_kernel_size' <Predicate = true> <Delay = 6.91> <CoreInst = "Multiplier">   --->   Core 3 'Multiplier' <Latency = 1> <II = 1> <Delay = 6.91> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 68 [1/1] (2.55ns)   --->   "%add_ln31 = add i32 %n_read, i32 4294967295" [cpu_functions.cpp:31]   --->   Operation 68 'add' 'add_ln31' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%trunc_ln2 = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %B_read, i32 2, i32 31" [cpu_functions.cpp:21]   --->   Operation 69 'partselect' 'trunc_ln2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 70 [1/1] (0.00ns)   --->   "%sext_ln21 = sext i30 %trunc_ln2" [cpu_functions.cpp:21]   --->   Operation 70 'sext' 'sext_ln21' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i32 %gmem, i32 %sext_ln21" [cpu_functions.cpp:21]   --->   Operation 71 'getelementptr' 'gmem_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 72 [1/1] ( I:7.30ns O:7.30ns )   --->   "%empty_92 = writereq i1 @_ssdm_op_WriteReq.m_axi.p1i32, i32 %gmem_addr, i32 %mul_ln21" [cpu_functions.cpp:21]   --->   Operation 72 'writereq' 'empty_92' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 9> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%trunc_ln3 = partselect i30 @_ssdm_op_PartSelect.i30.i32.i32.i32, i32 %kernel_read, i32 2, i32 31" [cpu_functions.cpp:26]   --->   Operation 73 'partselect' 'trunc_ln3' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%br_ln21 = br void %VITIS_LOOP_26_2" [cpu_functions.cpp:21]   --->   Operation 74 'br' 'br_ln21' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 4.14>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%block_1 = load i32 %block" [cpu_functions.cpp:21]   --->   Operation 75 'load' 'block_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 76 [1/1] (2.55ns)   --->   "%icmp_ln21 = icmp_eq  i32 %block_1, i32 %mul_ln21" [cpu_functions.cpp:21]   --->   Operation 76 'icmp' 'icmp_ln21' <Predicate = true> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 77 [1/1] (2.55ns)   --->   "%block_2 = add i32 %block_1, i32 1" [cpu_functions.cpp:21]   --->   Operation 77 'add' 'block_2' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%br_ln21 = br i1 %icmp_ln21, void %VITIS_LOOP_26_2.split, void %for.end38.loopexit" [cpu_functions.cpp:21]   --->   Operation 78 'br' 'br_ln21' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 79 [36/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 79 'udiv' 'x' <Predicate = (!icmp_ln21)> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 80 [36/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 80 'urem' 'y' <Predicate = (!icmp_ln21)> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 81 [1/1] (1.58ns)   --->   "%store_ln21 = store i32 %block_2, i32 %block" [cpu_functions.cpp:21]   --->   Operation 81 'store' 'store_ln21' <Predicate = (!icmp_ln21)> <Delay = 1.58>
+
+State 5 <SV = 4> <Delay = 4.13>
+ST_5 : Operation 82 [35/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 82 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 83 [35/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 83 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 4.13>
+ST_6 : Operation 84 [34/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 84 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 85 [34/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 85 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 4.13>
+ST_7 : Operation 86 [33/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 86 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 87 [33/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 87 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 4.13>
+ST_8 : Operation 88 [32/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 88 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 89 [32/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 89 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 4.13>
+ST_9 : Operation 90 [31/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 90 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 91 [31/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 91 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 4.13>
+ST_10 : Operation 92 [30/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 92 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 93 [30/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 93 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 4.13>
+ST_11 : Operation 94 [29/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 94 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 95 [29/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 95 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 4.13>
+ST_12 : Operation 96 [28/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 96 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 97 [28/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 97 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 4.13>
+ST_13 : Operation 98 [27/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 98 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 99 [27/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 99 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 4.13>
+ST_14 : Operation 100 [26/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 100 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 101 [26/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 101 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 4.13>
+ST_15 : Operation 102 [25/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 102 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 103 [25/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 103 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 4.13>
+ST_16 : Operation 104 [24/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 104 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 105 [24/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 105 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 4.13>
+ST_17 : Operation 106 [23/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 106 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 107 [23/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 107 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 4.13>
+ST_18 : Operation 108 [22/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 108 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 109 [22/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 109 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 4.13>
+ST_19 : Operation 110 [21/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 110 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 111 [21/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 111 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 4.13>
+ST_20 : Operation 112 [20/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 112 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 113 [20/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 113 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 4.13>
+ST_21 : Operation 114 [19/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 114 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 115 [19/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 115 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 4.13>
+ST_22 : Operation 116 [18/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 116 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 117 [18/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 117 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 4.13>
+ST_23 : Operation 118 [17/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 118 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 119 [17/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 119 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 4.13>
+ST_24 : Operation 120 [16/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 120 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 121 [16/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 121 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 4.13>
+ST_25 : Operation 122 [15/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 122 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 123 [15/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 123 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 4.13>
+ST_26 : Operation 124 [14/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 124 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 125 [14/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 125 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 4.13>
+ST_27 : Operation 126 [13/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 126 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 127 [13/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 127 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 4.13>
+ST_28 : Operation 128 [12/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 128 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 129 [12/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 129 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 4.13>
+ST_29 : Operation 130 [11/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 130 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 131 [11/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 131 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 4.13>
+ST_30 : Operation 132 [10/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 132 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 133 [10/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 133 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 4.13>
+ST_31 : Operation 134 [9/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 134 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 135 [9/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 135 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 4.13>
+ST_32 : Operation 136 [8/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 136 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 137 [8/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 137 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 4.13>
+ST_33 : Operation 138 [7/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 138 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 139 [7/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 139 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 4.13>
+ST_34 : Operation 140 [6/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 140 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 141 [6/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 141 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 4.13>
+ST_35 : Operation 142 [5/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 142 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 143 [5/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 143 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 4.13>
+ST_36 : Operation 144 [4/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 144 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 145 [4/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 145 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 36> <Delay = 4.13>
+ST_37 : Operation 146 [3/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 146 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 147 [3/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 147 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 37> <Delay = 4.13>
+ST_38 : Operation 148 [2/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 148 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 149 [2/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 149 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 38> <Delay = 4.13>
+ST_39 : Operation 150 [1/36] (4.13ns)   --->   "%x = udiv i32 %block_1, i32 %n_read" [cpu_functions.cpp:23]   --->   Operation 150 'udiv' 'x' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 151 [1/36] (4.13ns)   --->   "%y = urem i32 %block_1, i32 %n_read" [cpu_functions.cpp:24]   --->   Operation 151 'urem' 'y' <Predicate = true> <Delay = 4.13> <CoreInst = "DivnS_SEQ">   --->   Core 7 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'udiv' 'sdiv' 'urem' 'srem'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 39> <Delay = 4.33>
+ST_40 : Operation 152 [2/2] (4.33ns)   --->   "%call_ln19 = call void @convolution_Pipeline_VITIS_LOOP_26_2, i32 %squared_kernel_size, i30 %trunc_ln3, i32 %gmem, i32 %kernel_size_read, i31 %kernel_rad, i32 %x, i32 %y, i32 %add_ln31, i30 %empty, i32 %A_read, i32 %sum_loc" [cpu_functions.cpp:19]   --->   Operation 152 'call' 'call_ln19' <Predicate = true> <Delay = 4.33> <CoreType = "Generic">   --->   Generic Core
+
+State 41 <SV = 40> <Delay = 0.00>
+ST_41 : Operation 153 [1/2] (0.00ns)   --->   "%call_ln19 = call void @convolution_Pipeline_VITIS_LOOP_26_2, i32 %squared_kernel_size, i30 %trunc_ln3, i32 %gmem, i32 %kernel_size_read, i31 %kernel_rad, i32 %x, i32 %y, i32 %add_ln31, i30 %empty, i32 %A_read, i32 %sum_loc" [cpu_functions.cpp:19]   --->   Operation 153 'call' 'call_ln19' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 42 <SV = 41> <Delay = 7.30>
+ST_42 : Operation 154 [1/1] (0.00ns)   --->   "%specloopname_ln21 = specloopname void @_ssdm_op_SpecLoopName, void @empty_7" [cpu_functions.cpp:21]   --->   Operation 154 'specloopname' 'specloopname_ln21' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 155 [1/1] (0.00ns)   --->   "%sum_loc_load = load i32 %sum_loc"   --->   Operation 155 'load' 'sum_loc_load' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 156 [1/1] (0.00ns)   --->   "%bitcast_ln37 = bitcast i32 %sum_loc_load" [cpu_functions.cpp:37]   --->   Operation 156 'bitcast' 'bitcast_ln37' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 157 [1/1] ( I:7.30ns O:7.30ns )   --->   "%write_ln37 = write void @_ssdm_op_Write.m_axi.p1i32.i32, i32 %gmem_addr, i32 %bitcast_ln37, i4 15" [cpu_functions.cpp:37]   --->   Operation 157 'write' 'write_ln37' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 5> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_42 : Operation 158 [1/1] (0.00ns)   --->   "%br_ln21 = br void %VITIS_LOOP_26_2" [cpu_functions.cpp:21]   --->   Operation 158 'br' 'br_ln21' <Predicate = true> <Delay = 0.00>
+
+State 43 <SV = 4> <Delay = 0.00>
+ST_43 : Operation 159 [5/5] (7.30ns)   --->   "%empty_93 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr" [cpu_functions.cpp:39]   --->   Operation 159 'writeresp' 'empty_93' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 44 <SV = 5> <Delay = 0.00>
+ST_44 : Operation 160 [4/5] (7.30ns)   --->   "%empty_93 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr" [cpu_functions.cpp:39]   --->   Operation 160 'writeresp' 'empty_93' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 45 <SV = 6> <Delay = 0.00>
+ST_45 : Operation 161 [3/5] (7.30ns)   --->   "%empty_93 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr" [cpu_functions.cpp:39]   --->   Operation 161 'writeresp' 'empty_93' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 46 <SV = 7> <Delay = 0.00>
+ST_46 : Operation 162 [2/5] (7.30ns)   --->   "%empty_93 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr" [cpu_functions.cpp:39]   --->   Operation 162 'writeresp' 'empty_93' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 47 <SV = 8> <Delay = 7.30>
+ST_47 : Operation 163 [1/5] ( I:7.30ns O:7.30ns )   --->   "%empty_93 = writeresp i1 @_ssdm_op_WriteResp.m_axi.p1i32, i32 %gmem_addr" [cpu_functions.cpp:39]   --->   Operation 163 'writeresp' 'empty_93' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_47 : Operation 164 [1/1] (0.00ns)   --->   "%ret_ln39 = ret" [cpu_functions.cpp:39]   --->   Operation 164 'ret' 'ret_ln39' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 6.912ns
+The critical path consists of the following:
+	wire read operation ('n') on port 'n' [9]  (0.000 ns)
+	'mul' operation 32 bit ('mul_ln21', cpu_functions.cpp:21) [23]  (6.912 ns)
+
+ <State 2>: 6.912ns
+The critical path consists of the following:
+	wire read operation ('kernel_size') on port 'kernel_size' [8]  (0.000 ns)
+	'mul' operation 32 bit ('squared_kernel_size', cpu_functions.cpp:19) [22]  (6.912 ns)
+
+ <State 3>: 7.300ns
+The critical path consists of the following:
+	wire read operation ('B') on port 'B' [11]  (0.000 ns)
+	'getelementptr' operation 32 bit ('gmem_addr', cpu_functions.cpp:21) [27]  (0.000 ns)
+	bus request operation ('empty_92', cpu_functions.cpp:21) on port 'gmem' (cpu_functions.cpp:21) [28]  (7.300 ns)
+
+ <State 4>: 4.140ns
+The critical path consists of the following:
+	'load' operation 32 bit ('block', cpu_functions.cpp:21) on local variable 'block', cpu_functions.cpp:21 [33]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln21', cpu_functions.cpp:21) [34]  (2.552 ns)
+	'store' operation ('store_ln21', cpu_functions.cpp:21) of variable 'block', cpu_functions.cpp:21 32 bit on local variable 'block', cpu_functions.cpp:21 [45]  (1.588 ns)
+
+ <State 5>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 6>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 7>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 8>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 9>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 10>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 11>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 12>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 13>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 14>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 15>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 16>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 17>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 18>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 19>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 20>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 21>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 22>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 23>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 24>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 25>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 26>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 27>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 28>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 29>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 30>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 31>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 32>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 33>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 34>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 35>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 36>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 37>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 38>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 39>: 4.135ns
+The critical path consists of the following:
+	'udiv' operation 32 bit ('x', cpu_functions.cpp:23) [39]  (4.135 ns)
+
+ <State 40>: 4.336ns
+The critical path consists of the following:
+	'call' operation ('call_ln19', cpu_functions.cpp:19) to 'convolution_Pipeline_VITIS_LOOP_26_2' [41]  (4.336 ns)
+
+ <State 41>: 0.000ns
+The critical path consists of the following:
+
+ <State 42>: 7.300ns
+The critical path consists of the following:
+	'load' operation 32 bit ('sum_loc_load') on local variable 'sum_loc' [42]  (0.000 ns)
+	bus write operation ('write_ln37', cpu_functions.cpp:37) on port 'gmem' (cpu_functions.cpp:37) [44]  (7.300 ns)
+
+ <State 43>: 0.000ns
+The critical path consists of the following:
+
+ <State 44>: 0.000ns
+The critical path consists of the following:
+
+ <State 45>: 0.000ns
+The critical path consists of the following:
+
+ <State 46>: 0.000ns
+The critical path consists of the following:
+
+ <State 47>: 7.300ns
+The critical path consists of the following:
+	bus response operation ('empty_93', cpu_functions.cpp:39) on port 'gmem' (cpu_functions.cpp:39) [48]  (7.300 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

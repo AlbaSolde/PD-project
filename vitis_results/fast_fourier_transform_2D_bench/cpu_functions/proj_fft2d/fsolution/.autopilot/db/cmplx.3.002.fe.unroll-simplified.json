@@ -1,0 +1,312 @@
+{
+  "0": {
+    "basicblocks": 16,
+    "calls": "14 3",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "cpu_functions_vitis.cpp",
+    "fileloc": 57,
+    "instructions": 83,
+    "loads": {
+      "L": 2,
+      "T": 4
+    },
+    "memory_accesses": 12,
+    "name": "FFT2D_flat",
+    "stores": {
+      "L": 2,
+      "T": 4
+    },
+    "total_instructions": 1971
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "16",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "sincosfloat.cpp",
+    "fileloc": 7,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "sinf",
+    "total_instructions": 424
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_normalize.h",
+    "fileloc": 69,
+    "instructions": 5,
+    "memory_accesses": 0,
+    "name": "clz<29, 58, 0>",
+    "total_instructions": 5
+  },
+  "11": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 336,
+    "instructions": 4,
+    "memory_accesses": 0,
+    "name": "set_mantissa",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4
+  },
+  "12": {
+    "basicblocks": 6,
+    "calls": "13 18 17 10",
+    "control_depth": 0,
+    "def_use_depth": 9,
+    "file": "hls_range_redux.h",
+    "fileloc": 431,
+    "instructions": 67,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 0,
+    "name": "range_redux_payne_hanek_hotbm<29, float, 29, 29>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 100
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 283,
+    "instructions": 8,
+    "memory_accesses": 0,
+    "name": "fp_struct",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 8
+  },
+  "14": {
+    "basicblocks": 18,
+    "calls": "8 1",
+    "control_depth": 1,
+    "def_use_depth": 7,
+    "file": "cpu_functions_vitis.cpp",
+    "fileloc": 16,
+    "instructions": 96,
+    "loads": {
+      "L": 8
+    },
+    "memory_accesses": 8,
+    "name": "fft1D",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 944
+  },
+  "15": {
+    "basicblocks": 9,
+    "calls": "5 11 2",
+    "control_depth": 0,
+    "def_use_depth": 5,
+    "file": "x_hls_float_utils.h",
+    "fileloc": 256,
+    "instructions": 78,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 4,
+    "name": "scaled_fixed2ieee<29, 1>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 103
+  },
+  "16": {
+    "basicblocks": 1,
+    "calls": "19",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hls_hotbm_float.cpp",
+    "fileloc": 122,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "sin",
+    "total_instructions": 422
+  },
+  "17": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 5,
+    "file": "hls_range_redux.h",
+    "fileloc": 373,
+    "instructions": 16,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "table_lookup_4oPi_hotbm<23, 29>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 16
+  },
+  "18": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 316,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "expv",
+    "total_instructions": 4
+  },
+  "19": {
+    "basicblocks": 18,
+    "calls": "13 12 4 15 13 2",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_hotbm.h",
+    "fileloc": 209,
+    "instructions": 107,
+    "loads": {
+      "G": 4,
+      "L": 8
+    },
+    "memory_accesses": 0,
+    "name": "sin_or_cos<float>",
+    "stores": {
+      "L": 11
+    },
+    "total_instructions": 420
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "9",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "x_hls_utils.h",
+    "fileloc": 346,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "to_ieee",
+    "total_instructions": 19
+  },
+  "3": {
+    "basicblocks": 18,
+    "calls": "8 1",
+    "control_depth": 1,
+    "def_use_depth": 7,
+    "file": "cpu_functions_vitis.cpp",
+    "fileloc": 16,
+    "instructions": 96,
+    "loads": {
+      "L": 8
+    },
+    "memory_accesses": 8,
+    "name": "fft1D",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 944
+  },
+  "4": {
+    "basicblocks": 4,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 9,
+    "file": "hls_hotbm_float.cpp",
+    "fileloc": 8,
+    "instructions": 75,
+    "loads": {
+      "G": 5,
+      "L": 4
+    },
+    "memory_accesses": 0,
+    "name": "sin_or_cos_approximation<29, 29>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 75
+  },
+  "5": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hls_normalize.h",
+    "fileloc": 79,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "clz",
+    "total_instructions": 2
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "19",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "hls_hotbm_float.cpp",
+    "fileloc": 126,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "cos",
+    "total_instructions": 422
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 5,
+    "file": "x_hls_utils.h",
+    "fileloc": 309,
+    "instructions": 12,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 0,
+    "name": "data",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 12
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "6",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "sincosfloat.cpp",
+    "fileloc": 11,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "cosf",
+    "total_instructions": 424
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "7",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 322,
+    "instructions": 5,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "to_float",
+    "total_instructions": 17
+  }
+}

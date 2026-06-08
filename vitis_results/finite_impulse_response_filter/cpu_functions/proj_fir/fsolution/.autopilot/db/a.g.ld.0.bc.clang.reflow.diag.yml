@@ -1,0 +1,130 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_vector_convolution_ir
+Args:            
+  - Callee:          'vector_convolution(float const*, float*, float*, int, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 40, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_vector_convolution_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 49, Column: 16 }
+Function:        _Z18vector_convolutionPKfPfS1_ii
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          kernel
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 49, Column: 46 }
+Function:        _Z18vector_convolutionPKfPfS1_ii
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 49, Column: 13 }
+Function:        _Z18vector_convolutionPKfPfS1_ii
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 49, Column: 13 }
+Function:        _Z18vector_convolutionPKfPfS1_ii
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 49, Column: 16 }
+Function:        _Z18vector_convolutionPKfPfS1_ii
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          kernel
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 49, Column: 46 }
+Function:        _Z18vector_convolutionPKfPfS1_ii
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 49, Column: 13 }
+Function:        _Z18vector_convolutionPKfPfS1_ii
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 49, Column: 13 }
+Function:        _Z18vector_convolutionPKfPfS1_ii
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_45_2
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:45:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 45, Column: 20 }
+Function:        _Z18vector_convolutionPKfPfS1_ii
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  vector_convolution
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_45_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:45:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 45, Column: 20 }
+  - String:          ' '
+...

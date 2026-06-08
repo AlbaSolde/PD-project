@@ -1,0 +1,277 @@
+
+
+================================================================
+== Synthesis Summary Report of 'lrn'
+================================================================
++ General Information: 
+    * Date:           Mon May  4 18:44:43 2026
+    * Version:        2025.2 (Build 6295257 on Nov 14 2025)
+    * Project:        proj_lrn
+    * Solution:       fsolution (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
+* Performance & Resource Estimates: 
++-------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+----------+----------+-------------+-------------+-----+
+|         Modules         | Issue|               | Iteration|         | Trip |          |       Latency       |      |          |          |             |             |     |
+|         & Loops         | Type | Violation Type|  Latency | Interval| Count| Pipelined| (cycles)|    (ns)   | Slack|   BRAM   |    DSP   |      FF     |     LUT     | URAM|
++-------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+----------+----------+-------------+-------------+-----+
+|+ lrn                    |     -|              -|         -|      257|     -|        no|      256|  2.473e+03|  0.07|  30 (10%)|  99 (45%)|  17164 (16%)|  16237 (30%)|    -|
+| + pow_generic_double_s  |     -|              -|         -|        1|     -|       yes|       88|    850.080|  0.07|  30 (10%)|  85 (38%)|  15558 (14%)|  13141 (24%)|    -|
++-------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+----------+----------+-------------+-------------+-----+
+    Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++------+---------+-----------+----------+
+| Port | Mode    | Direction | Bitwidth |
++------+---------+-----------+----------+
+| A    | ap_none | in        | 32       |
+| B    | ap_vld  | out       | 32       |
+| size | ap_none | in        | 32       |
++------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------+
+| Argument | Direction | Datatype            |
++----------+-----------+---------------------+
+| A        | in        | float const *       |
+| B        | out       | float*              |
+| size     | in        | unsigned int const  |
++----------+-----------+---------------------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+
+| Argument | HW Interface | HW Type |
++----------+--------------+---------+
+| A        | A            | port    |
+| B        | B            | port    |
+| B        | B_ap_vld     | port    |
+| size     | size         | port    |
++----------+--------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------+-----+--------+-------------------+-----------+------------------------+---------+
+| Name                                  | DSP | Pragma | Variable          | Op        | Impl                   | Latency |
++---------------------------------------+-----+--------+-------------------+-----------+------------------------+---------+
+| + lrn                                 | 99  |        |                   |           |                        |         |
+|   fpext_32ns_64_2_no_dsp_1_U55        |     |        | conv              | fpext     | auto                   | 1       |
+|   dmul_64ns_64ns_64_7_max_dsp_1_U57   | 11  |        | mul               | dmul      | maxdsp                 | 6       |
+|   dadd_64ns_64ns_64_8_full_dsp_1_U56  | 3   |        | add               | dadd      | fulldsp                | 7       |
+|   ddiv_64ns_64ns_64_59_no_dsp_1_U58   |     |        | div               | ddiv      | fabric                 | 58      |
+|   fptrunc_64ns_32_2_no_dsp_1_U54      |     |        | conv1             | fptrunc   | auto                   | 1       |
+|   icmp_ln47_fu_143_p2                 |     |        | icmp_ln47         | seteq     | auto                   | 0       |
+|  + pow_generic_double_s               | 85  |        |                   |           |                        |         |
+|    b_exp_fu_1356_p2                   |     |        | b_exp             | add       | fabric                 | 0       |
+|    m_exp_fu_1740_p2                   |     |        | m_exp             | add       | fabric                 | 0       |
+|    y_is_0_fu_1746_p2                  |     |        | y_is_0            | seteq     | auto                   | 0       |
+|    icmp_ln340_fu_1362_p2              |     |        | icmp_ln340        | seteq     | auto                   | 0       |
+|    icmp_ln340_1_fu_711_p2             |     |        | icmp_ln340_1      | seteq     | auto                   | 0       |
+|    x_is_1_fu_1368_p2                  |     |        | x_is_1            | and       | auto                   | 0       |
+|    xor_ln341_fu_1751_p2               |     |        | xor_ln341         | xor       | auto                   | 0       |
+|    x_is_p1_fu_1756_p2                 |     |        | x_is_p1           | and       | auto                   | 0       |
+|    x_is_n1_fu_1761_p2                 |     |        | x_is_n1           | and       | auto                   | 0       |
+|    icmp_ln18_fu_1765_p2               |     |        | icmp_ln18         | seteq     | auto                   | 0       |
+|    icmp_ln18_1_fu_1636_p2             |     |        | icmp_ln18_1       | seteq     | auto                   | 0       |
+|    y_is_inf_fu_1770_p2                |     |        | y_is_inf          | and       | auto                   | 0       |
+|    icmp_ln18_2_fu_1641_p2             |     |        | icmp_ln18_2       | setne     | auto                   | 0       |
+|    y_is_NaN_fu_1775_p2                |     |        | y_is_NaN          | and       | auto                   | 0       |
+|    icmp_ln18_3_fu_1373_p2             |     |        | icmp_ln18_3       | seteq     | auto                   | 0       |
+|    icmp_ln18_4_fu_716_p2              |     |        | icmp_ln18_4       | setne     | auto                   | 0       |
+|    x_is_NaN_fu_1780_p2                |     |        | x_is_NaN          | and       | auto                   | 0       |
+|    x_is_0_fu_1378_p2                  |     |        | x_is_0            | seteq     | auto                   | 0       |
+|    x_is_inf_fu_1784_p2                |     |        | x_is_inf          | and       | auto                   | 0       |
+|    or_ln357_fu_1788_p2                |     |        | or_ln357          | or        | auto                   | 0       |
+|    xor_ln357_fu_1793_p2               |     |        | xor_ln357         | xor       | auto                   | 0       |
+|    x_is_neg_fu_1799_p2                |     |        | x_is_neg          | and       | auto                   | 0       |
+|    icmp_ln372_fu_1804_p2              |     |        | icmp_ln372        | setgt     | auto                   | 0       |
+|    add_ln373_fu_1573_p2               |     |        | add_ln373         | add       | fabric                 | 0       |
+|    lshr_ln373_fu_1649_p2              |     |        | lshr_ln373        | lshr      | auto_pipe              | 0       |
+|    and_ln373_1_fu_1655_p2             |     |        | and_ln373_1       | and       | auto                   | 0       |
+|    icmp_ln373_fu_1660_p2              |     |        | icmp_ln373        | seteq     | auto                   | 0       |
+|    or_ln373_fu_1818_p2                |     |        | or_ln373          | or        | auto                   | 0       |
+|    xor_ln373_fu_1824_p2               |     |        | xor_ln373         | xor       | auto                   | 0       |
+|    sparsemux_7_2_1_1_0_U17            |     |        | y_is_int          | sparsemux | onehotencoding_realdef | 0       |
+|    and_ln378_fu_1857_p2               |     |        | and_ln378         | and       | auto                   | 0       |
+|    or_ln378_fu_1863_p2                |     |        | or_ln378          | or        | auto                   | 0       |
+|    or_ln378_1_fu_1869_p2              |     |        | or_ln378_1        | or        | auto                   | 0       |
+|    or_ln386_fu_1875_p2                |     |        | or_ln386          | or        | auto                   | 0       |
+|    xor_ln386_fu_1881_p2               |     |        | xor_ln386         | xor       | auto                   | 0       |
+|    and_ln386_fu_1887_p2               |     |        | and_ln386         | and       | auto                   | 0       |
+|    or_ln386_1_fu_1893_p2              |     |        | or_ln386_1        | or        | auto                   | 0       |
+|    or_ln386_2_fu_1899_p2              |     |        | or_ln386_2        | or        | auto                   | 0       |
+|    y_is_pos_fu_1905_p2                |     |        | y_is_pos          | xor       | auto                   | 0       |
+|    y_is_pinf_fu_1910_p2               |     |        | y_is_pinf         | and       | auto                   | 0       |
+|    y_is_ninf_fu_1916_p2               |     |        | y_is_ninf         | and       | auto                   | 0       |
+|    x_abs_greater_1_fu_1921_p2         |     |        | x_abs_greater_1   | xor       | auto                   | 0       |
+|    icmp_ln421_fu_2045_p2              |     |        | icmp_ln421        | seteq     | auto                   | 0       |
+|    icmp_ln422_fu_2050_p2              |     |        | icmp_ln422        | setgt     | auto                   | 0       |
+|    icmp_ln422_1_fu_2055_p2            |     |        | icmp_ln422_1      | setlt     | auto                   | 0       |
+|    y_is_odd_fu_1585_p2                |     |        | sub_ln422         | sub       | fabric                 | 0       |
+|    bitselect_1ns_52ns_6ns_1_1_0_U16   |     |        | y_is_odd          | bitselect | auto                   | 0       |
+|    xor_ln421_fu_2060_p2               |     |        | xor_ln421         | xor       | auto                   | 0       |
+|    and_ln422_fu_2066_p2               |     |        | and_ln422         | and       | auto                   | 0       |
+|    and_ln422_1_fu_2072_p2             |     |        | and_ln422_1       | and       | auto                   | 0       |
+|    sparsemux_7_2_1_1_0_U18            |     |        | y_is_odd_1        | sparsemux | onehotencoding_realdef | 0       |
+|    r_sign_fu_2105_p2                  |     |        | r_sign            | and       | auto                   | 0       |
+|    and_ln431_fu_1926_p2               |     |        | and_ln431         | and       | auto                   | 0       |
+|    and_ln431_1_fu_1932_p2             |     |        | and_ln431_1       | and       | auto                   | 0       |
+|    and_ln431_2_fu_1938_p2             |     |        | and_ln431_2       | and       | auto                   | 0       |
+|    or_ln431_fu_1942_p2                |     |        | or_ln431          | or        | auto                   | 0       |
+|    and_ln431_3_fu_1948_p2             |     |        | and_ln431_3       | and       | auto                   | 0       |
+|    or_ln431_1_fu_1953_p2              |     |        | or_ln431_1        | or        | auto                   | 0       |
+|    or_ln431_2_fu_1959_p2              |     |        | or_ln431_2        | or        | auto                   | 0       |
+|    xor_ln431_fu_2677_p2               |     |        | xor_ln431         | xor       | auto                   | 0       |
+|    and_ln438_fu_1965_p2               |     |        | and_ln438         | and       | auto                   | 0       |
+|    and_ln438_1_fu_1971_p2             |     |        | and_ln438_1       | and       | auto                   | 0       |
+|    and_ln438_2_fu_1976_p2             |     |        | and_ln438_2       | and       | auto                   | 0       |
+|    and_ln438_3_fu_1981_p2             |     |        | and_ln438_3       | and       | auto                   | 0       |
+|    or_ln438_fu_1986_p2                |     |        | or_ln438          | or        | auto                   | 0       |
+|    or_ln438_1_fu_1992_p2              |     |        | or_ln438_1        | or        | auto                   | 0       |
+|    or_ln438_2_fu_1998_p2              |     |        | or_ln438_2        | or        | auto                   | 0       |
+|    xor_ln438_fu_2682_p2               |     |        | xor_ln438         | xor       | auto                   | 0       |
+|    b_exp_1_fu_1391_p2                 |     |        | b_exp_1           | add       | fabric                 | 0       |
+|    grp_fu_632_p0                      |     |        | b_frac_2          | select    | auto_sel               | 0       |
+|    b_exp_2_fu_1397_p3                 |     |        | b_exp_2           | select    | auto_sel               | 0       |
+|    mul_12s_80ns_90_5_0_U1             | 5   |        | Elog2             | mul       | auto                   | 4       |
+|    mul_54s_6ns_54_5_0_U7              | 3   |        | mul_ln516         | mul       | auto                   | 4       |
+|    select_ln42_fu_817_p3              |     |        | select_ln42       | select    | auto_sel               | 0       |
+|    mul_71ns_4ns_75_5_0_U15            |     |        | mul_ln44          | mul       | auto                   | 4       |
+|    mul_73ns_6ns_79_5_0_U8             | 4   |        | mul_ln44_1        | mul       | auto                   | 4       |
+|    mul_83ns_6ns_89_5_0_U12            | 5   |        | mul_ln44_2        | mul       | auto                   | 4       |
+|    mul_92ns_6ns_97_5_0_U14            | 5   |        | mul_ln44_3        | mul       | auto                   | 4       |
+|    add_ln44_4_fu_1167_p2              |     |        | add_ln44_4        | add       | fabric                 | 0       |
+|    mul_87ns_6ns_92_5_0_U13            | 5   |        | mul_ln44_4        | mul       | auto                   | 4       |
+|    sub_ln44_4_fu_1192_p2              |     |        | sub_ln44_4        | sub       | fabric                 | 0       |
+|    add_ln44_5_fu_1253_p2              |     |        | add_ln44_5        | add       | fabric                 | 0       |
+|    mul_82ns_6ns_87_5_0_U11            | 5   |        | mul_ln44_5        | mul       | auto                   | 4       |
+|    sub_ln44_5_fu_1278_p2              |     |        | sub_ln44_5        | sub       | fabric                 | 0       |
+|    add_ln44_6_fu_1339_p2              |     |        | add_ln44_6        | add       | fabric                 | 0       |
+|    mul_77ns_6ns_82_5_0_U9             | 4   |        | mul_ln44_6        | mul       | auto                   | 4       |
+|    sub_ln44_6_fu_1447_p2              |     |        | sub_ln44_6        | sub       | fabric                 | 0       |
+|    add_ln209_fu_1504_p2               |     |        | add_ln209         | add       | fabric                 | 0       |
+|    add_ln209_1_fu_1509_p2             |     |        | add_ln209_1       | add       | fabric                 | 0       |
+|    add_ln209_4_fu_1478_p2             |     |        | add_ln209_4       | add       | fabric                 | 0       |
+|    mul_40ns_40ns_79_2_0_U3            | 5   |        | mul_ln522         | mul       | auto                   | 1       |
+|    sub_ln522_fu_1620_p2               |     |        | sub_ln522         | sub       | fabric                 | 0       |
+|    e_frac_1_fu_1716_p2                |     |        | e_frac_1          | sub       | fabric                 | 0       |
+|    e_frac_2_fu_1722_p3                |     |        | e_frac_2          | select    | auto_sel               | 0       |
+|    mul_78s_54s_131_5_0_U10            | 15  |        | m_frac_l          | mul       | auto                   | 4       |
+|    sub_ln545_fu_2004_p2               |     |        | sub_ln545         | sub       | fabric                 | 0       |
+|    select_ln545_fu_2013_p3            |     |        | select_ln545      | select    | auto_sel               | 0       |
+|    ashr_ln545_fu_2117_p2              |     |        | ashr_ln545        | ashr      | auto_pipe              | 0       |
+|    shl_ln545_fu_2122_p2               |     |        | shl_ln545         | shl       | auto_pipe              | 0       |
+|    m_fix_l_fu_2135_p3                 |     |        | m_fix_l           | select    | auto_sel               | 0       |
+|    shl_ln546_fu_2224_p2               |     |        | shl_ln546         | shl       | auto_pipe              | 0       |
+|    ashr_ln546_fu_2229_p2              |     |        | ashr_ln546        | ashr      | auto_pipe              | 0       |
+|    m_fix_back_fu_2237_p3              |     |        | m_fix_back        | select    | auto_sel               | 0       |
+|    shl_ln552_fu_2149_p2               |     |        | shl_ln552         | shl       | auto_pipe              | 0       |
+|    select_ln553_fu_2029_p3            |     |        | select_ln553      | select    | auto_sel               | 0       |
+|    shl_ln553_fu_2161_p2               |     |        | shl_ln553         | shl       | auto_pipe              | 0       |
+|    ashr_ln553_fu_2166_p2              |     |        | ashr_ln553        | ashr      | auto_pipe              | 0       |
+|    select_ln553_1_fu_2171_p3          |     |        | select_ln553_1    | select    | auto_sel               | 0       |
+|    m_fix_0_in_in_v_v_fu_2178_p3       |     |        | m_fix_0_in_in_v_v | select    | auto_sel               | 0       |
+|    mac_muladd_16s_15ns_19s_31_4_0_U20 | 1   |        | mul_ln563         | mul       | dsp_slice              | 3       |
+|    mac_muladd_16s_15ns_19s_31_4_0_U20 | 1   |        | add_ln563         | add       | dsp_slice              | 3       |
+|    icmp_ln563_fu_2281_p2              |     |        | icmp_ln563        | setne     | auto                   | 0       |
+|    add_ln563_1_fu_2287_p2             |     |        | add_ln563_1       | add       | fabric                 | 0       |
+|    select_ln563_fu_2293_p3            |     |        | select_ln563      | select    | auto_sel               | 0       |
+|    r_exp_fu_2301_p3                   |     |        | r_exp             | select    | auto_sel               | 0       |
+|    mul_13s_71s_71_5_0_U2              | 4   |        | mul_ln568         | mul       | auto                   | 4       |
+|    sub_ln574_fu_2323_p2               |     |        | sub_ln574         | sub       | fabric                 | 0       |
+|    exp_Z4_m_1_fu_2398_p2              |     |        | exp_Z4_m_1        | add       | fabric                 | 0       |
+|    mul_43ns_36ns_78_5_0_U4            | 6   |        | mul_ln258         | mul       | auto                   | 4       |
+|    add_ln261_fu_2441_p2               |     |        | add_ln261         | add       | fabric                 | 0       |
+|    exp_Z2P_m_1_fu_2450_p2             |     |        | exp_Z2P_m_1       | add       | fabric                 | 0       |
+|    mul_49ns_44ns_92_5_0_U5            | 9   |        | mul_ln277         | mul       | auto                   | 4       |
+|    add_ln280_fu_2514_p2               |     |        | add_ln280         | add       | fabric                 | 0       |
+|    exp_Z1P_m_1_l_fu_2523_p2           |     |        | exp_Z1P_m_1_l     | add       | fabric                 | 0       |
+|    add_ln616_fu_2557_p2               |     |        | add_ln616         | add       | fabric                 | 0       |
+|    mul_50ns_50ns_99_5_0_U6            | 9   |        | mul_ln616         | mul       | auto                   | 4       |
+|    add_ln616_1_fu_2572_p2             |     |        | add_ln616_1       | add       | fabric                 | 0       |
+|    r_exp_1_fu_2586_p2                 |     |        | r_exp_1           | add       | fabric                 | 0       |
+|    r_exp_2_fu_2591_p3                 |     |        | r_exp_2           | select    | auto_sel               | 0       |
+|    icmp_ln628_fu_2246_p2              |     |        | icmp_ln628        | setne     | auto                   | 0       |
+|    and_ln628_fu_2709_p2               |     |        | and_ln628         | and       | auto                   | 0       |
+|    icmp_ln628_1_fu_2713_p2            |     |        | icmp_ln628_1      | setgt     | auto                   | 0       |
+|    or_ln628_fu_2718_p2                |     |        | or_ln628          | or        | auto                   | 0       |
+|    icmp_ln645_fu_2724_p2              |     |        | icmp_ln645        | setlt     | auto                   | 0       |
+|    out_sig_fu_2628_p3                 |     |        | out_sig           | select    | auto_sel               | 0       |
+|    out_exp_fu_2729_p2                 |     |        | out_exp           | add       | fabric                 | 0       |
+|    or_ln386_3_fu_2640_p2              |     |        | or_ln386_3        | or        | auto                   | 0       |
+|    xor_ln386_1_fu_2644_p2             |     |        | xor_ln386_1       | xor       | auto                   | 0       |
+|    and_ln342_fu_2650_p2               |     |        | and_ln342         | and       | auto                   | 0       |
+|    xor_ln386_2_fu_2746_p2             |     |        | xor_ln386_2       | xor       | auto                   | 0       |
+|    and_ln386_1_fu_2751_p2             |     |        | and_ln386_1       | and       | auto                   | 0       |
+|    xor_ln342_fu_2655_p2               |     |        | xor_ln342         | xor       | auto                   | 0       |
+|    and_ln342_1_fu_2660_p2             |     |        | and_ln342_1       | and       | auto                   | 0       |
+|    and_ln431_4_fu_2756_p2             |     |        | and_ln431_4       | and       | auto                   | 0       |
+|    and_ln431_5_fu_2760_p2             |     |        | and_ln431_5       | and       | auto                   | 0       |
+|    and_ln438_4_fu_2765_p2             |     |        | and_ln438_4       | and       | auto                   | 0       |
+|    and_ln438_5_fu_2770_p2             |     |        | and_ln438_5       | and       | auto                   | 0       |
+|    and_ln628_1_fu_2776_p2             |     |        | and_ln628_1       | and       | auto                   | 0       |
+|    and_ln629_fu_2782_p2               |     |        | and_ln629         | and       | auto                   | 0       |
+|    xor_ln629_fu_2787_p2               |     |        | xor_ln629         | xor       | auto                   | 0       |
+|    and_ln629_1_fu_2792_p2             |     |        | and_ln629_1       | and       | auto                   | 0       |
+|    xor_ln628_fu_2798_p2               |     |        | xor_ln628         | xor       | auto                   | 0       |
+|    and_ln645_fu_2804_p2               |     |        | and_ln645         | and       | auto                   | 0       |
+|    and_ln645_1_fu_2810_p2             |     |        | and_ln645_1       | and       | auto                   | 0       |
+|    sparsemux_19_8_64_1_0_U19          |     |        | retval_2          | sparsemux | onehotencoding_realdef | 0       |
++---------------------------------------+-----+--------+-------------------+-----------+------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++----------------------------------------------------------------------------+--------+------+------+------+--------+-----------------------------------------------------------------------+------+---------+------------------+
+| Name                                                                       | Usage  | Type | BRAM | URAM | Pragma | Variable                                                              | Impl | Latency | Bitwidth, Depth, |
+|                                                                            |        |      |      |      |        |                                                                       |      |         | Banks            |
++----------------------------------------------------------------------------+--------+------+------+------+--------+-----------------------------------------------------------------------+------+---------+------------------+
+| + lrn                                                                      |        |      | 30   | 0    |        |                                                                       |      |         |                  |
+|  + pow_generic_double_s                                                    |        |      | 30   | 0    |        |                                                                       |      |         |                  |
+|    pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array_U | rom_1p |      |      |      |        | pow_reduce_anonymous_namespace_log_inverse_lut_table_pow_0_5_64_array | auto | 1       | 6, 64, 1         |
+|    pow_reduce_anonymous_namespace_log0_lut_table_array_U                   | rom_1p |      | 4    |      |        | pow_reduce_anonymous_namespace_log0_lut_table_array                   | auto | 1       | 109, 64, 1       |
+|    pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array_U    | rom_1p |      | 3    |      |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_4_16_array    | auto | 1       | 105, 16, 1       |
+|    pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array_U    | rom_1p |      | 3    |      |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_6_64_array    | auto | 1       | 102, 64, 1       |
+|    pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array_U   | rom_1p |      | 3    |      |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12_6_64_array   | auto | 1       | 97, 64, 1        |
+|    pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17_6_64_array_U   | rom_1p |      | 3    |      |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17_6_64_array   | auto | 1       | 92, 64, 1        |
+|    pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22_6_64_array_U   | rom_1p |      | 3    |      |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22_6_64_array   | auto | 1       | 87, 64, 1        |
+|    pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27_6_64_array_U   | rom_1p |      | 3    |      |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27_6_64_array   | auto | 1       | 82, 64, 1        |
+|    pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32_6_64_array_U   | rom_1p |      | 3    |      |        | pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32_6_64_array   | auto | 1       | 77, 64, 1        |
+|    pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array_U           | rom_1p |      | 2    |      |        | pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_array           | auto | 1       | 58, 256, 1       |
+|    pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_array_U             | rom_2p |      | 1    |      |        | pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_array             | auto | 1       | 26, 256, 1       |
+|    pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array_U             | rom_1p |      | 2    |      |        | pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_array             | auto | 1       | 42, 256, 1       |
++----------------------------------------------------------------------------+--------+------+------+------+--------+-----------------------------------------------------------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Inferred Pragmas
++----------+---------+------------------------------------------------------------------------------+-------------------------------+
+| Type     | Options | Location                                                                     | Inferred From                 |
++----------+---------+------------------------------------------------------------------------------+-------------------------------+
+| PIPELINE |         | loop VITIS_LOOP_49_2 (cpu_functions.cpp:49:20) in lrn (cpu_functions.cpp:49) | syn.compile.pipeline_loops=64 |
++----------+---------+------------------------------------------------------------------------------+-------------------------------+
+
+

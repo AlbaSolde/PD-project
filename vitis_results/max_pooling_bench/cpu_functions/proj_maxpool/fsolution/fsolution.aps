@@ -1,0 +1,18 @@
+<AutoPilot:solution xmlns:AutoPilot="com.autoesl.autopilot.solution">
+    <clockList>
+        <clock name="default" period="10.0" default="false"/>
+    </clockList>
+    <name>
+        <value string="fsolution"/>
+    </name>
+    <project>
+        <value string="proj_maxpool"/>
+    </project>
+    <flowTarget value="vivado"/>
+    <targetInfo>
+        <TargetInfo value="xc7z020:-clg484:-1"/>
+    </targetInfo>
+    <libraryList>
+        <library value="xilinx/zynq/zynq" name="DefaultPlatform"/>
+    </libraryList>
+</AutoPilot:solution>

@@ -1,0 +1,116 @@
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project proj_maxpool 
+WARNING: [HLS 200-2182] The 'proj_maxpool' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Opening solution '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool'.
+INFO: [HLS 200-1510] Running: set_top max_pooling 
+INFO: [HLS 200-1510] Running: add_files cpu_functions.cpp -cflags -DFLOAT 
+INFO: [HLS 200-10] Adding design file 'cpu_functions.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution fsolution 
+INFO: [HLS 200-10] Opening solution '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.42 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.52 seconds; current allocated memory: 310.078 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'cpu_functions.cpp' ... 
+WARNING: [HLS 207-6585] expression result unused (cpu_functions.cpp:34:15)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.72 seconds. CPU system time: 0.57 seconds. Elapsed time: 3.3 seconds; current allocated memory: 310.820 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 64 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 49 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 52 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 52 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 54 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 54 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 52 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 51 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 45 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 50 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:47:16)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:54:108)
+WARNING: [HLS 214-450] Ignore address on register port 'B' (cpu_functions.cpp:59:49)
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_51_4> at cpu_functions.cpp:51:22 due to pipeline_loops threshold
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3 seconds. CPU system time: 0.47 seconds. Elapsed time: 8.18 seconds; current allocated memory: 320.371 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 320.371 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 320.754 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 321.402 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 343.984 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_49_3'(cpu_functions.cpp:49:21) and 'VITIS_LOOP_51_4'(cpu_functions.cpp:51:22) in function 'max_pooling' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_49_3' (cpu_functions.cpp:49:21) in function 'max_pooling'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 345.434 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'max_pooling' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'max_pooling_Pipeline_VITIS_LOOP_49_3_VITIS_LOOP_51_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_49_3_VITIS_LOOP_51_4'.
+WARNING: [HLS 200-880] The II Violation in module 'max_pooling_Pipeline_VITIS_LOOP_49_3_VITIS_LOOP_51_4' (loop 'VITIS_LOOP_49_3_VITIS_LOOP_51_4'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'and' operation 1 bit ('and_ln54_1', cpu_functions.cpp:54) and 'fcmp' operation 1 bit ('tmp_2', cpu_functions.cpp:54).
+Resolution: For help on HLS 200-880 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 4, loop 'VITIS_LOOP_49_3_VITIS_LOOP_51_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.07 seconds; current allocated memory: 346.414 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 346.414 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'max_pooling' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 346.414 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 346.414 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'max_pooling_Pipeline_VITIS_LOOP_49_3_VITIS_LOOP_51_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'max_pooling_Pipeline_VITIS_LOOP_49_3_VITIS_LOOP_51_4' pipeline 'VITIS_LOOP_49_3_VITIS_LOOP_51_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'max_pooling_Pipeline_VITIS_LOOP_49_3_VITIS_LOOP_51_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 346.414 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'max_pooling' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'max_pooling/A' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'max_pooling/B' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'max_pooling/size' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'max_pooling/stride' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'max_pooling/lateral_stride' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'max_pooling' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'max_pooling/lateral_stride' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'mul_32ns_32ns_64_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'max_pooling'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 346.414 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 348.109 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.28 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.33 seconds; current allocated memory: 349.770 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for max_pooling.
+INFO: [VLOG 209-307] Generating Verilog RTL for max_pooling.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 140.71 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:12; Allocated memory: 39.691 MB.
+INFO: [HLS 200-112] Total CPU user time: 8.37 seconds. Total CPU system time: 1.65 seconds. Total elapsed time: 14.51 seconds; peak allocated memory: 349.770 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 16s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

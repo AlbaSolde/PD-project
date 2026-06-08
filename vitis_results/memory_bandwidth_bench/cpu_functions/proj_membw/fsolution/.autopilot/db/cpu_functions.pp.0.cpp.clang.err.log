@@ -1,0 +1,4 @@
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/memory_bandwidth_bench/cpu_functions/run_hls.tcl:7:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=copy_array_XLX_SEP_ PragmaOptions=name=copy_array_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=copy_array
+^
+1 warning generated.

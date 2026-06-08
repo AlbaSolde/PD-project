@@ -1,0 +1,73 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon May  4 23:34:03 2026
+# Process ID         : 135730
+# Current directory  : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip
+# Command line       : vivado -notrace -mode batch -source run_ippack.tcl
+# Log file           : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/vivado.log
+# Journal file       : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/vivado.jou
+# Running On         : luthier-ku
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1365U
+# CPU Frequency      : 624.915 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 33282 MB
+# Swap memory        : 536 MB
+# Total Virtual      : 33819 MB
+# Available Virtual  : 27843 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: calling package_hls_ip ip_types=vitis sysgen json_file=/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/solution1_data.json outdir=/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip srcdir=/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1 ippack_options_dict= ippack_options_dict=
+INFO: Copied 1 ipmisc file(s) to /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/misc
+INFO: Copied 11 verilog file(s) to /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/hdl/verilog
+INFO: Copied 11 vhdl file(s) to /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/hdl/vhdl
+Generating 4 subcores in /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/subcore_prj:
+impl/misc/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip.tcl
+impl/misc/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip.tcl
+impl/misc/matrix_convolution_fadd_32ns_32ns_32_5_full_dsp_1_ip.tcl
+impl/misc/matrix_convolution_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl
+INFO: Using COE_DIR=/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/hdl/verilog
+INFO: Generating matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip via file impl/misc/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip.tcl
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/albasg/software/vivado/2025.2/data/ip'.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: Done generating matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip via file impl/misc/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip.tcl
+INFO: Generating matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip via file impl/misc/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
+INFO: Done generating matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip via file impl/misc/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip.tcl
+INFO: Generating matrix_convolution_fadd_32ns_32ns_32_5_full_dsp_1_ip via file impl/misc/matrix_convolution_fadd_32ns_32ns_32_5_full_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'matrix_convolution_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'matrix_convolution_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: Done generating matrix_convolution_fadd_32ns_32ns_32_5_full_dsp_1_ip via file impl/misc/matrix_convolution_fadd_32ns_32ns_32_5_full_dsp_1_ip.tcl
+INFO: Generating matrix_convolution_fmul_32ns_32ns_32_4_max_dsp_1_ip via file impl/misc/matrix_convolution_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'matrix_convolution_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'matrix_convolution_fmul_32ns_32ns_32_4_max_dsp_1_ip'...
+INFO: Done generating matrix_convolution_fmul_32ns_32ns_32_4_max_dsp_1_ip via file impl/misc/matrix_convolution_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl
+INFO: Found 1 unique subcore IP: xilinx.com:ip:floating_point:7.1
+INFO: Copied 4 subcore files: /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/hdl/ip/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip.xci /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/hdl/ip/matrix_convolution_fadd_32ns_32ns_32_5_full_dsp_1_ip/matrix_convolution_fadd_32ns_32ns_32_5_full_dsp_1_ip.xci /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/hdl/ip/matrix_convolution_fmul_32ns_32ns_32_4_max_dsp_1_ip/matrix_convolution_fmul_32ns_32ns_32_4_max_dsp_1_ip.xci /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/hdl/ip/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip.xci
+INFO: Import ports from HDL: /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/hdl/vhdl/matrix_convolution.vhd (matrix_convolution)
+INFO: Add clock interface ap_clk
+INFO: Add reset interface ap_rst
+INFO: Add ap_ctrl interface ap_ctrl
+INFO: Add data interface A
+INFO: Add data interface kernel
+INFO: Add data interface B
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/albasg/software/vivado/2025.2/data/ip'.
+INFO: Add data interface size
+INFO: Add data interface kernel_size
+INFO: Calling post_process_vitis to specialize IP
+INFO: Calling post_process_sysgen to specialize IP
+Generating sysgen info xml from json file
+INFO: Created IP /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/component.xml
+INFO: Created IP archive /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/impl/ip/xilinx_com_hls_matrix_convolution_1_0.zip
+INFO: [Common 17-206] Exiting Vivado at Mon May  4 23:34:14 2026...

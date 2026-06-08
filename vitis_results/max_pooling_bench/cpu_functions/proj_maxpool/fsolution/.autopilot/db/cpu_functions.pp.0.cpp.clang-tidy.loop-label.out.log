@@ -1,0 +1,75 @@
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44396:2: remark: Added loop label VITIS_LOOP_9_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < n; ++i)
+ ^
+ VITIS_LOOP_9_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44396:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44398:3: remark: Added loop label VITIS_LOOP_11_2:   [xilinx-label-all-loops]
+  for (unsigned int j = 0; j < w; ++j)
+  ^
+  VITIS_LOOP_11_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44398:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44400:4: remark: Added loop label VITIS_LOOP_13_3:   [xilinx-label-all-loops]
+   for (unsigned int k = 0; k < m; ++k)
+   ^
+   VITIS_LOOP_13_3: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44400:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44411:2: remark: Added loop label VITIS_LOOP_24_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i)
+ ^
+ VITIS_LOOP_24_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44411:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44413:3: remark: Added loop label VITIS_LOOP_26_2:   [xilinx-label-all-loops]
+  for (unsigned int j = 0; j < size; ++j)
+  ^
+  VITIS_LOOP_26_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44413:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44434:2: remark: Added loop label VITIS_LOOP_43_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; i+= stride)
+ ^
+ VITIS_LOOP_43_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44434:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44436:3: remark: Added loop label VITIS_LOOP_45_2:   [xilinx-label-all-loops]
+  for (unsigned int j = 0; j < size; j+= stride)
+  ^
+  VITIS_LOOP_45_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44436:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44440:4: remark: Added loop label VITIS_LOOP_49_3:   [xilinx-label-all-loops]
+   for(unsigned int x = 0; x < stride; ++x)
+   ^
+   VITIS_LOOP_49_3: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44440:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44442:5: remark: Added loop label VITIS_LOOP_51_4:   [xilinx-label-all-loops]
+    for(unsigned int y = 0; y < stride; ++y)
+    ^
+    VITIS_LOOP_51_4: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44442:5: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44466:3: remark: Added loop label VITIS_LOOP_83_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < size; ++i){
+  ^
+  VITIS_LOOP_83_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44466:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44516:2: remark: Added loop label VITIS_LOOP_150_1:   [xilinx-label-all-loops]
+ for(i=0; i<N*N; i++){
+ ^
+ VITIS_LOOP_150_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44516:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44520:2: remark: Added loop label VITIS_LOOP_154_2:   [xilinx-label-all-loops]
+ for(i=0; i<N*N; i++){
+ ^
+ VITIS_LOOP_154_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44520:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44536:2: remark: Added loop label VITIS_LOOP_170_1:   [xilinx-label-all-loops]
+ for(i=0; i<N*N; i++){
+ ^
+ VITIS_LOOP_170_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44536:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44546:4: remark: Added loop label VITIS_LOOP_180_1:   [xilinx-label-all-loops]
+   for (unsigned int i = 0; i < size; ++i){
+   ^
+   VITIS_LOOP_180_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44546:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44570:2: remark: Added loop label VITIS_LOOP_204_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i){
+ ^
+ VITIS_LOOP_204_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44570:2: note: FIX-IT applied suggested code changes

@@ -1,0 +1,24 @@
+[
+  {
+    "csim": false,
+    "functionLabel": "",
+    "functionName": "copy_array",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "copy_array"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/memory_bandwidth_bench/cpu_functions/run_hls.tcl",
+    "sourceLine": 7,
+    "success": true
+  }
+]

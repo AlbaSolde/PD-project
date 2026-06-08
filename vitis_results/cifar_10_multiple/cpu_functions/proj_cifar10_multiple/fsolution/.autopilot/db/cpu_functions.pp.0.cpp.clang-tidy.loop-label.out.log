@@ -1,0 +1,100 @@
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44412:2: remark: Added loop label VITIS_LOOP_21_1:   [xilinx-label-all-loops]
+ for (unsigned int block = 0; block < n*n; ++block)
+ ^
+ VITIS_LOOP_21_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44412:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44417:3: remark: Added loop label VITIS_LOOP_26_2:   [xilinx-label-all-loops]
+  for(unsigned int k = 0; k < squared_kernel_size; ++k)
+  ^
+  VITIS_LOOP_26_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44417:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44436:2: remark: Added loop label VITIS_LOOP_45_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i)
+ ^
+ VITIS_LOOP_45_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44436:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44438:3: remark: Added loop label VITIS_LOOP_47_2:   [xilinx-label-all-loops]
+  for (unsigned int j = 0; j < size; ++j)
+  ^
+  VITIS_LOOP_47_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44438:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44463:2: remark: Added loop label VITIS_LOOP_72_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i)
+ ^
+ VITIS_LOOP_72_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44463:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44480:2: remark: Added loop label VITIS_LOOP_89_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; i+= stride)
+ ^
+ VITIS_LOOP_89_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44480:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44482:3: remark: Added loop label VITIS_LOOP_91_2:   [xilinx-label-all-loops]
+  for (unsigned int j = 0; j < size; j+= stride)
+  ^
+  VITIS_LOOP_91_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44482:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44485:4: remark: Added loop label VITIS_LOOP_94_3:   [xilinx-label-all-loops]
+   for(unsigned int x = 0; x < stride; ++x)
+   ^
+   VITIS_LOOP_94_3: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44485:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44487:5: remark: Added loop label VITIS_LOOP_96_4:   [xilinx-label-all-loops]
+    for(unsigned int y = 0; y < stride; ++y)
+    ^
+    VITIS_LOOP_96_4: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44487:5: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44500:2: remark: Added loop label VITIS_LOOP_109_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i)
+ ^
+ VITIS_LOOP_109_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44500:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44502:3: remark: Added loop label VITIS_LOOP_111_2:   [xilinx-label-all-loops]
+  for (unsigned int j = 0; j < size; ++j)
+  ^
+  VITIS_LOOP_111_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44502:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44512:2: remark: Added loop label VITIS_LOOP_121_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < n; i++)
+ ^
+ VITIS_LOOP_121_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44512:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44514:3: remark: Added loop label VITIS_LOOP_123_2:   [xilinx-label-all-loops]
+  for (unsigned int j = 0; j < m; j++)
+  ^
+  VITIS_LOOP_123_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44514:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44517:4: remark: Added loop label VITIS_LOOP_126_3:   [xilinx-label-all-loops]
+   for (unsigned int k = 0; k < w; k++)
+   ^
+   VITIS_LOOP_126_3: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44517:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44532:2: remark: Added loop label VITIS_LOOP_141_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; i++)
+ ^
+ VITIS_LOOP_141_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44532:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44539:2: remark: Added loop label VITIS_LOOP_148_2:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; i++)
+ ^
+ VITIS_LOOP_148_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44539:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44556:2: remark: Added loop label VITIS_LOOP_161_1:   [xilinx-label-all-loops]
+ for(unsigned int position = 0; position < number_of_images; ++position)
+ ^
+ VITIS_LOOP_161_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44556:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44606:3: remark: Added loop label VITIS_LOOP_219_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < size; ++i){
+  ^
+  VITIS_LOOP_219_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44606:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44619:4: remark: Added loop label VITIS_LOOP_232_1:   [xilinx-label-all-loops]
+   for (unsigned int i = 0; i < size; ++i){
+   ^
+   VITIS_LOOP_232_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44619:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44643:2: remark: Added loop label VITIS_LOOP_256_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i){
+ ^
+ VITIS_LOOP_256_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/proj_cifar10_multiple/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44643:2: note: FIX-IT applied suggested code changes

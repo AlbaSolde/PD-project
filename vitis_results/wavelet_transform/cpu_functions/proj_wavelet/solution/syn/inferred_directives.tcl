@@ -1,0 +1,2 @@
+# Inferred from syn.compile.pipeline_loops=64
+set_directive_pipeline ccsds_wavelet_transform/VITIS_LOOP_55_1

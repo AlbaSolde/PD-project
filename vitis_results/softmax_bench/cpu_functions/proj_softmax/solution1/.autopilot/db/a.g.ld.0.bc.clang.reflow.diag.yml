@@ -1,0 +1,161 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_softmax_ir
+Args:            
+  - Callee:          'softmax(float const*, float*, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 43, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_softmax_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 51, Column: 17 }
+Function:        _Z7softmaxPKfPfj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 53, Column: 16 }
+Function:        _Z7softmaxPKfPfj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 60, Column: 19 }
+Function:        _Z7softmaxPKfPfj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 60, Column: 16 }
+Function:        _Z7softmaxPKfPfj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 51, Column: 17 }
+Function:        _Z7softmaxPKfPfj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 53, Column: 16 }
+Function:        _Z7softmaxPKfPfj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 60, Column: 19 }
+Function:        _Z7softmaxPKfPfj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 60, Column: 16 }
+Function:        _Z7softmaxPKfPfj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_48_2
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:48:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 48, Column: 20 }
+Function:        _Z7softmaxPKfPfj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  softmax
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_48_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:48:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 48, Column: 20 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_58_4
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:58:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 58, Column: 20 }
+Function:        _Z7softmaxPKfPfj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  softmax
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_58_4
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:58:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 58, Column: 20 }
+  - String:          ' '
+...

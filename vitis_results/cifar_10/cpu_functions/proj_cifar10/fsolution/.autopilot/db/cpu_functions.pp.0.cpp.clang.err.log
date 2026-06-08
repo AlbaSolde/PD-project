@@ -1,0 +1,109 @@
+cpu_functions.cpp:12:93: warning: unused parameter 'm' [-Wunused-parameter]
+void convolution(const bench_t *A, bench_t *B, const bench_t *kernel,const int n, const int m, const int w, const int kernel_size)
+                                                                                            ^
+cpu_functions.cpp:12:106: warning: unused parameter 'w' [-Wunused-parameter]
+void convolution(const bench_t *A, bench_t *B, const bench_t *kernel,const int n, const int m, const int w, const int kernel_size)
+                                                                                                         ^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:11:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=m_axi bundle=gmem port=input_data_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE m_axi bundle=gmem port=input_data
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:12:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=m_axi bundle=gmem port=output_data_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE m_axi bundle=gmem port=output_data
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:13:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=m_axi bundle=gmem port=kernel_1_data_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE m_axi bundle=gmem port=kernel_1_data
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:14:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=m_axi bundle=gmem port=kernel_2_data_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE m_axi bundle=gmem port=kernel_2_data
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:15:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=m_axi bundle=gmem port=weights_1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE m_axi bundle=gmem port=weights_1
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:16:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=m_axi bundle=gmem port=weights_2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE m_axi bundle=gmem port=weights_2
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:19:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=m_axi bundle=gmem port=conv_1_output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE m_axi bundle=gmem port=conv_1_output
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:20:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=m_axi bundle=gmem port=pooling_1_output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE m_axi bundle=gmem port=pooling_1_output
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:21:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=m_axi bundle=gmem port=conv_2_output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE m_axi bundle=gmem port=conv_2_output
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:22:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=m_axi bundle=gmem port=pooling_2_output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE m_axi bundle=gmem port=pooling_2_output
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:23:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=m_axi bundle=gmem port=dense_layer_1_output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE m_axi bundle=gmem port=dense_layer_1_output
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:24:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=m_axi bundle=gmem port=dense_layer_2_output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE m_axi bundle=gmem port=dense_layer_2_output
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:27:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=input_data_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=input_data
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:28:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=output_data_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=output_data
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:29:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=kernel_1_data_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=kernel_1_data
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:30:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=kernel_2_data_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=kernel_2_data
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:31:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=weights_1_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=weights_1
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:32:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=weights_2_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=weights_2
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:34:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=conv_1_output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=conv_1_output
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:35:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=pooling_1_output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=pooling_1_output
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:36:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=conv_2_output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=conv_2_output
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:37:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=pooling_2_output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=pooling_2_output
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:38:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=dense_layer_1_output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=dense_layer_1_output
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:39:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=dense_layer_2_output_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=dense_layer_2_output
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:41:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=input_data_size_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=input_data_size
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:42:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=output_data_size_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=output_data_size
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:43:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=kernel_1_size_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=kernel_1_size
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:44:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=kernel_2_size_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=kernel_2_size
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:45:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=stride_1_size_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=stride_1_size
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:46:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=stride_2_size_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=stride_2_size
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:47:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=neurons_dense_1_size_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=neurons_dense_1_size
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:48:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=neurons_dense_2_size_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=neurons_dense_2_size
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:49:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=s_axilite bundle=control port=return_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE INTERFACE s_axilite bundle=control port=return
+^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10/cpu_functions/run_hls.tcl:51:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=name=cifar10_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=cifar10
+^
+36 warnings generated.

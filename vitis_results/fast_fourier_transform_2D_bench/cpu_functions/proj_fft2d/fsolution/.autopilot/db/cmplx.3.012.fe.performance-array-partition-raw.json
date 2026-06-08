@@ -1,0 +1,41 @@
+{
+  "0": {
+    "basicblocks": 50,
+    "calls": "1 1 1 1",
+    "control_depth": 1,
+    "def_use_depth": 13,
+    "file": "cpu_functions_vitis.cpp",
+    "fileloc": 57,
+    "instructions": 325,
+    "loads": {
+      "L": 10,
+      "T": 9
+    },
+    "memory_accesses": 20,
+    "name": "FFT2D_flat",
+    "stores": {
+      "L": 10,
+      "T": 8
+    },
+    "total_instructions": 1373
+  },
+  "1": {
+    "basicblocks": 23,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 17,
+    "file": "hls_hotbm.h",
+    "fileloc": 209,
+    "instructions": 252,
+    "loads": {
+      "G": 4,
+      "L": 4
+    },
+    "memory_accesses": 10,
+    "name": "sin_or_cos<float>",
+    "stores": {
+      "L": 6
+    },
+    "total_instructions": 252
+  }
+}

@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon May  4 18:50:04 2026
+# Process ID         : 8842
+# Current directory  : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions
+# Command line       : vivado -mode batch -source run_vivado.tcl
+# Log file           : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/vivado.log
+# Journal file       : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/vivado.jou
+# Running On         : luthier-ku
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1365U
+# CPU Frequency      : 400.932 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 33282 MB
+# Swap memory        : 536 MB
+# Total Virtual      : 33819 MB
+# Available Virtual  : 29116 MB
+#-----------------------------------------------------------
+source run_vivado.tcl
+# set part_name xc7z020clg484-1
+# set top_name lrn
+# set clk_period 10.0
+# set rtl_dir "/home/albasg/software/vivado/2025.2/Vitis/proj_lrn/fsolution/syn/verilog"
+# set out_dir "./vivado_reports"
+# file mkdir $out_dir
+# create_project vivado_lrn ./vivado_lrn -part $part_name -force
+no files matched glob pattern "/home/albasg/software/vivado/2025.2/Vitis/proj_lrn/fsolution/syn/verilog/*.v"
+    while executing
+"glob $rtl_dir/*.v"
+    invoked from within
+"read_verilog [glob $rtl_dir/*.v]"
+    (file "run_vivado.tcl" line 12)
+INFO: [Common 17-206] Exiting Vivado at Mon May  4 18:50:11 2026...

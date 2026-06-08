@@ -1,0 +1,1191 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue May  5 16:46:15 2026
+# Process ID         : 44104
+# Current directory  : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions
+# Command line       : vivado -mode batch -source run_vivado.tcl
+# Log file           : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado.log
+# Journal file       : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado.jou
+# Running On         : luthier-ku
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1365U
+# CPU Frequency      : 2100.000 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 33282 MB
+# Swap memory        : 536 MB
+# Total Virtual      : 33819 MB
+# Available Virtual  : 25624 MB
+#-----------------------------------------------------------
+source run_vivado.tcl
+# create_project vivado_softmax ./vivado_softmax -part xc7z020clg484-1 -force
+# file mkdir vivado_reports
+# foreach ip_tcl [glob -nocomplain ./proj_softmax/solution1/syn/verilog/*_ip.tcl] {
+#     source $ip_tcl
+# }
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/albasg/software/vivado/2025.2/data/ip'.
+## set_property -dict [list CONFIG.a_precision_type Single \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Add \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 8 \
+##                           CONFIG.c_a_fraction_width 24 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 3 \
+##                           CONFIG.c_mult_usage Full_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 8 \
+##                           CONFIG.c_result_fraction_width 24 \
+##                           CONFIG.component_name softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Add_Subtract \
+##                           CONFIG.result_precision_type Single \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name softmax_fptrunc_64ns_32_2_no_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 0 \
+##                           CONFIG.c_mult_usage No_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 8 \
+##                           CONFIG.c_result_fraction_width 24 \
+##                           CONFIG.component_name softmax_fptrunc_64ns_32_2_no_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken false \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Float_to_Float \
+##                           CONFIG.result_precision_type Single \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips softmax_fptrunc_64ns_32_2_no_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files softmax_fptrunc_64ns_32_2_no_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files softmax_fptrunc_64ns_32_2_no_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'softmax_fptrunc_64ns_32_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'softmax_fptrunc_64ns_32_2_no_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name softmax_sitodp_32ns_64_6_no_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Custom \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 32 \
+##                           CONFIG.c_a_fraction_width 0 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 4 \
+##                           CONFIG.c_mult_usage No_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name softmax_sitodp_32ns_64_6_no_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Fixed_to_Float \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips softmax_sitodp_32ns_64_6_no_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files softmax_sitodp_32ns_64_6_no_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files softmax_sitodp_32ns_64_6_no_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'softmax_sitodp_32ns_64_6_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'softmax_sitodp_32ns_64_6_no_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name softmax_fpext_32ns_64_2_no_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Single \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 8 \
+##                           CONFIG.c_a_fraction_width 24 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 0 \
+##                           CONFIG.c_mult_usage No_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name softmax_fpext_32ns_64_2_no_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken false \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Float_to_Float \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips softmax_fpext_32ns_64_2_no_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files softmax_fpext_32ns_64_2_no_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files softmax_fpext_32ns_64_2_no_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'softmax_fpext_32ns_64_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'softmax_fpext_32ns_64_2_no_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Single \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 8 \
+##                           CONFIG.c_a_fraction_width 24 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 14 \
+##                           CONFIG.c_mult_usage No_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 8 \
+##                           CONFIG.c_result_fraction_width 24 \
+##                           CONFIG.component_name softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Divide \
+##                           CONFIG.result_precision_type Single \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 19 \
+##                           CONFIG.c_mult_usage Full_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Exponential \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip'...
+# read_verilog [glob ./proj_softmax/solution1/syn/verilog/*.v]
+# synth_design -top softmax -part xc7z020clg484-1
+Command: synth_design -top softmax -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 44242
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2125.660 ; gain = 470.117 ; free physical = 16912 ; free virtual = 24803
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'softmax' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax.v:9]
+INFO: [Synth 8-6157] synthesizing module 'softmax_softmax_Pipeline_VITIS_LOOP_46_1_VITIS_LOOP_48_2' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_softmax_Pipeline_VITIS_LOOP_46_1_VITIS_LOOP_48_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'softmax_fadd_32ns_32ns_32_5_full_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_fadd_32ns_32ns_32_5_full_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip/synth/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip/synth/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip/synth/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'softmax_fadd_32ns_32ns_32_5_full_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_fadd_32ns_32ns_32_5_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'softmax_flow_control_loop_pipe_sequential_init' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'softmax_flow_control_loop_pipe_sequential_init' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'softmax_softmax_Pipeline_VITIS_LOOP_46_1_VITIS_LOOP_48_2' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_softmax_Pipeline_VITIS_LOOP_46_1_VITIS_LOOP_48_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'softmax_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4.v:9]
+INFO: [Synth 8-6157] synthesizing module 'softmax_fdiv_32ns_32ns_32_16_no_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_fdiv_32ns_32ns_32_16_no_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 16 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip/synth/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 1 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 14 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip/synth/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip/synth/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'softmax_fdiv_32ns_32ns_32_16_no_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_fdiv_32ns_32ns_32_16_no_dsp_1.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'softmax_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4.v:9]
+INFO: [Synth 8-6157] synthesizing module 'softmax_fptrunc_64ns_32_2_no_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_fptrunc_64ns_32_2_no_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'softmax_fptrunc_64ns_32_2_no_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fptrunc_64ns_32_2_no_dsp_1_ip/synth/softmax_fptrunc_64ns_32_2_no_dsp_1_ip.vhd:68]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 1 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 0 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 0 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fptrunc_64ns_32_2_no_dsp_1_ip/synth/softmax_fptrunc_64ns_32_2_no_dsp_1_ip.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'softmax_fptrunc_64ns_32_2_no_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fptrunc_64ns_32_2_no_dsp_1_ip/synth/softmax_fptrunc_64ns_32_2_no_dsp_1_ip.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'softmax_fptrunc_64ns_32_2_no_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_fptrunc_64ns_32_2_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'softmax_fpext_32ns_64_2_no_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_fpext_32ns_64_2_no_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'softmax_fpext_32ns_64_2_no_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fpext_32ns_64_2_no_dsp_1_ip/synth/softmax_fpext_32ns_64_2_no_dsp_1_ip.vhd:68]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 1 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 0 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 0 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fpext_32ns_64_2_no_dsp_1_ip/synth/softmax_fpext_32ns_64_2_no_dsp_1_ip.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'softmax_fpext_32ns_64_2_no_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fpext_32ns_64_2_no_dsp_1_ip/synth/softmax_fpext_32ns_64_2_no_dsp_1_ip.vhd:68]
+INFO: [Synth 8-6155] done synthesizing module 'softmax_fpext_32ns_64_2_no_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_fpext_32ns_64_2_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'softmax_dexp_64ns_64ns_64_21_full_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_dexp_64ns_64ns_64_21_full_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 21 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip/synth/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip.vhd:70]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 1 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 19 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 0 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip/synth/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip.vhd:211]
+INFO: [Synth 8-256] done synthesizing module 'softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/vivado_softmax/vivado_softmax.gen/sources_1/ip/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip/synth/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip.vhd:70]
+INFO: [Synth 8-6155] done synthesizing module 'softmax_dexp_64ns_64ns_64_21_full_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_dexp_64ns_64ns_64_21_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'softmax_mul_32ns_32ns_64_2_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_mul_32ns_32ns_64_2_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'softmax_mul_32ns_32ns_64_2_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax_mul_32ns_32ns_64_2_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'softmax' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/syn/verilog/softmax.v:9]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7129] Port reset in module softmax_mul_32ns_32ns_64_2_1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized89 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized89 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized89 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized89 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized89 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized27 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized27 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized27 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized168 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized168 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized168 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized100 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized100 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized100 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized100 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized100 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized94 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized94 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized94 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized94 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized94 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized84 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized84 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized84 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized84 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized84 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_ne_im__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_eq_im__parameterized4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized86 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized86 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized86 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized86 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized86 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port B[15] in module carry_chain__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized33 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized33 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized33 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized29 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized29 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized29 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized29 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized29 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized116 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized116 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized116 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized116 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized116 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized25 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized25 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized25 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized25 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized25 is either unconnected or has no load
+INFO: [Synth 8-7129] Port NORMALIZE[1] in module flt_round_bit__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port FIXED_POINT in module flt_round_bit__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port FIX_MANT_SIGN in module flt_round_bit__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SIGN in module flt_round_bit__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized72 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized72 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized72 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized17 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized166 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized166 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized166 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized166 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized166 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized164 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized164 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized164 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized162 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized162 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized162 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized162 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2485.598 ; gain = 830.055 ; free physical = 16588 ; free virtual = 24494
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2485.598 ; gain = 830.055 ; free physical = 16614 ; free virtual = 24519
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2485.598 ; gain = 830.055 ; free physical = 16614 ; free virtual = 24519
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:34 . Memory (MB): peak = 2509.621 ; gain = 854.078 ; free physical = 16640 ; free virtual = 24544
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'grp_softmax_Pipeline_VITIS_LOOP_46_1_VITIS_LOOP_48_2_fu_69/fadd_32ns_32ns_32_5_full_dsp_1_U1/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'grp_softmax_Pipeline_VITIS_LOOP_46_1_VITIS_LOOP_48_2_fu_69/fadd_32ns_32ns_32_5_full_dsp_1_U1/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'grp_softmax_Pipeline_VITIS_LOOP_46_1_VITIS_LOOP_48_2_fu_69/fadd_32ns_32ns_32_5_full_dsp_1_U1/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'grp_softmax_Pipeline_VITIS_LOOP_46_1_VITIS_LOOP_48_2_fu_69/fadd_32ns_32ns_32_5_full_dsp_1_U1/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'grp_softmax_Pipeline_VITIS_LOOP_46_1_VITIS_LOOP_48_2_fu_69/fadd_32ns_32ns_32_5_full_dsp_1_U1/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'grp_softmax_Pipeline_VITIS_LOOP_46_1_VITIS_LOOP_48_2_fu_69/fadd_32ns_32ns_32_5_full_dsp_1_U1/softmax_fadd_32ns_32ns_32_5_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'grp_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4_fu_76/fdiv_32ns_32ns_32_16_no_dsp_1_U6/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'grp_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4_fu_76/fdiv_32ns_32ns_32_16_no_dsp_1_U6/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'grp_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4_fu_76/fdiv_32ns_32ns_32_16_no_dsp_1_U6/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'grp_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4_fu_76/fdiv_32ns_32ns_32_16_no_dsp_1_U6/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'grp_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4_fu_76/fdiv_32ns_32ns_32_16_no_dsp_1_U6/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized27) to 'grp_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4_fu_76/fdiv_32ns_32ns_32_16_no_dsp_1_U6/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'grp_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4_fu_76/fdiv_32ns_32ns_32_16_no_dsp_1_U6/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized27) to 'grp_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4_fu_76/fdiv_32ns_32ns_32_16_no_dsp_1_U6/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/U0/i_synth/DIV_OP.SPD.OP/ROUND/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'grp_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4_fu_76/fdiv_32ns_32ns_32_16_no_dsp_1_U6/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW' (delay__parameterized0) to 'grp_softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4_fu_76/fdiv_32ns_32ns_32_16_no_dsp_1_U6/softmax_fdiv_32ns_32ns_32_16_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'fptrunc_64ns_32_2_no_dsp_1_U13/softmax_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'fptrunc_64ns_32_2_no_dsp_1_U13/softmax_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'fptrunc_64ns_32_2_no_dsp_1_U13/softmax_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'fptrunc_64ns_32_2_no_dsp_1_U13/softmax_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'fptrunc_64ns_32_2_no_dsp_1_U13/softmax_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'fptrunc_64ns_32_2_no_dsp_1_U13/softmax_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'fptrunc_64ns_32_2_no_dsp_1_U13/softmax_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'fptrunc_64ns_32_2_no_dsp_1_U13/softmax_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'fptrunc_64ns_32_2_no_dsp_1_U13/softmax_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'fptrunc_64ns_32_2_no_dsp_1_U13/softmax_fptrunc_64ns_32_2_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'fpext_32ns_64_2_no_dsp_1_U14/softmax_fpext_32ns_64_2_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'fpext_32ns_64_2_no_dsp_1_U14/softmax_fpext_32ns_64_2_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'fpext_32ns_64_2_no_dsp_1_U14/softmax_fpext_32ns_64_2_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'fpext_32ns_64_2_no_dsp_1_U14/softmax_fpext_32ns_64_2_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'fpext_32ns_64_2_no_dsp_1_U14/softmax_fpext_32ns_64_2_no_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'fpext_32ns_64_2_no_dsp_1_U14/softmax_fpext_32ns_64_2_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'dexp_64ns_64ns_64_21_full_dsp_1_U15/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[0].i_sign_delay' (delay__parameterized0) to 'dexp_64ns_64ns_64_21_full_dsp_1_U15/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[1].i_sign_delay'
+INFO: [Synth 8-223] decloning instance 'dexp_64ns_64ns_64_21_full_dsp_1_U15/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_renorm_and_round/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'dexp_64ns_64ns_64_21_full_dsp_1_U15/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_renorm_and_round/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'dexp_64ns_64ns_64_21_full_dsp_1_U15/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'dexp_64ns_64ns_64_21_full_dsp_1_U15/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'dexp_64ns_64ns_64_21_full_dsp_1_U15/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'dexp_64ns_64ns_64_21_full_dsp_1_U15/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'dexp_64ns_64ns_64_21_full_dsp_1_U15/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'dexp_64ns_64ns_64_21_full_dsp_1_U15/softmax_dexp_64ns_64ns_64_21_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[0].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[0].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[1].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[1].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[2].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[2].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[3].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[3].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[4].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[4].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[5].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[5].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[6].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[6].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[7].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[7].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[0].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.runt_srl_loop.i_fdre) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[0].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[0].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[1].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[1].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[2].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[2].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[3].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[3].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[4].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[4].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[5].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[5].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[6].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[6].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[7].i_fdre0) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.srl_loop[7].i_fdre1) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (EXP_OP.i_sp_or_dp.OP/g_Fr_other.i_calculate_Fr/dsp_extra_fabric_adder.mult_with_add_low/use_prim.appDSP[1].bppDSP[0].need_output_delay.output_delay/dN_hlutnm.runt_srl_loop.i_fdre) is unused and will be removed from module floating_point_v7_1_21_viv__parameterized7.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[47]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[46]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[45]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[44]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[43]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[42]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[41]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[40]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[39]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[38]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[37]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[36]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[35]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[34]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[33]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[32]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[31]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[30]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[29]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[28]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[27]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[26]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[25]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[24]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[23]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[22]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[21]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[20]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[19]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[18]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[17]) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[47]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[46]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[45]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[44]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[43]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[42]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[41]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[40]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[39]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[38]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[37]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[36]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[35]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[34]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[33]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[32]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[31]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[30]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[29]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[28]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[27]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[26]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[25]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[24]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[23]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[22]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[21]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[20]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[19]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[18]__0) is unused and will be removed from module softmax.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U16/buff0_reg[17]__0) is unused and will be removed from module softmax.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:11 . Memory (MB): peak = 2583.652 ; gain = 928.109 ; free physical = 16059 ; free virtual = 23954
+---------------------------------------------------------------------------------
+ Sort Area is  mul_32ns_32ns_64_2_1_U16/tmp_product_0 : 0 0 : 3101 5927 : Used 1 time 0
+ Sort Area is  mul_32ns_32ns_64_2_1_U16/tmp_product_0 : 0 1 : 2826 5927 : Used 1 time 0
+ Sort Area is  mul_32ns_32ns_64_2_1_U16/tmp_product_3 : 0 0 : 2759 5466 : Used 1 time 0
+ Sort Area is  mul_32ns_32ns_64_2_1_U16/tmp_product_3 : 0 1 : 2707 5466 : Used 1 time 0
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:01:12 . Memory (MB): peak = 2583.652 ; gain = 928.109 ; free physical = 16052 ; free virtual = 23948
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:15 ; elapsed = 00:01:14 . Memory (MB): peak = 2583.652 ; gain = 928.109 ; free physical = 16049 ; free virtual = 23952
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:19 ; elapsed = 00:01:18 . Memory (MB): peak = 2636.465 ; gain = 980.922 ; free physical = 15787 ; free virtual = 23698
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:19 ; elapsed = 00:01:18 . Memory (MB): peak = 2636.465 ; gain = 980.922 ; free physical = 15779 ; free virtual = 23690
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 2636.465 ; gain = 980.922 ; free physical = 15708 ; free virtual = 23619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 2636.465 ; gain = 980.922 ; free physical = 15708 ; free virtual = 23619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 2636.465 ; gain = 980.922 ; free physical = 15708 ; free virtual = 23619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 2636.465 ; gain = 980.922 ; free physical = 15708 ; free virtual = 23619
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------------------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                         | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp                                 | C'+(A*B)'           | 22     | 17     | 46     | -      | 17     | 0    | 0    | 1    | -    | -     | 1    | 0    | 
+|dsp                                 | (PCIN>>17+A'*B')'   | 0      | 8      | -      | -      | 43     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|dsp__parameterized0                 | C'+(A*B)'           | 17     | 17     | 46     | -      | 17     | 0    | 0    | 1    | -    | -     | 1    | 0    | 
+|dsp__parameterized0                 | PCIN>>17+A'*B'      | 0      | 12     | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|dsp__parameterized0                 | (PCIN+A'*B')'       | 25     | 17     | -      | -      | 17     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|dsp__parameterized0                 | PCIN>>17+(A*B')'    | 0      | 12     | -      | -      | 43     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|dsp__parameterized1                 | C'+(A*B)'           | 17     | 17     | 0      | -      | 17     | 0    | 0    | 1    | -    | -     | 1    | 0    | 
+|dsp__parameterized1                 | PCIN>>17+A'*B'      | 0      | 17     | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|dsp__parameterized1                 | (PCIN+A''*B'')'     | 17     | 14     | -      | -      | 17     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp__parameterized1                 | (PCIN+A'*B')'       | 17     | 17     | -      | -      | 17     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|dsp__parameterized1                 | PCIN+(A'*B')'       | 17     | 17     | -      | -      | 0      | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|dsp__parameterized1                 | PCIN>>17+((A')'*B)' | 17     | 0      | -      | -      | 0      | 1    | 0    | -    | -    | 1     | 1    | 0    | 
+|dsp__parameterized1                 | PCIN>>17+(A'*B)'    | 14     | 0      | -      | -      | 0      | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp__parameterized1                 | PCIN+(A'')'*B''     | 14     | 17     | -      | -      | 17     | 2    | 2    | -    | -    | 1     | 0    | 0    | 
+|dsp__parameterized1                 | (PCIN>>17+A'*B'')'  | 0      | 14     | -      | -      | 43     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized2_169 | C'+A':B'            | 29     | 18     | 38     | -      | 48     | 1    | 1    | 1    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized4_165 | Dynamic             | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized7     | Dynamic             | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized5_164 | Dynamic             | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized4     | Dynamic             | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized6     | Dynamic             | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized5     | Dynamic             | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1     | C+A:B               | 0      | 6      | 0      | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2     | C'+A':B'            | 0      | 11     | 48     | -      | 48     | 1    | 1    | 1    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3     | (C+A:B)'            | 30     | 18     | 48     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized8     | Dynamic             | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper                     | Dynamic             | -      | -      | -      | -      | 40     | -    | -    | -    | -    | 0     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized0     | C+A'*B'             | 24     | 16     | 35     | -      | 35     | 1    | 1    | 0    | -    | -     | 0    | 0    | 
+|softmax                             | A*B                 | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|softmax                             | (PCIN>>17+A*B)'     | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|softmax                             | A*B                 | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|softmax                             | (PCIN>>17+A*B)'     | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------------------------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    88|
+|3     |DSP48E1 |    32|
+|4     |LUT1    |    57|
+|5     |LUT2    |   336|
+|6     |LUT3    |   854|
+|7     |LUT4    |   245|
+|8     |LUT5    |   289|
+|9     |LUT6    |  1462|
+|10    |MUXCY   |   897|
+|11    |MUXF7   |   423|
+|12    |MUXF8   |     7|
+|13    |SRL16E  |   230|
+|14    |XORCY   |   755|
+|15    |FDE     |     5|
+|16    |FDRE    |  2703|
+|17    |FDSE    |    12|
+|18    |IBUF    |    99|
+|19    |OBUF    |    36|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 2636.465 ; gain = 980.922 ; free physical = 15708 ; free virtual = 23619
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 2636.465 ; gain = 980.922 ; free physical = 15708 ; free virtual = 23619
+Synthesis Optimization Complete : Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 2636.473 ; gain = 980.922 ; free physical = 15708 ; free virtual = 23619
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2656.277 ; gain = 0.000 ; free physical = 15724 ; free virtual = 23635
+INFO: [Netlist 29-17] Analyzing 2207 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2804.797 ; gain = 0.000 ; free physical = 15257 ; free virtual = 23168
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 263 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 258 instances
+  FDE => FDRE: 5 instances
+
+Synth Design complete | Checksum: d8387f7f
+INFO: [Common 17-83] Releasing license: Synthesis
+274 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:31 ; elapsed = 00:01:26 . Memory (MB): peak = 2804.832 ; gain = 1165.297 ; free physical = 15255 ; free virtual = 23166
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2192.640; main = 1868.230; forked = 339.452
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3585.543; main = 2804.801; forked = 1001.887
+# if {[llength [get_ports ap_clk]] > 0} {
+#     create_clock -period 10.0 -name default [get_ports ap_clk]
+# }
+# report_utilization -file vivado_reports/utilization_synth.rpt
+# report_timing_summary -file vivado_reports/timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+report_timing_summary: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2884.828 ; gain = 79.996 ; free physical = 15307 ; free virtual = 23224
+# exit
+INFO: [Common 17-206] Exiting Vivado at Tue May  5 16:48:16 2026...

@@ -1,0 +1,4 @@
+# Inferred from syn.compile.pipeline_loops=64
+set_directive_pipeline vector_convolution/VITIS_LOOP_45_2
+# Inferred from Performance Budgeter performance directives
+set_directive_loop_flatten vector_convolution/VITIS_LOOP_43_1

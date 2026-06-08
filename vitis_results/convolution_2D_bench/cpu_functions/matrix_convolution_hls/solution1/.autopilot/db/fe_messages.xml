@@ -1,0 +1,11 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/run_hls.tcl:13:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrix_convolution" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=matrix_convolution" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="cpu_functions.cpp:45:15" msg_body="Ignore address on register port 'A'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="cpu_functions.cpp:48:21" msg_body="Ignore address on register port 'kernel'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="cpu_functions.cpp:52:17" msg_body="Ignore address on register port 'B'"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cpu_functions.cpp:29:22" msg_body="pipeline   1 matrix_convolution config_compile -pipeline_loops 64VITIS_LOOP_29_4 cpu_functions.cpp:29:22">
+        <args LoopLoc="cpu_functions.cpp:29:22" LoopLoc-DebugLoc="File cpu_functions.cpp Line 29 Column 22" LoopName="VITIS_LOOP_29_4" PragmaFunction="matrix_convolution" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+</xilinx:hls_fe_msgs>

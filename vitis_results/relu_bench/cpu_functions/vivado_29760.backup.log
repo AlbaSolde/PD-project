@@ -1,0 +1,578 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue May  5 13:48:46 2026
+# Process ID         : 29760
+# Current directory  : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions
+# Command line       : vivado -mode batch -source run_vivado.tcl
+# Log file           : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/vivado.log
+# Journal file       : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/vivado.jou
+# Running On         : luthier-ku
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1365U
+# CPU Frequency      : 3218.098 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 33282 MB
+# Swap memory        : 536 MB
+# Total Virtual      : 33819 MB
+# Available Virtual  : 28346 MB
+#-----------------------------------------------------------
+source run_vivado.tcl
+# create_project vivado_relu ./vivado_relu -part xc7z020clg484-1 -force
+# file mkdir vivado_reports
+# foreach ip_tcl [glob -nocomplain ./proj_relu/fsolution/syn/verilog/*_ip.tcl] {
+#     source $ip_tcl
+# }
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name relu_fcmp_32ns_32ns_1_2_no_dsp_1_ip
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/albasg/software/vivado/2025.2/data/ip'.
+## set_property -dict [list CONFIG.a_precision_type Single \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 8 \
+##                           CONFIG.c_a_fraction_width 24 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 0 \
+##                           CONFIG.c_mult_usage No_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 1 \
+##                           CONFIG.c_result_fraction_width 0 \
+##                           CONFIG.component_name relu_fcmp_32ns_32ns_1_2_no_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken false \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Compare \
+##                           CONFIG.result_precision_type Single \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips relu_fcmp_32ns_32ns_1_2_no_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files relu_fcmp_32ns_32ns_1_2_no_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files relu_fcmp_32ns_32ns_1_2_no_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'relu_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'relu_fcmp_32ns_32ns_1_2_no_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 0 \
+##                           CONFIG.c_mult_usage No_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 1 \
+##                           CONFIG.c_result_fraction_width 0 \
+##                           CONFIG.component_name relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken false \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Compare \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip'...
+# read_verilog [glob ./proj_relu/fsolution/syn/verilog/*.v]
+# synth_design -top relu -part xc7z020clg484-1
+Command: synth_design -top relu -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 29791
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2104.215 ; gain = 479.957 ; free physical = 18251 ; free virtual = 25800
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'relu' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/syn/verilog/relu.v:9]
+INFO: [Synth 8-6157] synthesizing module 'relu_relu_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/syn/verilog/relu_relu_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'relu_flow_control_loop_pipe_sequential_init' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/syn/verilog/relu_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'relu_flow_control_loop_pipe_sequential_init' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/syn/verilog/relu_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'relu_relu_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/syn/verilog/relu_relu_Pipeline_VITIS_LOOP_19_1_VITIS_LOOP_21_2.v:9]
+INFO: [Synth 8-6157] synthesizing module 'relu_dcmp_64ns_64ns_1_2_no_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/syn/verilog/relu_dcmp_64ns_64ns_1_2_no_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/vivado_relu/vivado_relu.gen/sources_1/ip/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip/synth/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 1 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 0 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 0 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 1 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/vivado_relu/vivado_relu.gen/sources_1/ip/relu_fcmp_32ns_32ns_1_2_no_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/vivado_relu/vivado_relu.gen/sources_1/ip/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip/synth/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip.vhd:215]
+INFO: [Synth 8-256] done synthesizing module 'relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/vivado_relu/vivado_relu.gen/sources_1/ip/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip/synth/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'relu_dcmp_64ns_64ns_1_2_no_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/syn/verilog/relu_dcmp_64ns_64ns_1_2_no_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'relu_mul_32ns_32ns_64_2_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/syn/verilog/relu_mul_32ns_32ns_64_2_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'relu_mul_32ns_32ns_64_2_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/syn/verilog/relu_mul_32ns_32ns_64_2_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'relu' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/relu_bench/cpu_functions/proj_relu/fsolution/syn/verilog/relu.v:9]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7129] Port reset in module relu_mul_32ns_32ns_64_2_1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized11 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized9 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized7 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized5 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_eq_im__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_ne_im is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CARRYS_OUT[0] in module compare_eq_im is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port m_axis_result_tuser[0] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port m_axis_result_tlast in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port aclken in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port aresetn in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_a_tuser[0] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_a_tlast in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_b_tuser[0] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_b_tlast in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tvalid in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[63] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[62] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[61] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[60] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[59] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[58] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[57] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[56] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[55] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[54] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[53] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[52] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[51] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[50] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[49] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[48] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[47] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[46] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[45] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[44] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[43] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[42] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[41] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[40] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[39] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[38] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[37] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[36] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[35] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[34] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[33] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[32] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[31] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[30] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[29] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[28] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[27] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[26] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[25] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[24] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[23] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[22] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[21] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[20] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[19] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[18] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Synth 8-7129] Port s_axis_c_tdata[17] in module floating_point_v7_1_21_viv is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2247.152 ; gain = 622.895 ; free physical = 18097 ; free virtual = 25647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2253.090 ; gain = 628.832 ; free physical = 18102 ; free virtual = 25653
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2253.090 ; gain = 628.832 ; free physical = 18102 ; free virtual = 25653
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2269.105 ; gain = 644.848 ; free physical = 18103 ; free virtual = 25655
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'dcmp_64ns_64ns_1_2_no_dsp_1_U5/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'dcmp_64ns_64ns_1_2_no_dsp_1_U5/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'dcmp_64ns_64ns_1_2_no_dsp_1_U5/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'dcmp_64ns_64ns_1_2_no_dsp_1_U5/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_UNDERFLOW'
+INFO: [Synth 8-223] decloning instance 'dcmp_64ns_64ns_1_2_no_dsp_1_U5/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'dcmp_64ns_64ns_1_2_no_dsp_1_U5/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'dcmp_64ns_64ns_1_2_no_dsp_1_U5/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized5) to 'dcmp_64ns_64ns_1_2_no_dsp_1_U5/relu_dcmp_64ns_64ns_1_2_no_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[47]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[46]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[45]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[44]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[43]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[42]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[41]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[40]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[39]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[38]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[37]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[36]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[35]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[34]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[33]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[32]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[31]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[30]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[29]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[28]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[27]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[26]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[25]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[24]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[23]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[22]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[21]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[20]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[19]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[18]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[17]) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[47]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[46]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[45]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[44]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[43]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[42]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[41]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[40]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[39]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[38]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[37]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[36]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[35]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[34]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[33]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[32]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[31]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[30]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[29]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[28]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[27]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[26]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[25]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[24]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[23]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[22]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[21]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[20]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[19]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[18]__0) is unused and will be removed from module relu.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_32ns_64_2_1_U6/buff0_reg[17]__0) is unused and will be removed from module relu.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2385.105 ; gain = 760.848 ; free physical = 18019 ; free virtual = 25574
+---------------------------------------------------------------------------------
+ Sort Area is  mul_32ns_32ns_64_2_1_U6/tmp_product_0 : 0 0 : 3101 5927 : Used 1 time 0
+ Sort Area is  mul_32ns_32ns_64_2_1_U6/tmp_product_0 : 0 1 : 2826 5927 : Used 1 time 0
+ Sort Area is  mul_32ns_32ns_64_2_1_U6/tmp_product_3 : 0 0 : 2759 5466 : Used 1 time 0
+ Sort Area is  mul_32ns_32ns_64_2_1_U6/tmp_product_3 : 0 1 : 2707 5466 : Used 1 time 0
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2385.105 ; gain = 760.848 ; free physical = 18019 ; free virtual = 25574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2393.113 ; gain = 768.855 ; free physical = 18014 ; free virtual = 25569
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2560.926 ; gain = 936.668 ; free physical = 17897 ; free virtual = 25452
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2560.926 ; gain = 936.668 ; free physical = 17897 ; free virtual = 25452
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2560.926 ; gain = 936.668 ; free physical = 17897 ; free virtual = 25452
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2560.926 ; gain = 936.668 ; free physical = 17897 ; free virtual = 25452
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2560.926 ; gain = 936.668 ; free physical = 17897 ; free virtual = 25452
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2560.926 ; gain = 936.668 ; free physical = 17897 ; free virtual = 25452
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|relu        | A*B             | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|relu        | (PCIN>>17+A*B)' | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|relu        | A*B             | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|relu        | (PCIN>>17+A*B)' | 17     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |    34|
+|3     |DSP48E1 |     4|
+|4     |LUT1    |     2|
+|5     |LUT2    |   117|
+|6     |LUT3    |     3|
+|7     |LUT4    |     9|
+|8     |LUT5    |     5|
+|9     |LUT6    |   108|
+|10    |MUXCY   |    58|
+|11    |FDRE    |   363|
+|12    |FDSE    |     1|
+|13    |IBUF    |    99|
+|14    |OBUF    |    68|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2560.926 ; gain = 936.668 ; free physical = 17897 ; free virtual = 25452
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2560.926 ; gain = 936.668 ; free physical = 17897 ; free virtual = 25452
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2560.934 ; gain = 936.668 ; free physical = 17897 ; free virtual = 25452
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2573.801 ; gain = 0.000 ; free physical = 18044 ; free virtual = 25599
+INFO: [Netlist 29-17] Analyzing 96 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2720.383 ; gain = 0.000 ; free physical = 17958 ; free virtual = 25510
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 15 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 15 instances
+
+Synth Design complete | Checksum: 722e75f0
+INFO: [Common 17-83] Releasing license: Synthesis
+196 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2720.418 ; gain = 1096.195 ; free physical = 17957 ; free virtual = 25510
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2109.133; main = 2109.133; forked = 339.319
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3395.004; main = 2720.387; forked = 1001.887
+# create_clock -period 10.0 -name default [get_ports ap_clk]
+# report_utilization -file vivado_reports/utilization_synth.rpt
+# report_timing_summary -file vivado_reports/timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+# exit
+INFO: [Common 17-206] Exiting Vivado at Tue May  5 13:49:10 2026...

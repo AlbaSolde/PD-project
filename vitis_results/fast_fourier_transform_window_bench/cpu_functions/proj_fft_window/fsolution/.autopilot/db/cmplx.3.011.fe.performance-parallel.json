@@ -1,0 +1,57 @@
+{
+  "0": {
+    "basicblocks": 9,
+    "calls": "1",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "cpu_functions.cpp",
+    "fileloc": 67,
+    "instructions": 32,
+    "loads": {
+      "T": 1
+    },
+    "memory_accesses": 2,
+    "name": "fft_function",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 654
+  },
+  "1": {
+    "basicblocks": 20,
+    "calls": "2 2",
+    "control_depth": 1,
+    "def_use_depth": 8,
+    "file": "cpu_functions.cpp",
+    "fileloc": 3,
+    "instructions": 118,
+    "loads": {
+      "L": 10
+    },
+    "memory_accesses": 10,
+    "name": "aux_fft_function",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 622
+  },
+  "2": {
+    "basicblocks": 18,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 19,
+    "file": "hls_hotbm.h",
+    "fileloc": 209,
+    "instructions": 252,
+    "loads": {
+      "G": 6,
+      "L": 2
+    },
+    "memory_accesses": 5,
+    "name": "sin_or_cos<double>",
+    "stores": {
+      "L": 4
+    },
+    "total_instructions": 252
+  }
+}

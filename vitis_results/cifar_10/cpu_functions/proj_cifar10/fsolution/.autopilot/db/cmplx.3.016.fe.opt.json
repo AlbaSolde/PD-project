@@ -1,0 +1,85 @@
+{
+  "0": {
+    "basicblocks": 79,
+    "calls": "1 2 2 1 2 2",
+    "control_depth": 1,
+    "def_use_depth": 11,
+    "file": "cpu_functions.cpp",
+    "fileloc": 154,
+    "instructions": 489,
+    "loads": {
+      "T": 13
+    },
+    "memory_accesses": 23,
+    "name": "cifar10",
+    "stores": {
+      "T": 9
+    },
+    "total_instructions": 3125
+  },
+  "1": {
+    "basicblocks": 9,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 12,
+    "file": "cpu_functions.cpp",
+    "fileloc": 12,
+    "instructions": 62,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 2,
+    "name": "convolution",
+    "total_instructions": 62
+  },
+  "2": {
+    "basicblocks": 30,
+    "calls": "3 4 4 4 4 4 4 4 4 4",
+    "control_depth": 7,
+    "def_use_depth": 46,
+    "file": "hls_pow.h",
+    "fileloc": 291,
+    "instructions": 350,
+    "loads": {
+      "G": 6,
+      "L": 2
+    },
+    "memory_accesses": 10,
+    "name": "pow_generic<double>",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 628
+  },
+  "3": {
+    "basicblocks": 15,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 6,
+    "file": "hls_pow.h",
+    "fileloc": 186,
+    "instructions": 224,
+    "loads": {
+      "G": 7,
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduction<71>",
+    "stores": {
+      "L": 15
+    },
+    "total_instructions": 224
+  },
+  "4": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 509,
+    "instructions": 6,
+    "memory_accesses": 0,
+    "name": "to_ieee",
+    "total_instructions": 6
+  }
+}

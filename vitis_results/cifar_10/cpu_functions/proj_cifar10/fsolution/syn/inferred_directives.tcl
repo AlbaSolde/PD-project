@@ -1,0 +1,12 @@
+# Inferred from syn.compile.pipeline_loops=64
+set_directive_pipeline convolution/VITIS_LOOP_26_2
+set_directive_pipeline cifar10/VITIS_LOOP_53_2
+set_directive_pipeline cifar10/VITIS_LOOP_95_4
+set_directive_pipeline cifar10/VITIS_LOOP_110_2
+set_directive_pipeline cifar10/VITIS_LOOP_125_3
+set_directive_pipeline cifar10/VITIS_LOOP_71_1
+set_directive_pipeline cifar10/VITIS_LOOP_140_1
+set_directive_pipeline cifar10/VITIS_LOOP_147_2
+# Inferred from Performance Budgeter performance directives
+set_directive_loop_flatten cifar10/VITIS_LOOP_51_1
+set_directive_loop_flatten cifar10/VITIS_LOOP_108_1

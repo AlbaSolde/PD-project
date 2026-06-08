@@ -1,0 +1,184 @@
+---
+MainSourceFile:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_4_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      4
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289256
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_4_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_6_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      6
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289298
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_6_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_8_3:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      8
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289342
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_8_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_19_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      19
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289515
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_19_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_21_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      21
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289560
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_21_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_46_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      46
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1290264
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_46_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_48_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      48
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1290309
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_48_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_56_3:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      56
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1290440
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_56_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_58_4:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      58
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1290485
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_58_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_77_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      77
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1290692
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_77_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_144_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      144
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1291679
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_144_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_148_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      148
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1291741
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_148_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_164_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      164
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1292018
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_164_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_174_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      174
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1292245
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_174_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_198_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      198
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1293075
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_198_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions'
+...

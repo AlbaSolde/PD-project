@@ -1,0 +1,5 @@
+# Inferred from syn.compile.pipeline_loops=64
+set_directive_pipeline softmax/VITIS_LOOP_48_2
+set_directive_pipeline softmax/VITIS_LOOP_58_4
+# Inferred from Performance Budgeter performance directives
+set_directive_loop_flatten softmax/VITIS_LOOP_56_3

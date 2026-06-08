@@ -1,0 +1,20 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "cpu_functions.cpp",
+    "fileloc": 3,
+    "instructions": 19,
+    "loads": {
+      "T": 1
+    },
+    "memory_accesses": 3,
+    "name": "copy_array",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 19
+  }
+}

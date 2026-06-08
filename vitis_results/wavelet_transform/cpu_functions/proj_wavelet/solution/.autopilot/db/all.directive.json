@@ -1,0 +1,136 @@
+[
+  {
+    "csim": false,
+    "functionLabel": "",
+    "functionName": "ccsds_wavelet_transform",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "INTERFACE",
+      "option": [
+        {
+          "name": "m_axi",
+          "value": ""
+        },
+        {
+          "name": "bundle",
+          "value": "gmem0"
+        },
+        {
+          "name": "port",
+          "value": "A"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/run_hls.tcl",
+    "sourceLine": 8,
+    "success": true
+  },
+  {
+    "csim": false,
+    "functionLabel": "",
+    "functionName": "ccsds_wavelet_transform",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "INTERFACE",
+      "option": [
+        {
+          "name": "m_axi",
+          "value": ""
+        },
+        {
+          "name": "bundle",
+          "value": "gmem1"
+        },
+        {
+          "name": "port",
+          "value": "B"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/run_hls.tcl",
+    "sourceLine": 9,
+    "success": true
+  },
+  {
+    "csim": false,
+    "functionLabel": "",
+    "functionName": "ccsds_wavelet_transform",
+    "id": 2,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "INTERFACE",
+      "option": [
+        {
+          "name": "s_axilite",
+          "value": ""
+        },
+        {
+          "name": "port",
+          "value": "size"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/run_hls.tcl",
+    "sourceLine": 10,
+    "success": true
+  },
+  {
+    "csim": false,
+    "functionLabel": "",
+    "functionName": "ccsds_wavelet_transform",
+    "id": 3,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "INTERFACE",
+      "option": [
+        {
+          "name": "s_axilite",
+          "value": ""
+        },
+        {
+          "name": "port",
+          "value": "return"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/run_hls.tcl",
+    "sourceLine": 11,
+    "success": true
+  },
+  {
+    "csim": false,
+    "functionLabel": "",
+    "functionName": "ccsds_wavelet_transform",
+    "id": 4,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "ccsds_wavelet_transform"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/run_hls.tcl",
+    "sourceLine": 13,
+    "success": true
+  }
+]

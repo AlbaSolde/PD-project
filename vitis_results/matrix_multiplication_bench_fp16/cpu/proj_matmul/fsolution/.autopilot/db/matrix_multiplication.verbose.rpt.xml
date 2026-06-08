@@ -1,0 +1,140 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'matrix_multiplication'" level="0">
+<item name = "Date">Tue May  5 12:27:42 2026
+</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
+<item name = "Project">proj_matmul</item>
+<item name = "Solution">fsolution (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.256 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, ?, ?, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_matrix_multiplication_Pipeline_VITIS_LOOP_8_3_fu_108">matrix_multiplication_Pipeline_VITIS_LOOP_8_3, ?, ?, ?, ?, 0, 0, loop pipeline stp</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- VITIS_LOOP_4_1">?, ?, ?, -, -, ?, no</column>
+<column name=" + VITIS_LOOP_6_2">?, ?, ?, -, -, ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 195, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 5, 453, 891, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, 0, 75, -</column>
+<column name="Register">-, -, 298, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 2, ~0, 2, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="fmul_32ns_32ns_32_4_max_dsp_1_U7">fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 321, 0</column>
+<column name="grp_matrix_multiplication_Pipeline_VITIS_LOOP_8_3_fu_108">matrix_multiplication_Pipeline_VITIS_LOOP_8_3, 0, 2, 310, 570, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="add_ln6_fu_160_p2">+, 0, 0, 39, 32, 1</column>
+<column name="i_2_fu_149_p2">+, 0, 0, 39, 32, 1</column>
+<column name="icmp_ln4_fu_144_p2">icmp, 0, 0, 39, 32, 32</column>
+<column name="icmp_ln6_fu_155_p2">icmp, 0, 0, 39, 32, 32</column>
+<column name="icmp_ln8_fu_135_p2">icmp, 0, 0, 39, 32, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="C_o">9, 2, 32, 64</column>
+<column name="ap_NS_fsm">48, 9, 1, 9</column>
+<column name="i_fu_46">9, 2, 32, 64</column>
+<column name="j_reg_97">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="add_ln6_reg_241">32, 0, 32, 0</column>
+<column name="ap_CS_fsm">8, 0, 8, 0</column>
+<column name="bitcast_ln10_2_reg_246">32, 0, 32, 0</column>
+<column name="grp_matrix_multiplication_Pipeline_VITIS_LOOP_8_3_fu_108_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_2_reg_233">32, 0, 32, 0</column>
+<column name="i_fu_46">32, 0, 32, 0</column>
+<column name="icmp_ln8_reg_221">1, 0, 1, 0</column>
+<column name="j_reg_97">32, 0, 32, 0</column>
+<column name="m_read_reg_211">32, 0, 32, 0</column>
+<column name="mul_reg_225">32, 0, 32, 0</column>
+<column name="n_read_reg_216">32, 0, 32, 0</column>
+<column name="w_read_reg_206">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, matrix_multiplication, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, matrix_multiplication, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, matrix_multiplication, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, matrix_multiplication, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, matrix_multiplication, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, matrix_multiplication, return value</column>
+<column name="A">in, 32, ap_none, A, pointer</column>
+<column name="B">in, 32, ap_none, B, pointer</column>
+<column name="C_i">in, 32, ap_ovld, C, pointer</column>
+<column name="C_o">out, 32, ap_ovld, C, pointer</column>
+<column name="C_o_ap_vld">out, 1, ap_ovld, C, pointer</column>
+<column name="n">in, 32, ap_none, n, scalar</column>
+<column name="m">in, 32, ap_none, m, scalar</column>
+<column name="w">in, 32, ap_none, w, scalar</column>
+</table>
+</item>
+</section>
+</profile>

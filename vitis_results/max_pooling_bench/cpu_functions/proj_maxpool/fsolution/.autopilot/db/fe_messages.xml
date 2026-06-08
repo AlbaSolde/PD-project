@@ -1,0 +1,14 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="" msg_id="207-6585" msg_severity="WARNING" msg_loc="cpu_functions.cpp:34:15" msg_body="expression result unused">
+        <args ClangWarningOption="unused-value"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/run_hls.tcl:7:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="max_pooling" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=max_pooling" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="cpu_functions.cpp:47:16" msg_body="Ignore address on register port 'A'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="cpu_functions.cpp:54:108" msg_body="Ignore address on register port 'A'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="cpu_functions.cpp:59:49" msg_body="Ignore address on register port 'B'"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cpu_functions.cpp:51:22" msg_body="pipeline   1 max_pooling config_compile -pipeline_loops 64VITIS_LOOP_51_4 cpu_functions.cpp:51:22">
+        <args LoopLoc="cpu_functions.cpp:51:22" LoopLoc-DebugLoc="File cpu_functions.cpp Line 51 Column 22" LoopName="VITIS_LOOP_51_4" PragmaFunction="max_pooling" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+</xilinx:hls_fe_msgs>

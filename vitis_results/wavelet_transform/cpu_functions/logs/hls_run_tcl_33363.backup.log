@@ -1,0 +1,78 @@
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project proj_wavelet 
+WARNING: [HLS 200-2182] The 'proj_wavelet' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Creating and opening solution '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet'.
+INFO: [HLS 200-1510] Running: set_top ccsds_wavelet_transform 
+INFO: [HLS 200-1510] Running: add_files cpu_functions.cpp -cflags -DINT 
+INFO: [HLS 200-10] Adding design file 'cpu_functions.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution 
+INFO: [HLS 200-10] Creating and opening solution '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.46 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.6 seconds; current allocated memory: 251.773 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'cpu_functions.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3.09 seconds. CPU system time: 0.67 seconds. Elapsed time: 3.76 seconds; current allocated memory: 253.383 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 13,008 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,101 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 486 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 476 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 308 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 306 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 306 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 306 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 306 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 308 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 308 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 308 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 306 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 306 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, (ap_q_mode)6, double>(double, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' into 'int generic_cast_IEEE754<int, double>(double, bool)' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, double>(double, bool)' into '__hls_fptosi_double_i32' (/wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:55:0)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:13:21)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:13:57)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:13:88)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:16:21)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:16:59)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:16:74)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:16:106)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:19:21)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:19:58)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:19:89)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:23:21)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:23:54)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:23:63)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:23:91)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:23:104)
+WARNING: [HLS 214-450] Ignore address on register port 'B' (cpu_functions.cpp:27:13)
+WARNING: [HLS 214-450] Ignore address on register port 'B' (cpu_functions.cpp:36:36)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:40:20)
+WARNING: [HLS 214-450] Ignore address on register port 'B' (cpu_functions.cpp:40:41)
+WARNING: [HLS 214-450] Ignore address on register port 'B' (cpu_functions.cpp:40:58)
+WARNING: [HLS 214-450] Ignore address on register port 'B' (cpu_functions.cpp:43:8)
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_9_1> at cpu_functions.cpp:9:18 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_33_2> at cpu_functions.cpp:33:19 due to pipeline_loops threshold
+ERROR: [HLS 214-323] Address computation on scalar port 'A' is not supported (cpu_functions.cpp:3:0)
+ERROR: [HLS 200-1715] Encountered problem during source synthesis
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:12; Allocated memory: 11.461 MB.
+Pre-synthesis failed.
+    while executing
+"source /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/run_hls.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 8.9 seconds. Total CPU system time: 1.66 seconds. Total elapsed time: 14.79 seconds; peak allocated memory: 263.234 MB.
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

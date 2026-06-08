@@ -1,0 +1,232 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 21, Column: 33 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - Callee:          'get_mean_value_matrix(float const*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 3, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'correlation_2D(float const*, float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 20, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 21, Column: 33 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - Callee:          'get_mean_value_matrix(float const*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 3, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'correlation_2D(float const*, float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 20, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_correlation_2D_ir
+Args:            
+  - Callee:          'correlation_2D(float const*, float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 20, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_correlation_2D_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cpu_functions.cpp, Line: 20, Column: 0 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'get_mean_value_matrix(float const*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 3, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'correlation_2D(float const*, float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 20, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 11, Column: 20 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 11, Column: 20 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 33, Column: 20 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 34, Column: 20 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 11, Column: 20 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 11, Column: 20 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 33, Column: 20 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 34, Column: 20 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_10_2
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:10:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 10, Column: 20 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  correlation_2D
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_10_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:10:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 10, Column: 20 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_10_2
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:10:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 10, Column: 20 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  correlation_2D
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_10_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:10:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 10, Column: 20 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_32_2
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:32:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 32, Column: 20 }
+Function:        _Z14correlation_2DPKfS0_Pfi
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  correlation_2D
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_32_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:32:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 32, Column: 20 }
+  - String:          ' '
+...

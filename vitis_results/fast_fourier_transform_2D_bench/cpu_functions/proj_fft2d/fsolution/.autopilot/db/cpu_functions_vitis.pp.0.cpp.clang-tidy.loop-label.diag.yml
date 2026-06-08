@@ -1,0 +1,184 @@
+---
+MainSourceFile:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_19_1:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      19
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1292653
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_19_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_21_2:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      21
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1292717
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_21_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_30_3:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      30
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1292980
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_30_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_34_4:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      34
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1293167
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_34_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_37_5:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      37
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1293284
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_37_5: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_59_1:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      59
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1294312
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_59_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_63_2:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      63
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1294385
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_63_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_68_3:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      68
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1294479
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_68_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_69_4:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      69
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1294518
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_69_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_72_5:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      72
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1294622
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_72_5: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_88_1:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      88
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1295022
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_88_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_98_1:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      98
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1295328
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_98_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_99_2:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      99
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1295376
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_99_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_114_1:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      114
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1296019
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_114_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_133_1:  '
+      FilePath:        cpu_functions_vitis.cpp
+      FileOffset:      133
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp'
+          Offset:          1296904
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_133_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions'
+...

@@ -1,0 +1,21 @@
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench_fp16/cpu/run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project proj_matmul 
+WARNING: [HLS 200-2182] The 'proj_matmul' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Opening solution '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench_fp16/cpu/proj_matmul'.
+INFO: [HLS 200-1510] Running: set_top matrix_multiplication 
+INFO: [HLS 200-1510] Running: add_files lib_cpu.cpp -cflags -DINT 
+INFO: [HLS 200-10] Adding design file 'lib_cpu.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution fsolution 
+INFO: [HLS 200-10] Opening solution '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench_fp16/cpu/proj_matmul/fsolution'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.43 seconds. CPU system time: 0.1 seconds. Elapsed time: 0.54 seconds; current allocated memory: 309.969 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'lib_cpu.cpp' ... 

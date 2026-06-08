@@ -1,0 +1,20 @@
+{
+  "0": {
+    "basicblocks": 28,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 5,
+    "file": "cpu_functions.cpp",
+    "fileloc": 40,
+    "instructions": 64,
+    "loads": {
+      "T": 2
+    },
+    "memory_accesses": 1,
+    "name": "max_pooling",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 64
+  }
+}

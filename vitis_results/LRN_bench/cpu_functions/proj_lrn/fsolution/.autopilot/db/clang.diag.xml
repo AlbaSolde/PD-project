@@ -1,0 +1,23 @@
+<dict>
+  <key>main-file</key>
+  <string>/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/.autopilot/db/cpu_functions.pp.0.cpp</string>
+  <key>diagnostics</key>
+  <array>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>cpu_functions.cpp</string>
+      <key>line</key>
+      <integer>29</integer>
+      <key>column</key>
+      <integer>15</integer>
+      <key>message</key>
+      <string>expression result unused</string>
+      <key>ID</key>
+      <integer>6585</integer>
+      <key>WarningOption</key>
+      <string>unused-value</string>
+    </dict>
+  </array>
+</dict>

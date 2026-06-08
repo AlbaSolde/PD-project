@@ -1,0 +1,50 @@
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44391:2: remark: Added loop label VITIS_LOOP_4_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < n; ++i)
+ ^
+ VITIS_LOOP_4_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44391:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44393:3: remark: Added loop label VITIS_LOOP_6_2:   [xilinx-label-all-loops]
+  for (unsigned int j = 0; j < w; ++j)
+  ^
+  VITIS_LOOP_6_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44393:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44395:4: remark: Added loop label VITIS_LOOP_8_3:   [xilinx-label-all-loops]
+   for (unsigned int k = 0; k < m; ++k)
+   ^
+   VITIS_LOOP_8_3: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44395:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44412:2: remark: Added loop label VITIS_LOOP_21_1:   [xilinx-label-all-loops]
+ for (int x = 0; x < size; ++x)
+ ^
+ VITIS_LOOP_21_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44412:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44414:3: remark: Added loop label VITIS_LOOP_23_2:   [xilinx-label-all-loops]
+  for (int y = 0; y < size; ++y)
+  ^
+  VITIS_LOOP_23_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44414:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44418:4: remark: Added loop label VITIS_LOOP_27_3:   [xilinx-label-all-loops]
+   for(int i = -kernel_rad; i <= kernel_rad; ++i)
+   ^
+   VITIS_LOOP_27_3: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44418:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44420:5: remark: Added loop label VITIS_LOOP_29_4:   [xilinx-label-all-loops]
+    for(int j = -kernel_rad; j <= kernel_rad; ++j){
+    ^
+    VITIS_LOOP_29_4: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44420:5: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44451:3: remark: Added loop label VITIS_LOOP_68_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < size; ++i){
+  ^
+  VITIS_LOOP_68_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44451:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44471:4: remark: Added loop label VITIS_LOOP_88_1:   [xilinx-label-all-loops]
+   for (unsigned int i = 0; i < size; ++i){
+   ^
+   VITIS_LOOP_88_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44471:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44495:2: remark: Added loop label VITIS_LOOP_112_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i){
+ ^
+ VITIS_LOOP_112_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44495:2: note: FIX-IT applied suggested code changes

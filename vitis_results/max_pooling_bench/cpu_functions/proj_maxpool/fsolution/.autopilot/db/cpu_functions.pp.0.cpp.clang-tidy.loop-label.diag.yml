@@ -1,0 +1,184 @@
+---
+MainSourceFile:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_9_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      9
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289365
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_9_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_11_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      11
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289407
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_11_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_13_3:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      13
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289451
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_13_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_24_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      24
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289624
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_24_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_26_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      26
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1289669
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_26_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_43_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      43
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1290268
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_43_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_45_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      45
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1290320
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_45_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_49_3:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      49
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1290403
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_49_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_51_4:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      51
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1290453
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_51_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_83_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      83
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1291058
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_83_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_150_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      150
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1292046
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_150_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_154_2:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      154
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1292108
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_154_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_170_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      170
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1292385
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_170_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_180_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      180
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1292612
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_180_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_204_1:  '
+      FilePath:        cpu_functions.cpp
+      FileOffset:      204
+      Replacements:
+        - FilePath:        '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/proj_maxpool/fsolution/.autopilot/db/cpu_functions.pp.0.cpp'
+          Offset:          1293442
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_204_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions'
+...

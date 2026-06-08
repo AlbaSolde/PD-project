@@ -1,0 +1,129 @@
+
+
+================================================================
+== Vitis HLS Report for 'aux_fft_function'
+================================================================
+* Date:           Tue May  5 10:29:41 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        proj_fft_window
+* Solution:       fsolution (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  8.495 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%nn_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %nn"   --->   Operation 4 'read' 'nn_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%data_read_2 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %data_read"   --->   Operation 5 'read' 'data_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%data_0_loc = alloca i64 1"   --->   Operation 6 'alloca' 'data_0_loc' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%tmp_s = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %nn_read, i32 1, i32 63" [cpu_functions.cpp:11]   --->   Operation 7 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%n = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i63.i1, i63 %tmp_s, i1 0" [cpu_functions.cpp:11]   --->   Operation 8 'bitconcatenate' 'n' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [2/2] (0.00ns)   --->   "%call_ln11 = call void @aux_fft_function_Outline_VITIS_LOOP_14_1, i64 %n, i64 %nn_read" [cpu_functions.cpp:11]   --->   Operation 9 'call' 'call_ln11' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_1 : Operation 10 [2/2] (0.00ns)   --->   "%call_ln11 = call void @aux_fft_function_Outline_VITIS_LOOP_30_3, i32 %data_read_2, i64 %n, i32 %data_0_loc, i256 %ref_4oPi_table_256, i59 %fourth_order_double_sin_cos_K0, i52 %fourth_order_double_sin_cos_K1, i44 %fourth_order_double_sin_cos_K2, i33 %fourth_order_double_sin_cos_K3, i25 %fourth_order_double_sin_cos_K4" [cpu_functions.cpp:11]   --->   Operation 10 'call' 'call_ln11' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 3.52>
+ST_2 : Operation 11 [1/2] (3.52ns)   --->   "%call_ln11 = call void @aux_fft_function_Outline_VITIS_LOOP_14_1, i64 %n, i64 %nn_read" [cpu_functions.cpp:11]   --->   Operation 11 'call' 'call_ln11' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 12 [1/2] (3.52ns)   --->   "%call_ln11 = call void @aux_fft_function_Outline_VITIS_LOOP_30_3, i32 %data_read_2, i64 %n, i32 %data_0_loc, i256 %ref_4oPi_table_256, i59 %fourth_order_double_sin_cos_K0, i52 %fourth_order_double_sin_cos_K1, i44 %fourth_order_double_sin_cos_K2, i33 %fourth_order_double_sin_cos_K3, i25 %fourth_order_double_sin_cos_K4" [cpu_functions.cpp:11]   --->   Operation 12 'call' 'call_ln11' <Predicate = true> <Delay = 3.52> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 13 [1/1] (0.00ns)   --->   "%data_0_loc_load = load i32 %data_0_loc"   --->   Operation 13 'load' 'data_0_loc_load' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 14 [1/1] (0.00ns)   --->   "%ret_ln64 = ret i32 %data_0_loc_load" [cpu_functions.cpp:64]   --->   Operation 14 'ret' 'ret_ln64' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 0.000ns
+The critical path consists of the following:
+
+ <State 2>: 3.520ns
+The critical path consists of the following:
+	'call' operation ('call_ln11', cpu_functions.cpp:11) to 'aux_fft_function_Outline_VITIS_LOOP_14_1' [14]  (3.520 ns)
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

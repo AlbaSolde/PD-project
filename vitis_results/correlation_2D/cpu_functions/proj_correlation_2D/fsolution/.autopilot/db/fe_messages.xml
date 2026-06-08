@@ -1,0 +1,18 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/run_hls.tcl:7:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="correlation_2D" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=correlation_2D" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="cpu_functions.cpp:20:0" msg_body="Inlining function 'get_mean_value_matrix(float const*, int)' into 'correlation_2D(float const*, float const*, float*, int)'">
+        <args Callee="get_mean_value_matrix(float const*, int)" Callee-DebugLoc="File cpu_functions.cpp Line 3 Column 0" Caller="correlation_2D(float const*, float const*, float*, int)" Caller-DebugLoc="File cpu_functions.cpp Line 20 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="cpu_functions.cpp:11:20" msg_body="Ignore address on register port 'A'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="cpu_functions.cpp:11:20" msg_body="Ignore address on register port 'B'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="cpu_functions.cpp:33:20" msg_body="Ignore address on register port 'A'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="cpu_functions.cpp:34:20" msg_body="Ignore address on register port 'B'"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cpu_functions.cpp:10:20" msg_body="pipeline   1 correlation_2D config_compile -pipeline_loops 64VITIS_LOOP_10_2 cpu_functions.cpp:10:20">
+        <args LoopLoc="cpu_functions.cpp:10:20" LoopLoc-DebugLoc="File cpu_functions.cpp Line 10 Column 20" LoopName="VITIS_LOOP_10_2" PragmaFunction="correlation_2D" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cpu_functions.cpp:32:20" msg_body="pipeline   1 correlation_2D config_compile -pipeline_loops 64VITIS_LOOP_32_2 cpu_functions.cpp:32:20">
+        <args LoopLoc="cpu_functions.cpp:32:20" LoopLoc-DebugLoc="File cpu_functions.cpp Line 32 Column 20" LoopName="VITIS_LOOP_32_2" PragmaFunction="correlation_2D" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+</xilinx:hls_fe_msgs>

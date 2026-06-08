@@ -1,0 +1,175 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+Tool Version Limit: 2025.11
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.45 seconds. CPU system time: 0.12 seconds. Elapsed time: 0.54 seconds; current allocated memory: 251.777 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'cpu_functions.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.79 seconds. CPU system time: 0.54 seconds. Elapsed time: 3.33 seconds; current allocated memory: 253.344 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 119 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 147 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 99 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 101 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 94 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 94 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 94 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 94 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 107 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 107 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 94 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 94 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 94 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 96 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-178] Inlining function 'get_mean_value_matrix(float const*, int)' into 'correlation_2D(float const*, float const*, float*, int)' (cpu_functions.cpp:20:0)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:11:20)
+WARNING: [HLS 214-450] Ignore address on register port 'B' (cpu_functions.cpp:11:20)
+WARNING: [HLS 214-450] Ignore address on register port 'A' (cpu_functions.cpp:33:20)
+WARNING: [HLS 214-450] Ignore address on register port 'B' (cpu_functions.cpp:34:20)
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_10_2> at cpu_functions.cpp:10:20 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_32_2> at cpu_functions.cpp:32:20 due to pipeline_loops threshold
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.06 seconds. CPU system time: 0.46 seconds. Elapsed time: 8.2 seconds; current allocated memory: 263.098 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 263.098 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 263.457 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 264.469 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.07 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 287.246 MB.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_9_1'(cpu_functions.cpp:9:18) and 'VITIS_LOOP_10_2'(cpu_functions.cpp:10:20) in function 'correlation_2D' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_9_1'(cpu_functions.cpp:9:18) and 'VITIS_LOOP_10_2'(cpu_functions.cpp:10:20) in function 'correlation_2D' into perfectly nested loops.
+INFO: [HLS 200-2061] Successfully converted nested loops 'VITIS_LOOP_31_1'(cpu_functions.cpp:31:19) and 'VITIS_LOOP_32_2'(cpu_functions.cpp:32:20) in function 'correlation_2D' into perfectly nested loops.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_9_1' (cpu_functions.cpp:9:18) in function 'correlation_2D'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_9_1' (cpu_functions.cpp:9:18) in function 'correlation_2D'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_31_1' (cpu_functions.cpp:31:19) in function 'correlation_2D'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 307.531 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'correlation_2D' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'.
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2' (loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('suma_valores_1_write_ln4', cpu_functions.cpp:4->cpu_functions.cpp:21) of variable 'suma_valores', cpu_functions.cpp:11->cpu_functions.cpp:21 64 bit on local variable 'suma_valores', cpu_functions.cpp:4->cpu_functions.cpp:21 and 'dadd' operation 64 bit ('suma_valores', cpu_functions.cpp:11->cpu_functions.cpp:21).
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2' (loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('suma_valores_1_write_ln4', cpu_functions.cpp:4->cpu_functions.cpp:21) of variable 'suma_valores', cpu_functions.cpp:11->cpu_functions.cpp:21 64 bit on local variable 'suma_valores', cpu_functions.cpp:4->cpu_functions.cpp:21 and 'dadd' operation 64 bit ('suma_valores', cpu_functions.cpp:11->cpu_functions.cpp:21).
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2' (loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('suma_valores_1_write_ln4', cpu_functions.cpp:4->cpu_functions.cpp:21) of variable 'suma_valores', cpu_functions.cpp:11->cpu_functions.cpp:21 64 bit on local variable 'suma_valores', cpu_functions.cpp:4->cpu_functions.cpp:21 and 'dadd' operation 64 bit ('suma_valores', cpu_functions.cpp:11->cpu_functions.cpp:21).
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2' (loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('suma_valores_1_write_ln4', cpu_functions.cpp:4->cpu_functions.cpp:21) of variable 'suma_valores', cpu_functions.cpp:11->cpu_functions.cpp:21 64 bit on local variable 'suma_valores', cpu_functions.cpp:4->cpu_functions.cpp:21 and 'dadd' operation 64 bit ('suma_valores', cpu_functions.cpp:11->cpu_functions.cpp:21).
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2' (loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'store' operation ('suma_valores_1_write_ln4', cpu_functions.cpp:4->cpu_functions.cpp:21) of variable 'suma_valores', cpu_functions.cpp:11->cpu_functions.cpp:21 64 bit on local variable 'suma_valores', cpu_functions.cpp:4->cpu_functions.cpp:21 and 'dadd' operation 64 bit ('suma_valores', cpu_functions.cpp:11->cpu_functions.cpp:21).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 10, loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.06 seconds; current allocated memory: 308.477 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 308.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'.
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_21' (loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('suma_valores_write_ln4', cpu_functions.cpp:4->cpu_functions.cpp:22) of variable 'suma_valores_1', cpu_functions.cpp:11->cpu_functions.cpp:22 64 bit on local variable 'suma_valores', cpu_functions.cpp:4->cpu_functions.cpp:22 and 'dadd' operation 64 bit ('suma_valores_1', cpu_functions.cpp:11->cpu_functions.cpp:22).
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_21' (loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('suma_valores_write_ln4', cpu_functions.cpp:4->cpu_functions.cpp:22) of variable 'suma_valores_1', cpu_functions.cpp:11->cpu_functions.cpp:22 64 bit on local variable 'suma_valores', cpu_functions.cpp:4->cpu_functions.cpp:22 and 'dadd' operation 64 bit ('suma_valores_1', cpu_functions.cpp:11->cpu_functions.cpp:22).
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_21' (loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('suma_valores_write_ln4', cpu_functions.cpp:4->cpu_functions.cpp:22) of variable 'suma_valores_1', cpu_functions.cpp:11->cpu_functions.cpp:22 64 bit on local variable 'suma_valores', cpu_functions.cpp:4->cpu_functions.cpp:22 and 'dadd' operation 64 bit ('suma_valores_1', cpu_functions.cpp:11->cpu_functions.cpp:22).
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_21' (loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('suma_valores_write_ln4', cpu_functions.cpp:4->cpu_functions.cpp:22) of variable 'suma_valores_1', cpu_functions.cpp:11->cpu_functions.cpp:22 64 bit on local variable 'suma_valores', cpu_functions.cpp:4->cpu_functions.cpp:22 and 'dadd' operation 64 bit ('suma_valores_1', cpu_functions.cpp:11->cpu_functions.cpp:22).
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_21' (loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'store' operation ('suma_valores_write_ln4', cpu_functions.cpp:4->cpu_functions.cpp:22) of variable 'suma_valores_1', cpu_functions.cpp:11->cpu_functions.cpp:22 64 bit on local variable 'suma_valores', cpu_functions.cpp:4->cpu_functions.cpp:22 and 'dadd' operation 64 bit ('suma_valores_1', cpu_functions.cpp:11->cpu_functions.cpp:22).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 8, Depth = 10, loop 'VITIS_LOOP_9_1_VITIS_LOOP_10_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 308.477 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 308.477 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'correlation_2D_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_31_1_VITIS_LOOP_32_2'.
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2' (loop 'VITIS_LOOP_31_1_VITIS_LOOP_32_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('acumulate_value_a_a_1_write_ln26', cpu_functions.cpp:26) of variable 'acumulate_value_a_a', cpu_functions.cpp:36 32 bit on local variable 'acumulate_value_a_a', cpu_functions.cpp:26 and 'fadd' operation 32 bit ('acumulate_value_a_a', cpu_functions.cpp:36).
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2' (loop 'VITIS_LOOP_31_1_VITIS_LOOP_32_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation ('acumulate_value_a_a_1_write_ln26', cpu_functions.cpp:26) of variable 'acumulate_value_a_a', cpu_functions.cpp:36 32 bit on local variable 'acumulate_value_a_a', cpu_functions.cpp:26 and 'fadd' operation 32 bit ('acumulate_value_a_a', cpu_functions.cpp:36).
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2' (loop 'VITIS_LOOP_31_1_VITIS_LOOP_32_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation ('acumulate_value_a_a_1_write_ln26', cpu_functions.cpp:26) of variable 'acumulate_value_a_a', cpu_functions.cpp:36 32 bit on local variable 'acumulate_value_a_a', cpu_functions.cpp:26 and 'fadd' operation 32 bit ('acumulate_value_a_a', cpu_functions.cpp:36).
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2' (loop 'VITIS_LOOP_31_1_VITIS_LOOP_32_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation ('acumulate_value_a_a_1_write_ln26', cpu_functions.cpp:26) of variable 'acumulate_value_a_a', cpu_functions.cpp:36 32 bit on local variable 'acumulate_value_a_a', cpu_functions.cpp:26 and 'fadd' operation 32 bit ('acumulate_value_a_a', cpu_functions.cpp:36).
+WARNING: [HLS 200-880] The II Violation in module 'correlation_2D_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2' (loop 'VITIS_LOOP_31_1_VITIS_LOOP_32_2'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1) between 'store' operation ('acumulate_value_a_a_1_write_ln26', cpu_functions.cpp:26) of variable 'acumulate_value_a_a', cpu_functions.cpp:36 32 bit on local variable 'acumulate_value_a_a', cpu_functions.cpp:26 and 'fadd' operation 32 bit ('acumulate_value_a_a', cpu_functions.cpp:36).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 10, loop 'VITIS_LOOP_31_1_VITIS_LOOP_32_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 308.492 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 308.492 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'correlation_2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 308.559 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 308.559 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2' pipeline 'VITIS_LOOP_9_1_VITIS_LOOP_10_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 308.559 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_21' pipeline 'VITIS_LOOP_9_1_VITIS_LOOP_10_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_21'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 308.559 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'correlation_2D_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'correlation_2D_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2' pipeline 'VITIS_LOOP_31_1_VITIS_LOOP_32_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'correlation_2D_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 308.676 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'correlation_2D' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'correlation_2D/A' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'correlation_2D/B' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'correlation_2D/R' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'correlation_2D/size' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'correlation_2D' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_16_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_16_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_31ns_32ns_63_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_32s_32s_32_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'correlation_2D'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 310.992 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 314.754 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.37 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.41 seconds; current allocated memory: 316.914 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for correlation_2D.
+INFO: [VLOG 209-307] Generating Verilog RTL for correlation_2D.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.04 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:13; Allocated memory: 65.137 MB.

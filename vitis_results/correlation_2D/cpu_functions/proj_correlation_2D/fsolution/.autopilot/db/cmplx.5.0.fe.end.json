@@ -1,0 +1,80 @@
+{
+    "1": {
+        "name": "correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_2",
+        "file": "cpu_functions.cpp",
+        "fileloc": "21",
+        "instructions": "21",
+        "total_instructions": "21",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "correlation_2D",
+        "file": "cpu_functions.cpp",
+        "fileloc": "20",
+        "instructions": "52",
+        "total_instructions": "131",
+        "calls": "1 2 3",
+        "basicblocks": "1",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "5",
+        "loads": {
+            "L": "5"
+        }
+    },
+    "2": {
+        "name": "correlation_2D_Pipeline_VITIS_LOOP_9_1_VITIS_LOOP_10_21",
+        "file": "cpu_functions.cpp",
+        "fileloc": "22",
+        "instructions": "21",
+        "total_instructions": "21",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "4",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "3"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "3": {
+        "name": "correlation_2D_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2",
+        "file": "cpu_functions.cpp",
+        "fileloc": "25",
+        "instructions": "37",
+        "total_instructions": "37",
+        "calls": "",
+        "basicblocks": "4",
+        "memory_accesses": "8",
+        "control_depth": "1",
+        "def_use_depth": "1",
+        "loads": {
+            "L": "7"
+        },
+        "stores": {
+            "L": "8"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

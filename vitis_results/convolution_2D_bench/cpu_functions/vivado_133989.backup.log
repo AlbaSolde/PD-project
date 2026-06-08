@@ -1,0 +1,921 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon May  4 23:13:39 2026
+# Process ID         : 133989
+# Current directory  : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions
+# Command line       : vivado -mode batch -source run_vivado.tcl
+# Log file           : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/vivado.log
+# Journal file       : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/vivado.jou
+# Running On         : luthier-ku
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1365U
+# CPU Frequency      : 698.085 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 33282 MB
+# Swap memory        : 536 MB
+# Total Virtual      : 33819 MB
+# Available Virtual  : 28453 MB
+#-----------------------------------------------------------
+source run_vivado.tcl
+# create_project vivado_matrix_convolution ./vivado_matrix_convolution -part xc7z020clg484-1 -force
+# file mkdir vivado_reports
+# foreach ip_tcl [glob ./matrix_convolution_hls/solution1/syn/verilog/*_ip.tcl] {
+#     source $ip_tcl
+# }
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/albasg/software/vivado/2025.2/data/ip'.
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 5 \
+##                           CONFIG.c_mult_usage Max_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Multiply \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Add \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 5 \
+##                           CONFIG.c_mult_usage Full_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Add_Subtract \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+# read_verilog [glob ./matrix_convolution_hls/solution1/syn/verilog/*.v]
+# synth_design -top matrix_convolution -part xc7z020clg484-1
+Command: synth_design -top matrix_convolution -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 134020
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2103.836 ; gain = 479.676 ; free physical = 8629 ; free virtual = 25887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:9]
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.v:9]
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution_mul_32s_32s_32_2_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_32s_32s_32_2_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution_mul_32s_32s_32_2_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_32s_32s_32_2_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution_flow_control_loop_pipe_sequential_init' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution_flow_control_loop_pipe_sequential_init' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.v:9]
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution_mul_31ns_128ns_159_5_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 31 - type: integer 
+	Parameter din1_WIDTH bound to: 128 - type: integer 
+	Parameter dout_WIDTH bound to: 159 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution_mul_31ns_128ns_159_5_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution_mul_32ns_64ns_96_5_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_32ns_64ns_96_5_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 96 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution_mul_32ns_64ns_96_5_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_32ns_64ns_96_5_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution_mul_32ns_96ns_128_5_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_32ns_96ns_128_5_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 96 - type: integer 
+	Parameter dout_WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution_mul_32ns_96ns_128_5_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_32ns_96ns_128_5_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:9]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7129] Port reset in module matrix_convolution_mul_32ns_96ns_128_5_1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module matrix_convolution_mul_32ns_64ns_96_5_1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module matrix_convolution_mul_31ns_128ns_159_5_1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module matrix_convolution_mul_32s_32s_32_2_1 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2243.773 ; gain = 619.613 ; free physical = 8463 ; free virtual = 25722
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2252.680 ; gain = 628.520 ; free physical = 8461 ; free virtual = 25720
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2252.680 ; gain = 628.520 ; free physical = 8457 ; free virtual = 25716
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2260.688 ; gain = 636.527 ; free physical = 8449 ; free virtual = 25709
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input  159 Bit       Adders := 1     
+	   2 Input  128 Bit       Adders := 1     
+	   2 Input   96 Bit       Adders := 1     
+	   2 Input   64 Bit       Adders := 2     
+	   2 Input   33 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 5     
+	   2 Input   31 Bit       Adders := 3     
++---Registers : 
+	              159 Bit    Registers := 6     
+	              128 Bit    Registers := 7     
+	               96 Bit    Registers := 7     
+	               64 Bit    Registers := 7     
+	               33 Bit    Registers := 2     
+	               32 Bit    Registers := 16    
+	               31 Bit    Registers := 10    
+	               21 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 21    
++---Multipliers : 
+	             32x129  Multipliers := 1     
+	              33x97  Multipliers := 1     
+	              33x65  Multipliers := 1     
+	              32x32  Multipliers := 1     
++---Muxes : 
+	   5 Input  128 Bit        Muxes := 1     
+	   5 Input   96 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 3     
+	   2 Input   31 Bit        Muxes := 1     
+	   2 Input   21 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 18    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP mul_32s_32s_32_2_1_U1/tmp_product, operation Mode is: A2*B.
+DSP Report: register mul_32s_32s_32_2_1_U1/tmp_product is absorbed into DSP mul_32s_32s_32_2_1_U1/tmp_product.
+DSP Report: operator mul_32s_32s_32_2_1_U1/tmp_product is absorbed into DSP mul_32s_32s_32_2_1_U1/tmp_product.
+DSP Report: operator mul_32s_32s_32_2_1_U1/tmp_product is absorbed into DSP mul_32s_32s_32_2_1_U1/tmp_product.
+DSP Report: Generating DSP mul_32s_32s_32_2_1_U1/buff0_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_32s_32s_32_2_1_U1/buff0_reg is absorbed into DSP mul_32s_32s_32_2_1_U1/buff0_reg.
+DSP Report: operator mul_32s_32s_32_2_1_U1/tmp_product is absorbed into DSP mul_32s_32s_32_2_1_U1/buff0_reg.
+DSP Report: operator mul_32s_32s_32_2_1_U1/tmp_product is absorbed into DSP mul_32s_32s_32_2_1_U1/buff0_reg.
+DSP Report: Generating DSP mul_32s_32s_32_2_1_U1/tmp_product, operation Mode is: A*B2.
+DSP Report: register mul_32s_32s_32_2_1_U1/tmp_product is absorbed into DSP mul_32s_32s_32_2_1_U1/tmp_product.
+DSP Report: operator mul_32s_32s_32_2_1_U1/tmp_product is absorbed into DSP mul_32s_32s_32_2_1_U1/tmp_product.
+DSP Report: operator mul_32s_32s_32_2_1_U1/tmp_product is absorbed into DSP mul_32s_32s_32_2_1_U1/tmp_product.
+DSP Report: Generating DSP mul_32s_32s_32_2_1_U1/buff0_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mul_32s_32s_32_2_1_U1/buff0_reg is absorbed into DSP mul_32s_32s_32_2_1_U1/buff0_reg.
+DSP Report: operator mul_32s_32s_32_2_1_U1/tmp_product is absorbed into DSP mul_32s_32s_32_2_1_U1/buff0_reg.
+DSP Report: operator mul_32s_32s_32_2_1_U1/tmp_product is absorbed into DSP mul_32s_32s_32_2_1_U1/buff0_reg.
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_340_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:280]
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_340_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:280]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U15/buff0_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_340_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:280]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U15/buff1_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_340_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:280]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U15/tmp_product was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_340_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:280]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U15/buff0_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_340_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:280]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U15/buff1_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U15/buff0_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U15/tmp_product was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_340_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:280]
+DSP Report: Generating DSP mul_32ns_64ns_96_5_1_U16/buff0_reg, operation Mode is: (A''*B'')'.
+DSP Report: register add_ln21_1_reg_283_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/din0_reg_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: Generating DSP mul_32ns_64ns_96_5_1_U16/buff1_reg, operation Mode is: (PCIN>>17)+(A''*B'')'.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff1_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff1_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register add_ln21_1_reg_283_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/din0_reg_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff1_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: Generating DSP mul_32ns_64ns_96_5_1_U16/buff0_reg, operation Mode is: (A''*B'')'.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: Generating DSP mul_32ns_64ns_96_5_1_U16/tmp_product, operation Mode is: PCIN+(A''*B'')'.
+DSP Report: register add_ln21_1_reg_283_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/din0_reg_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: Generating DSP mul_32ns_64ns_96_5_1_U16/buff1_reg, operation Mode is: (PCIN>>17)+(A''*B'')'.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff1_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff1_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff1_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff1_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff1_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: Generating DSP mul_32ns_64ns_96_5_1_U16/buff0_reg, operation Mode is: (A''*B'')'.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff0_reg.
+DSP Report: Generating DSP mul_32ns_64ns_96_5_1_U16/tmp_product, operation Mode is: (PCIN>>17)+(A''*B'')'.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/tmp_product.
+DSP Report: Generating DSP mul_32ns_64ns_96_5_1_U16/buff1_reg, operation Mode is: (PCIN+(A''*B'')')'.
+DSP Report: register add_ln21_1_reg_283_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/din0_reg_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff1_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff1_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff1_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: register mul_32ns_64ns_96_5_1_U16/buff0_reg is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: operator mul_32ns_64ns_96_5_1_U16/tmp_product is absorbed into DSP mul_32ns_64ns_96_5_1_U16/buff1_reg.
+DSP Report: Generating DSP mul_32ns_96ns_128_5_1_U17/buff0_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: Generating DSP mul_32ns_96ns_128_5_1_U17/tmp_product, operation Mode is: PCIN+(A''*B)'.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: Generating DSP mul_32ns_96ns_128_5_1_U17/buff1_reg, operation Mode is: (PCIN>>17)+(A*B'')'.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff1_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff1_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff1_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: Generating DSP mul_32ns_96ns_128_5_1_U17/buff0_reg, operation Mode is: (A''*B)'.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: Generating DSP mul_32ns_96ns_128_5_1_U17/tmp_product, operation Mode is: (PCIN>>17)+(A2*B'')'.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: Generating DSP mul_32ns_96ns_128_5_1_U17/buff1_reg, operation Mode is: (PCIN+(A''*B)')'.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff1_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff1_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff1_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: Generating DSP mul_32ns_96ns_128_5_1_U17/buff0_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: Generating DSP mul_32ns_96ns_128_5_1_U17/tmp_product, operation Mode is: PCIN+(A''*B)'.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: Generating DSP mul_32ns_96ns_128_5_1_U17/buff1_reg, operation Mode is: (PCIN>>17)+(A2*B'')'.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff1_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff1_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff1_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff1_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: Generating DSP mul_32ns_96ns_128_5_1_U17/buff0_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff0_reg.
+DSP Report: Generating DSP mul_32ns_96ns_128_5_1_U17/tmp_product, operation Mode is: (PCIN>>17)+(A2*B'')'.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/tmp_product.
+DSP Report: Generating DSP mul_32ns_96ns_128_5_1_U17/buff1_reg, operation Mode is: (PCIN+(A''*B)')'.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff1_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff1_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff1_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: register mul_32ns_96ns_128_5_1_U17/buff0_reg is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: operator mul_32ns_96ns_128_5_1_U17/tmp_product is absorbed into DSP mul_32ns_96ns_128_5_1_U17/buff1_reg.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/buff1_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/din0_reg_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/buff0_reg, operation Mode is: (A''*B2)'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/din0_reg_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/tmp_product, operation Mode is: (PCIN>>17)+(A2*B'')'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/buff1_reg, operation Mode is: (PCIN+(A''*B2)')'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/din0_reg_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/buff0_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/tmp_product, operation Mode is: PCIN+(A''*B2)'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/din0_reg_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/buff1_reg, operation Mode is: (PCIN>>17)+(A2*B'')'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/buff0_reg, operation Mode is: (A''*B2)'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/din0_reg_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/tmp_product, operation Mode is: (PCIN>>17)+(A2*B'')'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/buff1_reg, operation Mode is: (PCIN+(A''*B2)')'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/din0_reg_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/buff0_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/tmp_product, operation Mode is: PCIN+(A''*B2)'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/din0_reg_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/buff1_reg, operation Mode is: (PCIN>>17)+(A2*B'')'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/buff0_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff0_reg.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/tmp_product, operation Mode is: (PCIN>>17)+(A2*B'')'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/tmp_product.
+DSP Report: Generating DSP mul_31ns_128ns_159_5_1_U15/buff1_reg, operation Mode is: (PCIN+(A''*B2)')'.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/din0_reg_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff1_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: register mul_31ns_128ns_159_5_1_U15/buff0_reg is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+DSP Report: operator mul_31ns_128ns_159_5_1_U15/tmp_product is absorbed into DSP mul_31ns_128ns_159_5_1_U15/buff1_reg.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[47]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[46]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[45]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[44]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[43]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[42]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[41]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[40]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[39]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[38]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[37]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[36]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[35]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[34]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[33]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[32]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[31]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[30]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[29]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[28]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[27]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[26]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[25]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[24]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[23]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[22]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[21]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[20]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[19]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[18]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[17]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[16]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[15]) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[47]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[46]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[45]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[44]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[43]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[42]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[41]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[40]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[39]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[38]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[37]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[36]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[35]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[34]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[33]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[32]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[31]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[30]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[29]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[28]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[27]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[26]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[25]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[24]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[23]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[22]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[21]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[20]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[19]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[18]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32s_32s_32_2_1_U1/buff0_reg[17]__0) is unused and will be removed from module matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[47]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[46]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[45]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[44]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[43]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[42]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[41]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[40]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[39]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[38]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[37]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[36]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[35]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[34]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[33]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[32]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[31]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[30]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[29]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[28]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[27]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[26]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[25]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[24]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[23]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[22]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[21]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[20]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[19]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[18]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[17]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[47]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[46]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[45]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[44]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U16/buff1_reg[43]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2435.641 ; gain = 811.480 ; free physical = 8343 ; free virtual = 25627
+---------------------------------------------------------------------------------
+ Sort Area is  mul_32ns_64ns_96_5_1_U16/buff0_reg_6 : 0 0 : 3221 9384 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U16/buff0_reg_6 : 0 1 : 3240 9384 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U16/buff0_reg_6 : 0 2 : 2923 9384 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U17/buff0_reg_10 : 0 0 : 3203 9316 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U17/buff0_reg_10 : 0 1 : 3222 9316 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U17/buff0_reg_10 : 0 2 : 2891 9316 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U17/buff0_reg_14 : 0 0 : 3203 9316 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U17/buff0_reg_14 : 0 1 : 2843 9316 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U17/buff0_reg_14 : 0 2 : 3270 9316 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_1c : 0 0 : 3203 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_1c : 0 1 : 3222 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_1c : 0 2 : 2781 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_1e : 0 0 : 3203 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_1e : 0 1 : 2733 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_1e : 0 2 : 3270 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_22 : 0 0 : 3203 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_22 : 0 1 : 2733 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_22 : 0 2 : 3270 9206 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U17/buff0_reg_17 : 0 0 : 2843 8956 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U17/buff0_reg_17 : 0 1 : 3222 8956 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U17/buff0_reg_17 : 0 2 : 2891 8956 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_20 : 0 0 : 2733 8736 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_20 : 0 1 : 3222 8736 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_20 : 0 2 : 2781 8736 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U16/buff0_reg_a : 0 0 : 3221 8735 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U16/buff0_reg_a : 0 1 : 2875 8735 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U16/buff0_reg_a : 0 2 : 2639 8735 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_23 : 0 0 : 2733 7348 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_23 : 0 1 : 1834 7348 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff0_reg_23 : 0 2 : 2781 7348 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U17/buff0_reg_19 : 0 0 : 2176 7156 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U17/buff0_reg_19 : 0 1 : 2843 7156 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U17/buff0_reg_19 : 0 2 : 2137 7156 : Used 1 time 0
+ Sort Area is  mul_32s_32s_32_2_1_U1/tmp_product_0 : 0 0 : 3119 5820 : Used 1 time 0
+ Sort Area is  mul_32s_32s_32_2_1_U1/tmp_product_0 : 0 1 : 2701 5820 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U16/buff0_reg_d : 0 0 : 2875 5410 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U16/buff0_reg_d : 0 1 : 2535 5410 : Used 1 time 0
+ Sort Area is  mul_32s_32s_32_2_1_U1/tmp_product_3 : 0 0 : 2652 5185 : Used 1 time 0
+ Sort Area is  mul_32s_32s_32_2_1_U1/tmp_product_3 : 0 1 : 2533 5185 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U15/buff1_reg_25 : 0 0 : 1755 1755 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++----------------------------------------------------------------------------------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                                                                         | DSP Mapping           | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------------------------------------------------------------------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI | A2*B                  | 18     | 15     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI | (PCIN>>17)+A*B        | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI | A*B2                  | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI | (PCIN>>17)+A*B        | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | (A''*B'')'            | 18     | 16     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17)+(A''*B'')' | 16     | 14     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A''*B'')'            | 18     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | PCIN+(A''*B'')'       | 18     | 16     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17)+(A''*B'')' | 18     | 14     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A''*B'')'            | 18     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17)+(A''*B'')' | 18     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN+(A''*B'')')'    | 18     | 16     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A2*B'')'             | 18     | 12     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | PCIN+(A''*B)'         | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17)+(A*B'')'   | 16     | 12     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A''*B)'              | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17)+(A2*B'')'  | 18     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN+(A''*B)')'      | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A2*B'')'             | 18     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | PCIN+(A''*B)'         | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17)+(A2*B'')'  | 18     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A2*B'')'             | 18     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17)+(A2*B'')'  | 18     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN+(A''*B)')'      | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A2*B'')'             | 15     | 10     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A''*B2)'             | 18     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17)+(A2*B'')'  | 18     | 10     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN+(A''*B2)')'     | 18     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A2*B'')'             | 18     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | PCIN+(A''*B2)'        | 18     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17)+(A2*B'')'  | 18     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A''*B2)'             | 18     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17)+(A2*B'')'  | 18     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN+(A''*B2)')'     | 18     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A2*B'')'             | 18     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | PCIN+(A''*B2)'        | 18     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17)+(A2*B'')'  | 18     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A2*B'')'             | 18     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17)+(A2*B'')'  | 18     | 18     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN+(A''*B2)')'     | 18     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
++----------------------------------------------------------------------------------------------------+-----------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2435.641 ; gain = 811.480 ; free physical = 8345 ; free virtual = 25628
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2435.641 ; gain = 811.480 ; free physical = 8368 ; free virtual = 25645
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2577.453 ; gain = 953.293 ; free physical = 8288 ; free virtual = 25545
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2577.453 ; gain = 953.293 ; free physical = 8288 ; free virtual = 25545
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2577.453 ; gain = 953.293 ; free physical = 8280 ; free virtual = 25536
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2577.453 ; gain = 953.293 ; free physical = 8280 ; free virtual = 25536
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2577.453 ; gain = 953.293 ; free physical = 8279 ; free virtual = 25536
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2577.453 ; gain = 953.293 ; free physical = 8279 ; free virtual = 25536
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++----------------------------------------------------------------------------------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                                                                                         | DSP Mapping            | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------------------------------------------------------------------------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI | (A'*B')'               | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI | A'*B'                  | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI | (PCIN>>17+A*B')'       | 0      | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | ((A'*B'')')'           | 14     | 9      | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A''*B')'              | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | PCIN>>17+(A'*B'')'     | 17     | 9      | -      | -      | 0      | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN+(A''*B')')'      | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A'*B'')'              | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | PCIN+(A''*B')'         | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17+(A'*B'')')'  | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A''*B')'              | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | PCIN>>17+(A'*B'')'     | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN+(A''*B')')'      | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A'*B'')'              | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | PCIN+(A''*B')'         | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17+(A'*B'')')'  | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A'*B'')'              | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | PCIN>>17+(A'*B'')'     | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN+(A''*B')')'      | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A''*B'')'             | 18     | 15     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | (PCIN>>17+(A''*B'')')' | 15     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A''*B'')'             | 17     | 18     | -      | -      | 0      | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | PCIN+(A''*B'')'        | 17     | 15     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17+(A''*B'')')' | 17     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A''*B'')'             | 17     | 17     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | PCIN>>17+(A''*B'')'    | 17     | 17     | -      | -      | 0      | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN+(A''*B'')')'     | 17     | 15     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A'*B'')'              | 17     | 11     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | PCIN+(A''*B')'         | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17+(A'*B'')')'  | 15     | 11     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A''*B')'              | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | PCIN>>17+(A'*B'')'     | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN+(A''*B')')'      | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A'*B'')'              | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | PCIN+(A''*B')'         | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN>>17+(A'*B'')')'  | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                                                                                  | (A'*B'')'              | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                                                                                  | PCIN>>17+(A'*B'')'     | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                                                                                  | (PCIN+(A''*B')')'      | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
++----------------------------------------------------------------------------------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   388|
+|3     |DSP48E1 |    39|
+|4     |LUT1    |   129|
+|5     |LUT2    |   254|
+|6     |LUT3    |   257|
+|7     |LUT4    |   382|
+|8     |LUT5    |   166|
+|9     |LUT6    |   316|
+|10    |FDRE    |  2586|
+|11    |FDSE    |     2|
+|12    |IBUF    |   131|
+|13    |OBUF    |    36|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------+
+|      |Instance                                                                                     |Module                                                                                              |Cells |
++------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------+
+|1     |top                                                                                          |                                                                                                    |  4687|
+|2     |  grp_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI_fu_81 |matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI |  2249|
+|3     |    flow_control_loop_pipe_sequential_init_U                                                 |matrix_convolution_flow_control_loop_pipe_sequential_init                                           |   149|
+|4     |    mul_32s_32s_32_2_1_U1                                                                    |matrix_convolution_mul_32s_32s_32_2_1                                                               |    40|
+|5     |  mul_31ns_128ns_159_5_1_U15                                                                 |matrix_convolution_mul_31ns_128ns_159_5_1                                                           |   637|
+|6     |  mul_32ns_64ns_96_5_1_U16                                                                   |matrix_convolution_mul_32ns_64ns_96_5_1                                                             |   393|
+|7     |  mul_32ns_96ns_128_5_1_U17                                                                  |matrix_convolution_mul_32ns_96ns_128_5_1                                                            |   394|
++------+---------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2577.453 ; gain = 953.293 ; free physical = 8279 ; free virtual = 25536
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2577.453 ; gain = 953.293 ; free physical = 8279 ; free virtual = 25536
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2577.461 ; gain = 953.293 ; free physical = 8279 ; free virtual = 25536
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2593.297 ; gain = 0.000 ; free physical = 8434 ; free virtual = 25691
+INFO: [Netlist 29-17] Analyzing 427 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2739.879 ; gain = 0.000 ; free physical = 8330 ; free virtual = 25583
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 11ca78e7
+INFO: [Common 17-83] Releasing license: Synthesis
+151 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 2739.914 ; gain = 1115.789 ; free physical = 8329 ; free virtual = 25584
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2125.385; main = 2125.385; forked = 340.311
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3364.453; main = 2739.883; forked = 1001.887
+# create_clock -period 10.0 -name default [get_ports ap_clk]
+# report_utilization -file vivado_reports/utilization_synth.rpt
+# report_timing_summary -file vivado_reports/timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+report_timing_summary: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2803.910 ; gain = 63.996 ; free physical = 8275 ; free virtual = 25573
+# exit
+INFO: [Common 17-206] Exiting Vivado at Mon May  4 23:14:09 2026...

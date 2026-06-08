@@ -1,0 +1,10 @@
+cpu_functions.cpp:12:93: warning: unused parameter 'm' [-Wunused-parameter]
+void convolution(const bench_t *A, bench_t *B, const bench_t *kernel,const int n, const int m, const int w, const int kernel_size)
+                                                                                            ^
+cpu_functions.cpp:12:106: warning: unused parameter 'w' [-Wunused-parameter]
+void convolution(const bench_t *A, bench_t *B, const bench_t *kernel,const int n, const int m, const int w, const int kernel_size)
+                                                                                                         ^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/cifar_10_multiple/cpu_functions/run_hls.tcl:7:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=cifar10_XLX_SEP_ PragmaOptions=name=cifar10_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=cifar10
+^
+3 warnings generated.

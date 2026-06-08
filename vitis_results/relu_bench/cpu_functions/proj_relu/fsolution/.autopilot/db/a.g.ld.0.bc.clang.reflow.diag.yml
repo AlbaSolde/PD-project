@@ -1,0 +1,86 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_relu_ir
+Args:            
+  - Callee:          'relu(double const*, double*, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 18, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_relu_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 23, Column: 8 }
+Function:        _Z4reluPKdPdj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 25, Column: 17 }
+Function:        _Z4reluPKdPdj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 23, Column: 8 }
+Function:        _Z4reluPKdPdj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 25, Column: 17 }
+Function:        _Z4reluPKdPdj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_21_2
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:21:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 21, Column: 20 }
+Function:        _Z4reluPKdPdj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  relu
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_21_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:21:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 21, Column: 20 }
+  - String:          ' '
+...

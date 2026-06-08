@@ -1,0 +1,438 @@
+{
+  "0": {
+    "basicblocks": 7,
+    "calls": "3 22 15 18 3 22 18 15 19 7 19 7 25",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "cpu_functions.cpp",
+    "fileloc": 155,
+    "instructions": 36,
+    "memory_accesses": 0,
+    "name": "cifar10",
+    "total_instructions": 10161
+  },
+  "1": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 106,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 32, 6, 77, 72>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 106
+  },
+  "10": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 111,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 4, 4, 71, 73>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 111
+  },
+  "11": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 106,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 17, 6, 92, 87>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 106
+  },
+  "12": {
+    "basicblocks": 149,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 224,
+    "instructions": 279,
+    "loads": {
+      "G": 7
+    },
+    "memory_accesses": 0,
+    "name": "exp_Z1P_m_1",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 279
+  },
+  "13": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 106,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 7, 6, 73, 83>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 106
+  },
+  "14": {
+    "basicblocks": 1,
+    "calls": "4",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "powdouble.cpp",
+    "fileloc": 6,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "pow",
+    "total_instructions": 2369
+  },
+  "15": {
+    "basicblocks": 20,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 5,
+    "file": "cpu_functions.cpp",
+    "fileloc": 86,
+    "instructions": 65,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 2,
+    "name": "max_pooling",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 65
+  },
+  "16": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "x_hls_utils.h",
+    "fileloc": 475,
+    "instructions": 16,
+    "loads": {
+      "L": 6
+    },
+    "memory_accesses": 0,
+    "name": "data",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 16
+  },
+  "17": {
+    "basicblocks": 106,
+    "calls": "10 13 5 11 8 20 1",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_pow.h",
+    "fileloc": 186,
+    "instructions": 252,
+    "loads": {
+      "L": 48
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduction<71>",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 1000
+  },
+  "18": {
+    "basicblocks": 11,
+    "calls": "14 14",
+    "control_depth": 0,
+    "def_use_depth": 8,
+    "file": "cpu_functions.cpp",
+    "fileloc": 107,
+    "instructions": 46,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 4,
+    "name": "lrn",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 4784
+  },
+  "19": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "cpu_functions.cpp",
+    "fileloc": 119,
+    "instructions": 46,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 3,
+    "name": "matrix_multiplication",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 46
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "9",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "x_hls_utils.h",
+    "fileloc": 509,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "to_ieee",
+    "total_instructions": 23
+  },
+  "20": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 106,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 27, 6, 82, 77>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 106
+  },
+  "21": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 456,
+    "instructions": 8,
+    "memory_accesses": 0,
+    "name": "fp_struct",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 8
+  },
+  "22": {
+    "basicblocks": 14,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 4,
+    "file": "cpu_functions.cpp",
+    "fileloc": 42,
+    "instructions": 47,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 5,
+    "name": "relu",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 47
+  },
+  "23": {
+    "basicblocks": 3,
+    "calls": "21",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_isnan.h",
+    "fileloc": 16,
+    "instructions": 13,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "generic_isnan<double>",
+    "total_instructions": 21
+  },
+  "24": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 485,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "expv",
+    "total_instructions": 4
+  },
+  "25": {
+    "basicblocks": 13,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "cpu_functions.cpp",
+    "fileloc": 136,
+    "instructions": 43,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 6,
+    "name": "softmax",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 43
+  },
+  "3": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 5,
+    "def_use_depth": 9,
+    "file": "cpu_functions.cpp",
+    "fileloc": 12,
+    "instructions": 70,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 3,
+    "name": "convolution",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 70
+  },
+  "4": {
+    "basicblocks": 370,
+    "calls": "21 21 24 24 6 23 23 6 17 12 2 2 2 2 2 2 2 2 2",
+    "control_depth": 9,
+    "def_use_depth": 33,
+    "file": "hls_pow.h",
+    "fileloc": 291,
+    "instructions": 773,
+    "loads": {
+      "G": 3,
+      "L": 19
+    },
+    "memory_accesses": 52,
+    "name": "pow_generic<double>",
+    "stores": {
+      "L": 15
+    },
+    "total_instructions": 2367
+  },
+  "5": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 107,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 12, 6, 83, 92>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 107
+  },
+  "6": {
+    "basicblocks": 3,
+    "calls": "21",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_isinf.h",
+    "fileloc": 16,
+    "instructions": 13,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "generic_isinf<double>",
+    "total_instructions": 21
+  },
+  "7": {
+    "basicblocks": 10,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 3,
+    "file": "cpu_functions.cpp",
+    "fileloc": 69,
+    "instructions": 29,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 5,
+    "name": "relu_linear",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 29
+  },
+  "8": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 106,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 22, 6, 87, 82>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 106
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "16",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 494,
+    "instructions": 5,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "to_double",
+    "total_instructions": 21
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "0": {
+    "basicblocks": 6,
+    "calls": "1 1",
+    "control_depth": 0,
+    "def_use_depth": 8,
+    "file": "cpu_functions.cpp",
+    "fileloc": 35,
+    "instructions": 29,
+    "loads": {
+      "T": 1
+    },
+    "memory_accesses": 2,
+    "name": "lrn",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 1385
+  },
+  "1": {
+    "basicblocks": 30,
+    "calls": "3 2 2 2 2 2 2 2 2 2",
+    "control_depth": 7,
+    "def_use_depth": 44,
+    "file": "hls_pow.h",
+    "fileloc": 291,
+    "instructions": 373,
+    "loads": {
+      "G": 6,
+      "L": 2
+    },
+    "memory_accesses": 33,
+    "name": "pow_generic<double>",
+    "stores": {
+      "L": 15
+    },
+    "total_instructions": 678
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "x_hls_utils.h",
+    "fileloc": 509,
+    "instructions": 9,
+    "loads": {
+      "L": 3
+    },
+    "memory_accesses": 0,
+    "name": "to_ieee",
+    "total_instructions": 9
+  },
+  "3": {
+    "basicblocks": 15,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 6,
+    "file": "hls_pow.h",
+    "fileloc": 186,
+    "instructions": 224,
+    "loads": {
+      "G": 7,
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduction<71>",
+    "stores": {
+      "L": 15
+    },
+    "total_instructions": 224
+  }
+}

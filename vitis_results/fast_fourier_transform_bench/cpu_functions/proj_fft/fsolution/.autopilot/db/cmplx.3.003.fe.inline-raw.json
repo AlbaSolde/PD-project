@@ -1,0 +1,39 @@
+{
+  "0": {
+    "basicblocks": 20,
+    "calls": "1 1",
+    "control_depth": 1,
+    "def_use_depth": 7,
+    "file": "cpu_functions.cpp",
+    "fileloc": 4,
+    "instructions": 110,
+    "loads": {
+      "T": 10
+    },
+    "memory_accesses": 10,
+    "name": "fft_function",
+    "stores": {
+      "T": 8
+    },
+    "total_instructions": 894
+  },
+  "1": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 13,
+    "file": "hls_hotbm.h",
+    "fileloc": 209,
+    "instructions": 392,
+    "loads": {
+      "G": 10,
+      "L": 23
+    },
+    "memory_accesses": 5,
+    "name": "sin_or_cos<double>",
+    "stores": {
+      "L": 34
+    },
+    "total_instructions": 392
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "0": {
+    "basicblocks": 16,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "cpu_functions.cpp",
+    "fileloc": 20,
+    "instructions": 94,
+    "loads": {
+      "T": 4
+    },
+    "memory_accesses": 4,
+    "name": "correlation_2D",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 94
+  }
+}

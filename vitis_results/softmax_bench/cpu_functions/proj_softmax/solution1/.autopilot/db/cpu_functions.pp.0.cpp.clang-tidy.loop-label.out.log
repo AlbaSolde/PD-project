@@ -1,0 +1,75 @@
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44398:2: remark: Added loop label VITIS_LOOP_4_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < n; ++i)
+ ^
+ VITIS_LOOP_4_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44398:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44400:3: remark: Added loop label VITIS_LOOP_6_2:   [xilinx-label-all-loops]
+  for (unsigned int j = 0; j < w; ++j)
+  ^
+  VITIS_LOOP_6_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44400:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44402:4: remark: Added loop label VITIS_LOOP_8_3:   [xilinx-label-all-loops]
+   for (unsigned int k = 0; k < m; ++k)
+   ^
+   VITIS_LOOP_8_3: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44402:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44413:2: remark: Added loop label VITIS_LOOP_19_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i)
+ ^
+ VITIS_LOOP_19_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44413:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44415:3: remark: Added loop label VITIS_LOOP_21_2:   [xilinx-label-all-loops]
+  for (unsigned int j = 0; j < size; ++j)
+  ^
+  VITIS_LOOP_21_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44415:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44444:2: remark: Added loop label VITIS_LOOP_46_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i)
+ ^
+ VITIS_LOOP_46_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44444:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44446:3: remark: Added loop label VITIS_LOOP_48_2:   [xilinx-label-all-loops]
+  for (unsigned int j = 0; j < size; ++j)
+  ^
+  VITIS_LOOP_48_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44446:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44454:2: remark: Added loop label VITIS_LOOP_56_3:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i)
+ ^
+ VITIS_LOOP_56_3: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44454:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44456:3: remark: Added loop label VITIS_LOOP_58_4:   [xilinx-label-all-loops]
+  for (unsigned int j = 0; j < size; ++j)
+  ^
+  VITIS_LOOP_58_4: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44456:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44467:3: remark: Added loop label VITIS_LOOP_77_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < size; ++i){
+  ^
+  VITIS_LOOP_77_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44467:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44517:2: remark: Added loop label VITIS_LOOP_144_1:   [xilinx-label-all-loops]
+ for(i=0; i<N*N; i++){
+ ^
+ VITIS_LOOP_144_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44517:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44521:2: remark: Added loop label VITIS_LOOP_148_2:   [xilinx-label-all-loops]
+ for(i=0; i<N*N; i++){
+ ^
+ VITIS_LOOP_148_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44521:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44537:2: remark: Added loop label VITIS_LOOP_164_1:   [xilinx-label-all-loops]
+ for(i=0; i<N*N; i++){
+ ^
+ VITIS_LOOP_164_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44537:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44547:4: remark: Added loop label VITIS_LOOP_174_1:   [xilinx-label-all-loops]
+   for (unsigned int i = 0; i < size; ++i){
+   ^
+   VITIS_LOOP_174_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44547:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44571:2: remark: Added loop label VITIS_LOOP_198_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i){
+ ^
+ VITIS_LOOP_198_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/softmax_bench/cpu_functions/proj_softmax/solution1/.autopilot/db/cpu_functions.pp.0.cpp:44571:2: note: FIX-IT applied suggested code changes

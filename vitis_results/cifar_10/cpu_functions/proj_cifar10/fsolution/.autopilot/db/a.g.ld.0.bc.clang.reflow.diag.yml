@@ -1,0 +1,3798 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.9685
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.16.9686
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 39, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.17.9687
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 62, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.18.9688
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 88, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.82.9689
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.83.9690
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 232, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.84.9691
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 307, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.148.9692
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 379, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.149.9693
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 454, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.213.9694
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 529, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.277.9695
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 604, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.341.9696
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 679, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1268.9704
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 2420, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1300.9705
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 2459, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1556.9706
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 2726, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powdouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powdouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.451.13493
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 940, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powdouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powdouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powdouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powdouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.474.13494
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 1041, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powdouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powdouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powdouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powdouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1011.13497
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 2153, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powdouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powdouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                   Line: 17, Column: 21 }
+Function:        _Z13generic_isinfIdEiT_
+Args:            
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_isinf<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                   Line: 17, Column: 21 }
+Function:        _Z13generic_isnanIdEiT_
+Args:            
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_isnan<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 496, Column: 17 }
+Function:        _ZNK9fp_structIdE9to_doubleEv
+Args:            
+  - Callee:          'fp_struct<double>::data() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 475, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<double>::to_double() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 494, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 510, Column: 16 }
+Function:        _ZNK9fp_structIdE7to_ieeeEv
+Args:            
+  - Callee:          'fp_struct<double>::to_double() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 494, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 509, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 196, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>(ap_ufixed<71, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<73, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 208, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>(ap_ufixed<77, -(32), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<72, -(((32) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 198, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>(ap_ufixed<73, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<83, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 206, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>(ap_ufixed<82, -(27), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<77, -(((27) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 200, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>(ap_ufixed<83, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<92, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 204, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>(ap_ufixed<87, -(22), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<82, -(((22) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 202, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>(ap_ufixed<92, -(17), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<87, -(((17) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 295, Column: 15 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 659, Column: 16 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 509, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 305, Column: 20 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 485, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 612, Column: 66 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'pow_reduce::pow_traits<double>::exp_Z1P_m_1(ap_ufixed<51, -8, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 224, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 519, Column: 7 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 344, Column: 10 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'int generic_isinf<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 346, Column: 10 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'int generic_isnan<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                   Line: 7, Column: 12 }
+Function:        pow
+Args:            
+  - Callee:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          pow
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                       Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 43 }
+Function:        _Z3lrnPKfPfi
+Args:            
+  - Callee:          pow
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                       Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'lrn(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 107, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 158, Column: 2 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'convolution(float const*, float*, float const*, int, int, int, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 13, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 161, Column: 2 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'relu(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 49, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 165, Column: 2 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'max_pooling(float const*, float*, int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 86, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 168, Column: 2 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'lrn(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 107, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 184, Column: 2 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'matrix_multiplication(float const*, float const*, float*, int, int, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 119, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 187, Column: 5 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'relu_linear(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 69, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 196, Column: 2 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'softmax(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 136, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                   Line: 17, Column: 21 }
+Function:        _Z13generic_isinfIdEiT_
+Args:            
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_isinf<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                   Line: 17, Column: 21 }
+Function:        _Z13generic_isnanIdEiT_
+Args:            
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_isnan<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 496, Column: 17 }
+Function:        _ZNK9fp_structIdE9to_doubleEv.100.110.140.150
+Args:            
+  - Callee:          'fp_struct<double>::data() const (.103.113.143.153)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 475, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<double>::to_double() const (.100.110.140.150)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 494, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 510, Column: 16 }
+Function:        _ZNK9fp_structIdE7to_ieeeEv
+Args:            
+  - Callee:          'fp_struct<double>::to_double() const (.100.110.140.150)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 494, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 509, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 196, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>(ap_ufixed<71, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<73, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 198, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>(ap_ufixed<73, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<83, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 200, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>(ap_ufixed<83, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<92, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 202, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>(ap_ufixed<92, -(17), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<87, -(((17) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 204, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>(ap_ufixed<87, -(22), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<82, -(((22) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 206, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>(ap_ufixed<82, -(27), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<77, -(((27) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 208, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>(ap_ufixed<77, -(32), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<72, -(((32) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 295, Column: 15 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 305, Column: 20 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 485, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 344, Column: 10 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'int generic_isinf<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 346, Column: 10 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'int generic_isnan<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 383, Column: 15 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 509, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 519, Column: 7 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 612, Column: 66 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'pow_reduce::pow_traits<double>::exp_Z1P_m_1(ap_ufixed<51, -8, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 224, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                   Line: 7, Column: 12 }
+Function:        pow
+Args:            
+  - Callee:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          pow
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                       Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 43 }
+Function:        _Z3lrnPKfPfi
+Args:            
+  - Callee:          pow
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                       Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'lrn(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 107, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 158, Column: 2 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'convolution(float const*, float*, float const*, int, int, int, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 13, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 161, Column: 2 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'relu(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 49, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 165, Column: 2 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'max_pooling(float const*, float*, int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 86, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 168, Column: 2 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'lrn(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 107, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 184, Column: 2 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'matrix_multiplication(float const*, float const*, float*, int, int, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 119, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 187, Column: 5 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'relu_linear(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 69, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 196, Column: 2 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'softmax(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 136, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_cifar10_ir
+Args:            
+  - Callee:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_cifar10_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                   Line: 16, Column: 0 }
+Function:        _Z13generic_isinfIdEiT_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_isinf<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                   Line: 16, Column: 0 }
+Function:        _Z13generic_isnanIdEiT_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_isnan<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 494, Column: 0 }
+Function:        _ZNK9fp_structIdE9to_doubleEv.100.110.140.150
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::data() const (.103.113.143.153)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 475, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<double>::to_double() const (.100.110.140.150)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 494, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 509, Column: 0 }
+Function:        _ZNK9fp_structIdE7to_ieeeEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::to_double() const (.100.110.140.150)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 494, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 509, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>(ap_ufixed<71, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<73, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>(ap_ufixed<73, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<83, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>(ap_ufixed<83, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<92, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>(ap_ufixed<92, -(17), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<87, -(((17) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>(ap_ufixed<87, -(22), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<82, -(((22) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>(ap_ufixed<82, -(27), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<77, -(((27) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>(ap_ufixed<77, -(32), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<72, -(((32) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 485, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'int generic_isinf<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'int generic_isnan<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'pow_reduce::pow_traits<double>::exp_Z1P_m_1(ap_ufixed<51, -8, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 224, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cpu_functions.cpp, Line: 107, Column: 0 }
+Function:        _Z3lrnPKfPfi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          pow
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                       Line: 6, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'lrn(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 107, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'relu(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 49, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'max_pooling(float const*, float*, int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 86, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'lrn(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 107, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'matrix_multiplication(float const*, float const*, float*, int, int, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 119, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'relu_linear(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 69, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'softmax(float const*, float*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 136, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       input_data
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       conv_1_output
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       kernel_1_data
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       pooling_1_output
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       conv_2_output
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       kernel_2_data
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cpu_functions.cpp, Line: 26, Column: 20 }
+Function:        _Z11convolutionPKfPfS0_iiii
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        kernelseq
+  - ArrayName:       kernel
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:26:20'
+  - String:          ' '
+  - Function:        'convolution(float const*, float*, float const*, int, int, int, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 35, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.7
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cpu_functions.cpp, Line: 21, Column: 19 }
+Function:        _Z11convolutionPKfPfS0_iiii
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        Bseq
+  - ArrayName:       B
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_21_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:21:19'
+  - String:          ' '
+  - Function:        'convolution(float const*, float*, float const*, int, int, int, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 37, Column: 12 }
+  - OrigDirection:   write
+  - OrigID:          for.inc36.store.6
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: cpu_functions.cpp, Line: 33, Column: 13 }
+Function:        _Z11convolutionPKfPfS0_iiii
+Args:            
+  - String:          'Access '
+  - Access:          value
+    DebugLoc:        { File: cpu_functions.cpp, Line: 33, Column: 13 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      value
+    DebugLoc:        { File: cpu_functions.cpp, Line: 33, Column: 13 }
+  - OrigDirection:   read
+  - OrigID:          if.then.load.4
+  - ArrayName:       A
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:26:20'
+  - String:          ' '
+  - Function:        'convolution(float const*, float*, float const*, int, int, int, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: cpu_functions.cpp, Line: 26, Column: 20 }
+Function:        _Z11convolutionPKfPfS0_iiii
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 26, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          kernelseq
+  - ArrayName:       kernel
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_21_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:21:19'
+  - String:          ' '
+  - Function:        'convolution(float const*, float*, float const*, int, int, int, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       conv_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:95:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 97, Column: 108 }
+  - OrigDirection:   read
+  - OrigID:          for.body12.i.load.14
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep198seq
+  - ArrayName:       conv_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:95:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 97, Column: 108 }
+  - OrigDirection:   read
+  - OrigID:          for.body12.i102.load.14
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep199seq
+  - ArrayName:       weights_1
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_125_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:125:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 127, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i128.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        pooling_2_outputseq
+  - ArrayName:       pooling_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_125_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:125:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 127, Column: 30 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i128.load.18
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cpu_functions.cpp, Line: 120, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        dense_layer_1_outputseq
+  - ArrayName:       dense_layer_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_120_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:120:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 129, Column: 13 }
+  - OrigDirection:   write
+  - OrigID:          for.inc19.i.store.3
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep200seq
+  - ArrayName:       weights_2
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_125_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:125:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 127, Column: 19 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i157.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        dense_layer_1_outputseq201
+  - ArrayName:       dense_layer_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_125_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:125:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 127, Column: 30 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i157.load.18
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cpu_functions.cpp, Line: 120, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        dense_layer_2_outputseq
+  - ArrayName:       dense_layer_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_120_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:120:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 129, Column: 13 }
+  - OrigDirection:   write
+  - OrigID:          for.inc19.i164.store.3
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cpu_functions.cpp, Line: 140, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        dense_layer_2_outputseq202
+  - ArrayName:       dense_layer_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:140:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 142, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i187.load.9
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: cpu_functions.cpp, Line: 140, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        output_dataseq
+  - ArrayName:       output_data
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:140:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 144, Column: 8 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.i187.store.18
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: cpu_functions.cpp, Line: 90, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_90_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:90:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: cpu_functions.cpp, Line: 88, Column: 19 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_88_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:88:19'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: cpu_functions.cpp, Line: 90, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_90_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:90:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzeBoundsPattern
+DebugLoc:        { File: cpu_functions.cpp, Line: 88, Column: 19 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          Could not analyze the loop bounds
+  - String:          ' _XLX_SEP_ '
+  - LoopName:        VITIS_LOOP_88_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:88:19'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cpu_functions.cpp, Line: 55, Column: 8 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 55, Column: 8 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.i.load.6
+  - ArrayName:       conv_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 55, Column: 8 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          for.body4.i.store.9
+  - ArrayName:       conv_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       conv_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_93_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:93:21'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 18 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 16 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 18 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i20.load.6
+  - ArrayName:       pooling_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 16 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 18 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 16 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.i20.store.16
+  - ArrayName:       pooling_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cpu_functions.cpp, Line: 55, Column: 8 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 55, Column: 8 }
+  - OrigDirection:   read
+  - OrigID:          for.body4.i32.load.6
+  - ArrayName:       conv_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 55, Column: 8 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          for.body4.i32.store.9
+  - ArrayName:       conv_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 18 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 16 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 18 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.i66.load.6
+  - ArrayName:       conv_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 16 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 18 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 112, Column: 16 }
+  - OrigDirection:   write
+  - OrigID:          for.inc.i66.store.16
+  - ArrayName:       conv_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          scevgep198seq
+  - ArrayName:       conv_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_93_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:93:21'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          scevgep199seq
+  - ArrayName:       weights_1
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_120_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:120:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          pooling_2_outputseq
+  - ArrayName:       pooling_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_120_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:120:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cpu_functions.cpp, Line: 73, Column: 7 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 73, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.body.i.load.3
+  - ArrayName:       dense_layer_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 73, Column: 7 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          for.body.i.store.6
+  - ArrayName:       dense_layer_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          scevgep200seq
+  - ArrayName:       weights_2
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_120_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:120:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          dense_layer_1_outputseq201
+  - ArrayName:       dense_layer_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_120_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:120:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cpu_functions.cpp, Line: 73, Column: 7 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 73, Column: 7 }
+  - OrigDirection:   read
+  - OrigID:          for.body.i172.load.3
+  - ArrayName:       dense_layer_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 73, Column: 7 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+  - OrigDirection:   write
+  - OrigID:          for.body.i172.store.6
+  - ArrayName:       dense_layer_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cpu_functions.cpp, Line: 149, Column: 11 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 149, Column: 8 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 149, Column: 11 }
+  - OrigDirection:   read
+  - OrigID:          for.inc12.i.load.3
+  - ArrayName:       output_data
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cpu_functions.cpp, Line: 149, Column: 8 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 149, Column: 11 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 149, Column: 8 }
+  - OrigDirection:   write
+  - OrigID:          for.inc12.i.store.5
+  - ArrayName:       output_data
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: cpu_functions.cpp, Line: 21, Column: 19 }
+Function:        _Z11convolutionPKfPfS0_iiii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 21, Column: 19 }
+  - OrigDirection:   write
+  - OrigID:          Bseq
+  - ArrayName:       B
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_21_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:21:19'
+  - String:          ' '
+  - Function:        'convolution(float const*, float*, float const*, int, int, int, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: cpu_functions.cpp, Line: 26, Column: 20 }
+Function:        _Z11convolutionPKfPfS0_iiii
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 26, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          kernelseq
+  - ArrayName:       kernel
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_26_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:26:20'
+  - String:          ' '
+  - Function:        'convolution(float const*, float*, float const*, int, int, int, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       conv_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:95:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          scevgep198seq
+  - ArrayName:       conv_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:95:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: cpu_functions.cpp, Line: 140, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 140, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          dense_layer_2_outputseq202
+  - ArrayName:       dense_layer_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:140:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: cpu_functions.cpp, Line: 140, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 140, Column: 20 }
+  - OrigDirection:   write
+  - OrigID:          output_dataseq
+  - ArrayName:       output_data
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:140:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: cpu_functions.cpp, Line: 120, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 120, Column: 20 }
+  - OrigDirection:   write
+  - OrigID:          dense_layer_2_outputseq
+  - ArrayName:       dense_layer_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_120_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:120:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          scevgep200seq
+  - ArrayName:       weights_2
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_125_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:125:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          dense_layer_1_outputseq201
+  - ArrayName:       dense_layer_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_125_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:125:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: cpu_functions.cpp, Line: 120, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 120, Column: 20 }
+  - OrigDirection:   write
+  - OrigID:          dense_layer_1_outputseq
+  - ArrayName:       dense_layer_1_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_120_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:120:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          scevgep199seq
+  - ArrayName:       weights_1
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_125_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:125:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            float
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          pooling_2_outputseq
+  - ArrayName:       pooling_2_output
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_125_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:125:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_26_2
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:26:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 26, Column: 20 }
+Function:        _Z11convolutionPKfPfS0_iiii
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  convolution
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_26_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:26:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 26, Column: 20 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_53_2
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:53:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 53, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_53_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:53:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 53, Column: 20 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:95:22'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:95:22'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_110_2
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:110:21'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 110, Column: 21 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_110_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:110:21'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 110, Column: 21 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_53_2
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:53:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 53, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_53_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:53:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 53, Column: 20 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_110_2
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:110:21'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 110, Column: 21 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_110_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:110:21'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 110, Column: 21 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:95:22'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:95:22'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_125_3
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:125:22'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_125_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:125:22'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_71_1
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:71:19'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 71, Column: 19 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_71_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:71:19'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 71, Column: 19 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_125_3
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:125:22'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_125_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:125:22'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_71_1
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:71:19'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 71, Column: 19 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_71_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:71:19'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 71, Column: 19 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:140:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 140, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:140:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 140, Column: 20 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_147_2
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:147:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 147, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_147_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:147:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 147, Column: 20 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: cpu_functions.cpp, Line: 90, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Disabling loop flattening for loop '''
+  - LoopName:        VITIS_LOOP_90_2
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 90, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   'off '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_90_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:90:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 90, Column: 20 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            FlattenOffInference
+DebugLoc:        { File: cpu_functions.cpp, Line: 90, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Disabling loop flattening for loop '''
+  - LoopName:        VITIS_LOOP_90_2
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-loop-flatten-cost-model
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 90, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - PragmaType:      loop_flatten
+  - String:          ' '
+  - PragmaOptions:   'off '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  cifar10
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_90_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:90:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 90, Column: 20 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       input_data
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       conv_1_output
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       kernel_1_data
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       pooling_1_output
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       conv_2_output
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       kernel_2_data
+  - String:          '''.'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            BurstConflict
+DebugLoc:        { File: cpu_functions.cpp, Line: 26, Column: 20 }
+Function:        _Z11convolutionPKfPfS0_iiii.1
+Args:            
+  - String:          'Could not burst due to multiple potential '
+  - Direction:       reads
+  - String:          ' to the same bundle in the same region.'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 26, Column: 20 }
+  - OrigDirection:   read
+  - OrigID:          seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'convolution(float const*, float*, float const*, int, int, int, int) (.1)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 21, Column: 19 }
+Function:        _Z11convolutionPKfPfS0_iiii.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_21_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:21:19'
+  - String:          ' '
+  - Function:        'convolution(float const*, float*, float const*, int, int, int, int) (.1)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 13, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 21, Column: 19 }
+Function:        _Z11convolutionPKfPfS0_iiii.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_21_1
+  - String:          '''('
+  - LoopLoc:         'cpu_functions.cpp:21:19'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            BurstConflict
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Could not burst due to multiple potential '
+  - Direction:       reads
+  - String:          ' to the same bundle in the same region.'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          seq1
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            BurstConflict
+DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Could not burst due to multiple potential '
+  - Direction:       reads
+  - String:          ' to the same bundle in the same region.'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: cpu_functions.cpp, Line: 125, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          seq4
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq9
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:95:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          '''('
+  - LoopLoc:         'cpu_functions.cpp:95:22'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq8
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:95:22'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 95, Column: 22 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_95_4
+  - String:          '''('
+  - LoopLoc:         'cpu_functions.cpp:95:22'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 120, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_120_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:120:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 120, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_120_1
+  - String:          '''('
+  - LoopLoc:         'cpu_functions.cpp:120:20'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 120, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq3
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_120_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:120:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 120, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_120_1
+  - String:          '''('
+  - LoopLoc:         'cpu_functions.cpp:120:20'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 140, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq6
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:140:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 140, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          '''('
+  - LoopLoc:         'cpu_functions.cpp:140:20'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 140, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq7
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:140:20'
+  - String:          ' '
+  - Function:        'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: cpu_functions.cpp, Line: 140, Column: 20 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_140_1
+  - String:          '''('
+  - LoopLoc:         'cpu_functions.cpp:140:20'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 383, Column: 15 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 509, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 519, Column: 7 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 158, Column: 2 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'convolution(float const*, float*, float const*, int, int, int, int) (.1)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 13, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                   Line: 7, Column: 12 }
+Function:        _Z7cifar10PfS_S_S_S_S_S_S_S_S_S_S_jjjjjjjj
+Args:            
+  - Callee:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'cifar10(float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, float*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 156, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

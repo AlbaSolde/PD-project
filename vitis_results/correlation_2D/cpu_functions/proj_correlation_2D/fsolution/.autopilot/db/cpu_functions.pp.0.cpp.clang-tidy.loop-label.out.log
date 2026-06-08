@@ -1,0 +1,35 @@
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44402:2: remark: Added loop label VITIS_LOOP_9_1:   [xilinx-label-all-loops]
+ for (int i=0; i<size; i++){
+ ^
+ VITIS_LOOP_9_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44402:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44403:3: remark: Added loop label VITIS_LOOP_10_2:   [xilinx-label-all-loops]
+  for (int j=0; j<size; j++){
+  ^
+  VITIS_LOOP_10_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44403:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44428:2: remark: Added loop label VITIS_LOOP_31_1:   [xilinx-label-all-loops]
+ for (int i=0; i<size; i++){
+ ^
+ VITIS_LOOP_31_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44428:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44429:3: remark: Added loop label VITIS_LOOP_32_2:   [xilinx-label-all-loops]
+  for (int j=0; j<size; j++){
+  ^
+  VITIS_LOOP_32_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44429:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44454:3: remark: Added loop label VITIS_LOOP_67_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < size; ++i){
+  ^
+  VITIS_LOOP_67_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44454:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44467:4: remark: Added loop label VITIS_LOOP_80_1:   [xilinx-label-all-loops]
+   for (unsigned int i = 0; i < size; ++i){
+   ^
+   VITIS_LOOP_80_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44467:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44498:2: remark: Added loop label VITIS_LOOP_111_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i){
+ ^
+ VITIS_LOOP_111_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/correlation_2D/cpu_functions/proj_correlation_2D/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44498:2: note: FIX-IT applied suggested code changes

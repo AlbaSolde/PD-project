@@ -1,0 +1,317 @@
+<stg><name>aux_fft_function</name>
+
+
+<trans_list>
+
+<trans id="15" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="16" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="64" op_0_bw="64" op_1_bw="64">
+<![CDATA[
+entry:0 %nn_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %nn
+
+]]></Node>
+<StgValue><ssdm name="nn_read"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:1 %data_read_2 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %data_read
+
+]]></Node>
+<StgValue><ssdm name="data_read_2"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="32" op_0_bw="64">
+<![CDATA[
+entry:2 %data_0_loc = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="data_0_loc"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="63" op_0_bw="63" op_1_bw="64" op_2_bw="32" op_3_bw="32">
+<![CDATA[
+entry:3 %tmp_s = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %nn_read, i32 1, i32 63
+
+]]></Node>
+<StgValue><ssdm name="tmp_s"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="64" op_0_bw="64" op_1_bw="63" op_2_bw="1">
+<![CDATA[
+entry:4 %n = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i63.i1, i63 %tmp_s, i1 0
+
+]]></Node>
+<StgValue><ssdm name="n"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:5 %call_ln11 = call void @aux_fft_function_Outline_VITIS_LOOP_14_1, i64 %n, i64 %nn_read
+
+]]></Node>
+<StgValue><ssdm name="call_ln11"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="256" op_5_bw="59" op_6_bw="52" op_7_bw="44" op_8_bw="33" op_9_bw="25">
+<![CDATA[
+entry:6 %call_ln11 = call void @aux_fft_function_Outline_VITIS_LOOP_30_3, i32 %data_read_2, i64 %n, i32 %data_0_loc, i256 %ref_4oPi_table_256, i59 %fourth_order_double_sin_cos_K0, i52 %fourth_order_double_sin_cos_K1, i44 %fourth_order_double_sin_cos_K2, i33 %fourth_order_double_sin_cos_K3, i25 %fourth_order_double_sin_cos_K4
+
+]]></Node>
+<StgValue><ssdm name="call_ln11"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="11" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:5 %call_ln11 = call void @aux_fft_function_Outline_VITIS_LOOP_14_1, i64 %n, i64 %nn_read
+
+]]></Node>
+<StgValue><ssdm name="call_ln11"/></StgValue>
+</operation>
+
+<operation id="12" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="256" op_5_bw="59" op_6_bw="52" op_7_bw="44" op_8_bw="33" op_9_bw="25">
+<![CDATA[
+entry:6 %call_ln11 = call void @aux_fft_function_Outline_VITIS_LOOP_30_3, i32 %data_read_2, i64 %n, i32 %data_0_loc, i256 %ref_4oPi_table_256, i59 %fourth_order_double_sin_cos_K0, i52 %fourth_order_double_sin_cos_K1, i44 %fourth_order_double_sin_cos_K2, i33 %fourth_order_double_sin_cos_K3, i25 %fourth_order_double_sin_cos_K4
+
+]]></Node>
+<StgValue><ssdm name="call_ln11"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="13" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="32" op_0_bw="32" op_1_bw="0">
+<![CDATA[
+entry:7 %data_0_loc_load = load i32 %data_0_loc
+
+]]></Node>
+<StgValue><ssdm name="data_0_loc_load"/></StgValue>
+</operation>
+
+<operation id="14" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="0" op_0_bw="32">
+<![CDATA[
+entry:8 %ret_ln64 = ret i32 %data_0_loc_load
+
+]]></Node>
+<StgValue><ssdm name="ret_ln64"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="17" name="data_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="data_read"/></StgValue>
+</port>
+<port id="18" name="nn" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="nn"/></StgValue>
+</port>
+<port id="19" name="ref_4oPi_table_256" dir="0" iftype="1">
+<core>ROM</core><StgValue><ssdm name="ref_4oPi_table_256"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="20" name="fourth_order_double_sin_cos_K0" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_sin_cos_K0"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="21" name="fourth_order_double_sin_cos_K1" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_sin_cos_K1"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="22" name="fourth_order_double_sin_cos_K2" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_sin_cos_K2"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="23" name="fourth_order_double_sin_cos_K3" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_sin_cos_K3"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="24" name="fourth_order_double_sin_cos_K4" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_sin_cos_K4"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="26" from="_ssdm_op_Read.ap_auto.i64" to="nn_read" fromId="25" toId="4">
+</dataflow>
+<dataflow id="27" from="nn" to="nn_read" fromId="18" toId="4">
+</dataflow>
+<dataflow id="29" from="_ssdm_op_Read.ap_auto.i32" to="data_read_2" fromId="28" toId="5">
+</dataflow>
+<dataflow id="30" from="data_read" to="data_read_2" fromId="17" toId="5">
+</dataflow>
+<dataflow id="32" from="StgValue_31" to="data_0_loc" fromId="31" toId="6">
+</dataflow>
+<dataflow id="34" from="_ssdm_op_PartSelect.i63.i64.i32.i32" to="tmp_s" fromId="33" toId="7">
+</dataflow>
+<dataflow id="35" from="nn_read" to="tmp_s" fromId="4" toId="7">
+</dataflow>
+<dataflow id="37" from="StgValue_36" to="tmp_s" fromId="36" toId="7">
+</dataflow>
+<dataflow id="39" from="StgValue_38" to="tmp_s" fromId="38" toId="7">
+</dataflow>
+<dataflow id="41" from="_ssdm_op_BitConcatenate.i64.i63.i1" to="n" fromId="40" toId="8">
+</dataflow>
+<dataflow id="42" from="tmp_s" to="n" fromId="7" toId="8">
+</dataflow>
+<dataflow id="44" from="StgValue_43" to="n" fromId="43" toId="8">
+</dataflow>
+<dataflow id="46" from="aux_fft_function_Outline_VITIS_LOOP_14_1" to="call_ln11" fromId="45" toId="9">
+</dataflow>
+<dataflow id="47" from="n" to="call_ln11" fromId="8" toId="9">
+</dataflow>
+<dataflow id="48" from="nn_read" to="call_ln11" fromId="4" toId="9">
+</dataflow>
+<dataflow id="50" from="aux_fft_function_Outline_VITIS_LOOP_30_3" to="call_ln11" fromId="49" toId="10">
+</dataflow>
+<dataflow id="51" from="data_read_2" to="call_ln11" fromId="5" toId="10">
+</dataflow>
+<dataflow id="52" from="n" to="call_ln11" fromId="8" toId="10">
+</dataflow>
+<dataflow id="53" from="data_0_loc" to="call_ln11" fromId="6" toId="10">
+</dataflow>
+<dataflow id="54" from="ref_4oPi_table_256" to="call_ln11" fromId="19" toId="10">
+</dataflow>
+<dataflow id="55" from="fourth_order_double_sin_cos_K0" to="call_ln11" fromId="20" toId="10">
+</dataflow>
+<dataflow id="56" from="fourth_order_double_sin_cos_K1" to="call_ln11" fromId="21" toId="10">
+</dataflow>
+<dataflow id="57" from="fourth_order_double_sin_cos_K2" to="call_ln11" fromId="22" toId="10">
+</dataflow>
+<dataflow id="58" from="fourth_order_double_sin_cos_K3" to="call_ln11" fromId="23" toId="10">
+</dataflow>
+<dataflow id="59" from="fourth_order_double_sin_cos_K4" to="call_ln11" fromId="24" toId="10">
+</dataflow>
+<dataflow id="60" from="aux_fft_function_Outline_VITIS_LOOP_14_1" to="call_ln11" fromId="45" toId="11">
+</dataflow>
+<dataflow id="61" from="n" to="call_ln11" fromId="8" toId="11">
+</dataflow>
+<dataflow id="62" from="nn_read" to="call_ln11" fromId="4" toId="11">
+</dataflow>
+<dataflow id="63" from="aux_fft_function_Outline_VITIS_LOOP_30_3" to="call_ln11" fromId="49" toId="12">
+</dataflow>
+<dataflow id="64" from="data_read_2" to="call_ln11" fromId="5" toId="12">
+</dataflow>
+<dataflow id="65" from="n" to="call_ln11" fromId="8" toId="12">
+</dataflow>
+<dataflow id="66" from="data_0_loc" to="call_ln11" fromId="6" toId="12">
+</dataflow>
+<dataflow id="67" from="ref_4oPi_table_256" to="call_ln11" fromId="19" toId="12">
+</dataflow>
+<dataflow id="68" from="fourth_order_double_sin_cos_K0" to="call_ln11" fromId="20" toId="12">
+</dataflow>
+<dataflow id="69" from="fourth_order_double_sin_cos_K1" to="call_ln11" fromId="21" toId="12">
+</dataflow>
+<dataflow id="70" from="fourth_order_double_sin_cos_K2" to="call_ln11" fromId="22" toId="12">
+</dataflow>
+<dataflow id="71" from="fourth_order_double_sin_cos_K3" to="call_ln11" fromId="23" toId="12">
+</dataflow>
+<dataflow id="72" from="fourth_order_double_sin_cos_K4" to="call_ln11" fromId="24" toId="12">
+</dataflow>
+<dataflow id="73" from="data_0_loc" to="data_0_loc_load" fromId="6" toId="13">
+</dataflow>
+<dataflow id="74" from="data_0_loc_load" to="ret_ln64" fromId="13" toId="14">
+</dataflow>
+</dataflows>
+
+
+</stg>

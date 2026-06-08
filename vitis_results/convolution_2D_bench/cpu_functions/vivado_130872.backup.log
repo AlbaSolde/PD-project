@@ -1,0 +1,822 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon May  4 22:35:08 2026
+# Process ID         : 130872
+# Current directory  : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions
+# Command line       : vivado -mode batch -source run_vivado.tcl
+# Log file           : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/vivado.log
+# Journal file       : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/vivado.jou
+# Running On         : luthier-ku
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1365U
+# CPU Frequency      : 3379.656 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 33282 MB
+# Swap memory        : 536 MB
+# Total Virtual      : 33819 MB
+# Available Virtual  : 27924 MB
+#-----------------------------------------------------------
+source run_vivado.tcl
+# create_project vivado_matrix_convolution ./vivado_matrix_convolution -part xc7z020clg484-1 -force
+# file mkdir vivado_reports
+# foreach ip_tcl [glob ./matrix_convolution_hls/solution1/syn/verilog/*_ip.tcl] {
+#     source $ip_tcl
+# }
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/albasg/software/vivado/2025.2/data/ip'.
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Both \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 5 \
+##                           CONFIG.c_mult_usage Max_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Multiply \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip'...
+## set vivado_ver [version -short]
+## set fpo_ver 7.1
+## if {[regexp -nocase {2015\.1.*} $vivado_ver match]} {
+##     set fpo_ver 7.0
+## }
+## create_ip -name floating_point -version $fpo_ver -vendor xilinx.com -library ip -module_name matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip
+## set_property -dict [list CONFIG.a_precision_type Double \
+##                           CONFIG.a_tuser_width 1 \
+##                           CONFIG.add_sub_value Add \
+##                           CONFIG.b_tuser_width 1 \
+##                           CONFIG.c_a_exponent_width 11 \
+##                           CONFIG.c_a_fraction_width 53 \
+##                           CONFIG.c_compare_operation Programmable \
+##                           CONFIG.c_has_divide_by_zero false \
+##                           CONFIG.c_has_invalid_op false \
+##                           CONFIG.c_has_overflow false \
+##                           CONFIG.c_has_underflow false \
+##                           CONFIG.c_latency 5 \
+##                           CONFIG.c_mult_usage Full_Usage \
+##                           CONFIG.c_optimization Speed_Optimized \
+##                           CONFIG.c_rate 1 \
+##                           CONFIG.c_result_exponent_width 11 \
+##                           CONFIG.c_result_fraction_width 53 \
+##                           CONFIG.component_name matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip \
+##                           CONFIG.flow_control NonBlocking \
+##                           CONFIG.has_a_tlast false \
+##                           CONFIG.has_a_tuser false \
+##                           CONFIG.has_aclken true \
+##                           CONFIG.has_aresetn false \
+##                           CONFIG.has_b_tlast false \
+##                           CONFIG.has_b_tuser false \
+##                           CONFIG.has_operation_tlast false \
+##                           CONFIG.has_operation_tuser false \
+##                           CONFIG.has_result_tready false \
+##                           CONFIG.maximum_latency false \
+##                           CONFIG.operation_tuser_width 1 \
+##                           CONFIG.operation_type Add_Subtract \
+##                           CONFIG.result_precision_type Double \
+##                           CONFIG.result_tlast_behv Null] -objects [get_ips matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip] -quiet
+## set_property generate_synth_checkpoint false [get_files matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip.xci]
+## generate_target {synthesis simulation} [get_files matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip'...
+# read_verilog [glob ./matrix_convolution_hls/solution1/syn/verilog/*.v]
+# synth_design -top matrix_convolution -part xc7z020clg484-1
+Command: synth_design -top matrix_convolution -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 130912
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2104.363 ; gain = 482.238 ; free physical = 8264 ; free virtual = 25452
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:9]
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.v:9]
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/vivado_matrix_convolution/vivado_matrix_convolution.gen/sources_1/ip/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip/synth/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 5 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/vivado_matrix_convolution/vivado_matrix_convolution.gen/sources_1/ip/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/vivado_matrix_convolution/vivado_matrix_convolution.gen/sources_1/ip/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip/synth/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/vivado_matrix_convolution/vivado_matrix_convolution.gen/sources_1/ip/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip/synth/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 7 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/vivado_matrix_convolution/vivado_matrix_convolution.gen/sources_1/ip/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip/synth/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_PART bound to: xc7z020clg484-1 - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 1 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 5 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 3 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_21' declared at '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/vivado_matrix_convolution/vivado_matrix_convolution.gen/sources_1/ip/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip/hdl/floating_point_v7_1_vh_rfs.vhd:93266' bound to instance 'U0' of component 'floating_point_v7_1_21' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/vivado_matrix_convolution/vivado_matrix_convolution.gen/sources_1/ip/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip/synth/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip.vhd:217]
+INFO: [Synth 8-256] done synthesizing module 'matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/vivado_matrix_convolution/vivado_matrix_convolution.gen/sources_1/ip/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip/synth/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1.v:9]
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution_flow_control_loop_pipe_sequential_init' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution_flow_control_loop_pipe_sequential_init' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI.v:9]
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution_mul_31ns_128ns_159_5_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 31 - type: integer 
+	Parameter din1_WIDTH bound to: 128 - type: integer 
+	Parameter dout_WIDTH bound to: 159 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution_mul_31ns_128ns_159_5_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution_mul_32ns_64ns_96_5_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_32ns_64ns_96_5_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 96 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution_mul_32ns_64ns_96_5_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_32ns_64ns_96_5_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'matrix_convolution_mul_32ns_96ns_128_5_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_32ns_96ns_128_5_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 96 - type: integer 
+	Parameter dout_WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution_mul_32ns_96ns_128_5_1' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_32ns_96ns_128_5_1.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'matrix_convolution' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:9]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-7129] Port reset in module matrix_convolution_mul_32ns_96ns_128_5_1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module matrix_convolution_mul_32ns_64ns_96_5_1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port reset in module matrix_convolution_mul_31ns_128ns_159_5_1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized23 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized23 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized23 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized23 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized23 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized93 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized93 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized93 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized93 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized93 is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[11] in module flt_dec_op_lat is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[10] in module flt_dec_op_lat is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[9] in module flt_dec_op_lat is either unconnected or has no load
+INFO: [Synth 8-7129] Port DEC_OP_STATE[8] in module flt_dec_op_lat is either unconnected or has no load
+INFO: [Synth 8-7129] Port DIVIDE_BY_ZERO_IN in module flt_dec_op_lat is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized71 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized71 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized71 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized71 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized71 is either unconnected or has no load
+INFO: [Synth 8-7129] Port B[18] in module carry_chain__parameterized4 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized69 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized69 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized69 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized69 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized69 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized39 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized39 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized39 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized39 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized39 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized37 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized37 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized37 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized37 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized37 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized13 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized41 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized41 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized41 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized41 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized41 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized33 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized33 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized33 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized33 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized33 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized31 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized31 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized31 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized31 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized31 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module dsp48e1_wrapper__parameterized1 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized55 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized55 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized55 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized3 is either unconnected or has no load
+INFO: [Synth 8-7129] Port NORMALIZE[1] in module flt_round_bit__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port FIXED_POINT in module flt_round_bit__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port FIX_MANT_SIGN in module flt_round_bit__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SIGN in module flt_round_bit__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized57 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized57 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized57 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized57 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized57 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized75 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized75 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized75 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CLK in module xbip_pipe_v3_0_11_viv__parameterized67 is either unconnected or has no load
+INFO: [Synth 8-7129] Port CE in module xbip_pipe_v3_0_11_viv__parameterized67 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized67 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized67 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized67 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized111 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized111 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized111 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized109 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized109 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized109 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SCLR in module xbip_pipe_v3_0_11_viv__parameterized107 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SSET in module xbip_pipe_v3_0_11_viv__parameterized107 is either unconnected or has no load
+INFO: [Synth 8-7129] Port SINIT in module xbip_pipe_v3_0_11_viv__parameterized107 is either unconnected or has no load
+INFO: [Synth 8-7129] Port MANT_CASC_IN[47] in module flt_mult_round is either unconnected or has no load
+INFO: [Synth 8-7129] Port MANT_CASC_IN[46] in module flt_mult_round is either unconnected or has no load
+INFO: [Synth 8-7129] Port MANT_CASC_IN[45] in module flt_mult_round is either unconnected or has no load
+INFO: [Synth 8-7129] Port MANT_CASC_IN[44] in module flt_mult_round is either unconnected or has no load
+INFO: [Synth 8-7129] Port MANT_CASC_IN[43] in module flt_mult_round is either unconnected or has no load
+INFO: [Synth 8-7129] Port MANT_CASC_IN[42] in module flt_mult_round is either unconnected or has no load
+INFO: [Synth 8-7129] Port MANT_CASC_IN[41] in module flt_mult_round is either unconnected or has no load
+INFO: [Synth 8-7129] Port MANT_CASC_IN[40] in module flt_mult_round is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2295.301 ; gain = 673.176 ; free physical = 8062 ; free virtual = 25246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2307.176 ; gain = 685.051 ; free physical = 8053 ; free virtual = 25249
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2307.176 ; gain = 685.051 ; free physical = 8053 ; free virtual = 25249
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2329.129 ; gain = 707.004 ; free physical = 8075 ; free virtual = 25257
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'grp_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI_fu_81/dadd_64ns_64ns_64_7_full_dsp_1_U1/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/NORM/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized11) to 'grp_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI_fu_81/dadd_64ns_64ns_64_7_full_dsp_1_U1/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'grp_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI_fu_81/dadd_64ns_64ns_64_7_full_dsp_1_U1/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/NORM/ROUND/EXP_INC_DELAY' (delay__parameterized11) to 'grp_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI_fu_81/dadd_64ns_64ns_64_7_full_dsp_1_U1/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/NORM/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'grp_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI_fu_81/dadd_64ns_64ns_64_7_full_dsp_1_U1/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized11) to 'grp_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI_fu_81/dadd_64ns_64ns_64_7_full_dsp_1_U1/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'grp_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI_fu_81/dadd_64ns_64ns_64_7_full_dsp_1_U1/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized11) to 'grp_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI_fu_81/dadd_64ns_64ns_64_7_full_dsp_1_U1/matrix_convolution_dadd_64ns_64ns_64_7_full_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'grp_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI_fu_81/dmul_64ns_64ns_64_7_max_dsp_1_U2/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized11) to 'grp_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI_fu_81/dmul_64ns_64ns_64_7_max_dsp_1_U2/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'grp_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI_fu_81/dmul_64ns_64ns_64_7_max_dsp_1_U2/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized11) to 'grp_matrix_convolution_Pipeline_VITIS_LOOP_21_1_VITIS_LOOP_23_2_VITIS_LOOP_27_3_VITI_fu_81/dmul_64ns_64ns_64_7_max_dsp_1_U2/matrix_convolution_dmul_64ns_64ns_64_7_max_dsp_1_ip_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_352_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:282]
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_352_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:282]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U17/buff0_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_352_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:282]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U17/buff1_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_352_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:282]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U17/tmp_product was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_352_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:282]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U17/buff0_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_352_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:282]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U17/buff1_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U17/buff0_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element mul_31ns_128ns_159_5_1_U17/tmp_product was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution_mul_31ns_128ns_159_5_1.v:56]
+INFO: [Synth 8-6014] Unused sequential element smax18_reg_352_reg was removed.  [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/convolution_2D_bench/cpu_functions/matrix_convolution_hls/solution1/syn/verilog/matrix_convolution.v:282]
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[47]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[46]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[45]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[44]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[43]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[42]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[41]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[40]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[39]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[38]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[37]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[36]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[35]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[34]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[33]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[32]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[31]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[30]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[29]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[28]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[27]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[26]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[25]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[24]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[23]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[22]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[21]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[20]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[19]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[18]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[17]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[47]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[46]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[45]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[44]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[43]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[42]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[41]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[40]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[39]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[38]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[37]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[36]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[35]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[34]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[33]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[32]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[31]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[30]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[29]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[28]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[27]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[26]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[25]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[24]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[23]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[22]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[21]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[20]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[19]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[18]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[17]__0) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[47]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[46]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[45]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[44]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[43]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[42]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[41]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[40]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[39]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[38]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[37]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[36]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[35]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[34]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[33]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[32]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[31]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[30]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[29]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[28]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[27]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[26]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[25]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[24]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[23]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[22]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[21]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[20]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[19]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[18]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_64ns_96_5_1_U18/buff1_reg[17]__1) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_96ns_128_5_1_U19/buff1_reg[47]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_96ns_128_5_1_U19/buff1_reg[46]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_96ns_128_5_1_U19/buff1_reg[45]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_96ns_128_5_1_U19/buff1_reg[44]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_96ns_128_5_1_U19/buff1_reg[43]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_96ns_128_5_1_U19/buff1_reg[42]) is unused and will be removed from module matrix_convolution.
+INFO: [Synth 8-3332] Sequential element (mul_32ns_96ns_128_5_1_U19/buff1_reg[41]) is unused and will be removed from module matrix_convolution.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 2467.199 ; gain = 845.074 ; free physical = 7909 ; free virtual = 25097
+---------------------------------------------------------------------------------
+ Sort Area is  mul_32ns_64ns_96_5_1_U18/buff0_reg_0 : 0 0 : 3221 9384 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U18/buff0_reg_0 : 0 1 : 3240 9384 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U18/buff0_reg_0 : 0 2 : 2923 9384 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U19/buff0_reg_a : 0 0 : 3203 9316 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U19/buff0_reg_a : 0 1 : 3222 9316 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U19/buff0_reg_a : 0 2 : 2891 9316 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U19/buff0_reg_e : 0 0 : 3203 9316 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U19/buff0_reg_e : 0 1 : 2843 9316 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U19/buff0_reg_e : 0 2 : 3270 9316 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_16 : 0 0 : 3203 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_16 : 0 1 : 3222 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_16 : 0 2 : 2781 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_18 : 0 0 : 3203 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_18 : 0 1 : 2733 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_18 : 0 2 : 3270 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_1c : 0 0 : 3203 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_1c : 0 1 : 2733 9206 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_1c : 0 2 : 3270 9206 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U19/buff0_reg_11 : 0 0 : 2843 8956 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U19/buff0_reg_11 : 0 1 : 3222 8956 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U19/buff0_reg_11 : 0 2 : 2891 8956 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_1a : 0 0 : 2733 8736 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_1a : 0 1 : 3222 8736 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_1a : 0 2 : 2781 8736 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U18/buff0_reg_4 : 0 0 : 3221 8735 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U18/buff0_reg_4 : 0 1 : 2875 8735 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U18/buff0_reg_4 : 0 2 : 2639 8735 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_1d : 0 0 : 2733 7348 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_1d : 0 1 : 1834 7348 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff0_reg_1d : 0 2 : 2781 7348 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U19/buff0_reg_13 : 0 0 : 2176 7156 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U19/buff0_reg_13 : 0 1 : 2843 7156 : Used 1 time 0
+ Sort Area is  mul_32ns_96ns_128_5_1_U19/buff0_reg_13 : 0 2 : 2137 7156 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U18/buff0_reg_7 : 0 0 : 2875 5410 : Used 1 time 0
+ Sort Area is  mul_32ns_64ns_96_5_1_U18/buff0_reg_7 : 0 1 : 2535 5410 : Used 1 time 0
+ Sort Area is  mul_31ns_128ns_159_5_1_U17/buff1_reg_1f : 0 0 : 1755 1755 : Used 1 time 0
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2467.199 ; gain = 845.074 ; free physical = 7921 ; free virtual = 25109
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 2467.199 ; gain = 845.074 ; free physical = 7925 ; free virtual = 25114
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2591.012 ; gain = 968.887 ; free physical = 7903 ; free virtual = 25064
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2591.012 ; gain = 968.887 ; free physical = 7904 ; free virtual = 25065
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2591.012 ; gain = 968.887 ; free physical = 7899 ; free virtual = 25061
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2591.012 ; gain = 968.887 ; free physical = 7899 ; free virtual = 25061
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2591.012 ; gain = 968.887 ; free physical = 7899 ; free virtual = 25061
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2591.012 ; gain = 968.887 ; free physical = 7899 ; free virtual = 25061
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++-----------------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                        | DSP Mapping            | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|dsp48e1_wrapper__parameterized0    | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper                    | A':B'                  | 29     | 18     | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1_21 | C+A:B                  | 0      | 2      | 47     | -      | 48     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized2    | A*B                    | 17     | 17     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized3    | (PCIN>>17+A*B)'        | 17     | 0      | -      | -      | 16     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized4    | PCIN+(A*B)'            | 17     | 17     | -      | -      | 17     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized5    | PCIN>>17+A'*B'         | 17     | 0      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized6    | (PCIN+A'*B')'          | 19     | 17     | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized7    | PCIN+(A'*B')'          | 19     | 17     | -      | -      | 17     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized8    | PCIN>>17+A'*B''        | 0      | 17     | -      | -      | 16     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized9    | (PCIN+A''*B'')'        | 19     | 17     | -      | -      | 17     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|dsp48e1_wrapper__parameterized10   | PCIN>>17+(A*B'')'      | 0      | 17     | -      | -      | 38     | 0    | 2    | -    | -    | -     | 1    | 0    | 
+|dsp48e1_wrapper__parameterized11   | PCIN>>17+A'*B''        | 0      | 2      | -      | -      | 21     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|dsp48e1_wrapper__parameterized1    | Dynamic                | -      | -      | -      | -      | 48     | -    | -    | -    | -    | -     | 0    | 0    | 
+|matrix_convolution                 | ((A'*B'')')'           | 14     | 9      | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                 | (A''*B')'              | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                 | PCIN>>17+(A'*B'')'     | 17     | 9      | -      | -      | 0      | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                 | (PCIN+(A''*B')')'      | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                 | (A'*B'')'              | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                 | PCIN+(A''*B')'         | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                 | (PCIN>>17+(A'*B'')')'  | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                 | (A''*B')'              | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                 | PCIN>>17+(A'*B'')'     | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                 | (PCIN+(A''*B')')'      | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                 | (A'*B'')'              | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                 | PCIN+(A''*B')'         | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                 | (PCIN>>17+(A'*B'')')'  | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                 | (A'*B'')'              | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                 | PCIN>>17+(A'*B'')'     | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                 | (PCIN+(A''*B')')'      | 17     | 14     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                 | (A''*B'')'             | 18     | 15     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                 | (PCIN>>17+(A''*B'')')' | 15     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                 | (A''*B'')'             | 17     | 18     | -      | -      | 0      | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                 | PCIN+(A''*B'')'        | 17     | 15     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                 | (PCIN>>17+(A''*B'')')' | 17     | 18     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                 | (A''*B'')'             | 17     | 17     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                 | PCIN>>17+(A''*B'')'    | 17     | 17     | -      | -      | 0      | 2    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                 | (PCIN+(A''*B'')')'     | 17     | 15     | -      | -      | 48     | 2    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                 | (A'*B'')'              | 17     | 11     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                 | PCIN+(A''*B')'         | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                 | (PCIN>>17+(A'*B'')')'  | 15     | 11     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                 | (A''*B')'              | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                 | PCIN>>17+(A'*B'')'     | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                 | (PCIN+(A''*B')')'      | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                 | (A'*B'')'              | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                 | PCIN+(A''*B')'         | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                 | (PCIN>>17+(A'*B'')')'  | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 1    | 1    | 
+|matrix_convolution                 | (A'*B'')'              | 17     | 17     | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|matrix_convolution                 | PCIN>>17+(A'*B'')'     | 17     | 17     | -      | -      | 0      | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|matrix_convolution                 | (PCIN+(A''*B')')'      | 17     | 15     | -      | -      | 48     | 2    | 1    | -    | -    | -     | 1    | 1    | 
++-----------------------------------+------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   389|
+|3     |DSP48E1 |    50|
+|4     |LUT1    |   138|
+|5     |LUT2    |   283|
+|6     |LUT3    |   305|
+|7     |LUT4    |   627|
+|8     |LUT5    |   279|
+|9     |LUT6    |   728|
+|10    |MUXCY   |   196|
+|11    |MUXF7   |    17|
+|12    |MUXF8   |     1|
+|13    |SRL16E  |    30|
+|14    |XORCY   |    89|
+|15    |FDE     |    19|
+|16    |FDRE    |  3787|
+|17    |FDSE    |    68|
+|18    |IBUF    |   195|
+|19    |OBUF    |    68|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 2591.012 ; gain = 968.887 ; free physical = 7899 ; free virtual = 25061
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2591.012 ; gain = 968.887 ; free physical = 7899 ; free virtual = 25061
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2591.020 ; gain = 968.887 ; free physical = 7899 ; free virtual = 25061
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2611.793 ; gain = 0.000 ; free physical = 8038 ; free virtual = 25200
+INFO: [Netlist 29-17] Analyzing 761 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2759.344 ; gain = 0.000 ; free physical = 7956 ; free virtual = 25115
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 77 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 58 instances
+  FDE => FDRE: 19 instances
+
+Synth Design complete | Checksum: bd88f4cf
+INFO: [Common 17-83] Releasing license: Synthesis
+263 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 2759.379 ; gain = 1137.289 ; free physical = 7955 ; free virtual = 25114
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2150.860; main = 2150.860; forked = 340.546
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3525.090; main = 2759.348; forked = 1001.887
+# create_clock -period 10.0 -name default [get_ports ap_clk]
+# report_utilization -file vivado_reports/utilization_synth.rpt
+# report_timing_summary -file vivado_reports/timing_synth.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+report_timing_summary: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2823.375 ; gain = 63.996 ; free physical = 7909 ; free virtual = 25082
+# exit
+INFO: [Common 17-206] Exiting Vivado at Mon May  4 22:35:46 2026...

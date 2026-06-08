@@ -1,0 +1,122 @@
+  **** HLS Build v2025.2 6295257
+Sourcing Tcl script '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project proj_wavelet 
+WARNING: [HLS 200-2182] The 'proj_wavelet' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Opening solution '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet'.
+INFO: [HLS 200-1510] Running: set_top ccsds_wavelet_transform 
+INFO: [HLS 200-1510] Running: add_files cpu_functions.cpp -cflags -DDOUBLE 
+INFO: [HLS 200-10] Adding design file 'cpu_functions.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution 
+INFO: [HLS 200-10] Opening solution '/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10.0 -name default 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -bundle gmem0 ccsds_wavelet_transform A 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode m_axi -bundle gmem1 ccsds_wavelet_transform B 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite ccsds_wavelet_transform size 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite ccsds_wavelet_transform return 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.45 seconds. CPU system time: 0.1 seconds. Elapsed time: 0.56 seconds; current allocated memory: 310.000 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'cpu_functions.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.86 seconds. CPU system time: 0.53 seconds. Elapsed time: 3.39 seconds; current allocated memory: 310.816 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 97 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 92 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 75 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 79 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 79 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 78 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 81 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 81 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 267 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 266 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 266 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 344 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 346 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-376] Pipelining loop< VITIS_LOOP_55_1> at cpu_functions.cpp:55:19 due to pipeline_loops threshold
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_59_2' is marked as complete unroll implied by the pipeline pragma (cpu_functions.cpp:59:20)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_77_3' is marked as complete unroll implied by the pipeline pragma (cpu_functions.cpp:77:20)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_59_2' (cpu_functions.cpp:59:20) in function 'ccsds_wavelet_transform' completely with a factor of 9 (cpu_functions.cpp:3:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_77_3' (cpu_functions.cpp:77:20) in function 'ccsds_wavelet_transform' completely with a factor of 7 (cpu_functions.cpp:3:0)
+INFO: [HLS 214-449] Partitioning array 'lowpass_filter_cpu' dimension 1 due to constant index. (./cpu_functions.h:26:0)
+INFO: [HLS 214-449] Partitioning array 'highpass_filter_cpu' dimension 1 due to constant index. (./cpu_functions.h:27:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL19highpass_filter_cpu': Complete partitioning on dimension 1. (./cpu_functions.h:27:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZL18lowpass_filter_cpu': Complete partitioning on dimension 1. (./cpu_functions.h:26:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.1 seconds. CPU system time: 0.44 seconds. Elapsed time: 8.17 seconds; current allocated memory: 320.707 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 320.707 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 321.527 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 322.309 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (cpu_functions.cpp:55:37) to (cpu_functions.cpp:55:19) in function 'ccsds_wavelet_transform'... converting 39 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 346.465 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 347.598 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'ccsds_wavelet_transform' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ccsds_wavelet_transform_Pipeline_VITIS_LOOP_55_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_55_1'.
+WARNING: [HLS 200-448] Lower bound of II is 9 due to multiple bus read operation ('gmem0_addr_read', cpu_functions.cpp:70) on port 'gmem0' (cpu_functions.cpp:70), bus read operation ('gmem0_addr_1_read', cpu_functions.cpp:70) on port 'gmem0' (cpu_functions.cpp:70), bus read operation ('gmem0_addr_2_read', cpu_functions.cpp:70) on port 'gmem0' (cpu_functions.cpp:70), bus read operation ('gmem0_addr_3_read', cpu_functions.cpp:70) on port 'gmem0' (cpu_functions.cpp:70), bus read operation ('gmem0_addr_4_read', cpu_functions.cpp:70) on port 'gmem0' (cpu_functions.cpp:70), bus read operation ('gmem0_addr_5_read', cpu_functions.cpp:70) on port 'gmem0' (cpu_functions.cpp:70), bus read operation ('gmem0_addr_6_read', cpu_functions.cpp:70) on port 'gmem0' (cpu_functions.cpp:70), bus read operation ('gmem0_addr_7_read', cpu_functions.cpp:70) on port 'gmem0' (cpu_functions.cpp:70), bus read operation ('gmem0_addr_8_read', cpu_functions.cpp:70) on port 'gmem0' (cpu_functions.cpp:70) accessing 'gmem0' m_axi read
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 9, Depth = 88, loop 'VITIS_LOOP_55_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.16 seconds; current allocated memory: 349.035 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 349.035 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'ccsds_wavelet_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 349.035 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 349.035 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ccsds_wavelet_transform_Pipeline_VITIS_LOOP_55_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'ccsds_wavelet_transform_Pipeline_VITIS_LOOP_55_1' pipeline 'VITIS_LOOP_55_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ccsds_wavelet_transform_Pipeline_VITIS_LOOP_55_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 350.660 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'ccsds_wavelet_transform' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ccsds_wavelet_transform/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ccsds_wavelet_transform/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ccsds_wavelet_transform/A' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ccsds_wavelet_transform/B' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'ccsds_wavelet_transform/size' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'ccsds_wavelet_transform' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'A', 'B', 'size' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'ccsds_wavelet_transform'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 356.496 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.24 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.26 seconds; current allocated memory: 358.867 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.55 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.61 seconds; current allocated memory: 365.145 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for ccsds_wavelet_transform.
+INFO: [VLOG 209-307] Generating Verilog RTL for ccsds_wavelet_transform.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 116.18 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:13; Allocated memory: 55.145 MB.
+INFO: [HLS 200-112] Total CPU user time: 9.76 seconds. Total CPU system time: 1.67 seconds. Total elapsed time: 15.78 seconds; peak allocated memory: 365.145 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 17s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

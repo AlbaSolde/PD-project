@@ -1,0 +1,7 @@
+cpu_functions.cpp:34:15: warning: expression result unused [-Wunused-value]
+    B[i*size+j];
+    ~ ~~~~~~~~^
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/max_pooling_bench/cpu_functions/run_hls.tcl:7:1: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=max_pooling_XLX_SEP_ PragmaOptions=name=max_pooling_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=max_pooling
+^
+2 warnings generated.

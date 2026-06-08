@@ -1,0 +1,119 @@
+
+
+================================================================
+== Synthesis Summary Report of 'softmax'
+================================================================
++ General Information: 
+    * Date:           Tue May  5 16:46:07 2026
+    * Version:        2025.2 (Build 6295257 on Nov 14 2025)
+    * Project:        proj_softmax
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
+* Performance & Resource Estimates: 
++-----------------------------------------------------+------+-------------------+----------+---------+------+----------+---------+-----+------+------+----------+-----------+-----------+-----+
+|                       Modules                       | Issue|                   | Iteration|         | Trip |          |    Latency    |      |      |          |           |           |     |
+|                       & Loops                       | Type |   Violation Type  |  Latency | Interval| Count| Pipelined| (cycles)| (ns)| Slack| BRAM |    DSP   |     FF    |    LUT    | URAM|
++-----------------------------------------------------+------+-------------------+----------+---------+------+----------+---------+-----+------+------+----------+-----------+-----------+-----+
+|+ softmax                                            |     -|                  -|         -|        -|     -|        no|        -|    -|  0.04|     -|  32 (14%)|  2553 (2%)|  3845 (7%)|    -|
+| + softmax_Pipeline_VITIS_LOOP_46_1_VITIS_LOOP_48_2  |     -|                  -|         -|        -|     -|       yes|        -|    -|  0.04|     -|   2 (~0%)|  407 (~0%)|   625 (1%)|    -|
+|  o VITIS_LOOP_46_1_VITIS_LOOP_48_2                  |    II|  Memory Dependency|         7|        6|     -|       yes|        -|    -|  7.30|     -|         -|          -|          -|    -|
+| + softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4  |     -|                  -|         -|        -|     -|       yes|        -|    -|  1.22|     -|         -|  245 (~0%)|  294 (~0%)|    -|
+|  o VITIS_LOOP_56_3_VITIS_LOOP_58_4                  |    II|  Memory Dependency|        18|       17|     -|       yes|        -|    -|  7.30|     -|         -|          -|          -|    -|
++-----------------------------------------------------+------+-------------------+----------+---------+------+----------+---------+-----+------+------+----------+-----------+-----------+-----+
+    II Violation Information: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+    Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
+
+
+================================================================
+== HW Interfaces
+================================================================
+* Other Ports
++------+---------+-----------+----------+
+| Port | Mode    | Direction | Bitwidth |
++------+---------+-----------+----------+
+| A    | ap_none | in        | 32       |
+| B_i  | ap_ovld | in        | 32       |
+| B_o  | ap_ovld | out       | 32       |
+| size | ap_none | in        | 32       |
++------+---------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------+
+| Argument | Direction | Datatype            |
++----------+-----------+---------------------+
+| A        | in        | float const *       |
+| B        | inout     | float*              |
+| size     | in        | unsigned int const  |
++----------+-----------+---------------------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+
+| Argument | HW Interface | HW Type |
++----------+--------------+---------+
+| A        | A            | port    |
+| B        | B_i          | port    |
+| B        | B_o          | port    |
+| B        | B_o_ap_vld   | port    |
+| size     | size         | port    |
++----------+--------------+---------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------------+-----+--------+-------------+---------+----------+---------+
+| Name                                                | DSP | Pragma | Variable    | Op      | Impl     | Latency |
++-----------------------------------------------------+-----+--------+-------------+---------+----------+---------+
+| + softmax                                           | 32  |        |             |         |          |         |
+|   fpext_32ns_64_2_no_dsp_1_U14                      |     |        | conv        | fpext   | auto     | 1       |
+|   dexp_64ns_64ns_64_21_full_dsp_1_U15               | 26  |        | tmp         | dexp    | fulldsp  | 20      |
+|   fptrunc_64ns_32_2_no_dsp_1_U13                    |     |        | value       | fptrunc | auto     | 1       |
+|   mul_32ns_32ns_64_2_1_U16                          | 4   |        | mul_ln42    | mul     | auto     | 1       |
+|   icmp_ln46_fu_113_p2                               |     |        | icmp_ln46   | setne   | auto     | 0       |
+|   select_ln46_fu_126_p3                             |     |        | select_ln46 | select  | auto_sel | 0       |
+|   select_ln56_fu_142_p3                             |     |        | select_ln56 | select  | auto_sel | 0       |
+|  + softmax_Pipeline_VITIS_LOOP_46_1_VITIS_LOOP_48_2 | 2   |        |             |         |          |         |
+|    icmp_ln46_fu_76_p2                               |     |        | icmp_ln46   | seteq   | auto     | 0       |
+|    add_ln46_fu_81_p2                                |     |        | add_ln46    | add     | fabric   | 0       |
+|    fadd_32ns_32ns_32_5_full_dsp_1_U1                | 2   |        | sum_values  | fadd    | fulldsp  | 4       |
+|  + softmax_Pipeline_VITIS_LOOP_56_3_VITIS_LOOP_58_4 | 0   |        |             |         |          |         |
+|    icmp_ln56_fu_101_p2                              |     |        | icmp_ln56   | seteq   | auto     | 0       |
+|    add_ln56_fu_106_p2                               |     |        | add_ln56    | add     | fabric   | 0       |
+|    fdiv_32ns_32ns_32_16_no_dsp_1_U6                 |     |        | div         | fdiv    | fabric   | 15      |
++-----------------------------------------------------+-----+--------+-------------+---------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Inferred Pragmas
++--------------+---------+----------------------------------------------------------------------------------+------------------------------------------------------+
+| Type         | Options | Location                                                                         | Inferred From                                        |
++--------------+---------+----------------------------------------------------------------------------------+------------------------------------------------------+
+| LOOP_FLATTEN |         | loop VITIS_LOOP_56_3 (cpu_functions.cpp:56:19) in softmax (cpu_functions.cpp:56) | pipeline cpu_functions.cpp:58 (Performance Budgeter) |
+| PIPELINE     |         | loop VITIS_LOOP_48_2 (cpu_functions.cpp:48:20) in softmax (cpu_functions.cpp:48) | syn.compile.pipeline_loops=64                        |
+| PIPELINE     |         | loop VITIS_LOOP_58_4 (cpu_functions.cpp:58:20) in softmax (cpu_functions.cpp:58) | syn.compile.pipeline_loops=64                        |
++--------------+---------+----------------------------------------------------------------------------------+------------------------------------------------------+
+
+

@@ -1,0 +1,1344 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.9685
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.16.9686
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 39, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.17.9687
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 62, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.18.9688
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 88, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.82.9689
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 160, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.83.9690
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 232, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.84.9691
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 307, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.148.9692
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 379, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.149.9693
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 454, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.213.9694
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 529, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.277.9695
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 604, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.341.9696
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 679, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1268.9704
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 2420, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1300.9705
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 2459, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_rootndouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1556.9706
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 2726, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_rootndouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/rootndouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powdouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powdouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.451.13493
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 940, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powdouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powdouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powdouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powdouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.474.13494
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 1041, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powdouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powdouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powdouble.pp.cpp, 
+                   Line: 0, Column: 0 }
+Function:        _GLOBAL__sub_I_powdouble.pp.cpp
+Args:            
+  - Callee:          __cxx_global_var_init.1011.13497
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow_tables.h, 
+                       Line: 2153, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _GLOBAL__sub_I_powdouble.pp.cpp
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/build/hls_clib/lnx64/hlsmath_csyn_c/objs/src/c/powdouble.pp.cpp, 
+                       Line: 0, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                   Line: 17, Column: 21 }
+Function:        _Z13generic_isinfIdEiT_
+Args:            
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_isinf<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                   Line: 17, Column: 21 }
+Function:        _Z13generic_isnanIdEiT_
+Args:            
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_isnan<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 496, Column: 17 }
+Function:        _ZNK9fp_structIdE9to_doubleEv
+Args:            
+  - Callee:          'fp_struct<double>::data() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 475, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<double>::to_double() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 494, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 510, Column: 16 }
+Function:        _ZNK9fp_structIdE7to_ieeeEv
+Args:            
+  - Callee:          'fp_struct<double>::to_double() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 494, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 509, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 196, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>(ap_ufixed<71, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<73, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 208, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>(ap_ufixed<77, -(32), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<72, -(((32) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 198, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>(ap_ufixed<73, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<83, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 206, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>(ap_ufixed<82, -(27), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<77, -(((27) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 200, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>(ap_ufixed<83, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<92, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 204, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>(ap_ufixed<87, -(22), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<82, -(((22) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 202, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>(ap_ufixed<92, -(17), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<87, -(((17) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 295, Column: 15 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 659, Column: 16 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 509, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 305, Column: 20 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 485, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 612, Column: 66 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'pow_reduce::pow_traits<double>::exp_Z1P_m_1(ap_ufixed<51, -8, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 224, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 519, Column: 7 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 344, Column: 10 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'int generic_isinf<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 346, Column: 10 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'int generic_isnan<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                   Line: 7, Column: 12 }
+Function:        pow
+Args:            
+  - Callee:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          pow
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                       Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 51, Column: 43 }
+Function:        _Z3lrnPKfPfj
+Args:            
+  - Callee:          pow
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                       Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'lrn(float const*, float*, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 36, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                   Line: 17, Column: 21 }
+Function:        _Z13generic_isinfIdEiT_
+Args:            
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_isinf<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                   Line: 17, Column: 21 }
+Function:        _Z13generic_isnanIdEiT_
+Args:            
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'int generic_isnan<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 496, Column: 17 }
+Function:        _ZNK9fp_structIdE9to_doubleEv.100.110.140.150
+Args:            
+  - Callee:          'fp_struct<double>::data() const (.103.113.143.153)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 475, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<double>::to_double() const (.100.110.140.150)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 494, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 510, Column: 16 }
+Function:        _ZNK9fp_structIdE7to_ieeeEv
+Args:            
+  - Callee:          'fp_struct<double>::to_double() const (.100.110.140.150)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 494, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 509, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 196, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>(ap_ufixed<71, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<73, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 198, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>(ap_ufixed<73, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<83, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 200, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>(ap_ufixed<83, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<92, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 202, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>(ap_ufixed<92, -(17), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<87, -(((17) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 204, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>(ap_ufixed<87, -(22), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<82, -(((22) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 206, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>(ap_ufixed<82, -(27), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<77, -(((27) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 208, Column: 4 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>(ap_ufixed<77, -(32), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<72, -(((32) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 295, Column: 15 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 305, Column: 20 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 485, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 344, Column: 10 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'int generic_isinf<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 346, Column: 10 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'int generic_isnan<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 383, Column: 15 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 509, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 519, Column: 7 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 612, Column: 66 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'pow_reduce::pow_traits<double>::exp_Z1P_m_1(ap_ufixed<51, -8, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 224, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                   Line: 7, Column: 12 }
+Function:        pow
+Args:            
+  - Callee:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          pow
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                       Line: 6, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: cpu_functions.cpp, Line: 51, Column: 43 }
+Function:        _Z3lrnPKfPfj
+Args:            
+  - Callee:          pow
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                       Line: 6, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'lrn(float const*, float*, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 36, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_lrn_ir
+Args:            
+  - Callee:          'lrn(float const*, float*, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 36, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_lrn_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                   Line: 16, Column: 0 }
+Function:        _Z13generic_isinfIdEiT_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_isinf<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                   Line: 16, Column: 0 }
+Function:        _Z13generic_isnanIdEiT_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'int generic_isnan<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 494, Column: 0 }
+Function:        _ZNK9fp_structIdE9to_doubleEv.100.110.140.150
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::data() const (.103.113.143.153)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 475, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<double>::to_double() const (.100.110.140.150)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 494, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                   Line: 509, Column: 0 }
+Function:        _ZNK9fp_structIdE7to_ieeeEv
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::to_double() const (.100.110.140.150)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 494, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 509, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 4, 4, 71, 73>(ap_ufixed<71, -(4), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<73, -(((4) + (4)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 7, 6, 73, 83>(ap_ufixed<73, -(7), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<83, -(((7) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 12, 6, 83, 92>(ap_ufixed<83, -(12), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<92, -(((12) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 17, 6, 92, 87>(ap_ufixed<92, -(17), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<87, -(((17) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 22, 6, 87, 82>(ap_ufixed<87, -(22), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<82, -(((22) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 27, 6, 82, 77>(ap_ufixed<82, -(27), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<77, -(((27) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 186, Column: 0 }
+Function:        _ZN10pow_reduce10pow_traitsIdE19log_range_reductionILi71EEE9ap_ufixedILi72ELin37EL9ap_q_mode5EL9ap_o_mode3ELi0EES3_IXT_ELin4ELS4_5ELS5_3ELi0EER8ap_fixedILi121ELi12ELS4_5ELS5_3ELi0EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'void pow_reduce::log_range_reduce<ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>, 32, 6, 77, 72>(ap_ufixed<77, -(32), (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<72, -(((32) + (6)) - (1)), (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 31, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::fp_struct(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 456, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'fp_struct<double>::expv() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 485, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'int generic_isinf<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isinf.h, 
+                       Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'int generic_isnan<double>(double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_isnan.h, 
+                       Line: 16, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 292, Column: 0 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'pow_reduce::pow_traits<double>::exp_Z1P_m_1(ap_ufixed<51, -8, (ap_q_mode)5, (ap_o_mode)3, 0>)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 224, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: cpu_functions.cpp, Line: 36, Column: 0 }
+Function:        _Z3lrnPKfPfj
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          pow
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                       Line: 6, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'lrn(float const*, float*, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 36, Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 51, Column: 18 }
+Function:        _Z3lrnPKfPfj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 51, Column: 16 }
+Function:        _Z3lrnPKfPfj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 51, Column: 18 }
+Function:        _Z3lrnPKfPfj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 51, Column: 16 }
+Function:        _Z3lrnPKfPfj
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_49_2
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:49:20'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 49, Column: 20 }
+Function:        _Z3lrnPKfPfj
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  lrn
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_49_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:49:20'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 49, Column: 20 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 383, Column: 15 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'fp_struct<double>::to_ieee() const'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/src/hls/utils/x_hls_utils.h, 
+                       Line: 509, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                   Line: 519, Column: 7 }
+Function:        _ZN10pow_reduce11pow_genericIdEET_S1_S1_
+Args:            
+  - Callee:          'ap_ufixed<72, -37, (ap_q_mode)5, (ap_o_mode)3, 0> pow_reduce::pow_traits<double>::log_range_reduction<71>(ap_ufixed<71, -4, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<121, 12, (ap_q_mode)5, (ap_o_mode)3, 0>&)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/src/c/powdouble.cpp, 
+                   Line: 7, Column: 12 }
+Function:        _Z3lrnPKfPfj
+Args:            
+  - Callee:          'double pow_reduce::pow_generic<double>(double, double)'
+    DebugLoc:        { File: /wrk/ci/prod/2025.2/hls_product/continuous/666/2025.2/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_pow.h, 
+                       Line: 292, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'lrn(float const*, float*, unsigned int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 36, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

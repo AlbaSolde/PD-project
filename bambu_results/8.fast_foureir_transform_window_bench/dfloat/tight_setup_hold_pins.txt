@@ -1,0 +1,8 @@
++====================+===================+============================================================================================================================================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                                                                                                                                        |
++====================+===================+============================================================================================================================================================+
+| clock              | clock             | __Z12fft_functionPfS_xx_i0/Datapath_i/fu__Z12fft_functionPfS_xx_36289_37840/Datapath_i/__float_adde8m23b_127nih_314_i0/Datapath_i/reg_31/reg_out1_reg[6]/D |
+| clock              | clock             | __Z12fft_functionPfS_xx_i0/Datapath_i/fu__Z12fft_functionPfS_xx_36289_37840/Datapath_i/__float_sube8m23b_127nih_319_i0/Datapath_i/reg_36/reg_out1_reg[0]/D |
+| clock              | clock             | __Z12fft_functionPfS_xx_i0/Datapath_i/fu__Z12fft_functionPfS_xx_36289_37840/Datapath_i/reg_6/reg_out1_reg[3]/D                                             |
+| clock              | clock             | __Z12fft_functionPfS_xx_i0/Datapath_i/fu__Z12fft_functionPfS_xx_36289_37840/Datapath_i/reg_6/reg_out1_reg[1]/D                                             |
++--------------------+-------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+

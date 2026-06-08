@@ -1,0 +1,295 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon May  4 18:55:56 2026
+# Process ID         : 9124
+# Current directory  : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions
+# Command line       : vivado -mode batch -source run_vivado.tcl
+# Log file           : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/vivado.log
+# Journal file       : /home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/vivado.jou
+# Running On         : luthier-ku
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i7-1365U
+# CPU Frequency      : 742.425 MHz
+# CPU Physical cores : 10
+# CPU Logical cores  : 12
+# Host memory        : 33282 MB
+# Swap memory        : 536 MB
+# Total Virtual      : 33819 MB
+# Available Virtual  : 29089 MB
+#-----------------------------------------------------------
+source run_vivado.tcl
+# set part_name xc7z020clg484-1
+# set top_name lrn
+# set clk_period 10.0
+# set rtl_dir "./proj_lrn/fsolution/syn/verilog"
+# set out_dir "./vivado_reports"
+# file mkdir $out_dir
+# create_project vivado_lrn ./vivado_lrn -part $part_name -force
+# read_verilog [glob $rtl_dir/*.v]
+# synth_design -top $top_name -part $part_name
+Command: synth_design -top lrn -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 9153
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2036.906 ; gain = 461.391 ; free physical = 10302 ; free virtual = 26543
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'lrn' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn.v:9]
+INFO: [Synth 8-6157] synthesizing module 'lrn_pow_generic_double_s' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb.v:7]
+	Parameter DataWidth bound to: 6 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_inverse_lut_table_powbkb.v:7]
+INFO: [Synth 8-6157] synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_ROM_cud' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_ROM_cud.v:7]
+	Parameter DataWidth bound to: 109 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_ROM_cud.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_ROM_cud.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_ROM_cud' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log0_lut_table_array_ROM_cud.v:7]
+INFO: [Synth 8-6157] synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_dEe' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_dEe.v:7]
+	Parameter DataWidth bound to: 105 - type: integer 
+	Parameter AddressWidth bound to: 4 - type: integer 
+	Parameter AddressRange bound to: 16 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_dEe.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_dEe.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_dEe' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_4_dEe.v:7]
+INFO: [Synth 8-6157] synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_eOg' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_eOg.v:7]
+	Parameter DataWidth bound to: 102 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_eOg.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_eOg.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_eOg' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_7_eOg.v:7]
+INFO: [Synth 8-6157] synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi.v:7]
+	Parameter DataWidth bound to: 97 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_12fYi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17g8j' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17g8j.v:7]
+	Parameter DataWidth bound to: 92 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17g8j.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17g8j.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17g8j' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_17g8j.v:7]
+INFO: [Synth 8-6157] synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22hbi' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22hbi.v:7]
+	Parameter DataWidth bound to: 87 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22hbi.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22hbi.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22hbi' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_22hbi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27ibs' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27ibs.v:7]
+	Parameter DataWidth bound to: 82 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27ibs.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27ibs.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27ibs' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_27ibs.v:7]
+INFO: [Synth 8-6157] synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32jbC' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32jbC.v:7]
+	Parameter DataWidth bound to: 77 - type: integer 
+	Parameter AddressWidth bound to: 6 - type: integer 
+	Parameter AddressRange bound to: 64 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32jbC.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32jbC.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32jbC' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_log_lut_table_ap_fixed_32jbC.v:7]
+INFO: [Synth 8-6157] synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arkbM' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arkbM.v:7]
+	Parameter DataWidth bound to: 58 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arkbM.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arkbM.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arkbM' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_exp_Z1_ap_ufixed_arkbM.v:7]
+INFO: [Synth 8-6157] synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_arralbW' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_arralbW.v:7]
+	Parameter DataWidth bound to: 26 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_arralbW.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_arralbW.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_arralbW' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z3_ap_ufixed_arralbW.v:7]
+INFO: [Synth 8-6157] synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arramb6' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arramb6.v:7]
+	Parameter DataWidth bound to: 42 - type: integer 
+	Parameter AddressWidth bound to: 8 - type: integer 
+	Parameter AddressRange bound to: 256 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arramb6.dat' is read successfully [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arramb6.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arramb6' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s_pow_reduce_anonymous_namespace_table_f_Z2_ap_ufixed_arramb6.v:7]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_12s_80ns_90_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_12s_80ns_90_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 80 - type: integer 
+	Parameter dout_WIDTH bound to: 90 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_12s_80ns_90_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_12s_80ns_90_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_13s_71s_71_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_13s_71s_71_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 13 - type: integer 
+	Parameter din1_WIDTH bound to: 71 - type: integer 
+	Parameter dout_WIDTH bound to: 71 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_13s_71s_71_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_13s_71s_71_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_40ns_40ns_79_2_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_40ns_40ns_79_2_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 40 - type: integer 
+	Parameter din1_WIDTH bound to: 40 - type: integer 
+	Parameter dout_WIDTH bound to: 79 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_40ns_40ns_79_2_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_40ns_40ns_79_2_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_43ns_36ns_78_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_43ns_36ns_78_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 43 - type: integer 
+	Parameter din1_WIDTH bound to: 36 - type: integer 
+	Parameter dout_WIDTH bound to: 78 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_43ns_36ns_78_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_43ns_36ns_78_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_49ns_44ns_92_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_49ns_44ns_92_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 49 - type: integer 
+	Parameter din1_WIDTH bound to: 44 - type: integer 
+	Parameter dout_WIDTH bound to: 92 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_49ns_44ns_92_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_49ns_44ns_92_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_50ns_50ns_99_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_50ns_50ns_99_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 50 - type: integer 
+	Parameter din1_WIDTH bound to: 50 - type: integer 
+	Parameter dout_WIDTH bound to: 99 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_50ns_50ns_99_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_50ns_50ns_99_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_54s_6ns_54_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_54s_6ns_54_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 54 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 54 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_54s_6ns_54_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_54s_6ns_54_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_73ns_6ns_79_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_73ns_6ns_79_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 73 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 79 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_73ns_6ns_79_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_73ns_6ns_79_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_77ns_6ns_82_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_77ns_6ns_82_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 77 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 82 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_77ns_6ns_82_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_77ns_6ns_82_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_78s_54s_131_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_78s_54s_131_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 78 - type: integer 
+	Parameter din1_WIDTH bound to: 54 - type: integer 
+	Parameter dout_WIDTH bound to: 131 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_78s_54s_131_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_78s_54s_131_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_82ns_6ns_87_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_82ns_6ns_87_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 82 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 87 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_82ns_6ns_87_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_82ns_6ns_87_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_83ns_6ns_89_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_83ns_6ns_89_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 83 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 89 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_83ns_6ns_89_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_83ns_6ns_89_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_87ns_6ns_92_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_87ns_6ns_92_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 87 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 92 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_87ns_6ns_92_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_87ns_6ns_92_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_92ns_6ns_97_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_92ns_6ns_97_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 92 - type: integer 
+	Parameter din1_WIDTH bound to: 6 - type: integer 
+	Parameter dout_WIDTH bound to: 97 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_92ns_6ns_97_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_92ns_6ns_97_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mul_71ns_4ns_75_5_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_71ns_4ns_75_5_0.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 71 - type: integer 
+	Parameter din1_WIDTH bound to: 4 - type: integer 
+	Parameter dout_WIDTH bound to: 75 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mul_71ns_4ns_75_5_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mul_71ns_4ns_75_5_0.v:5]
+INFO: [Synth 8-6157] synthesizing module 'lrn_bitselect_1ns_52ns_6ns_1_1_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_bitselect_1ns_52ns_6ns_1_1_0.v:8]
+	Parameter ADDRWIDTH bound to: 6 - type: integer 
+	Parameter DATAWIDTH bound to: 52 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_bitselect_1ns_52ns_6ns_1_1_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_bitselect_1ns_52ns_6ns_1_1_0.v:8]
+INFO: [Synth 8-6157] synthesizing module 'lrn_sparsemux_7_2_1_1_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_sparsemux_7_2_1_1_0.v:8]
+	Parameter din0_WIDTH bound to: 1 - type: integer 
+	Parameter din1_WIDTH bound to: 1 - type: integer 
+	Parameter din2_WIDTH bound to: 1 - type: integer 
+	Parameter def_WIDTH bound to: 1 - type: integer 
+	Parameter sel_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 1 - type: integer 
+	Parameter CASE0 bound to: 2'b10 
+	Parameter CASE1 bound to: 2'b01 
+	Parameter CASE2 bound to: 2'b00 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_sparsemux_7_2_1_1_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_sparsemux_7_2_1_1_0.v:8]
+INFO: [Synth 8-6157] synthesizing module 'lrn_sparsemux_19_8_64_1_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_sparsemux_19_8_64_1_0.v:8]
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter din2_WIDTH bound to: 64 - type: integer 
+	Parameter din3_WIDTH bound to: 64 - type: integer 
+	Parameter din4_WIDTH bound to: 64 - type: integer 
+	Parameter din5_WIDTH bound to: 64 - type: integer 
+	Parameter din6_WIDTH bound to: 64 - type: integer 
+	Parameter din7_WIDTH bound to: 64 - type: integer 
+	Parameter din8_WIDTH bound to: 64 - type: integer 
+	Parameter def_WIDTH bound to: 64 - type: integer 
+	Parameter sel_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+	Parameter CASE0 bound to: 8'b10000000 
+	Parameter CASE1 bound to: 8'b01000000 
+	Parameter CASE2 bound to: 8'b00100000 
+	Parameter CASE3 bound to: 8'b00010000 
+	Parameter CASE4 bound to: 8'b00001000 
+	Parameter CASE5 bound to: 8'b00000100 
+	Parameter CASE6 bound to: 8'b00000010 
+	Parameter CASE7 bound to: 8'b00000001 
+	Parameter CASE8 bound to: 8'b00000000 
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lrn_sparsemux_19_8_64_1_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_sparsemux_19_8_64_1_0.v:8]
+INFO: [Synth 8-6157] synthesizing module 'lrn_mac_muladd_16s_15ns_19s_31_4_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mac_muladd_16s_15ns_19s_31_4_0.v:45]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 16 - type: integer 
+	Parameter din1_WIDTH bound to: 15 - type: integer 
+	Parameter din2_WIDTH bound to: 19 - type: integer 
+	Parameter dout_WIDTH bound to: 31 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lrn_mac_muladd_16s_15ns_19s_31_4_0_DSP48_0' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mac_muladd_16s_15ns_19s_31_4_0.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mac_muladd_16s_15ns_19s_31_4_0_DSP48_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mac_muladd_16s_15ns_19s_31_4_0.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_mac_muladd_16s_15ns_19s_31_4_0' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_mac_muladd_16s_15ns_19s_31_4_0.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'lrn_pow_generic_double_s' (0#1) [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_pow_generic_double_s.v:9]
+INFO: [Synth 8-6157] synthesizing module 'lrn_fptrunc_64ns_32_2_no_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_fptrunc_64ns_32_2_no_dsp_1.v:9]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+ERROR: [Synth 8-439] module 'lrn_fptrunc_64ns_32_2_no_dsp_1_ip' not found [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_fptrunc_64ns_32_2_no_dsp_1.v:32]
+ERROR: [Synth 8-6156] failed synthesizing module 'lrn_fptrunc_64ns_32_2_no_dsp_1' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn_fptrunc_64ns_32_2_no_dsp_1.v:9]
+ERROR: [Synth 8-6156] failed synthesizing module 'lrn' [/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/LRN_bench/cpu_functions/proj_lrn/fsolution/syn/verilog/lrn.v:9]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2128.844 ; gain = 553.328 ; free physical = 10194 ; free virtual = 26438
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+85 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2128.852 ; gain = 553.336 ; free physical = 10194 ; free virtual = 26438
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1728.603; main = 1386.699; forked = 341.903
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3130.715; main = 2128.848; forked = 1001.867
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Mon May  4 18:56:10 2026...

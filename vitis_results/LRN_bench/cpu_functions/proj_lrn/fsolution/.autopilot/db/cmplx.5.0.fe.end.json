@@ -1,0 +1,29 @@
+{
+    "0": {
+        "name": "lrn",
+        "file": "cpu_functions.cpp",
+        "fileloc": "35",
+        "instructions": "23",
+        "total_instructions": "855",
+        "calls": "1 1",
+        "basicblocks": "3",
+        "memory_accesses": "0",
+        "control_depth": "0",
+        "def_use_depth": "5"
+    },
+    "1": {
+        "name": "pow_generic<double>",
+        "file": "hls_pow.h",
+        "fileloc": "291",
+        "instructions": "416",
+        "total_instructions": "416",
+        "calls": "",
+        "basicblocks": "1",
+        "memory_accesses": "15",
+        "control_depth": "0",
+        "def_use_depth": "79",
+        "loads": {
+            "G": "13"
+        }
+    }
+}

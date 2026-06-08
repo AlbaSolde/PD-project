@@ -1,0 +1,338 @@
+
+
+================================================================
+== Vitis HLS Report for 'FFT2D_flat_Pipeline_VITIS_LOOP_37_5'
+================================================================
+* Date:           Tue May  5 09:35:10 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        proj_fft2d
+* Solution:       fsolution (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.290 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+-------------+-----------+-------------+-----+-----+-------------------+
+    |    Latency (cycles)   |    Latency (absolute)   |  Interval |      Pipeline     |
+    |   min   |     max     |    min    |     max     | min | max |        Type       |
+    +---------+-------------+-----------+-------------+-----+-----+-------------------+
+    |        2|  15032385524|  20.000 ns|  150.324 sec|    0|    0|  loop pipeline stp|
+    +---------+-------------+-----------+-------------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+-------------+----------+-----------+-----------+----------------+----------+
+        |                   |    Latency (cycles)   | Iteration|  Initiation Interval  |      Trip      |          |
+        |     Loop Name     |   min   |     max     |  Latency |  achieved |   target  |      Count     | Pipelined|
+        +-------------------+---------+-------------+----------+-----------+-----------+----------------+----------+
+        |- VITIS_LOOP_37_5  |        0|  15032385522|        15|         14|          1|  0 ~ 1073741823|       yes|
+        +-------------------+---------+-------------+----------+-----------+-----------+----------------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 14, depth = 16
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 16
+* Pipeline : 1
+  Pipeline-0 : II = 14, D = 16, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.58>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%cur_cos = alloca i32 1" [cpu_functions_vitis.cpp:35->cpu_functions_vitis.cpp:64]   --->   Operation 18 'alloca' 'cur_cos' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%cur_sin = alloca i32 1" [cpu_functions_vitis.cpp:36->cpu_functions_vitis.cpp:64]   --->   Operation 19 'alloca' 'cur_sin' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%k = alloca i32 1"   --->   Operation 20 'alloca' 'k' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%empty = alloca i32 1"   --->   Operation 21 'alloca' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%wsin_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %wsin"   --->   Operation 22 'read' 'wsin_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%wcos_read = read i32 @_ssdm_op_Read.ap_auto.float, i32 %wcos"   --->   Operation 23 'read' 'wcos_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%select_ln37_read = read i31 @_ssdm_op_Read.ap_auto.i31, i31 %select_ln37"   --->   Operation 24 'read' 'select_ln37_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%out_flat_load_1_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %out_flat_load_1"   --->   Operation 25 'read' 'out_flat_load_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (1.58ns)   --->   "%store_ln0 = store i64 %out_flat_load_1_read, i64 %empty"   --->   Operation 26 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 27 [1/1] (1.58ns)   --->   "%store_ln0 = store i30 0, i30 %k"   --->   Operation 27 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 28 [1/1] (1.58ns)   --->   "%store_ln36 = store i32 0, i32 %cur_sin" [cpu_functions_vitis.cpp:36->cpu_functions_vitis.cpp:64]   --->   Operation 28 'store' 'store_ln36' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 29 [1/1] (1.58ns)   --->   "%store_ln35 = store i32 1, i32 %cur_cos" [cpu_functions_vitis.cpp:35->cpu_functions_vitis.cpp:64]   --->   Operation 29 'store' 'store_ln35' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc108.i"   --->   Operation 30 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 5.70>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%k_load = load i30 %k" [cpu_functions_vitis.cpp:37->cpu_functions_vitis.cpp:64]   --->   Operation 31 'load' 'k_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln37 = zext i30 %k_load" [cpu_functions_vitis.cpp:37->cpu_functions_vitis.cpp:64]   --->   Operation 32 'zext' 'zext_ln37' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (2.52ns)   --->   "%icmp_ln37 = icmp_slt  i31 %zext_ln37, i31 %select_ln37_read" [cpu_functions_vitis.cpp:37->cpu_functions_vitis.cpp:64]   --->   Operation 33 'icmp' 'icmp_ln37' <Predicate = true> <Delay = 2.52> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (2.49ns)   --->   "%add_ln37 = add i30 %k_load, i30 1" [cpu_functions_vitis.cpp:37->cpu_functions_vitis.cpp:64]   --->   Operation 34 'add' 'add_ln37' <Predicate = true> <Delay = 2.49> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.49> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln37 = br i1 %icmp_ln37, void %for.inc111.i.loopexit.exitStub, void %for.inc108.i.split" [cpu_functions_vitis.cpp:37->cpu_functions_vitis.cpp:64]   --->   Operation 35 'br' 'br_ln37' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%cur_cos_load = load i32 %cur_cos" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 36 'load' 'cur_cos_load' <Predicate = (icmp_ln37)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%cur_sin_load = load i32 %cur_sin" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 37 'load' 'cur_sin_load' <Predicate = (icmp_ln37)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%p_load = load i64 %empty" [cpu_functions_vitis.cpp:38->cpu_functions_vitis.cpp:64]   --->   Operation 38 'load' 'p_load' <Predicate = (icmp_ln37)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%trunc_ln38 = trunc i64 %p_load" [cpu_functions_vitis.cpp:38->cpu_functions_vitis.cpp:64]   --->   Operation 39 'trunc' 'trunc_ln38' <Predicate = (icmp_ln37)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%ux = bitcast i32 %trunc_ln38" [cpu_functions_vitis.cpp:38->cpu_functions_vitis.cpp:64]   --->   Operation 40 'bitcast' 'ux' <Predicate = (icmp_ln37)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%trunc_ln7 = partselect i32 @_ssdm_op_PartSelect.i32.i64.i32.i32, i64 %p_load, i32 32, i32 63" [cpu_functions_vitis.cpp:39->cpu_functions_vitis.cpp:64]   --->   Operation 41 'partselect' 'trunc_ln7' <Predicate = (icmp_ln37)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%uy = bitcast i32 %trunc_ln7" [cpu_functions_vitis.cpp:39->cpu_functions_vitis.cpp:64]   --->   Operation 42 'bitcast' 'uy' <Predicate = (icmp_ln37)> <Delay = 0.00>
+ST_2 : Operation 43 [4/4] (5.70ns)   --->   "%mul_i = fmul i32 %ux, i32 %cur_cos_load" [cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64]   --->   Operation 43 'fmul' 'mul_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 44 [4/4] (5.70ns)   --->   "%mul62_i = fmul i32 %uy, i32 %cur_sin_load" [cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64]   --->   Operation 44 'fmul' 'mul62_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 45 [4/4] (5.70ns)   --->   "%mul69_i = fmul i32 %ux, i32 %cur_sin_load" [cpu_functions_vitis.cpp:41->cpu_functions_vitis.cpp:64]   --->   Operation 45 'fmul' 'mul69_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 46 [4/4] (5.70ns)   --->   "%mul76_i = fmul i32 %uy, i32 %cur_cos_load" [cpu_functions_vitis.cpp:41->cpu_functions_vitis.cpp:64]   --->   Operation 46 'fmul' 'mul76_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 47 [1/1] (1.58ns)   --->   "%store_ln37 = store i30 %add_ln37, i30 %k" [cpu_functions_vitis.cpp:37->cpu_functions_vitis.cpp:64]   --->   Operation 47 'store' 'store_ln37' <Predicate = (icmp_ln37)> <Delay = 1.58>
+ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%p_load7 = load i64 %empty"   --->   Operation 116 'load' 'p_load7' <Predicate = (!icmp_ln37)> <Delay = 0.00>
+ST_2 : Operation 117 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.i64P0A, i64 %p_out, i64 %p_load7"   --->   Operation 117 'write' 'write_ln0' <Predicate = (!icmp_ln37)> <Delay = 0.00>
+ST_2 : Operation 118 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 118 'ret' 'ret_ln0' <Predicate = (!icmp_ln37)> <Delay = 1.58>
+
+State 3 <SV = 2> <Delay = 5.70>
+ST_3 : Operation 48 [3/4] (5.70ns)   --->   "%mul_i = fmul i32 %ux, i32 %cur_cos_load" [cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64]   --->   Operation 48 'fmul' 'mul_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 49 [3/4] (5.70ns)   --->   "%mul62_i = fmul i32 %uy, i32 %cur_sin_load" [cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64]   --->   Operation 49 'fmul' 'mul62_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 50 [3/4] (5.70ns)   --->   "%mul69_i = fmul i32 %ux, i32 %cur_sin_load" [cpu_functions_vitis.cpp:41->cpu_functions_vitis.cpp:64]   --->   Operation 50 'fmul' 'mul69_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 51 [3/4] (5.70ns)   --->   "%mul76_i = fmul i32 %uy, i32 %cur_cos_load" [cpu_functions_vitis.cpp:41->cpu_functions_vitis.cpp:64]   --->   Operation 51 'fmul' 'mul76_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 52 [4/4] (5.70ns)   --->   "%mul102_i = fmul i32 %cur_cos_load, i32 %wcos_read" [cpu_functions_vitis.cpp:46->cpu_functions_vitis.cpp:64]   --->   Operation 52 'fmul' 'mul102_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 53 [4/4] (5.70ns)   --->   "%mul103_i = fmul i32 %cur_sin_load, i32 %wsin_read" [cpu_functions_vitis.cpp:46->cpu_functions_vitis.cpp:64]   --->   Operation 53 'fmul' 'mul103_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 54 [4/4] (5.70ns)   --->   "%mul105_i = fmul i32 %cur_cos_load, i32 %wsin_read" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 54 'fmul' 'mul105_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 55 [4/4] (5.70ns)   --->   "%mul106_i = fmul i32 %cur_sin_load, i32 %wcos_read" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 55 'fmul' 'mul106_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 5.70>
+ST_4 : Operation 56 [2/4] (5.70ns)   --->   "%mul_i = fmul i32 %ux, i32 %cur_cos_load" [cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64]   --->   Operation 56 'fmul' 'mul_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 57 [2/4] (5.70ns)   --->   "%mul62_i = fmul i32 %uy, i32 %cur_sin_load" [cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64]   --->   Operation 57 'fmul' 'mul62_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 58 [2/4] (5.70ns)   --->   "%mul69_i = fmul i32 %ux, i32 %cur_sin_load" [cpu_functions_vitis.cpp:41->cpu_functions_vitis.cpp:64]   --->   Operation 58 'fmul' 'mul69_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 59 [2/4] (5.70ns)   --->   "%mul76_i = fmul i32 %uy, i32 %cur_cos_load" [cpu_functions_vitis.cpp:41->cpu_functions_vitis.cpp:64]   --->   Operation 59 'fmul' 'mul76_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 60 [3/4] (5.70ns)   --->   "%mul102_i = fmul i32 %cur_cos_load, i32 %wcos_read" [cpu_functions_vitis.cpp:46->cpu_functions_vitis.cpp:64]   --->   Operation 60 'fmul' 'mul102_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 61 [3/4] (5.70ns)   --->   "%mul103_i = fmul i32 %cur_sin_load, i32 %wsin_read" [cpu_functions_vitis.cpp:46->cpu_functions_vitis.cpp:64]   --->   Operation 61 'fmul' 'mul103_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 62 [3/4] (5.70ns)   --->   "%mul105_i = fmul i32 %cur_cos_load, i32 %wsin_read" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 62 'fmul' 'mul105_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 63 [3/4] (5.70ns)   --->   "%mul106_i = fmul i32 %cur_sin_load, i32 %wcos_read" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 63 'fmul' 'mul106_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 5.70>
+ST_5 : Operation 64 [1/4] (5.70ns)   --->   "%mul_i = fmul i32 %ux, i32 %cur_cos_load" [cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64]   --->   Operation 64 'fmul' 'mul_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 65 [1/4] (5.70ns)   --->   "%mul62_i = fmul i32 %uy, i32 %cur_sin_load" [cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64]   --->   Operation 65 'fmul' 'mul62_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 66 [1/4] (5.70ns)   --->   "%mul69_i = fmul i32 %ux, i32 %cur_sin_load" [cpu_functions_vitis.cpp:41->cpu_functions_vitis.cpp:64]   --->   Operation 66 'fmul' 'mul69_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 67 [1/4] (5.70ns)   --->   "%mul76_i = fmul i32 %uy, i32 %cur_cos_load" [cpu_functions_vitis.cpp:41->cpu_functions_vitis.cpp:64]   --->   Operation 67 'fmul' 'mul76_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 68 [2/4] (5.70ns)   --->   "%mul102_i = fmul i32 %cur_cos_load, i32 %wcos_read" [cpu_functions_vitis.cpp:46->cpu_functions_vitis.cpp:64]   --->   Operation 68 'fmul' 'mul102_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 69 [2/4] (5.70ns)   --->   "%mul103_i = fmul i32 %cur_sin_load, i32 %wsin_read" [cpu_functions_vitis.cpp:46->cpu_functions_vitis.cpp:64]   --->   Operation 69 'fmul' 'mul103_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 70 [2/4] (5.70ns)   --->   "%mul105_i = fmul i32 %cur_cos_load, i32 %wsin_read" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 70 'fmul' 'mul105_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 71 [2/4] (5.70ns)   --->   "%mul106_i = fmul i32 %cur_sin_load, i32 %wcos_read" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 71 'fmul' 'mul106_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 7.25>
+ST_6 : Operation 72 [5/5] (7.25ns)   --->   "%vx = fsub i32 %mul_i, i32 %mul62_i" [cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64]   --->   Operation 72 'fsub' 'vx' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 73 [5/5] (7.25ns)   --->   "%vy = fadd i32 %mul69_i, i32 %mul76_i" [cpu_functions_vitis.cpp:41->cpu_functions_vitis.cpp:64]   --->   Operation 73 'fadd' 'vy' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 74 [1/4] (5.70ns)   --->   "%mul102_i = fmul i32 %cur_cos_load, i32 %wcos_read" [cpu_functions_vitis.cpp:46->cpu_functions_vitis.cpp:64]   --->   Operation 74 'fmul' 'mul102_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 75 [1/4] (5.70ns)   --->   "%mul103_i = fmul i32 %cur_sin_load, i32 %wsin_read" [cpu_functions_vitis.cpp:46->cpu_functions_vitis.cpp:64]   --->   Operation 75 'fmul' 'mul103_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 76 [1/4] (5.70ns)   --->   "%mul105_i = fmul i32 %cur_cos_load, i32 %wsin_read" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 76 'fmul' 'mul105_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 77 [1/4] (5.70ns)   --->   "%mul106_i = fmul i32 %cur_sin_load, i32 %wcos_read" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 77 'fmul' 'mul106_i' <Predicate = (icmp_ln37)> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.25>
+ST_7 : Operation 78 [4/5] (7.25ns)   --->   "%vx = fsub i32 %mul_i, i32 %mul62_i" [cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64]   --->   Operation 78 'fsub' 'vx' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 79 [4/5] (7.25ns)   --->   "%vy = fadd i32 %mul69_i, i32 %mul76_i" [cpu_functions_vitis.cpp:41->cpu_functions_vitis.cpp:64]   --->   Operation 79 'fadd' 'vy' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 80 [5/5] (7.25ns)   --->   "%new_cos = fsub i32 %mul102_i, i32 %mul103_i" [cpu_functions_vitis.cpp:46->cpu_functions_vitis.cpp:64]   --->   Operation 80 'fsub' 'new_cos' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 81 [5/5] (7.25ns)   --->   "%new_sin = fadd i32 %mul105_i, i32 %mul106_i" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 81 'fadd' 'new_sin' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.25>
+ST_8 : Operation 82 [3/5] (7.25ns)   --->   "%vx = fsub i32 %mul_i, i32 %mul62_i" [cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64]   --->   Operation 82 'fsub' 'vx' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 83 [3/5] (7.25ns)   --->   "%vy = fadd i32 %mul69_i, i32 %mul76_i" [cpu_functions_vitis.cpp:41->cpu_functions_vitis.cpp:64]   --->   Operation 83 'fadd' 'vy' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 84 [4/5] (7.25ns)   --->   "%new_cos = fsub i32 %mul102_i, i32 %mul103_i" [cpu_functions_vitis.cpp:46->cpu_functions_vitis.cpp:64]   --->   Operation 84 'fsub' 'new_cos' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 85 [4/5] (7.25ns)   --->   "%new_sin = fadd i32 %mul105_i, i32 %mul106_i" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 85 'fadd' 'new_sin' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.25>
+ST_9 : Operation 86 [2/5] (7.25ns)   --->   "%vx = fsub i32 %mul_i, i32 %mul62_i" [cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64]   --->   Operation 86 'fsub' 'vx' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 87 [2/5] (7.25ns)   --->   "%vy = fadd i32 %mul69_i, i32 %mul76_i" [cpu_functions_vitis.cpp:41->cpu_functions_vitis.cpp:64]   --->   Operation 87 'fadd' 'vy' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 88 [3/5] (7.25ns)   --->   "%new_cos = fsub i32 %mul102_i, i32 %mul103_i" [cpu_functions_vitis.cpp:46->cpu_functions_vitis.cpp:64]   --->   Operation 88 'fsub' 'new_cos' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 89 [3/5] (7.25ns)   --->   "%new_sin = fadd i32 %mul105_i, i32 %mul106_i" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 89 'fadd' 'new_sin' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.25>
+ST_10 : Operation 90 [1/5] (7.25ns)   --->   "%vx = fsub i32 %mul_i, i32 %mul62_i" [cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64]   --->   Operation 90 'fsub' 'vx' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 91 [1/5] (7.25ns)   --->   "%vy = fadd i32 %mul69_i, i32 %mul76_i" [cpu_functions_vitis.cpp:41->cpu_functions_vitis.cpp:64]   --->   Operation 91 'fadd' 'vy' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 92 [2/5] (7.25ns)   --->   "%new_cos = fsub i32 %mul102_i, i32 %mul103_i" [cpu_functions_vitis.cpp:46->cpu_functions_vitis.cpp:64]   --->   Operation 92 'fsub' 'new_cos' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 93 [2/5] (7.25ns)   --->   "%new_sin = fadd i32 %mul105_i, i32 %mul106_i" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 93 'fadd' 'new_sin' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 7.25>
+ST_11 : Operation 94 [5/5] (7.25ns)   --->   "%sub88_i = fsub i32 %ux, i32 %vx" [cpu_functions_vitis.cpp:44->cpu_functions_vitis.cpp:64]   --->   Operation 94 'fsub' 'sub88_i' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 95 [5/5] (7.25ns)   --->   "%sub95_i = fsub i32 %uy, i32 %vy" [cpu_functions_vitis.cpp:45->cpu_functions_vitis.cpp:64]   --->   Operation 95 'fsub' 'sub95_i' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 96 [1/5] (7.25ns)   --->   "%new_cos = fsub i32 %mul102_i, i32 %mul103_i" [cpu_functions_vitis.cpp:46->cpu_functions_vitis.cpp:64]   --->   Operation 96 'fsub' 'new_cos' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 97 [1/5] (7.25ns)   --->   "%new_sin = fadd i32 %mul105_i, i32 %mul106_i" [cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64]   --->   Operation 97 'fadd' 'new_sin' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 7.25>
+ST_12 : Operation 98 [4/5] (7.25ns)   --->   "%sub88_i = fsub i32 %ux, i32 %vx" [cpu_functions_vitis.cpp:44->cpu_functions_vitis.cpp:64]   --->   Operation 98 'fsub' 'sub88_i' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 99 [4/5] (7.25ns)   --->   "%sub95_i = fsub i32 %uy, i32 %vy" [cpu_functions_vitis.cpp:45->cpu_functions_vitis.cpp:64]   --->   Operation 99 'fsub' 'sub95_i' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 100 [1/1] (1.58ns)   --->   "%store_ln36 = store i32 %new_sin, i32 %cur_sin" [cpu_functions_vitis.cpp:36->cpu_functions_vitis.cpp:64]   --->   Operation 100 'store' 'store_ln36' <Predicate = (icmp_ln37)> <Delay = 1.58>
+ST_12 : Operation 101 [1/1] (1.58ns)   --->   "%store_ln35 = store i32 %new_cos, i32 %cur_cos" [cpu_functions_vitis.cpp:35->cpu_functions_vitis.cpp:64]   --->   Operation 101 'store' 'store_ln35' <Predicate = (icmp_ln37)> <Delay = 1.58>
+
+State 13 <SV = 12> <Delay = 7.25>
+ST_13 : Operation 102 [3/5] (7.25ns)   --->   "%sub88_i = fsub i32 %ux, i32 %vx" [cpu_functions_vitis.cpp:44->cpu_functions_vitis.cpp:64]   --->   Operation 102 'fsub' 'sub88_i' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 103 [3/5] (7.25ns)   --->   "%sub95_i = fsub i32 %uy, i32 %vy" [cpu_functions_vitis.cpp:45->cpu_functions_vitis.cpp:64]   --->   Operation 103 'fsub' 'sub95_i' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 7.25>
+ST_14 : Operation 104 [2/5] (7.25ns)   --->   "%sub88_i = fsub i32 %ux, i32 %vx" [cpu_functions_vitis.cpp:44->cpu_functions_vitis.cpp:64]   --->   Operation 104 'fsub' 'sub88_i' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 105 [2/5] (7.25ns)   --->   "%sub95_i = fsub i32 %uy, i32 %vy" [cpu_functions_vitis.cpp:45->cpu_functions_vitis.cpp:64]   --->   Operation 105 'fsub' 'sub95_i' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 7.25>
+ST_15 : Operation 106 [1/5] (7.25ns)   --->   "%sub88_i = fsub i32 %ux, i32 %vx" [cpu_functions_vitis.cpp:44->cpu_functions_vitis.cpp:64]   --->   Operation 106 'fsub' 'sub88_i' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 107 [1/5] (7.25ns)   --->   "%sub95_i = fsub i32 %uy, i32 %vy" [cpu_functions_vitis.cpp:45->cpu_functions_vitis.cpp:64]   --->   Operation 107 'fsub' 'sub95_i' <Predicate = (icmp_ln37)> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 7.29>
+ST_16 : Operation 108 [1/1] (0.00ns)   --->   "%specpipeline_ln35 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, i32 4294967295, void @empty_6" [cpu_functions_vitis.cpp:35->cpu_functions_vitis.cpp:64]   --->   Operation 108 'specpipeline' 'specpipeline_ln35' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 109 [1/1] (0.00ns)   --->   "%speclooptripcount_ln35 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 0, i64 1073741823, i64 536870911" [cpu_functions_vitis.cpp:35->cpu_functions_vitis.cpp:64]   --->   Operation 109 'speclooptripcount' 'speclooptripcount_ln35' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 110 [1/1] (0.00ns)   --->   "%specloopname_ln37 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [cpu_functions_vitis.cpp:37->cpu_functions_vitis.cpp:64]   --->   Operation 110 'specloopname' 'specloopname_ln37' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 111 [1/1] (0.00ns)   --->   "%bitcast_ln44 = bitcast i32 %sub88_i" [cpu_functions_vitis.cpp:44->cpu_functions_vitis.cpp:64]   --->   Operation 111 'bitcast' 'bitcast_ln44' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 112 [1/1] (0.00ns)   --->   "%bitcast_ln45 = bitcast i32 %sub95_i" [cpu_functions_vitis.cpp:45->cpu_functions_vitis.cpp:64]   --->   Operation 112 'bitcast' 'bitcast_ln45' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 113 [1/1] (0.00ns)   --->   "%or_ln45_3 = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i32.i32, i32 %bitcast_ln45, i32 %bitcast_ln44" [cpu_functions_vitis.cpp:45->cpu_functions_vitis.cpp:64]   --->   Operation 113 'bitconcatenate' 'or_ln45_3' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 114 [1/1] (1.58ns)   --->   "%store_ln45 = store i64 %or_ln45_3, i64 %empty" [cpu_functions_vitis.cpp:45->cpu_functions_vitis.cpp:64]   --->   Operation 114 'store' 'store_ln45' <Predicate = true> <Delay = 1.58>
+ST_16 : Operation 115 [1/1] (0.00ns)   --->   "%br_ln37 = br void %for.inc108.i" [cpu_functions_vitis.cpp:37->cpu_functions_vitis.cpp:64]   --->   Operation 115 'br' 'br_ln37' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.588ns
+The critical path consists of the following:
+	'alloca' operation 64 bit ('empty') [9]  (0.000 ns)
+	'store' operation ('store_ln0') of variable 'out_flat_load_1_read' 64 bit on local variable 'empty' [14]  (1.588 ns)
+
+ <State 2>: 5.702ns
+The critical path consists of the following:
+	'load' operation 32 bit ('cur_cos_load', cpu_functions_vitis.cpp:47->cpu_functions_vitis.cpp:64) on local variable 'cur_cos', cpu_functions_vitis.cpp:35->cpu_functions_vitis.cpp:64 [26]  (0.000 ns)
+	'fmul' operation 32 bit ('mul_i', cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64) [36]  (5.702 ns)
+
+ <State 3>: 5.702ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul_i', cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64) [36]  (5.702 ns)
+
+ <State 4>: 5.702ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul_i', cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64) [36]  (5.702 ns)
+
+ <State 5>: 5.702ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul_i', cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64) [36]  (5.702 ns)
+
+ <State 6>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('vx', cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64) [38]  (7.256 ns)
+
+ <State 7>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('vx', cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64) [38]  (7.256 ns)
+
+ <State 8>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('vx', cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64) [38]  (7.256 ns)
+
+ <State 9>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('vx', cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64) [38]  (7.256 ns)
+
+ <State 10>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('vx', cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64) [38]  (7.256 ns)
+
+ <State 11>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub88_i', cpu_functions_vitis.cpp:44->cpu_functions_vitis.cpp:64) [42]  (7.256 ns)
+
+ <State 12>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub88_i', cpu_functions_vitis.cpp:44->cpu_functions_vitis.cpp:64) [42]  (7.256 ns)
+
+ <State 13>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub88_i', cpu_functions_vitis.cpp:44->cpu_functions_vitis.cpp:64) [42]  (7.256 ns)
+
+ <State 14>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub88_i', cpu_functions_vitis.cpp:44->cpu_functions_vitis.cpp:64) [42]  (7.256 ns)
+
+ <State 15>: 7.256ns
+The critical path consists of the following:
+	'fsub' operation 32 bit ('sub88_i', cpu_functions_vitis.cpp:44->cpu_functions_vitis.cpp:64) [42]  (7.256 ns)
+
+ <State 16>: 7.290ns
+The critical path consists of the following:
+	'store' operation ('store_ln45', cpu_functions_vitis.cpp:45->cpu_functions_vitis.cpp:64) of variable 'or_ln45_3', cpu_functions_vitis.cpp:45->cpu_functions_vitis.cpp:64 64 bit on local variable 'empty' [53]  (1.588 ns)
+	'load' operation 64 bit ('p_load', cpu_functions_vitis.cpp:38->cpu_functions_vitis.cpp:64) on local variable 'empty' [28]  (0.000 ns)
+	'fmul' operation 32 bit ('mul_i', cpu_functions_vitis.cpp:40->cpu_functions_vitis.cpp:64) [36]  (5.702 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

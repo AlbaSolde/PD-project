@@ -1,0 +1,35 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="ccsds_wavelet_transform" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="bundle" value="gmem0"/>
+                <option name="port" positionalBoolean="4" value="A"/>
+            </pragma>
+        </directive>
+        <directive functionName="ccsds_wavelet_transform" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="m_axi" value="" positionalBoolean="mode"/>
+                <option name="bundle" value="gmem1"/>
+                <option name="port" positionalBoolean="4" value="B"/>
+            </pragma>
+        </directive>
+        <directive functionName="ccsds_wavelet_transform" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="size"/>
+            </pragma>
+        </directive>
+        <directive functionName="ccsds_wavelet_transform" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" positionalBoolean="4" value="return"/>
+            </pragma>
+        </directive>
+        <directive functionName="ccsds_wavelet_transform" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="ccsds_wavelet_transform"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>

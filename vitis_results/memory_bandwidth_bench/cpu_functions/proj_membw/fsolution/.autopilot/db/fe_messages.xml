@@ -1,0 +1,10 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/memory_bandwidth_bench/cpu_functions/run_hls.tcl:7:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="copy_array" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=copy_array" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="cpu_functions.cpp:5:16" msg_body="Ignore address on register port 'A'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="cpu_functions.cpp:5:14" msg_body="Ignore address on register port 'B'"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="cpu_functions.cpp:4:21" msg_body="pipeline   1 copy_array config_compile -pipeline_loops 64VITIS_LOOP_4_1 cpu_functions.cpp:4:21">
+        <args LoopLoc="cpu_functions.cpp:4:21" LoopLoc-DebugLoc="File cpu_functions.cpp Line 4 Column 21" LoopName="VITIS_LOOP_4_1" PragmaFunction="copy_array" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+</xilinx:hls_fe_msgs>

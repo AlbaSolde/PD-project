@@ -1,0 +1,30 @@
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp:44419:2: remark: Added loop label VITIS_LOOP_55_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i){
+ ^
+ VITIS_LOOP_55_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp:44419:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp:44423:3: remark: Added loop label VITIS_LOOP_59_2:   [xilinx-label-all-loops]
+  for (int hi = hi_start; hi < hi_end + 1; ++hi){
+  ^
+  VITIS_LOOP_59_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp:44423:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp:44441:3: remark: Added loop label VITIS_LOOP_77_3:   [xilinx-label-all-loops]
+  for (int gi = gi_start; gi < gi_end + 1; ++gi){
+  ^
+  VITIS_LOOP_77_3: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp:44441:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp:44470:3: remark: Added loop label VITIS_LOOP_116_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < size; ++i){
+  ^
+  VITIS_LOOP_116_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp:44470:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp:44483:4: remark: Added loop label VITIS_LOOP_129_1:   [xilinx-label-all-loops]
+   for (unsigned int i = 0; i < size; ++i){
+   ^
+   VITIS_LOOP_129_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp:44483:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp:44507:2: remark: Added loop label VITIS_LOOP_153_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i){
+ ^
+ VITIS_LOOP_153_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/wavelet_transform/cpu_functions/proj_wavelet/solution/.autopilot/db/cpu_functions.pp.0.cpp:44507:2: note: FIX-IT applied suggested code changes

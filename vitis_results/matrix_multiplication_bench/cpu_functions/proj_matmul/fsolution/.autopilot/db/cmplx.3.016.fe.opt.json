@@ -1,0 +1,20 @@
+{
+  "0": {
+    "basicblocks": 12,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 2,
+    "file": "cpu_functions.cpp",
+    "fileloc": 3,
+    "instructions": 53,
+    "loads": {
+      "T": 3
+    },
+    "memory_accesses": 0,
+    "name": "matrix_multiplication",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 53
+  }
+}

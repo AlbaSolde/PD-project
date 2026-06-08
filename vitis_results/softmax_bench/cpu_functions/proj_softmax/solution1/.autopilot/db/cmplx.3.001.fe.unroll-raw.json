@@ -1,0 +1,20 @@
+{
+  "0": {
+    "basicblocks": 21,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "cpu_functions.cpp",
+    "fileloc": 42,
+    "instructions": 76,
+    "loads": {
+      "T": 2
+    },
+    "memory_accesses": 6,
+    "name": "softmax",
+    "stores": {
+      "T": 2
+    },
+    "total_instructions": 76
+  }
+}

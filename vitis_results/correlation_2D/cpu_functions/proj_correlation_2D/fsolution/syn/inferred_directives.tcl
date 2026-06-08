@@ -1,0 +1,3 @@
+# Inferred from syn.compile.pipeline_loops=64
+set_directive_pipeline correlation_2d/VITIS_LOOP_10_2
+set_directive_pipeline correlation_2d/VITIS_LOOP_32_2

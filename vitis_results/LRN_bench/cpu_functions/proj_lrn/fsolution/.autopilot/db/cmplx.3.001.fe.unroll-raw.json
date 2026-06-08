@@ -1,0 +1,318 @@
+{
+  "0": {
+    "basicblocks": 11,
+    "calls": "13 13",
+    "control_depth": 0,
+    "def_use_depth": 8,
+    "file": "cpu_functions.cpp",
+    "fileloc": 35,
+    "instructions": 46,
+    "loads": {
+      "T": 2
+    },
+    "memory_accesses": 4,
+    "name": "lrn",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 4784
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "x_hls_utils.h",
+    "fileloc": 475,
+    "instructions": 16,
+    "loads": {
+      "L": 6
+    },
+    "memory_accesses": 0,
+    "name": "data",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 16
+  },
+  "10": {
+    "basicblocks": 1,
+    "calls": "18",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "x_hls_utils.h",
+    "fileloc": 509,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "to_ieee",
+    "total_instructions": 23
+  },
+  "11": {
+    "basicblocks": 149,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 224,
+    "instructions": 279,
+    "loads": {
+      "G": 7
+    },
+    "memory_accesses": 0,
+    "name": "exp_Z1P_m_1",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 279
+  },
+  "12": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 456,
+    "instructions": 8,
+    "memory_accesses": 0,
+    "name": "fp_struct",
+    "stores": {
+      "L": 3
+    },
+    "total_instructions": 8
+  },
+  "13": {
+    "basicblocks": 1,
+    "calls": "4",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "powdouble.cpp",
+    "fileloc": 6,
+    "instructions": 2,
+    "memory_accesses": 0,
+    "name": "pow",
+    "total_instructions": 2369
+  },
+  "14": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 106,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 17, 6, 92, 87>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 106
+  },
+  "15": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 107,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 12, 6, 83, 92>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 107
+  },
+  "16": {
+    "basicblocks": 106,
+    "calls": "5 7 15 14 8 9 2",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_pow.h",
+    "fileloc": 186,
+    "instructions": 252,
+    "loads": {
+      "L": 48
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduction<71>",
+    "stores": {
+      "L": 14
+    },
+    "total_instructions": 1000
+  },
+  "17": {
+    "basicblocks": 3,
+    "calls": "12",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_isnan.h",
+    "fileloc": 16,
+    "instructions": 13,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "generic_isnan<double>",
+    "total_instructions": 21
+  },
+  "18": {
+    "basicblocks": 1,
+    "calls": "1",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 494,
+    "instructions": 5,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "to_double",
+    "total_instructions": 21
+  },
+  "2": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 106,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 32, 6, 77, 72>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 106
+  },
+  "3": {
+    "basicblocks": 3,
+    "calls": "12",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_isinf.h",
+    "fileloc": 16,
+    "instructions": 13,
+    "loads": {
+      "L": 2
+    },
+    "memory_accesses": 0,
+    "name": "generic_isinf<double>",
+    "total_instructions": 21
+  },
+  "4": {
+    "basicblocks": 370,
+    "calls": "12 12 6 6 3 17 17 3 16 11 10 10 10 10 10 10 10 10 10",
+    "control_depth": 9,
+    "def_use_depth": 33,
+    "file": "hls_pow.h",
+    "fileloc": 291,
+    "instructions": 773,
+    "loads": {
+      "G": 3,
+      "L": 19
+    },
+    "memory_accesses": 52,
+    "name": "pow_generic<double>",
+    "stores": {
+      "L": 15
+    },
+    "total_instructions": 2367
+  },
+  "5": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 111,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 4, 4, 71, 73>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 111
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 2,
+    "file": "x_hls_utils.h",
+    "fileloc": 485,
+    "instructions": 4,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 0,
+    "name": "expv",
+    "total_instructions": 4
+  },
+  "7": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 106,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 7, 6, 73, 83>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 106
+  },
+  "8": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 106,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 22, 6, 87, 82>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 106
+  },
+  "9": {
+    "basicblocks": 61,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 4,
+    "file": "hls_pow.h",
+    "fileloc": 30,
+    "instructions": 106,
+    "loads": {
+      "G": 1
+    },
+    "memory_accesses": 0,
+    "name": "log_range_reduce<ap_fixed<121, 12, AP_TRN, AP_WRAP, 0>, 27, 6, 82, 77>",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 106
+  }
+}

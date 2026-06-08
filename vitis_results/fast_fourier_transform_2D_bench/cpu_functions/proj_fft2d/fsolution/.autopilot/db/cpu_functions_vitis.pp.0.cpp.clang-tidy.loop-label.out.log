@@ -1,0 +1,75 @@
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44561:5: remark: Added loop label VITIS_LOOP_19_1:   [xilinx-label-all-loops]
+    for (int i = 1; i < n; i++) {
+    ^
+    VITIS_LOOP_19_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44561:5: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44563:9: remark: Added loop label VITIS_LOOP_21_2:   [xilinx-label-all-loops]
+        for (; j & bit; bit >>= 1)
+        ^
+        VITIS_LOOP_21_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44563:9: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44572:5: remark: Added loop label VITIS_LOOP_30_3:   [xilinx-label-all-loops]
+    for (int len = 2; len <= n; len <<= 1) {
+    ^
+    VITIS_LOOP_30_3: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44572:5: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44576:9: remark: Added loop label VITIS_LOOP_34_4:   [xilinx-label-all-loops]
+        for (int i = 0; i < n; i += len) {
+        ^
+        VITIS_LOOP_34_4: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44576:9: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44579:13: remark: Added loop label VITIS_LOOP_37_5:   [xilinx-label-all-loops]
+            for (int k = 0; k < len / 2; k++) {
+            ^
+            VITIS_LOOP_37_5: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44579:13: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44605:5: remark: Added loop label VITIS_LOOP_59_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < nx * ny; i++)
+    ^
+    VITIS_LOOP_59_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44605:5: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44609:5: remark: Added loop label VITIS_LOOP_63_2:   [xilinx-label-all-loops]
+    for (int i = 0; i < nx; i++)
+    ^
+    VITIS_LOOP_63_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44609:5: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44614:5: remark: Added loop label VITIS_LOOP_68_3:   [xilinx-label-all-loops]
+    for (int j = 0; j < ny; j++) {
+    ^
+    VITIS_LOOP_68_3: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44614:5: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44615:9: remark: Added loop label VITIS_LOOP_69_4:   [xilinx-label-all-loops]
+        for (int i = 0; i < nx; i++)
+        ^
+        VITIS_LOOP_69_4: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44615:9: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44618:9: remark: Added loop label VITIS_LOOP_72_5:   [xilinx-label-all-loops]
+        for (int i = 0; i < nx; i++)
+        ^
+        VITIS_LOOP_72_5: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44618:9: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44634:5: remark: Added loop label VITIS_LOOP_88_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < size; ++i){
+    ^
+    VITIS_LOOP_88_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44634:5: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44644:5: remark: Added loop label VITIS_LOOP_98_1:   [xilinx-label-all-loops]
+    for (unsigned int i = 0; i < size; ++i)
+    ^
+    VITIS_LOOP_98_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44644:5: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44645:9: remark: Added loop label VITIS_LOOP_99_2:   [xilinx-label-all-loops]
+        for (unsigned int j = 0; j < size; ++j){
+        ^
+        VITIS_LOOP_99_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44645:9: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44660:5: remark: Added loop label VITIS_LOOP_114_1:   [xilinx-label-all-loops]
+    for (unsigned int i = 0; i < size; ++i){
+    ^
+    VITIS_LOOP_114_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44660:5: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44679:5: remark: Added loop label VITIS_LOOP_133_1:   [xilinx-label-all-loops]
+    for (unsigned int i = 0; i < size; ++i){
+    ^
+    VITIS_LOOP_133_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/fast_fourier_transform_2D_bench/cpu_functions/proj_fft2d/fsolution/.autopilot/db/cpu_functions_vitis.pp.0.cpp:44679:5: note: FIX-IT applied suggested code changes

@@ -1,0 +1,45 @@
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44395:2: remark: Added loop label VITIS_LOOP_4_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < n; ++i)
+ ^
+ VITIS_LOOP_4_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44395:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44397:3: remark: Added loop label VITIS_LOOP_6_2:   [xilinx-label-all-loops]
+  for (unsigned int j = 0; j < w; ++j)
+  ^
+  VITIS_LOOP_6_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44397:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44399:4: remark: Added loop label VITIS_LOOP_8_3:   [xilinx-label-all-loops]
+   for (unsigned int k = 0; k < m; ++k)
+   ^
+   VITIS_LOOP_8_3: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44399:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44410:3: remark: Added loop label VITIS_LOOP_27_1:   [xilinx-label-all-loops]
+  for (int i = 0; i < size; ++i){
+  ^
+  VITIS_LOOP_27_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44410:3: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44466:2: remark: Added loop label VITIS_LOOP_100_1:   [xilinx-label-all-loops]
+ for(i=0; i<N*N; i++){
+ ^
+ VITIS_LOOP_100_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44466:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44470:2: remark: Added loop label VITIS_LOOP_104_2:   [xilinx-label-all-loops]
+ for(i=0; i<N*N; i++){
+ ^
+ VITIS_LOOP_104_2: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44470:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44489:2: remark: Added loop label VITIS_LOOP_123_1:   [xilinx-label-all-loops]
+ for(i=0; i<N*N; i++){
+ ^
+ VITIS_LOOP_123_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44489:2: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44498:4: remark: Added loop label VITIS_LOOP_132_1:   [xilinx-label-all-loops]
+   for (unsigned int i = 0; i < size; ++i){
+   ^
+   VITIS_LOOP_132_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44498:4: note: FIX-IT applied suggested code changes
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44524:2: remark: Added loop label VITIS_LOOP_158_1:   [xilinx-label-all-loops]
+ for (unsigned int i = 0; i < size; ++i){
+ ^
+ VITIS_LOOP_158_1: 
+/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench/cpu_functions/proj_matmul/fsolution/.autopilot/db/cpu_functions.pp.0.cpp:44524:2: note: FIX-IT applied suggested code changes

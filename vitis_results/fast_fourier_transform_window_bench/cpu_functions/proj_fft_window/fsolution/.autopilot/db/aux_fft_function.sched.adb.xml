@@ -1,0 +1,207 @@
+<stg><name>aux_fft_function</name>
+
+
+<trans_list>
+
+<trans id="15" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="16" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="64" op_0_bw="64" op_1_bw="64">
+<![CDATA[
+entry:0 %nn_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %nn
+
+]]></Node>
+<StgValue><ssdm name="nn_read"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+entry:1 %data_read_2 = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %data_read
+
+]]></Node>
+<StgValue><ssdm name="data_read_2"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="32" op_0_bw="64">
+<![CDATA[
+entry:2 %data_0_loc = alloca i64 1
+
+]]></Node>
+<StgValue><ssdm name="data_0_loc"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="63" op_0_bw="63" op_1_bw="64" op_2_bw="32" op_3_bw="32">
+<![CDATA[
+entry:3 %tmp_s = partselect i63 @_ssdm_op_PartSelect.i63.i64.i32.i32, i64 %nn_read, i32 1, i32 63
+
+]]></Node>
+<StgValue><ssdm name="tmp_s"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="64" op_0_bw="64" op_1_bw="63" op_2_bw="1">
+<![CDATA[
+entry:4 %n = bitconcatenate i64 @_ssdm_op_BitConcatenate.i64.i63.i1, i63 %tmp_s, i1 0
+
+]]></Node>
+<StgValue><ssdm name="n"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:5 %call_ln11 = call void @aux_fft_function_Outline_VITIS_LOOP_14_1, i64 %n, i64 %nn_read
+
+]]></Node>
+<StgValue><ssdm name="call_ln11"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="256" op_5_bw="59" op_6_bw="52" op_7_bw="44" op_8_bw="33" op_9_bw="25">
+<![CDATA[
+entry:6 %call_ln11 = call void @aux_fft_function_Outline_VITIS_LOOP_30_3, i32 %data_read_2, i64 %n, i32 %data_0_loc, i256 %ref_4oPi_table_256, i59 %fourth_order_double_sin_cos_K0, i52 %fourth_order_double_sin_cos_K1, i44 %fourth_order_double_sin_cos_K2, i33 %fourth_order_double_sin_cos_K3, i25 %fourth_order_double_sin_cos_K4
+
+]]></Node>
+<StgValue><ssdm name="call_ln11"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="11" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64">
+<![CDATA[
+entry:5 %call_ln11 = call void @aux_fft_function_Outline_VITIS_LOOP_14_1, i64 %n, i64 %nn_read
+
+]]></Node>
+<StgValue><ssdm name="call_ln11"/></StgValue>
+</operation>
+
+<operation id="12" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="64" op_3_bw="32" op_4_bw="256" op_5_bw="59" op_6_bw="52" op_7_bw="44" op_8_bw="33" op_9_bw="25">
+<![CDATA[
+entry:6 %call_ln11 = call void @aux_fft_function_Outline_VITIS_LOOP_30_3, i32 %data_read_2, i64 %n, i32 %data_0_loc, i256 %ref_4oPi_table_256, i59 %fourth_order_double_sin_cos_K0, i52 %fourth_order_double_sin_cos_K1, i44 %fourth_order_double_sin_cos_K2, i33 %fourth_order_double_sin_cos_K3, i25 %fourth_order_double_sin_cos_K4
+
+]]></Node>
+<StgValue><ssdm name="call_ln11"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="13" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="32" op_0_bw="32" op_1_bw="0">
+<![CDATA[
+entry:7 %data_0_loc_load = load i32 %data_0_loc
+
+]]></Node>
+<StgValue><ssdm name="data_0_loc_load"/></StgValue>
+</operation>
+
+<operation id="14" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="0" op_0_bw="32">
+<![CDATA[
+entry:8 %ret_ln64 = ret i32 %data_0_loc_load
+
+]]></Node>
+<StgValue><ssdm name="ret_ln64"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+</ports>
+
+
+<dataflows>
+</dataflows>
+
+
+</stg>

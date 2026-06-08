@@ -1,0 +1,337 @@
+
+
+================================================================
+== Vitis HLS Report for 'cifar10_Pipeline_VITIS_LOOP_125_34'
+================================================================
+* Date:           Mon May  4 21:06:53 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        proj_cifar10
+* Solution:       fsolution (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |       22|        ?|  0.220 us|         ?|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |                    |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |      Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- VITIS_LOOP_125_3  |       20|        ?|        21|          6|          1|  1 ~ ?|       yes|
+        +--------------------+---------+---------+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 6, depth = 21
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 21
+* Pipeline : 1
+  Pipeline-0 : II = 6, D = 21, States = { 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.72>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%acumulated = alloca i32 1" [cpu_functions.cpp:124->cpu_functions.cpp:190]   --->   Operation 24 'alloca' 'acumulated' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%k_2 = alloca i32 1" [cpu_functions.cpp:125->cpu_functions.cpp:190]   --->   Operation 25 'alloca' 'k_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%sext_ln125_2_read = read i30 @_ssdm_op_Read.ap_auto.i30, i30 %sext_ln125_2"   --->   Operation 26 'read' 'sext_ln125_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%sext_ln125_3_read = read i30 @_ssdm_op_Read.ap_auto.i30, i30 %sext_ln125_3"   --->   Operation 27 'read' 'sext_ln125_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%neurons_dense_1_size_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %neurons_dense_1_size"   --->   Operation 28 'read' 'neurons_dense_1_size_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%sext_ln125_2_cast = sext i30 %sext_ln125_2_read"   --->   Operation 29 'sext' 'sext_ln125_2_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%sext_ln125_3_cast = sext i30 %sext_ln125_3_read"   --->   Operation 30 'sext' 'sext_ln125_3_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem, void @empty_0, i32 0, i32 0, void @empty_14, i32 0, i32 0, void @empty, void @empty_20, void @empty_14, i32 16, i32 16, i32 16, i32 16, void @empty_14, void @empty_14, i32 4294967295, i32 0, i32 0, i32 4"   --->   Operation 31 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (1.58ns)   --->   "%store_ln125 = store i32 0, i32 %k_2" [cpu_functions.cpp:125->cpu_functions.cpp:190]   --->   Operation 32 'store' 'store_ln125' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 33 [1/1] (1.58ns)   --->   "%store_ln124 = store i32 0, i32 %acumulated" [cpu_functions.cpp:124->cpu_functions.cpp:190]   --->   Operation 33 'store' 'store_ln124' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i157"   --->   Operation 34 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%k = load i32 %k_2" [cpu_functions.cpp:125->cpu_functions.cpp:190]   --->   Operation 35 'load' 'k' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i32 %gmem"   --->   Operation 36 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (2.55ns)   --->   "%icmp_ln125 = icmp_eq  i32 %k, i32 %neurons_dense_1_size_read" [cpu_functions.cpp:125->cpu_functions.cpp:190]   --->   Operation 37 'icmp' 'icmp_ln125' <Predicate = true> <Delay = 2.55> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 1, i64 18446744073709551615, i64 0"   --->   Operation 38 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (2.55ns)   --->   "%add_ln125 = add i32 %k, i32 1" [cpu_functions.cpp:125->cpu_functions.cpp:190]   --->   Operation 39 'add' 'add_ln125' <Predicate = true> <Delay = 2.55> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%br_ln125 = br i1 %icmp_ln125, void %for.inc.i157.split, void %for.inc19.i164.exitStub" [cpu_functions.cpp:125->cpu_functions.cpp:190]   --->   Operation 40 'br' 'br_ln125' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%trunc_ln127 = trunc i32 %k" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 41 'trunc' 'trunc_ln127' <Predicate = (!icmp_ln125)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%zext_ln127 = zext i30 %trunc_ln127" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 42 'zext' 'zext_ln127' <Predicate = (!icmp_ln125)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (2.49ns)   --->   "%add_ln127 = add i32 %zext_ln127, i32 %sext_ln125_3_cast" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 43 'add' 'add_ln127' <Predicate = (!icmp_ln125)> <Delay = 2.49> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.49> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 44 [1/1] (2.49ns)   --->   "%add_ln127_1 = add i32 %zext_ln127, i32 %sext_ln125_2_cast" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 44 'add' 'add_ln127_1' <Predicate = (!icmp_ln125)> <Delay = 2.49> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.49> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 45 [1/1] (1.58ns)   --->   "%store_ln125 = store i32 %add_ln125, i32 %k_2" [cpu_functions.cpp:125->cpu_functions.cpp:190]   --->   Operation 45 'store' 'store_ln125' <Predicate = (!icmp_ln125)> <Delay = 1.58>
+
+State 2 <SV = 1> <Delay = 7.30>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%gmem_addr = getelementptr i32 %gmem, i32 %add_ln127" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 46 'getelementptr' 'gmem_addr' <Predicate = (!icmp_ln125)> <Delay = 0.00>
+ST_2 : Operation 47 [8/8] (7.30ns)   --->   "%gmem_load_11_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 47 'readreq' 'gmem_load_11_req' <Predicate = (!icmp_ln125)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 7.30>
+ST_3 : Operation 48 [7/8] (7.30ns)   --->   "%gmem_load_11_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 48 'readreq' 'gmem_load_11_req' <Predicate = (!icmp_ln125)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 49 [1/1] (0.00ns)   --->   "%gmem_addr_3 = getelementptr i32 %gmem, i32 %add_ln127_1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 49 'getelementptr' 'gmem_addr_3' <Predicate = (!icmp_ln125)> <Delay = 0.00>
+ST_3 : Operation 50 [8/8] (7.30ns)   --->   "%gmem_load_12_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr_3, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 50 'readreq' 'gmem_load_12_req' <Predicate = (!icmp_ln125)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 51 [6/8] (7.30ns)   --->   "%gmem_load_11_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 51 'readreq' 'gmem_load_11_req' <Predicate = (!icmp_ln125)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 52 [7/8] (7.30ns)   --->   "%gmem_load_12_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr_3, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 52 'readreq' 'gmem_load_12_req' <Predicate = (!icmp_ln125)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 53 [5/8] (7.30ns)   --->   "%gmem_load_11_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 53 'readreq' 'gmem_load_11_req' <Predicate = (!icmp_ln125)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 54 [6/8] (7.30ns)   --->   "%gmem_load_12_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr_3, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 54 'readreq' 'gmem_load_12_req' <Predicate = (!icmp_ln125)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 55 [4/8] (7.30ns)   --->   "%gmem_load_11_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 55 'readreq' 'gmem_load_11_req' <Predicate = (!icmp_ln125)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 56 [5/8] (7.30ns)   --->   "%gmem_load_12_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr_3, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 56 'readreq' 'gmem_load_12_req' <Predicate = (!icmp_ln125)> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 7 <SV = 6> <Delay = 0.00>
+ST_7 : Operation 57 [3/8] (7.30ns)   --->   "%gmem_load_11_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 57 'readreq' 'gmem_load_11_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 58 [4/8] (7.30ns)   --->   "%gmem_load_12_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr_3, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 58 'readreq' 'gmem_load_12_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 8 <SV = 7> <Delay = 0.00>
+ST_8 : Operation 59 [2/8] (7.30ns)   --->   "%gmem_load_11_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 59 'readreq' 'gmem_load_11_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 60 [3/8] (7.30ns)   --->   "%gmem_load_12_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr_3, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 60 'readreq' 'gmem_load_12_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 9 <SV = 8> <Delay = 7.30>
+ST_9 : Operation 61 [1/8] ( I:7.30ns O:7.30ns )   --->   "%gmem_load_11_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 61 'readreq' 'gmem_load_11_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 62 [2/8] (7.30ns)   --->   "%gmem_load_12_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr_3, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 62 'readreq' 'gmem_load_12_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 10 <SV = 9> <Delay = 7.30>
+ST_10 : Operation 63 [1/1] ( I:7.30ns O:7.30ns )   --->   "%gmem_addr_read = read i32 @_ssdm_op_Read.m_axi.i32P1A, i32 %gmem_addr" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 63 'read' 'gmem_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 64 [1/8] ( I:7.30ns O:7.30ns )   --->   "%gmem_load_12_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i32P1A, i32 %gmem_addr_3, i32 1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 64 'readreq' 'gmem_load_12_req' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 11 <SV = 10> <Delay = 7.30>
+ST_11 : Operation 65 [1/1] ( I:7.30ns O:7.30ns )   --->   "%gmem_addr_3_read = read i32 @_ssdm_op_Read.m_axi.i32P1A, i32 %gmem_addr_3" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 65 'read' 'gmem_addr_3_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 3> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'readrequnaligned' 'writerequnaligned' 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 12 <SV = 11> <Delay = 5.70>
+ST_12 : Operation 66 [1/1] (0.00ns)   --->   "%bitcast_ln127 = bitcast i32 %gmem_addr_read" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 66 'bitcast' 'bitcast_ln127' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 67 [1/1] (0.00ns)   --->   "%bitcast_ln127_1 = bitcast i32 %gmem_addr_3_read" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 67 'bitcast' 'bitcast_ln127_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 68 [4/4] (5.70ns)   --->   "%mul13_i1 = fmul i32 %bitcast_ln127, i32 %bitcast_ln127_1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 68 'fmul' 'mul13_i1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 5.70>
+ST_13 : Operation 69 [3/4] (5.70ns)   --->   "%mul13_i1 = fmul i32 %bitcast_ln127, i32 %bitcast_ln127_1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 69 'fmul' 'mul13_i1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 5.70>
+ST_14 : Operation 70 [2/4] (5.70ns)   --->   "%mul13_i1 = fmul i32 %bitcast_ln127, i32 %bitcast_ln127_1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 70 'fmul' 'mul13_i1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 5.70>
+ST_15 : Operation 71 [1/4] (5.70ns)   --->   "%mul13_i1 = fmul i32 %bitcast_ln127, i32 %bitcast_ln127_1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 71 'fmul' 'mul13_i1' <Predicate = true> <Delay = 5.70> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 82 [1/1] (0.00ns)   --->   "%acumulated_load = load i32 %acumulated"   --->   Operation 82 'load' 'acumulated_load' <Predicate = (icmp_ln125)> <Delay = 0.00>
+ST_15 : Operation 83 [1/1] (0.00ns)   --->   "%write_ln0 = write void @_ssdm_op_Write.ap_auto.floatP0A, i32 %acumulated_2_out, i32 %acumulated_load"   --->   Operation 83 'write' 'write_ln0' <Predicate = (icmp_ln125)> <Delay = 0.00>
+ST_15 : Operation 84 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 84 'ret' 'ret_ln0' <Predicate = (icmp_ln125)> <Delay = 1.58>
+
+State 16 <SV = 15> <Delay = 7.25>
+ST_16 : Operation 72 [1/1] (0.00ns)   --->   "%acumulated_load_1 = load i32 %acumulated" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 72 'load' 'acumulated_load_1' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 73 [5/5] (7.25ns)   --->   "%acumulated_1 = fadd i32 %acumulated_load_1, i32 %mul13_i1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 73 'fadd' 'acumulated_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 7.25>
+ST_17 : Operation 74 [4/5] (7.25ns)   --->   "%acumulated_1 = fadd i32 %acumulated_load_1, i32 %mul13_i1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 74 'fadd' 'acumulated_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 7.25>
+ST_18 : Operation 75 [3/5] (7.25ns)   --->   "%acumulated_1 = fadd i32 %acumulated_load_1, i32 %mul13_i1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 75 'fadd' 'acumulated_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 7.25>
+ST_19 : Operation 76 [2/5] (7.25ns)   --->   "%acumulated_1 = fadd i32 %acumulated_load_1, i32 %mul13_i1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 76 'fadd' 'acumulated_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 7.25>
+ST_20 : Operation 77 [1/5] (7.25ns)   --->   "%acumulated_1 = fadd i32 %acumulated_load_1, i32 %mul13_i1" [cpu_functions.cpp:127->cpu_functions.cpp:190]   --->   Operation 77 'fadd' 'acumulated_1' <Predicate = true> <Delay = 7.25> <CoreInst = "FAddSub_fulldsp">   --->   Core 18 'FAddSub_fulldsp' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 1.58>
+ST_21 : Operation 78 [1/1] (0.00ns)   --->   "%specpipeline_ln124 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, i32 4294967295, void @empty_14" [cpu_functions.cpp:124->cpu_functions.cpp:190]   --->   Operation 78 'specpipeline' 'specpipeline_ln124' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 79 [1/1] (0.00ns)   --->   "%specloopname_ln125 = specloopname void @_ssdm_op_SpecLoopName, void @empty_36" [cpu_functions.cpp:125->cpu_functions.cpp:190]   --->   Operation 79 'specloopname' 'specloopname_ln125' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 80 [1/1] (1.58ns)   --->   "%store_ln124 = store i32 %acumulated_1, i32 %acumulated" [cpu_functions.cpp:124->cpu_functions.cpp:190]   --->   Operation 80 'store' 'store_ln124' <Predicate = true> <Delay = 1.58>
+ST_21 : Operation 81 [1/1] (0.00ns)   --->   "%br_ln125 = br void %for.inc.i157" [cpu_functions.cpp:125->cpu_functions.cpp:190]   --->   Operation 81 'br' 'br_ln125' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 5.728ns
+The critical path consists of the following:
+	'store' operation ('store_ln125', cpu_functions.cpp:125->cpu_functions.cpp:190) of constant 0 32 bit on local variable 'k', cpu_functions.cpp:125->cpu_functions.cpp:190 [14]  (1.588 ns)
+	'load' operation 32 bit ('k', cpu_functions.cpp:125->cpu_functions.cpp:190) on local variable 'k', cpu_functions.cpp:125->cpu_functions.cpp:190 [18]  (0.000 ns)
+	'icmp' operation 1 bit ('icmp_ln125', cpu_functions.cpp:125->cpu_functions.cpp:190) [20]  (2.552 ns)
+	'store' operation ('store_ln125', cpu_functions.cpp:125->cpu_functions.cpp:190) of variable 'add_ln125', cpu_functions.cpp:125->cpu_functions.cpp:190 32 bit on local variable 'k', cpu_functions.cpp:125->cpu_functions.cpp:190 [42]  (1.588 ns)
+
+ <State 2>: 7.300ns
+The critical path consists of the following:
+	'getelementptr' operation 32 bit ('gmem_addr', cpu_functions.cpp:127->cpu_functions.cpp:190) [31]  (0.000 ns)
+	bus request operation ('gmem_load_11_req', cpu_functions.cpp:127->cpu_functions.cpp:190) on port 'gmem' (cpu_functions.cpp:127->cpu_functions.cpp:190) [32]  (0.000 ns)
+	blocking operation 7.3 ns on control path)
+
+ <State 3>: 7.300ns
+The critical path consists of the following:
+	'getelementptr' operation 32 bit ('gmem_addr_3', cpu_functions.cpp:127->cpu_functions.cpp:190) [36]  (0.000 ns)
+	bus request operation ('gmem_load_12_req', cpu_functions.cpp:127->cpu_functions.cpp:190) on port 'gmem' (cpu_functions.cpp:127->cpu_functions.cpp:190) [37]  (0.000 ns)
+	blocking operation 7.3 ns on control path)
+
+ <State 4>: 0.000ns
+The critical path consists of the following:
+
+ <State 5>: 0.000ns
+The critical path consists of the following:
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+ <State 7>: 0.000ns
+The critical path consists of the following:
+
+ <State 8>: 0.000ns
+The critical path consists of the following:
+
+ <State 9>: 7.300ns
+The critical path consists of the following:
+	bus request operation ('gmem_load_11_req', cpu_functions.cpp:127->cpu_functions.cpp:190) on port 'gmem' (cpu_functions.cpp:127->cpu_functions.cpp:190) [32]  (7.300 ns)
+
+ <State 10>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_read', cpu_functions.cpp:127->cpu_functions.cpp:190) on port 'gmem' (cpu_functions.cpp:127->cpu_functions.cpp:190) [33]  (7.300 ns)
+
+ <State 11>: 7.300ns
+The critical path consists of the following:
+	bus read operation ('gmem_addr_3_read', cpu_functions.cpp:127->cpu_functions.cpp:190) on port 'gmem' (cpu_functions.cpp:127->cpu_functions.cpp:190) [38]  (7.300 ns)
+
+ <State 12>: 5.702ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul13_i1', cpu_functions.cpp:127->cpu_functions.cpp:190) [40]  (5.702 ns)
+
+ <State 13>: 5.702ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul13_i1', cpu_functions.cpp:127->cpu_functions.cpp:190) [40]  (5.702 ns)
+
+ <State 14>: 5.702ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul13_i1', cpu_functions.cpp:127->cpu_functions.cpp:190) [40]  (5.702 ns)
+
+ <State 15>: 5.702ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul13_i1', cpu_functions.cpp:127->cpu_functions.cpp:190) [40]  (5.702 ns)
+
+ <State 16>: 7.256ns
+The critical path consists of the following:
+	'load' operation 32 bit ('acumulated_load_1', cpu_functions.cpp:127->cpu_functions.cpp:190) on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:190 [25]  (0.000 ns)
+	'fadd' operation 32 bit ('acumulated', cpu_functions.cpp:127->cpu_functions.cpp:190) [41]  (7.256 ns)
+
+ <State 17>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('acumulated', cpu_functions.cpp:127->cpu_functions.cpp:190) [41]  (7.256 ns)
+
+ <State 18>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('acumulated', cpu_functions.cpp:127->cpu_functions.cpp:190) [41]  (7.256 ns)
+
+ <State 19>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('acumulated', cpu_functions.cpp:127->cpu_functions.cpp:190) [41]  (7.256 ns)
+
+ <State 20>: 7.256ns
+The critical path consists of the following:
+	'fadd' operation 32 bit ('acumulated', cpu_functions.cpp:127->cpu_functions.cpp:190) [41]  (7.256 ns)
+
+ <State 21>: 1.588ns
+The critical path consists of the following:
+	'store' operation ('store_ln124', cpu_functions.cpp:124->cpu_functions.cpp:190) of variable 'acumulated', cpu_functions.cpp:127->cpu_functions.cpp:190 32 bit on local variable 'acumulated', cpu_functions.cpp:124->cpu_functions.cpp:190 [43]  (1.588 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

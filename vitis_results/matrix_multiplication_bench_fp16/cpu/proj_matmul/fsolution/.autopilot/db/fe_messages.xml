@@ -1,0 +1,17 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/albasg/Documentos/semestre-2/pd/project/GPU4S_Bench/gpu4s_benchmark/matrix_multiplication_bench_fp16/cpu/run_hls.tcl:7:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrix_multiplication" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=matrix_multiplication" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="lib_cpu.cpp:10:14" msg_body="Ignore address on register port 'C'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="lib_cpu.cpp:10:27" msg_body="Ignore address on register port 'A'"/>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-450" msg_severity="WARNING" msg_loc="lib_cpu.cpp:10:38" msg_body="Ignore address on register port 'B'"/>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="lib_cpu.cpp:8:20" msg_body="pipeline   1 matrix_multiplication config_compile -pipeline_loops 64VITIS_LOOP_8_3 lib_cpu.cpp:8:20">
+        <args LoopLoc="lib_cpu.cpp:8:20" LoopLoc-DebugLoc="File lib_cpu.cpp Line 8 Column 20" LoopName="VITIS_LOOP_8_3" PragmaFunction="matrix_multiplication" PragmaInferReason="config_compile -pipeline_loops 64" PragmaIsAuto="1" PragmaType="pipeline"/>
+    </msg>
+    <msg msg_groups="AUTOMATION PRAGMA_MISC" msg_id="214-437" msg_severity="INFO" msg_loc="lib_cpu.cpp:6:19" msg_body="Disabling loop flattening for loop 'VITIS_LOOP_6_2'.">
+        <args LoopName="VITIS_LOOP_6_2"/>
+    </msg>
+    <msg msg_groups="AUTOMATION_VERBOSE_PASSED" msg_id="214-335" msg_severity="INFO" msg_loc="lib_cpu.cpp:6:19" msg_body="loop_flatten off  1 matrix_multiplication VITIS_LOOP_6_2 lib_cpu.cpp:6:19">
+        <args LoopLoc="lib_cpu.cpp:6:19" LoopLoc-DebugLoc="File lib_cpu.cpp Line 6 Column 19" LoopName="VITIS_LOOP_6_2" PragmaFunction="matrix_multiplication" PragmaIsAuto="1" PragmaOptions="off" PragmaType="loop_flatten"/>
+    </msg>
+</xilinx:hls_fe_msgs>

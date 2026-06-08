@@ -1,0 +1,35 @@
+{
+  "0": {
+    "basicblocks": 11,
+    "calls": "1 1",
+    "control_depth": 0,
+    "def_use_depth": 5,
+    "file": "cpu_functions.cpp",
+    "fileloc": 20,
+    "instructions": 67,
+    "loads": {
+      "T": 2
+    },
+    "memory_accesses": 3,
+    "name": "correlation_2D",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 147
+  },
+  "1": {
+    "basicblocks": 11,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "cpu_functions.cpp",
+    "fileloc": 3,
+    "instructions": 40,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "get_mean_value_matrix",
+    "total_instructions": 40
+  }
+}

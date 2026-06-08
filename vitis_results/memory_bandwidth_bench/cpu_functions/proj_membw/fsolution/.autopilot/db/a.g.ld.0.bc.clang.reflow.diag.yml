@@ -1,0 +1,86 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_copy_array_ir
+Args:            
+  - Callee:          'copy_array(double*, double*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 3, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_copy_array_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 5, Column: 16 }
+Function:        _Z10copy_arrayPdS_i
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 5, Column: 14 }
+Function:        _Z10copy_arrayPdS_i
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 5, Column: 16 }
+Function:        _Z10copy_arrayPdS_i
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          A
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-syncheck
+Name:            AdderessOnRegister
+DebugLoc:        { File: cpu_functions.cpp, Line: 5, Column: 14 }
+Function:        _Z10copy_arrayPdS_i
+Args:            
+  - String:          Ignore address on register port
+  - String:          ' '''
+  - String:          B
+  - String:          ''''
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_4_1
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:4:21'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 4, Column: 21 }
+Function:        _Z10copy_arrayPdS_i
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  copy_array
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_4_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:4:21'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 4, Column: 21 }
+  - String:          ' '
+...

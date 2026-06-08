@@ -1,0 +1,246 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_ccsds_wavelet_transform_ir
+Args:            
+  - Callee:          'ccsds_wavelet_transform(double const*, double*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 3, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_ccsds_wavelet_transform_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: cpu_functions.cpp, Line: 70, Column: 55 }
+Function:        _Z23ccsds_wavelet_transformPKdPdi
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 70, Column: 55 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.7
+  - ArrayName:       A
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_59_2
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:59:20'
+  - String:          ' '
+  - Function:        'ccsds_wavelet_transform(double const*, double*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: cpu_functions.cpp, Line: 87, Column: 57 }
+Function:        _Z23ccsds_wavelet_transformPKdPdi
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: cpu_functions.cpp, Line: 87, Column: 57 }
+  - OrigDirection:   read
+  - OrigID:          for.inc52.load.7
+  - ArrayName:       A
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_77_3
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:77:20'
+  - String:          ' '
+  - Function:        'ccsds_wavelet_transform(double const*, double*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cpu_functions.cpp, Line: 74, Column: 8 }
+Function:        _Z23ccsds_wavelet_transformPKdPdi
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 90, Column: 13 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 74, Column: 8 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_77_3.store.2
+  - ArrayName:       B
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - Function:        'ccsds_wavelet_transform(double const*, double*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessClobbered
+DebugLoc:        { File: cpu_functions.cpp, Line: 90, Column: 13 }
+Function:        _Z23ccsds_wavelet_transformPKdPdi
+Args:            
+  - String:          'Access is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 74, Column: 8 }
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: cpu_functions.cpp, Line: 90, Column: 13 }
+  - OrigDirection:   write
+  - OrigID:          for.inc58.store.4
+  - ArrayName:       B
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - Function:        'ccsds_wavelet_transform(double const*, double*, int)'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'Pipelining loop< '
+  - LoopName:        VITIS_LOOP_55_1
+  - String:          '> at '
+  - LoopLoc:         'cpu_functions.cpp:55:19'
+  - String:          ' due to pipeline_loops threshold'
+...
+--- !Passed
+Pass:            reflow-auto-loop-pipeline
+Name:            AutoParallelPerformanceDrivenVerbosePassed
+DebugLoc:        { File: cpu_functions.cpp, Line: 55, Column: 19 }
+Function:        _Z23ccsds_wavelet_transformPKdPdi
+Args:            
+  - PragmaType:      pipeline
+  - String:          ' '
+  - PragmaOptions:   ' '
+  - String:          ' '
+  - PragmaIsAuto:    '1'
+  - String:          ' '
+  - PragmaFunction:  ccsds_wavelet_transform
+  - String:          ' '
+  - PragmaInferReason: config_compile -pipeline_loops 64
+  - LoopName:        VITIS_LOOP_55_1
+  - String:          ' '
+  - LoopLoc:         'cpu_functions.cpp:55:19'
+    DebugLoc:        { File: cpu_functions.cpp, Line: 55, Column: 19 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: cpu_functions.cpp, Line: 59, Column: 20 }
+Function:        _Z23ccsds_wavelet_transformPKdPdi
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_59_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: cpu_functions.cpp, Line: 77, Column: 20 }
+Function:        _Z23ccsds_wavelet_transformPKdPdi
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_77_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cpu_functions.cpp, Line: 3, Column: 0 }
+Function:        _Z23ccsds_wavelet_transformPKdPdi
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_59_2
+  - String:          ''' ('
+  - LoopLoc:         'cpu_functions.cpp:59:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ccsds_wavelet_transform
+  - String:          ''' completely with a factor of '
+  - Factor:          '9'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: cpu_functions.cpp, Line: 3, Column: 0 }
+Function:        _Z23ccsds_wavelet_transformPKdPdi
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_77_3
+  - String:          ''' ('
+  - LoopLoc:         'cpu_functions.cpp:77:20'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          ccsds_wavelet_transform
+  - String:          ''' completely with a factor of '
+  - Factor:          '7'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: ./cpu_functions.h, Line: 26, Column: 0 }
+Function:        _Z23ccsds_wavelet_transformPKdPdi
+Args:            
+  - String:          'Partitioning array '''
+  - Value:           lowpass_filter_cpu
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' due to constant index.'
+...
+--- !Passed
+Pass:            reflow-auto-array-partition
+Name:            AutoArrayPromotion
+DebugLoc:        { File: ./cpu_functions.h, Line: 27, Column: 0 }
+Function:        _Z23ccsds_wavelet_transformPKdPdi
+Args:            
+  - String:          'Partitioning array '''
+  - Value:           highpass_filter_cpu
+  - String:          ''' dimension '
+  - Dim:             '1'
+  - String:          ' due to constant index.'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./cpu_functions.h, Line: 27, Column: 0 }
+Function:        _Z23ccsds_wavelet_transformPKdPdi
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL19highpass_filter_cpu
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: ./cpu_functions.h, Line: 26, Column: 0 }
+Function:        _Z23ccsds_wavelet_transformPKdPdi
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          _ZL18lowpass_filter_cpu
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
